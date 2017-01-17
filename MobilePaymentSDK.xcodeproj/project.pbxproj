@@ -66,6 +66,7 @@
 		1DACE8471E2E152900F5E38E /* MobilePaymentSDKError.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1DACE7F01E2E14F400F5E38E /* MobilePaymentSDKError.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DACE8481E2E152900F5E38E /* Article.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1DACE7F31E2E14F400F5E38E /* Article.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DACE8491E2E152900F5E38E /* MobilePaymentSDK.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1DACE83E1E2E14FE00F5E38E /* MobilePaymentSDK.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DACE84C1E2E1E7A00F5E38E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DACE84B1E2E1E7A00F5E38E /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +125,7 @@
 		1DACE80B1E2E14F400F5E38E /* ICThemedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICThemedTextField.swift; sourceTree = "<group>"; };
 		1DACE83E1E2E14FE00F5E38E /* MobilePaymentSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MobilePaymentSDK.swift; path = MobilePaymentSDK/MobilePaymentSDK.swift; sourceTree = SOURCE_ROOT; };
 		1DACE8411E2E151100F5E38E /* MobilePaymentSDKUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobilePaymentSDKUtils.framework; path = MobilePaymentSDK/MobilePaymentSDKUtils.framework; sourceTree = "<group>"; };
+		1DACE84B1E2E1E7A00F5E38E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = MobilePaymentSDK/Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				1DACE8081E2E14F400F5E38E /* Views */,
 				1DACE7CD1E2E14EA00F5E38E /* MobilePaymentSDK.h */,
 				1DACE83E1E2E14FE00F5E38E /* MobilePaymentSDK.swift */,
+				1DACE84B1E2E1E7A00F5E38E /* Storyboard.storyboard */,
 				1DACE7C61E2E14B300F5E38E /* Info.plist */,
 			);
 			name = "Mobile Payment SDK";
@@ -397,6 +400,7 @@
 			files = (
 				1DACE83C1E2E14F400F5E38E /* ICCardView.xib in Resources */,
 				1DACE8271E2E14F400F5E38E /* Images.xcassets in Resources */,
+				1DACE84C1E2E1E7A00F5E38E /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +568,12 @@
 		1DACE7CB1E2E14B300F5E38E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					i386,
+					x86_64,
+					armv7s,
+				);
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2SSZUB73NA;
@@ -578,6 +588,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ipay.Mobile-Payment-SDK";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -588,6 +599,12 @@
 		1DACE7CC1E2E14B300F5E38E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					i386,
+					x86_64,
+					armv7s,
+				);
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2SSZUB73NA;
