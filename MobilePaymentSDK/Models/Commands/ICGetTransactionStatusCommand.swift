@@ -12,11 +12,12 @@ class ICGetTransactionStatusCommand: ICBaseCommand {
 
     // MARK: Initializers
     
-    init(orderId: String) {
+    init(orderId: String, transactionType: TransactionType) {
         super.init()
         
-        self.data[ICParameters.method]  = ICMethods.getTransactionStatus
-        self.data[ICParameters.orderId] = orderId
+        self.data[ICParameters.method]          = ICMethods.getTransactionStatus
+        self.data[ICParameters.orderId]         = orderId
+        self.data[ICParameters.transactionType] = String(transactionType.rawValue)
     }
     
     

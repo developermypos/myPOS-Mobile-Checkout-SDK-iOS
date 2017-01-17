@@ -99,6 +99,7 @@ struct ICParameters {
     static let statusMessage     = "StatusMsg"
     static let customerIdent     = "CustomerIdent"
     static let transactionRef    = "IPC_Trnref"
+    static let transactionType   = "check_refund"
     static let cardVerification  = "CardVerification"
     static let billingDescriptor = "BillingDescriptor"
     static let transactionStatus = "TrnStatus"

@@ -145,10 +145,11 @@ class ICCommunicationManager: ICBaseManager {
     }
     
     func getTransactionStatusFor(order orderId: String,
+                                 transactionType: TransactionType,
                                  completed: @escaping (_ data: [String : Any]) -> Void,
                                  failed: @escaping (_ error: MobilePaymentSDKError) -> Void) {
         
-        let command = ICGetTransactionStatusCommand(orderId: orderId)
+        let command = ICGetTransactionStatusCommand(orderId: orderId, transactionType: transactionType)
         self.sendCommand(command, completion: self.operationCompletion(paramNames: [ICParameters.transactionStatus, ICParameters.transactionRef2], completed: completed, failed: failed))
     }
     

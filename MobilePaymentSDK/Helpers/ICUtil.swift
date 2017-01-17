@@ -27,6 +27,11 @@ public enum Currency: String {
     case unknown = ""
 }
 
+public enum TransactionType: Int {
+    case refund
+    case purchase
+}
+
 private enum ICControllerIdentifier: String {
     case payment          = "Payment"
     case storeCard        = "StoreCard"

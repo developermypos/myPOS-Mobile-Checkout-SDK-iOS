@@ -62,12 +62,14 @@ public struct MobilePaymentSDK {
     ///
     /// Gets the transaction status of a specific order.
     ///
-    /// - parameter orderId:   The order's id.
-    /// - parameter completed: On success block returning a dictionary of transaction data - status and reference.
-    /// - parameter failed:    On error block with error object for more details.
+    /// - parameter orderId:         The order's id.
+    /// - parameter transactionType: The transaction's type. Purchase, Refund, etc.
+    /// - parameter completed:       On success block returning a dictionary of transaction data - status and reference.
+    /// - parameter failed:          On error block with error object for more details.
     ///
     
     public static func getOrderStatusFor(_ orderId: String,
+                                         transactionType: TransactionType,
                                          completed: @escaping (_ transactionStatus: Int, _ transactionReference: String) -> Void,
                                          failed: @escaping (_ error: MobilePaymentSDKError) -> Void) {
         
@@ -76,7 +78,7 @@ public struct MobilePaymentSDK {
             return
         }
         
-        ICCommunicationManager.shared.getTransactionStatusFor(order: orderId, completed: { (transactionData) in
+        ICCommunicationManager.shared.getTransactionStatusFor(order: orderId, transactionType: transactionType, completed: { (transactionData) in
             let status    = transactionData[ICParameters.transactionStatus] as? Int    ?? -1
             let reference = transactionData[ICParameters.transactionRef2]   as? String ?? ""
             
