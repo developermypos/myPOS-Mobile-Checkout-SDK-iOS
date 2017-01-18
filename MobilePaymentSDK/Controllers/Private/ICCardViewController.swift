@@ -129,13 +129,12 @@ class ICCardViewController: ICBaseViewController, IC3DSecureDelegate, ICCardView
         }
         
         self.extraData = [
-            IC3DSParameters.avv           : avv,
-            IC3DSParameters.eci           : eci,
-            IC3DSParameters.xid           : xid,
-            IC3DSParameters.cavv          : cavv,
-            ICParameters.cardType         : self.cardData[ICParameters.cardType] as? String ?? "",
-            ICParameters.customerIdent    : ICConstants.customerIdent,
-            ICParameters.cardVerification : "1"
+            IC3DSParameters.avv        : avv,
+            IC3DSParameters.eci        : eci,
+            IC3DSParameters.xid        : xid,
+            IC3DSParameters.cavv       : cavv,
+            ICParameters.cardType      : self.cardData[ICParameters.cardType] as? String ?? "",
+            ICParameters.customerIdent : ICConstants.customerIdent,
         ]
         
         ICLogger.log("Card verified")

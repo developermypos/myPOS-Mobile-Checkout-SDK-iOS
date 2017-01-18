@@ -20,6 +20,7 @@ struct ICConstants {
     static let ipcVersion             = "1.2"
     static let outputFormat           = "json"
     static let source                 = "2"
+    static let cardVerification       = "2"
     static let errorDomain            = "mobilePaymentSDKErrorDomain"
     static let storyboardName         = "Storyboard"
     static let localizationsTable     = "MobilePaymentSDK"

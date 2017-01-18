@@ -15,15 +15,16 @@ class ICUpdateStoredCardCommand: ICBaseCommand {
     init(token: String, pan: String, cvc: String, expiryDate: String, embossName: String, customName: String, amount: String, extraData: [String : String]) {
         super.init()
         
-        self.data[ICParameters.pan]        = pan.encrypted
-        self.data[ICParameters.cvc]        = cvc.encrypted
-        self.data[ICParameters.method]     = ICMethods.updateStoredCard
-        self.data[ICParameters.cardToken]  = token
-        self.data[ICParameters.customName] = customName
-        self.data[ICParameters.embossName] = embossName
-        self.data[ICParameters.expiryDate] = expiryDate.encrypted
-        self.data[ICParameters.amount]     = amount
-        self.data[ICParameters.currency]   = ICMobilePaymentManager.shared.currency
+        self.data[ICParameters.pan]              = pan.encrypted
+        self.data[ICParameters.cvc]              = cvc.encrypted
+        self.data[ICParameters.method]           = ICMethods.updateStoredCard
+        self.data[ICParameters.cardToken]        = token
+        self.data[ICParameters.customName]       = customName
+        self.data[ICParameters.embossName]       = embossName
+        self.data[ICParameters.expiryDate]       = expiryDate.encrypted
+        self.data[ICParameters.amount]           = amount
+        self.data[ICParameters.currency]         = ICMobilePaymentManager.shared.currency
+        self.data[ICParameters.cardVerification] = ICConstants.cardVerification
         self.data.append(extraData)
     }
     
