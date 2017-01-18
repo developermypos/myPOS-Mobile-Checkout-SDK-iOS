@@ -28,8 +28,9 @@ public enum Currency: String {
 }
 
 public enum TransactionType: Int {
-    case refund
+    case unknown
     case purchase
+    case refund
 }
 
 private enum ICControllerIdentifier: String {

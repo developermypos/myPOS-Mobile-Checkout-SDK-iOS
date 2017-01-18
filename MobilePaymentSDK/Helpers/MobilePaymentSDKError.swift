@@ -29,6 +29,7 @@ public struct MobilePaymentSDKError {
         case inactiveAccount          = 17
         case invalidAccount           = 18
         case accountLimitExceeded     = 19
+        case orderIdAlreadyUsed       = 20
         case undefined                = 99
     }
     
@@ -100,6 +101,9 @@ public struct MobilePaymentSDKError {
             
         case .apiError:
             return "API error"
+            
+        case .orderIdAlreadyUsed:
+            return "Order id already used for a different transaction"
         }
     }
     

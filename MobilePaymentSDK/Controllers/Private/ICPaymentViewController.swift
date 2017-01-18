@@ -19,6 +19,24 @@ class ICPaymentViewController: ICCardViewController {
 
     // MARK: Controller Methods
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        guard let cardToken = self.cardToken else {
+            return
+        }
+        
+        self.contentView.isHidden              = true
+        self.navigationItem.rightBarButtonItem = nil
+        
+        self.showLoadingHUD()
+        ICCommunicationManager.shared.makePurchase(for: self.articles,
+                                                   orderId: self.orderId,
+                                                   cardToken: cardToken,
+                                                   completed: self.paymentCompleted,
+                                                   failed: self.paymentFailed)
+    }
+    
     override func applyTheme() {
         super.applyTheme()
         
@@ -30,24 +48,6 @@ class ICPaymentViewController: ICCardViewController {
         
         self.navigationItem.title = ICLocalization.localized("Payment")
         self.confirmButton.title  = ICLocalization.localized("Pay")
-    }
-    
-    // MARK: Actions
-    
-    @IBAction override func confirm(_ sender: UIBarButtonItem) {
-        guard let cardToken = self.cardToken else {
-            super.confirm(sender)
-            return
-        }
-        
-        self.showLoadingHUD()
-        
-        ICCommunicationManager.shared.makePurchase(for: self.articles,
-                                                   orderId: self.orderId,
-                                                   cardToken: cardToken,
-                                                   completed: self.paymentCompleted,
-                                                   failed: self.paymentFailed)
-    
     }
     
     

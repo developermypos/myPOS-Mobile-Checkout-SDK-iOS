@@ -263,8 +263,8 @@
 		1DACE7F21E2E14F400F5E38E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1DACE7F31E2E14F400F5E38E /* Article.swift */,
 				1DACE7F41E2E14F400F5E38E /* Commands */,
+				1DACE7F31E2E14F400F5E38E /* Article.swift */,
 				1DACE7FD1E2E14F400F5E38E /* ICCard.swift */,
 				1DACE7FE1E2E14F400F5E38E /* ICHttpOperation.swift */,
 				1DACE7FF1E2E14F400F5E38E /* ICURLRequest.swift */,

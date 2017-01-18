@@ -42,4 +42,19 @@ public class Article: NSObject {
     var amount: String {
         return String.init(format: "%.02f", self.price * Double(self.quantity))
     }
+    
+    
+    // MARK: Description
+    
+    public override var description: String {
+        return "Article {\r" +
+               "    name = \(self.name)\r" +
+               "    price = \(self.price)\r" +
+               "    quantity = \(self.quantity)\r" +
+               "}"
+    }
+    
+    public override var debugDescription: String {
+        return self.description
+    }
 }

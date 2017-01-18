@@ -180,8 +180,9 @@ class ICCardViewController: ICBaseViewController, IC3DSecureDelegate, ICCardView
                 return
             }
             
+            self.cardData = cardData
+            
             if is3DSecure == 1 {
-                self.cardData = cardData
                 self.performSegue(withIdentifier: self.kSecureSegue, sender: self)
                 return
             }
@@ -206,6 +207,6 @@ class ICCardViewController: ICBaseViewController, IC3DSecureDelegate, ICCardView
     }
     
     private func cardEci(cardType: String) -> String {
-        return String(cardType == ICCardType.mastercard || cardType == ICCardType.maestro ? 0 : 7)
+        return cardType == ICCardType.mastercard || cardType == ICCardType.maestro ? "00" : "07"
     }
 }
