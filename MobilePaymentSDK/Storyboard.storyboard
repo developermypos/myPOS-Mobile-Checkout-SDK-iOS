@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Payment View Controller-->
         <scene sceneID="Hvh-KN-BXk">
             <objects>
-                <viewController storyboardIdentifier="Payment" automaticallyAdjustsScrollViewInsets="NO" id="5AT-MM-unF" customClass="ICPaymentViewController" customModule="MobilePaymentSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Payment" automaticallyAdjustsScrollViewInsets="NO" id="5AT-MM-unF" customClass="ICPaymentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4N6-4B-y1c"/>
                         <viewControllerLayoutGuide type="bottom" id="B7d-zN-d8B"/>
@@ -51,7 +51,7 @@
                     <connections>
                         <outlet property="cancelButton" destination="03t-i7-u4H" id="wAZ-GU-DEk"/>
                         <outlet property="confirmButton" destination="vPl-uR-VsH" id="J6Q-hl-Odf"/>
-                        <outlet property="contentView" destination="Jzr-CD-CvY" id="ZqK-CF-4K4"/>
+                        <outlet property="contentView" destination="Jzr-CD-CvY" id="eoo-kp-hSQ"/>
                         <segue destination="DOs-E6-8UT" kind="presentation" identifier="3DSecure" id="MWR-cA-Exn"/>
                     </connections>
                 </viewController>
@@ -62,7 +62,7 @@
         <!--Store Card View Controller-->
         <scene sceneID="dsH-Np-MXd">
             <objects>
-                <viewController storyboardIdentifier="StoreCard" automaticallyAdjustsScrollViewInsets="NO" id="ZEi-yh-dld" customClass="ICStoreCardViewController" customModule="MobilePaymentSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoreCard" automaticallyAdjustsScrollViewInsets="NO" id="ZEi-yh-dld" customClass="ICStoreCardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IeW-YW-Uu9"/>
                         <viewControllerLayoutGuide type="bottom" id="pGg-dw-20n"/>
@@ -100,7 +100,7 @@
                     <connections>
                         <outlet property="cancelButton" destination="rru-Q5-XJB" id="SCs-Q7-PWT"/>
                         <outlet property="confirmButton" destination="Tn3-J6-Vl8" id="QbA-0K-naJ"/>
-                        <outlet property="contentView" destination="SbC-q5-oZC" id="HIf-yM-1I7"/>
+                        <outlet property="contentView" destination="SbC-q5-oZC" id="IBf-KF-OKG"/>
                         <segue destination="DOs-E6-8UT" kind="presentation" identifier="3DSecure" id="zro-db-Uyv"/>
                     </connections>
                 </viewController>
@@ -127,7 +127,7 @@
         <!--Secure Web View Controller-->
         <scene sceneID="wI8-Hx-VGc">
             <objects>
-                <viewController id="w5J-C1-eVA" customClass="IC3DSecureWebViewController" customModule="MobilePaymentSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w5J-C1-eVA" customClass="IC3DSecureWebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zEN-0m-pYT"/>
                         <viewControllerLayoutGuide type="bottom" id="fqz-Pm-0bx"/>
@@ -140,13 +140,13 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-types" translatesAutoresizingMaskIntoConstraints="NO" id="JIP-Cf-t3r">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="51.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="JIP-Cf-t3r" secondAttribute="height" multiplier="80:11" id="0j3-sf-cx7"/>
                                         </constraints>
                                     </imageView>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqf-jz-Vk7">
-                                        <rect key="frame" x="0.0" y="52" width="375" height="551"/>
+                                        <rect key="frame" x="0.0" y="51.5" width="375" height="551.5"/>
                                         <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -166,13 +166,13 @@
                                         <exclude reference="qqf-jz-Vk7"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="WyT-me-16X"/>
                                         <exclude reference="9mY-91-dKI"/>
+                                        <exclude reference="WyT-me-16X"/>
                                         <exclude reference="qkx-gt-LJr"/>
-                                        <exclude reference="mLH-Wg-DTH"/>
+                                        <exclude reference="9Bh-Hq-mQL"/>
                                         <exclude reference="cRk-WZ-BAO"/>
                                         <exclude reference="ekX-i5-5dQ"/>
-                                        <exclude reference="9Bh-Hq-mQL"/>
+                                        <exclude reference="mLH-Wg-DTH"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -181,13 +181,13 @@
                                         <include reference="qqf-jz-Vk7"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="WyT-me-16X"/>
                                         <include reference="9mY-91-dKI"/>
+                                        <include reference="WyT-me-16X"/>
                                         <include reference="qkx-gt-LJr"/>
-                                        <include reference="mLH-Wg-DTH"/>
+                                        <include reference="9Bh-Hq-mQL"/>
                                         <include reference="cRk-WZ-BAO"/>
                                         <include reference="ekX-i5-5dQ"/>
-                                        <include reference="9Bh-Hq-mQL"/>
+                                        <include reference="mLH-Wg-DTH"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -209,9 +209,9 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="jwg-O9-WAo"/>
-                                <exclude reference="hft-Ue-7VI"/>
                                 <exclude reference="asT-9i-8Hv"/>
                                 <exclude reference="cBL-CP-Q7G"/>
+                                <exclude reference="hft-Ue-7VI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -220,9 +220,9 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="jwg-O9-WAo"/>
-                                <include reference="hft-Ue-7VI"/>
                                 <include reference="asT-9i-8Hv"/>
                                 <include reference="cBL-CP-Q7G"/>
+                                <include reference="hft-Ue-7VI"/>
                             </mask>
                         </variation>
                     </view>
@@ -245,7 +245,7 @@
         <!--Update Stored Card View Controller-->
         <scene sceneID="Xns-dW-MTd">
             <objects>
-                <viewController storyboardIdentifier="UpdateStoredCard" automaticallyAdjustsScrollViewInsets="NO" id="VTf-Ro-Cln" customClass="ICUpdateStoredCardViewController" customModule="MobilePaymentSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UpdateStoredCard" automaticallyAdjustsScrollViewInsets="NO" id="VTf-Ro-Cln" customClass="ICUpdateStoredCardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hnf-GG-x0x"/>
                         <viewControllerLayoutGuide type="bottom" id="xww-mU-uoB"/>
@@ -283,7 +283,7 @@
                     <connections>
                         <outlet property="cancelButton" destination="SIR-0p-3Ju" id="08F-lL-14R"/>
                         <outlet property="confirmButton" destination="Hq1-2J-CYy" id="IyZ-oI-Vkr"/>
-                        <outlet property="contentView" destination="eGr-qW-bXe" id="wHG-Xx-vLS"/>
+                        <outlet property="contentView" destination="eGr-qW-bXe" id="cvg-Gs-Mex"/>
                         <segue destination="DOs-E6-8UT" kind="presentation" identifier="3DSecure" id="vy9-cY-jdI"/>
                     </connections>
                 </viewController>

@@ -7,124 +7,208 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DACE80C1E2E14F400F5E38E /* IC3DSecureWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7D11E2E14F400F5E38E /* IC3DSecureWebViewController.swift */; };
-		1DACE80D1E2E14F400F5E38E /* ICBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7D21E2E14F400F5E38E /* ICBaseViewController.swift */; };
-		1DACE80E1E2E14F400F5E38E /* ICCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7D31E2E14F400F5E38E /* ICCardViewController.swift */; };
-		1DACE80F1E2E14F400F5E38E /* ICPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7D41E2E14F400F5E38E /* ICPaymentViewController.swift */; };
-		1DACE8101E2E14F400F5E38E /* ICStoreCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7D51E2E14F400F5E38E /* ICStoreCardViewController.swift */; };
-		1DACE8111E2E14F400F5E38E /* ICUpdateStoredCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7D61E2E14F400F5E38E /* ICUpdateStoredCardViewController.swift */; };
-		1DACE8121E2E14F400F5E38E /* MobilePaymentSDKProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7D81E2E14F400F5E38E /* MobilePaymentSDKProtocols.swift */; };
-		1DACE8131E2E14F400F5E38E /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7D91E2E14F400F5E38E /* PaymentViewController.swift */; };
-		1DACE8141E2E14F400F5E38E /* StoreCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7DA1E2E14F400F5E38E /* StoreCardViewController.swift */; };
-		1DACE8151E2E14F400F5E38E /* UpdateStoredCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7DB1E2E14F400F5E38E /* UpdateStoredCardViewController.swift */; };
-		1DACE8161E2E14F400F5E38E /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7DD1E2E14F400F5E38E /* Dictionary+Helpers.swift */; };
-		1DACE8171E2E14F400F5E38E /* Double+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7DE1E2E14F400F5E38E /* Double+Helpers.swift */; };
-		1DACE8181E2E14F400F5E38E /* Float+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7DF1E2E14F400F5E38E /* Float+Helpers.swift */; };
-		1DACE8191E2E14F400F5E38E /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7E01E2E14F400F5E38E /* String+Helpers.swift */; };
-		1DACE81A1E2E14F400F5E38E /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7E11E2E14F400F5E38E /* UIColor+Helpers.swift */; };
-		1DACE81B1E2E14F400F5E38E /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7E21E2E14F400F5E38E /* UIColor+HexString.swift */; };
-		1DACE81C1E2E14F400F5E38E /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7E51E2E14F400F5E38E /* Key.swift */; };
-		1DACE81D1E2E14F400F5E38E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7E61E2E14F400F5E38E /* Message.swift */; };
-		1DACE81E1E2E14F400F5E38E /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7E71E2E14F400F5E38E /* Signature.swift */; };
-		1DACE81F1E2E14F400F5E38E /* SwiftyRSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7E81E2E14F400F5E38E /* SwiftyRSA.swift */; };
-		1DACE8201E2E14F400F5E38E /* ICConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7EA1E2E14F400F5E38E /* ICConstants.swift */; };
-		1DACE8211E2E14F400F5E38E /* ICLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7EB1E2E14F400F5E38E /* ICLocalization.swift */; };
-		1DACE8221E2E14F400F5E38E /* ICLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7EC1E2E14F400F5E38E /* ICLogger.swift */; };
-		1DACE8231E2E14F400F5E38E /* ICNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7ED1E2E14F400F5E38E /* ICNotifications.swift */; };
-		1DACE8241E2E14F400F5E38E /* ICResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7EE1E2E14F400F5E38E /* ICResponseStatus.swift */; };
-		1DACE8251E2E14F400F5E38E /* ICUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7EF1E2E14F400F5E38E /* ICUtil.swift */; };
-		1DACE8261E2E14F400F5E38E /* MobilePaymentSDKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7F01E2E14F400F5E38E /* MobilePaymentSDKError.swift */; };
+		1D32E62B1E7AE24E00B066A0 /* ICPrivateKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D32E6291E7AE24E00B066A0 /* ICPrivateKey.h */; };
+		1D32E62C1E7AE24E00B066A0 /* ICPrivateKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D32E62A1E7AE24E00B066A0 /* ICPrivateKey.m */; };
+		1D3D7F931E7A805C0043BF9D /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7F871E7A805C0043BF9D /* Base64.h */; };
+		1D3D7F941E7A805C0043BF9D /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7F881E7A805C0043BF9D /* Base64.m */; };
+		1D3D7F951E7A805C0043BF9D /* NSData+SHA.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7F891E7A805C0043BF9D /* NSData+SHA.h */; };
+		1D3D7F961E7A805C0043BF9D /* NSData+SHA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7F8A1E7A805C0043BF9D /* NSData+SHA.m */; };
+		1D3D7F971E7A805C0043BF9D /* NSDictionary+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7F8B1E7A805C0043BF9D /* NSDictionary+Helpers.h */; };
+		1D3D7F981E7A805C0043BF9D /* NSDictionary+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7F8C1E7A805C0043BF9D /* NSDictionary+Helpers.m */; };
+		1D3D7F991E7A805C0043BF9D /* NSString+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7F8D1E7A805C0043BF9D /* NSString+Helpers.h */; };
+		1D3D7F9A1E7A805C0043BF9D /* NSString+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7F8E1E7A805C0043BF9D /* NSString+Helpers.m */; };
+		1D3D7F9B1E7A805C0043BF9D /* UIColor+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7F8F1E7A805C0043BF9D /* UIColor+Helpers.h */; };
+		1D3D7F9C1E7A805C0043BF9D /* UIColor+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7F901E7A805C0043BF9D /* UIColor+Helpers.m */; };
+		1D3D7F9D1E7A805C0043BF9D /* UIColor+HexString.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7F911E7A805C0043BF9D /* UIColor+HexString.h */; };
+		1D3D7F9E1E7A805C0043BF9D /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7F921E7A805C0043BF9D /* UIColor+HexString.m */; };
+		1D3D7FAB1E7A806A0043BF9D /* CryptoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FA01E7A806A0043BF9D /* CryptoUtil.h */; };
+		1D3D7FAC1E7A806A0043BF9D /* CryptoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FA11E7A806A0043BF9D /* CryptoUtil.m */; };
+		1D3D7FAD1E7A806A0043BF9D /* ICConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FA21E7A806A0043BF9D /* ICConstants.h */; };
+		1D3D7FAE1E7A806A0043BF9D /* ICConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FA31E7A806A0043BF9D /* ICConstants.m */; };
+		1D3D7FAF1E7A806A0043BF9D /* ICHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FA41E7A806A0043BF9D /* ICHelpers.h */; };
+		1D3D7FB01E7A806A0043BF9D /* ICLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FA51E7A806A0043BF9D /* ICLogger.h */; };
+		1D3D7FB11E7A806A0043BF9D /* ICLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FA61E7A806A0043BF9D /* ICLogger.m */; };
+		1D3D7FB21E7A806A0043BF9D /* ICUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FA71E7A806A0043BF9D /* ICUtil.h */; };
+		1D3D7FB31E7A806A0043BF9D /* ICUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FA81E7A806A0043BF9D /* ICUtil.m */; };
+		1D3D7FB41E7A806A0043BF9D /* MobilePaymentSDKError.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FA91E7A806A0043BF9D /* MobilePaymentSDKError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D3D7FB51E7A806A0043BF9D /* MobilePaymentSDKError.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FAA1E7A806A0043BF9D /* MobilePaymentSDKError.m */; };
+		1D3D7FB81E7A80790043BF9D /* BSKeyboardControls.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FB61E7A80790043BF9D /* BSKeyboardControls.h */; };
+		1D3D7FB91E7A80790043BF9D /* BSKeyboardControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FB71E7A80790043BF9D /* BSKeyboardControls.m */; };
+		1D3D7FBC1E7A80840043BF9D /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FBA1E7A80840043BF9D /* MBProgressHUD.h */; };
+		1D3D7FBD1E7A80840043BF9D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FBB1E7A80840043BF9D /* MBProgressHUD.m */; };
+		1D3D7FC21E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FBE1E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.h */; };
+		1D3D7FC31E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FBF1E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.m */; };
+		1D3D7FC41E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FC01E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.h */; };
+		1D3D7FC51E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FC11E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		1D3D7FC81E7A86590043BF9D /* MobilePaymentTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FC61E7A86590043BF9D /* MobilePaymentTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D3D7FC91E7A86590043BF9D /* MobilePaymentTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FC71E7A86590043BF9D /* MobilePaymentTheme.m */; };
+		1D3D7FD71E7A86E20043BF9D /* ICApplicationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FCB1E7A86E20043BF9D /* ICApplicationManager.h */; };
+		1D3D7FD81E7A86E20043BF9D /* ICApplicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FCC1E7A86E20043BF9D /* ICApplicationManager.m */; };
+		1D3D7FD91E7A86E20043BF9D /* ICBaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FCD1E7A86E20043BF9D /* ICBaseManager.h */; };
+		1D3D7FDA1E7A86E20043BF9D /* ICBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FCE1E7A86E20043BF9D /* ICBaseManager.m */; };
+		1D3D7FDB1E7A86E20043BF9D /* ICCommunicationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FCF1E7A86E20043BF9D /* ICCommunicationManager.h */; };
+		1D3D7FDC1E7A86E20043BF9D /* ICCommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FD01E7A86E20043BF9D /* ICCommunicationManager.m */; };
+		1D3D7FDD1E7A86E20043BF9D /* ICMobilePaymentManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FD11E7A86E20043BF9D /* ICMobilePaymentManager.h */; };
+		1D3D7FDE1E7A86E20043BF9D /* ICMobilePaymentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FD21E7A86E20043BF9D /* ICMobilePaymentManager.m */; };
+		1D3D7FDF1E7A86E20043BF9D /* ICRSAManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FD31E7A86E20043BF9D /* ICRSAManager.h */; };
+		1D3D7FE01E7A86E20043BF9D /* ICRSAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FD41E7A86E20043BF9D /* ICRSAManager.m */; };
+		1D3D7FE11E7A86E20043BF9D /* ICThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FD51E7A86E20043BF9D /* ICThemeManager.h */; };
+		1D3D7FE21E7A86E20043BF9D /* ICThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FD61E7A86E20043BF9D /* ICThemeManager.m */; };
+		1D7A780A1E3F924300DA6196 /* CartItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78081E3F924300DA6196 /* CartItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D7A780B1E3F924300DA6196 /* CartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78091E3F924300DA6196 /* CartItem.m */; };
+		1D7A78331E407B1100DA6196 /* Card.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78311E407B1100DA6196 /* Card.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D7A78341E407B1100DA6196 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78321E407B1100DA6196 /* Card.m */; };
+		1D7A78371E407BEF00DA6196 /* ICURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78351E407BEF00DA6196 /* ICURLRequest.h */; };
+		1D7A78381E407BEF00DA6196 /* ICURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78361E407BEF00DA6196 /* ICURLRequest.m */; };
+		1D7A783B1E407DD000DA6196 /* ICHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78391E407DD000DA6196 /* ICHTTPOperation.h */; };
+		1D7A783C1E407DD000DA6196 /* ICHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A783A1E407DD000DA6196 /* ICHTTPOperation.m */; };
+		1D7A78471E408B0000DA6196 /* ICBaseCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78451E408B0000DA6196 /* ICBaseCommand.h */; };
+		1D7A78481E408B0000DA6196 /* ICBaseCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78461E408B0000DA6196 /* ICBaseCommand.m */; };
+		1D7A784B1E408D8200DA6196 /* ICGetCardDataCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78491E408D8200DA6196 /* ICGetCardDataCommand.h */; };
+		1D7A784C1E408D8200DA6196 /* ICGetCardDataCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A784A1E408D8200DA6196 /* ICGetCardDataCommand.m */; };
+		1D7A784F1E408E4900DA6196 /* ICGetTransactionStatusCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A784D1E408E4900DA6196 /* ICGetTransactionStatusCommand.h */; };
+		1D7A78501E408E4900DA6196 /* ICGetTransactionStatusCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A784E1E408E4900DA6196 /* ICGetTransactionStatusCommand.m */; };
+		1D7A78571E408F3B00DA6196 /* ICPurchaseCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78551E408F3B00DA6196 /* ICPurchaseCommand.h */; };
+		1D7A78581E408F3B00DA6196 /* ICPurchaseCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78561E408F3B00DA6196 /* ICPurchaseCommand.m */; };
+		1D7A785B1E4090A500DA6196 /* ICRefundCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78591E4090A500DA6196 /* ICRefundCommand.h */; };
+		1D7A785C1E4090A500DA6196 /* ICRefundCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A785A1E4090A500DA6196 /* ICRefundCommand.m */; };
+		1D7A785F1E40935100DA6196 /* ICReversalCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A785D1E40935100DA6196 /* ICReversalCommand.h */; };
+		1D7A78601E40935100DA6196 /* ICReversalCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A785E1E40935100DA6196 /* ICReversalCommand.m */; };
+		1D7A78631E4093E700DA6196 /* ICStoreCardCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78611E4093E700DA6196 /* ICStoreCardCommand.h */; };
+		1D7A78641E4093E700DA6196 /* ICStoreCardCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78621E4093E700DA6196 /* ICStoreCardCommand.m */; };
+		1D7A78671E40954600DA6196 /* ICUpdateStoredCardCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78651E40954600DA6196 /* ICUpdateStoredCardCommand.h */; };
+		1D7A78681E40954600DA6196 /* ICUpdateStoredCardCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78661E40954600DA6196 /* ICUpdateStoredCardCommand.m */; };
+		1D7A786B1E40ACCE00DA6196 /* PaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78691E40ACCE00DA6196 /* PaymentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D7A786C1E40ACCE00DA6196 /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A786A1E40ACCE00DA6196 /* PaymentViewController.m */; };
+		1D7A786F1E40AEF000DA6196 /* ICBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A786D1E40AEF000DA6196 /* ICBaseViewController.h */; };
+		1D7A78701E40AEF000DA6196 /* ICBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A786E1E40AEF000DA6196 /* ICBaseViewController.m */; };
+		1D7A78731E40B01100DA6196 /* IC3DSecureWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78711E40B01100DA6196 /* IC3DSecureWebViewController.h */; };
+		1D7A78741E40B01100DA6196 /* IC3DSecureWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78721E40B01100DA6196 /* IC3DSecureWebViewController.m */; };
+		1D7A78771E40B3CC00DA6196 /* ICCardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78751E40B3CC00DA6196 /* ICCardViewController.h */; };
+		1D7A78781E40B3CC00DA6196 /* ICCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78761E40B3CC00DA6196 /* ICCardViewController.m */; };
+		1D7A787B1E40B44B00DA6196 /* ICCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78791E40B44B00DA6196 /* ICCardView.h */; };
+		1D7A787C1E40B44B00DA6196 /* ICCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A787A1E40B44B00DA6196 /* ICCardView.m */; };
+		1D7A787F1E40B4A900DA6196 /* ICThemedTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A787D1E40B4A900DA6196 /* ICThemedTextField.h */; };
+		1D7A78801E40B4A900DA6196 /* ICThemedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A787E1E40B4A900DA6196 /* ICThemedTextField.m */; };
+		1D7A788F1E40D41B00DA6196 /* StoreCardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A788D1E40D41B00DA6196 /* StoreCardViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D7A78901E40D41B00DA6196 /* StoreCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A788E1E40D41B00DA6196 /* StoreCardViewController.m */; };
+		1D7A78931E40D56F00DA6196 /* UpdateStoredCardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78911E40D56F00DA6196 /* UpdateStoredCardViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D7A78941E40D56F00DA6196 /* UpdateStoredCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78921E40D56F00DA6196 /* UpdateStoredCardViewController.m */; };
+		1D7A78971E40E08100DA6196 /* ICStoreCardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78951E40E08100DA6196 /* ICStoreCardViewController.h */; };
+		1D7A78981E40E08100DA6196 /* ICStoreCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78961E40E08100DA6196 /* ICStoreCardViewController.m */; };
+		1D7A789B1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78991E40E2DA00DA6196 /* ICUpdateStoredCardViewController.h */; };
+		1D7A789C1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A789A1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.m */; };
+		1D7A789F1E40E36300DA6196 /* ICPaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A789D1E40E36300DA6196 /* ICPaymentViewController.h */; };
+		1D7A78A01E40E36300DA6196 /* ICPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A789E1E40E36300DA6196 /* ICPaymentViewController.m */; };
+		1D7A78A31E40E61400DA6196 /* MobilePaymentSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78A11E40E61400DA6196 /* MobilePaymentSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D7A78A41E40E61400DA6196 /* MobilePaymentSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78A21E40E61400DA6196 /* MobilePaymentSDK.m */; };
+		1D7A78A51E40EC3200DA6196 /* MobilePaymentSDKProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78101E3F965400DA6196 /* MobilePaymentSDKProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DACE8271E2E14F400F5E38E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DACE7F11E2E14F400F5E38E /* Images.xcassets */; };
-		1DACE8281E2E14F400F5E38E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7F31E2E14F400F5E38E /* Article.swift */; };
-		1DACE8291E2E14F400F5E38E /* ICBaseCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7F51E2E14F400F5E38E /* ICBaseCommand.swift */; };
-		1DACE82A1E2E14F400F5E38E /* ICGetCardDataCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7F61E2E14F400F5E38E /* ICGetCardDataCommand.swift */; };
-		1DACE82B1E2E14F400F5E38E /* ICGetTransactionStatusCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7F71E2E14F400F5E38E /* ICGetTransactionStatusCommand.swift */; };
-		1DACE82C1E2E14F400F5E38E /* ICPurchaseCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7F81E2E14F400F5E38E /* ICPurchaseCommand.swift */; };
-		1DACE82D1E2E14F400F5E38E /* ICRefundCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7F91E2E14F400F5E38E /* ICRefundCommand.swift */; };
-		1DACE82E1E2E14F400F5E38E /* ICReversalCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7FA1E2E14F400F5E38E /* ICReversalCommand.swift */; };
-		1DACE82F1E2E14F400F5E38E /* ICStoreCardCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7FB1E2E14F400F5E38E /* ICStoreCardCommand.swift */; };
-		1DACE8301E2E14F400F5E38E /* ICUpdateStoredCardCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7FC1E2E14F400F5E38E /* ICUpdateStoredCardCommand.swift */; };
-		1DACE8311E2E14F400F5E38E /* ICCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7FD1E2E14F400F5E38E /* ICCard.swift */; };
-		1DACE8321E2E14F400F5E38E /* ICHttpOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7FE1E2E14F400F5E38E /* ICHttpOperation.swift */; };
-		1DACE8331E2E14F400F5E38E /* ICURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE7FF1E2E14F400F5E38E /* ICURLRequest.swift */; };
-		1DACE8341E2E14F400F5E38E /* MobilePaymentTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE8001E2E14F400F5E38E /* MobilePaymentTheme.swift */; };
-		1DACE8351E2E14F400F5E38E /* ICApplicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE8021E2E14F400F5E38E /* ICApplicationManager.swift */; };
-		1DACE8361E2E14F400F5E38E /* ICBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE8031E2E14F400F5E38E /* ICBaseManager.swift */; };
-		1DACE8371E2E14F400F5E38E /* ICCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE8041E2E14F400F5E38E /* ICCommunicationManager.swift */; };
-		1DACE8381E2E14F400F5E38E /* ICMobilePaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE8051E2E14F400F5E38E /* ICMobilePaymentManager.swift */; };
-		1DACE8391E2E14F400F5E38E /* ICRSAManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE8061E2E14F400F5E38E /* ICRSAManager.swift */; };
-		1DACE83A1E2E14F400F5E38E /* ICThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE8071E2E14F400F5E38E /* ICThemeManager.swift */; };
-		1DACE83B1E2E14F400F5E38E /* ICCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE8091E2E14F400F5E38E /* ICCardView.swift */; };
 		1DACE83C1E2E14F400F5E38E /* ICCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DACE80A1E2E14F400F5E38E /* ICCardView.xib */; };
-		1DACE83D1E2E14F400F5E38E /* ICThemedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE80B1E2E14F400F5E38E /* ICThemedTextField.swift */; };
-		1DACE83F1E2E14FE00F5E38E /* MobilePaymentSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACE83E1E2E14FE00F5E38E /* MobilePaymentSDK.swift */; };
-		1DACE8421E2E151100F5E38E /* MobilePaymentSDKUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DACE8411E2E151100F5E38E /* MobilePaymentSDKUtils.framework */; };
-		1DACE8431E2E152900F5E38E /* MobilePaymentSDKProtocols.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1DACE7D81E2E14F400F5E38E /* MobilePaymentSDKProtocols.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DACE8441E2E152900F5E38E /* PaymentViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1DACE7D91E2E14F400F5E38E /* PaymentViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DACE8451E2E152900F5E38E /* StoreCardViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1DACE7DA1E2E14F400F5E38E /* StoreCardViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DACE8461E2E152900F5E38E /* UpdateStoredCardViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1DACE7DB1E2E14F400F5E38E /* UpdateStoredCardViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DACE8471E2E152900F5E38E /* MobilePaymentSDKError.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1DACE7F01E2E14F400F5E38E /* MobilePaymentSDKError.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DACE8481E2E152900F5E38E /* Article.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1DACE7F31E2E14F400F5E38E /* Article.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DACE8491E2E152900F5E38E /* MobilePaymentSDK.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1DACE83E1E2E14FE00F5E38E /* MobilePaymentSDK.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DACE84C1E2E1E7A00F5E38E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DACE84B1E2E1E7A00F5E38E /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D32E6291E7AE24E00B066A0 /* ICPrivateKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICPrivateKey.h; sourceTree = "<group>"; };
+		1D32E62A1E7AE24E00B066A0 /* ICPrivateKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPrivateKey.m; sourceTree = "<group>"; };
+		1D3D7F871E7A805C0043BF9D /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		1D3D7F881E7A805C0043BF9D /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		1D3D7F891E7A805C0043BF9D /* NSData+SHA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SHA.h"; sourceTree = "<group>"; };
+		1D3D7F8A1E7A805C0043BF9D /* NSData+SHA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SHA.m"; sourceTree = "<group>"; };
+		1D3D7F8B1E7A805C0043BF9D /* NSDictionary+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Helpers.h"; sourceTree = "<group>"; };
+		1D3D7F8C1E7A805C0043BF9D /* NSDictionary+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Helpers.m"; sourceTree = "<group>"; };
+		1D3D7F8D1E7A805C0043BF9D /* NSString+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helpers.h"; sourceTree = "<group>"; };
+		1D3D7F8E1E7A805C0043BF9D /* NSString+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helpers.m"; sourceTree = "<group>"; };
+		1D3D7F8F1E7A805C0043BF9D /* UIColor+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helpers.h"; sourceTree = "<group>"; };
+		1D3D7F901E7A805C0043BF9D /* UIColor+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helpers.m"; sourceTree = "<group>"; };
+		1D3D7F911E7A805C0043BF9D /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		1D3D7F921E7A805C0043BF9D /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		1D3D7FA01E7A806A0043BF9D /* CryptoUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoUtil.h; sourceTree = "<group>"; };
+		1D3D7FA11E7A806A0043BF9D /* CryptoUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptoUtil.m; sourceTree = "<group>"; };
+		1D3D7FA21E7A806A0043BF9D /* ICConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICConstants.h; sourceTree = "<group>"; };
+		1D3D7FA31E7A806A0043BF9D /* ICConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICConstants.m; sourceTree = "<group>"; };
+		1D3D7FA41E7A806A0043BF9D /* ICHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICHelpers.h; sourceTree = "<group>"; };
+		1D3D7FA51E7A806A0043BF9D /* ICLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICLogger.h; sourceTree = "<group>"; };
+		1D3D7FA61E7A806A0043BF9D /* ICLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICLogger.m; sourceTree = "<group>"; };
+		1D3D7FA71E7A806A0043BF9D /* ICUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUtil.h; sourceTree = "<group>"; };
+		1D3D7FA81E7A806A0043BF9D /* ICUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICUtil.m; sourceTree = "<group>"; };
+		1D3D7FA91E7A806A0043BF9D /* MobilePaymentSDKError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePaymentSDKError.h; sourceTree = "<group>"; };
+		1D3D7FAA1E7A806A0043BF9D /* MobilePaymentSDKError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilePaymentSDKError.m; sourceTree = "<group>"; };
+		1D3D7FB61E7A80790043BF9D /* BSKeyboardControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSKeyboardControls.h; sourceTree = "<group>"; };
+		1D3D7FB71E7A80790043BF9D /* BSKeyboardControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSKeyboardControls.m; sourceTree = "<group>"; };
+		1D3D7FBA1E7A80840043BF9D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		1D3D7FBB1E7A80840043BF9D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		1D3D7FBE1E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		1D3D7FBF1E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		1D3D7FC01E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		1D3D7FC11E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		1D3D7FC61E7A86590043BF9D /* MobilePaymentTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePaymentTheme.h; sourceTree = "<group>"; };
+		1D3D7FC71E7A86590043BF9D /* MobilePaymentTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilePaymentTheme.m; sourceTree = "<group>"; };
+		1D3D7FCB1E7A86E20043BF9D /* ICApplicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICApplicationManager.h; sourceTree = "<group>"; };
+		1D3D7FCC1E7A86E20043BF9D /* ICApplicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICApplicationManager.m; sourceTree = "<group>"; };
+		1D3D7FCD1E7A86E20043BF9D /* ICBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICBaseManager.h; sourceTree = "<group>"; };
+		1D3D7FCE1E7A86E20043BF9D /* ICBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICBaseManager.m; sourceTree = "<group>"; };
+		1D3D7FCF1E7A86E20043BF9D /* ICCommunicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ICCommunicationManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D3D7FD01E7A86E20043BF9D /* ICCommunicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ICCommunicationManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1D3D7FD11E7A86E20043BF9D /* ICMobilePaymentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMobilePaymentManager.h; sourceTree = "<group>"; };
+		1D3D7FD21E7A86E20043BF9D /* ICMobilePaymentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMobilePaymentManager.m; sourceTree = "<group>"; };
+		1D3D7FD31E7A86E20043BF9D /* ICRSAManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICRSAManager.h; sourceTree = "<group>"; };
+		1D3D7FD41E7A86E20043BF9D /* ICRSAManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICRSAManager.m; sourceTree = "<group>"; };
+		1D3D7FD51E7A86E20043BF9D /* ICThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThemeManager.h; sourceTree = "<group>"; };
+		1D3D7FD61E7A86E20043BF9D /* ICThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICThemeManager.m; sourceTree = "<group>"; };
+		1D7A78081E3F924300DA6196 /* CartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartItem.h; sourceTree = "<group>"; };
+		1D7A78091E3F924300DA6196 /* CartItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CartItem.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1D7A78101E3F965400DA6196 /* MobilePaymentSDKProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePaymentSDKProtocols.h; sourceTree = "<group>"; };
+		1D7A78311E407B1100DA6196 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		1D7A78321E407B1100DA6196 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		1D7A78351E407BEF00DA6196 /* ICURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICURLRequest.h; sourceTree = "<group>"; };
+		1D7A78361E407BEF00DA6196 /* ICURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICURLRequest.m; sourceTree = "<group>"; };
+		1D7A78391E407DD000DA6196 /* ICHTTPOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICHTTPOperation.h; sourceTree = "<group>"; };
+		1D7A783A1E407DD000DA6196 /* ICHTTPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICHTTPOperation.m; sourceTree = "<group>"; };
+		1D7A78451E408B0000DA6196 /* ICBaseCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICBaseCommand.h; sourceTree = "<group>"; };
+		1D7A78461E408B0000DA6196 /* ICBaseCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICBaseCommand.m; sourceTree = "<group>"; };
+		1D7A78491E408D8200DA6196 /* ICGetCardDataCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGetCardDataCommand.h; sourceTree = "<group>"; };
+		1D7A784A1E408D8200DA6196 /* ICGetCardDataCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGetCardDataCommand.m; sourceTree = "<group>"; };
+		1D7A784D1E408E4900DA6196 /* ICGetTransactionStatusCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGetTransactionStatusCommand.h; sourceTree = "<group>"; };
+		1D7A784E1E408E4900DA6196 /* ICGetTransactionStatusCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGetTransactionStatusCommand.m; sourceTree = "<group>"; };
+		1D7A78551E408F3B00DA6196 /* ICPurchaseCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICPurchaseCommand.h; sourceTree = "<group>"; };
+		1D7A78561E408F3B00DA6196 /* ICPurchaseCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPurchaseCommand.m; sourceTree = "<group>"; };
+		1D7A78591E4090A500DA6196 /* ICRefundCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICRefundCommand.h; sourceTree = "<group>"; };
+		1D7A785A1E4090A500DA6196 /* ICRefundCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICRefundCommand.m; sourceTree = "<group>"; };
+		1D7A785D1E40935100DA6196 /* ICReversalCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICReversalCommand.h; sourceTree = "<group>"; };
+		1D7A785E1E40935100DA6196 /* ICReversalCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICReversalCommand.m; sourceTree = "<group>"; };
+		1D7A78611E4093E700DA6196 /* ICStoreCardCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICStoreCardCommand.h; sourceTree = "<group>"; };
+		1D7A78621E4093E700DA6196 /* ICStoreCardCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICStoreCardCommand.m; sourceTree = "<group>"; };
+		1D7A78651E40954600DA6196 /* ICUpdateStoredCardCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUpdateStoredCardCommand.h; sourceTree = "<group>"; };
+		1D7A78661E40954600DA6196 /* ICUpdateStoredCardCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICUpdateStoredCardCommand.m; sourceTree = "<group>"; };
+		1D7A78691E40ACCE00DA6196 /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
+		1D7A786A1E40ACCE00DA6196 /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
+		1D7A786D1E40AEF000DA6196 /* ICBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICBaseViewController.h; sourceTree = "<group>"; };
+		1D7A786E1E40AEF000DA6196 /* ICBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICBaseViewController.m; sourceTree = "<group>"; };
+		1D7A78711E40B01100DA6196 /* IC3DSecureWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IC3DSecureWebViewController.h; sourceTree = "<group>"; };
+		1D7A78721E40B01100DA6196 /* IC3DSecureWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IC3DSecureWebViewController.m; sourceTree = "<group>"; };
+		1D7A78751E40B3CC00DA6196 /* ICCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICCardViewController.h; sourceTree = "<group>"; };
+		1D7A78761E40B3CC00DA6196 /* ICCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCardViewController.m; sourceTree = "<group>"; };
+		1D7A78791E40B44B00DA6196 /* ICCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICCardView.h; sourceTree = "<group>"; };
+		1D7A787A1E40B44B00DA6196 /* ICCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCardView.m; sourceTree = "<group>"; };
+		1D7A787D1E40B4A900DA6196 /* ICThemedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThemedTextField.h; sourceTree = "<group>"; };
+		1D7A787E1E40B4A900DA6196 /* ICThemedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICThemedTextField.m; sourceTree = "<group>"; };
+		1D7A788D1E40D41B00DA6196 /* StoreCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCardViewController.h; sourceTree = "<group>"; };
+		1D7A788E1E40D41B00DA6196 /* StoreCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCardViewController.m; sourceTree = "<group>"; };
+		1D7A78911E40D56F00DA6196 /* UpdateStoredCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateStoredCardViewController.h; sourceTree = "<group>"; };
+		1D7A78921E40D56F00DA6196 /* UpdateStoredCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateStoredCardViewController.m; sourceTree = "<group>"; };
+		1D7A78951E40E08100DA6196 /* ICStoreCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICStoreCardViewController.h; sourceTree = "<group>"; };
+		1D7A78961E40E08100DA6196 /* ICStoreCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICStoreCardViewController.m; sourceTree = "<group>"; };
+		1D7A78991E40E2DA00DA6196 /* ICUpdateStoredCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUpdateStoredCardViewController.h; sourceTree = "<group>"; };
+		1D7A789A1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICUpdateStoredCardViewController.m; sourceTree = "<group>"; };
+		1D7A789D1E40E36300DA6196 /* ICPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICPaymentViewController.h; sourceTree = "<group>"; };
+		1D7A789E1E40E36300DA6196 /* ICPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPaymentViewController.m; sourceTree = "<group>"; };
+		1D7A78A11E40E61400DA6196 /* MobilePaymentSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePaymentSDK.h; sourceTree = "<group>"; };
+		1D7A78A21E40E61400DA6196 /* MobilePaymentSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilePaymentSDK.m; sourceTree = "<group>"; };
 		1DACE7C21E2E14B300F5E38E /* MobilePaymentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobilePaymentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DACE7C61E2E14B300F5E38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1DACE7CD1E2E14EA00F5E38E /* MobilePaymentSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobilePaymentSDK.h; path = MobilePaymentSDK/MobilePaymentSDK.h; sourceTree = SOURCE_ROOT; };
-		1DACE7D11E2E14F400F5E38E /* IC3DSecureWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IC3DSecureWebViewController.swift; sourceTree = "<group>"; };
-		1DACE7D21E2E14F400F5E38E /* ICBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICBaseViewController.swift; sourceTree = "<group>"; };
-		1DACE7D31E2E14F400F5E38E /* ICCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICCardViewController.swift; sourceTree = "<group>"; };
-		1DACE7D41E2E14F400F5E38E /* ICPaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICPaymentViewController.swift; sourceTree = "<group>"; };
-		1DACE7D51E2E14F400F5E38E /* ICStoreCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICStoreCardViewController.swift; sourceTree = "<group>"; };
-		1DACE7D61E2E14F400F5E38E /* ICUpdateStoredCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICUpdateStoredCardViewController.swift; sourceTree = "<group>"; };
-		1DACE7D81E2E14F400F5E38E /* MobilePaymentSDKProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobilePaymentSDKProtocols.swift; sourceTree = "<group>"; };
-		1DACE7D91E2E14F400F5E38E /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
-		1DACE7DA1E2E14F400F5E38E /* StoreCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCardViewController.swift; sourceTree = "<group>"; };
-		1DACE7DB1E2E14F400F5E38E /* UpdateStoredCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateStoredCardViewController.swift; sourceTree = "<group>"; };
-		1DACE7DD1E2E14F400F5E38E /* Dictionary+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Helpers.swift"; sourceTree = "<group>"; };
-		1DACE7DE1E2E14F400F5E38E /* Double+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Helpers.swift"; sourceTree = "<group>"; };
-		1DACE7DF1E2E14F400F5E38E /* Float+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Helpers.swift"; sourceTree = "<group>"; };
-		1DACE7E01E2E14F400F5E38E /* String+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
-		1DACE7E11E2E14F400F5E38E /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
-		1DACE7E21E2E14F400F5E38E /* UIColor+HexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
-		1DACE7E51E2E14F400F5E38E /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
-		1DACE7E61E2E14F400F5E38E /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		1DACE7E71E2E14F400F5E38E /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
-		1DACE7E81E2E14F400F5E38E /* SwiftyRSA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRSA.swift; sourceTree = "<group>"; };
-		1DACE7EA1E2E14F400F5E38E /* ICConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICConstants.swift; sourceTree = "<group>"; };
-		1DACE7EB1E2E14F400F5E38E /* ICLocalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICLocalization.swift; sourceTree = "<group>"; };
-		1DACE7EC1E2E14F400F5E38E /* ICLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICLogger.swift; sourceTree = "<group>"; };
-		1DACE7ED1E2E14F400F5E38E /* ICNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICNotifications.swift; sourceTree = "<group>"; };
-		1DACE7EE1E2E14F400F5E38E /* ICResponseStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICResponseStatus.swift; sourceTree = "<group>"; };
-		1DACE7EF1E2E14F400F5E38E /* ICUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICUtil.swift; sourceTree = "<group>"; };
-		1DACE7F01E2E14F400F5E38E /* MobilePaymentSDKError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobilePaymentSDKError.swift; sourceTree = "<group>"; };
 		1DACE7F11E2E14F400F5E38E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MobilePaymentSDK/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		1DACE7F31E2E14F400F5E38E /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
-		1DACE7F51E2E14F400F5E38E /* ICBaseCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICBaseCommand.swift; sourceTree = "<group>"; };
-		1DACE7F61E2E14F400F5E38E /* ICGetCardDataCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICGetCardDataCommand.swift; sourceTree = "<group>"; };
-		1DACE7F71E2E14F400F5E38E /* ICGetTransactionStatusCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICGetTransactionStatusCommand.swift; sourceTree = "<group>"; };
-		1DACE7F81E2E14F400F5E38E /* ICPurchaseCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICPurchaseCommand.swift; sourceTree = "<group>"; };
-		1DACE7F91E2E14F400F5E38E /* ICRefundCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICRefundCommand.swift; sourceTree = "<group>"; };
-		1DACE7FA1E2E14F400F5E38E /* ICReversalCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICReversalCommand.swift; sourceTree = "<group>"; };
-		1DACE7FB1E2E14F400F5E38E /* ICStoreCardCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICStoreCardCommand.swift; sourceTree = "<group>"; };
-		1DACE7FC1E2E14F400F5E38E /* ICUpdateStoredCardCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICUpdateStoredCardCommand.swift; sourceTree = "<group>"; };
-		1DACE7FD1E2E14F400F5E38E /* ICCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICCard.swift; sourceTree = "<group>"; };
-		1DACE7FE1E2E14F400F5E38E /* ICHttpOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICHttpOperation.swift; sourceTree = "<group>"; };
-		1DACE7FF1E2E14F400F5E38E /* ICURLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICURLRequest.swift; sourceTree = "<group>"; };
-		1DACE8001E2E14F400F5E38E /* MobilePaymentTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobilePaymentTheme.swift; sourceTree = "<group>"; };
-		1DACE8021E2E14F400F5E38E /* ICApplicationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICApplicationManager.swift; sourceTree = "<group>"; };
-		1DACE8031E2E14F400F5E38E /* ICBaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICBaseManager.swift; sourceTree = "<group>"; };
-		1DACE8041E2E14F400F5E38E /* ICCommunicationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICCommunicationManager.swift; sourceTree = "<group>"; };
-		1DACE8051E2E14F400F5E38E /* ICMobilePaymentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICMobilePaymentManager.swift; sourceTree = "<group>"; };
-		1DACE8061E2E14F400F5E38E /* ICRSAManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICRSAManager.swift; sourceTree = "<group>"; };
-		1DACE8071E2E14F400F5E38E /* ICThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICThemeManager.swift; sourceTree = "<group>"; };
-		1DACE8091E2E14F400F5E38E /* ICCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICCardView.swift; sourceTree = "<group>"; };
 		1DACE80A1E2E14F400F5E38E /* ICCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ICCardView.xib; sourceTree = "<group>"; };
-		1DACE80B1E2E14F400F5E38E /* ICThemedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICThemedTextField.swift; sourceTree = "<group>"; };
-		1DACE83E1E2E14FE00F5E38E /* MobilePaymentSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MobilePaymentSDK.swift; path = MobilePaymentSDK/MobilePaymentSDK.swift; sourceTree = SOURCE_ROOT; };
-		1DACE8411E2E151100F5E38E /* MobilePaymentSDKUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobilePaymentSDKUtils.framework; path = MobilePaymentSDK/MobilePaymentSDKUtils.framework; sourceTree = "<group>"; };
 		1DACE84B1E2E1E7A00F5E38E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = MobilePaymentSDK/Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -133,19 +217,76 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DACE8421E2E151100F5E38E /* MobilePaymentSDKUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D3D7F861E7A805C0043BF9D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1D3D7F871E7A805C0043BF9D /* Base64.h */,
+				1D3D7F881E7A805C0043BF9D /* Base64.m */,
+				1D3D7F891E7A805C0043BF9D /* NSData+SHA.h */,
+				1D3D7F8A1E7A805C0043BF9D /* NSData+SHA.m */,
+				1D3D7F8B1E7A805C0043BF9D /* NSDictionary+Helpers.h */,
+				1D3D7F8C1E7A805C0043BF9D /* NSDictionary+Helpers.m */,
+				1D3D7F8D1E7A805C0043BF9D /* NSString+Helpers.h */,
+				1D3D7F8E1E7A805C0043BF9D /* NSString+Helpers.m */,
+				1D3D7F8F1E7A805C0043BF9D /* UIColor+Helpers.h */,
+				1D3D7F901E7A805C0043BF9D /* UIColor+Helpers.m */,
+				1D3D7F911E7A805C0043BF9D /* UIColor+HexString.h */,
+				1D3D7F921E7A805C0043BF9D /* UIColor+HexString.m */,
+			);
+			name = Categories;
+			path = MobilePaymentSDK/Categories;
+			sourceTree = SOURCE_ROOT;
+		};
+		1D3D7F9F1E7A806A0043BF9D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1D3D7FA01E7A806A0043BF9D /* CryptoUtil.h */,
+				1D3D7FA11E7A806A0043BF9D /* CryptoUtil.m */,
+				1D3D7FA21E7A806A0043BF9D /* ICConstants.h */,
+				1D3D7FA31E7A806A0043BF9D /* ICConstants.m */,
+				1D3D7FA41E7A806A0043BF9D /* ICHelpers.h */,
+				1D3D7FA51E7A806A0043BF9D /* ICLogger.h */,
+				1D3D7FA61E7A806A0043BF9D /* ICLogger.m */,
+				1D3D7FA71E7A806A0043BF9D /* ICUtil.h */,
+				1D3D7FA81E7A806A0043BF9D /* ICUtil.m */,
+				1D3D7FA91E7A806A0043BF9D /* MobilePaymentSDKError.h */,
+				1D3D7FAA1E7A806A0043BF9D /* MobilePaymentSDKError.m */,
+			);
+			name = Helpers;
+			path = MobilePaymentSDK/Helpers;
+			sourceTree = SOURCE_ROOT;
+		};
+		1D3D7FCA1E7A86E20043BF9D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1D3D7FCB1E7A86E20043BF9D /* ICApplicationManager.h */,
+				1D3D7FCC1E7A86E20043BF9D /* ICApplicationManager.m */,
+				1D3D7FCD1E7A86E20043BF9D /* ICBaseManager.h */,
+				1D3D7FCE1E7A86E20043BF9D /* ICBaseManager.m */,
+				1D3D7FCF1E7A86E20043BF9D /* ICCommunicationManager.h */,
+				1D3D7FD01E7A86E20043BF9D /* ICCommunicationManager.m */,
+				1D3D7FD11E7A86E20043BF9D /* ICMobilePaymentManager.h */,
+				1D3D7FD21E7A86E20043BF9D /* ICMobilePaymentManager.m */,
+				1D3D7FD31E7A86E20043BF9D /* ICRSAManager.h */,
+				1D3D7FD41E7A86E20043BF9D /* ICRSAManager.m */,
+				1D3D7FD51E7A86E20043BF9D /* ICThemeManager.h */,
+				1D3D7FD61E7A86E20043BF9D /* ICThemeManager.m */,
+			);
+			name = Managers;
+			path = MobilePaymentSDK/Managers;
+			sourceTree = SOURCE_ROOT;
+		};
 		1DACE7B81E2E14B300F5E38E = {
 			isa = PBXGroup;
 			children = (
 				1DACE7C41E2E14B300F5E38E /* Mobile Payment SDK */,
 				1DACE7C31E2E14B300F5E38E /* Products */,
-				1DACE8401E2E151000F5E38E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,16 +301,15 @@
 		1DACE7C41E2E14B300F5E38E /* Mobile Payment SDK */ = {
 			isa = PBXGroup;
 			children = (
+				1D3D7F861E7A805C0043BF9D /* Categories */,
 				1DACE7CF1E2E14F400F5E38E /* Controllers */,
-				1DACE7DC1E2E14F400F5E38E /* Extensions */,
-				1DACE7E31E2E14F400F5E38E /* External */,
-				1DACE7E91E2E14F400F5E38E /* Helpers */,
+				1D3D7F9F1E7A806A0043BF9D /* Helpers */,
 				1DACE7F11E2E14F400F5E38E /* Images.xcassets */,
+				1D3D7FCA1E7A86E20043BF9D /* Managers */,
 				1DACE7F21E2E14F400F5E38E /* Models */,
-				1DACE8011E2E14F400F5E38E /* Singletons */,
 				1DACE8081E2E14F400F5E38E /* Views */,
-				1DACE7CD1E2E14EA00F5E38E /* MobilePaymentSDK.h */,
-				1DACE83E1E2E14FE00F5E38E /* MobilePaymentSDK.swift */,
+				1D7A78A11E40E61400DA6196 /* MobilePaymentSDK.h */,
+				1D7A78A21E40E61400DA6196 /* MobilePaymentSDK.m */,
 				1DACE84B1E2E1E7A00F5E38E /* Storyboard.storyboard */,
 				1DACE7C61E2E14B300F5E38E /* Info.plist */,
 			);
@@ -190,12 +330,18 @@
 		1DACE7D01E2E14F400F5E38E /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				1DACE7D11E2E14F400F5E38E /* IC3DSecureWebViewController.swift */,
-				1DACE7D21E2E14F400F5E38E /* ICBaseViewController.swift */,
-				1DACE7D31E2E14F400F5E38E /* ICCardViewController.swift */,
-				1DACE7D41E2E14F400F5E38E /* ICPaymentViewController.swift */,
-				1DACE7D51E2E14F400F5E38E /* ICStoreCardViewController.swift */,
-				1DACE7D61E2E14F400F5E38E /* ICUpdateStoredCardViewController.swift */,
+				1D7A78711E40B01100DA6196 /* IC3DSecureWebViewController.h */,
+				1D7A78721E40B01100DA6196 /* IC3DSecureWebViewController.m */,
+				1D7A786D1E40AEF000DA6196 /* ICBaseViewController.h */,
+				1D7A786E1E40AEF000DA6196 /* ICBaseViewController.m */,
+				1D7A78751E40B3CC00DA6196 /* ICCardViewController.h */,
+				1D7A78761E40B3CC00DA6196 /* ICCardViewController.m */,
+				1D7A789D1E40E36300DA6196 /* ICPaymentViewController.h */,
+				1D7A789E1E40E36300DA6196 /* ICPaymentViewController.m */,
+				1D7A78951E40E08100DA6196 /* ICStoreCardViewController.h */,
+				1D7A78961E40E08100DA6196 /* ICStoreCardViewController.m */,
+				1D7A78991E40E2DA00DA6196 /* ICUpdateStoredCardViewController.h */,
+				1D7A789A1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.m */,
 			);
 			path = Private;
 			sourceTree = "<group>";
@@ -203,72 +349,33 @@
 		1DACE7D71E2E14F400F5E38E /* Public */ = {
 			isa = PBXGroup;
 			children = (
-				1DACE7D81E2E14F400F5E38E /* MobilePaymentSDKProtocols.swift */,
-				1DACE7D91E2E14F400F5E38E /* PaymentViewController.swift */,
-				1DACE7DA1E2E14F400F5E38E /* StoreCardViewController.swift */,
-				1DACE7DB1E2E14F400F5E38E /* UpdateStoredCardViewController.swift */,
+				1D7A78101E3F965400DA6196 /* MobilePaymentSDKProtocols.h */,
+				1D7A78691E40ACCE00DA6196 /* PaymentViewController.h */,
+				1D7A786A1E40ACCE00DA6196 /* PaymentViewController.m */,
+				1D7A788D1E40D41B00DA6196 /* StoreCardViewController.h */,
+				1D7A788E1E40D41B00DA6196 /* StoreCardViewController.m */,
+				1D7A78911E40D56F00DA6196 /* UpdateStoredCardViewController.h */,
+				1D7A78921E40D56F00DA6196 /* UpdateStoredCardViewController.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
-		};
-		1DACE7DC1E2E14F400F5E38E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				1DACE7DD1E2E14F400F5E38E /* Dictionary+Helpers.swift */,
-				1DACE7DE1E2E14F400F5E38E /* Double+Helpers.swift */,
-				1DACE7DF1E2E14F400F5E38E /* Float+Helpers.swift */,
-				1DACE7E01E2E14F400F5E38E /* String+Helpers.swift */,
-				1DACE7E11E2E14F400F5E38E /* UIColor+Helpers.swift */,
-				1DACE7E21E2E14F400F5E38E /* UIColor+HexString.swift */,
-			);
-			name = Extensions;
-			path = MobilePaymentSDK/Extensions;
-			sourceTree = SOURCE_ROOT;
-		};
-		1DACE7E31E2E14F400F5E38E /* External */ = {
-			isa = PBXGroup;
-			children = (
-				1DACE7E41E2E14F400F5E38E /* SwiftyRSA */,
-			);
-			name = External;
-			path = MobilePaymentSDK/External;
-			sourceTree = SOURCE_ROOT;
-		};
-		1DACE7E41E2E14F400F5E38E /* SwiftyRSA */ = {
-			isa = PBXGroup;
-			children = (
-				1DACE7E51E2E14F400F5E38E /* Key.swift */,
-				1DACE7E61E2E14F400F5E38E /* Message.swift */,
-				1DACE7E71E2E14F400F5E38E /* Signature.swift */,
-				1DACE7E81E2E14F400F5E38E /* SwiftyRSA.swift */,
-			);
-			path = SwiftyRSA;
-			sourceTree = "<group>";
-		};
-		1DACE7E91E2E14F400F5E38E /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				1DACE7EA1E2E14F400F5E38E /* ICConstants.swift */,
-				1DACE7EB1E2E14F400F5E38E /* ICLocalization.swift */,
-				1DACE7EC1E2E14F400F5E38E /* ICLogger.swift */,
-				1DACE7ED1E2E14F400F5E38E /* ICNotifications.swift */,
-				1DACE7EE1E2E14F400F5E38E /* ICResponseStatus.swift */,
-				1DACE7EF1E2E14F400F5E38E /* ICUtil.swift */,
-				1DACE7F01E2E14F400F5E38E /* MobilePaymentSDKError.swift */,
-			);
-			name = Helpers;
-			path = MobilePaymentSDK/Helpers;
-			sourceTree = SOURCE_ROOT;
 		};
 		1DACE7F21E2E14F400F5E38E /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				1DACE7F41E2E14F400F5E38E /* Commands */,
-				1DACE7F31E2E14F400F5E38E /* Article.swift */,
-				1DACE7FD1E2E14F400F5E38E /* ICCard.swift */,
-				1DACE7FE1E2E14F400F5E38E /* ICHttpOperation.swift */,
-				1DACE7FF1E2E14F400F5E38E /* ICURLRequest.swift */,
-				1DACE8001E2E14F400F5E38E /* MobilePaymentTheme.swift */,
+				1D7A78311E407B1100DA6196 /* Card.h */,
+				1D7A78321E407B1100DA6196 /* Card.m */,
+				1D7A78081E3F924300DA6196 /* CartItem.h */,
+				1D7A78091E3F924300DA6196 /* CartItem.m */,
+				1D7A78391E407DD000DA6196 /* ICHTTPOperation.h */,
+				1D7A783A1E407DD000DA6196 /* ICHTTPOperation.m */,
+				1D7A78351E407BEF00DA6196 /* ICURLRequest.h */,
+				1D7A78361E407BEF00DA6196 /* ICURLRequest.m */,
+				1D3D7FC61E7A86590043BF9D /* MobilePaymentTheme.h */,
+				1D3D7FC71E7A86590043BF9D /* MobilePaymentTheme.m */,
+				1D32E6291E7AE24E00B066A0 /* ICPrivateKey.h */,
+				1D32E62A1E7AE24E00B066A0 /* ICPrivateKey.m */,
 			);
 			name = Models;
 			path = MobilePaymentSDK/Models;
@@ -277,50 +384,46 @@
 		1DACE7F41E2E14F400F5E38E /* Commands */ = {
 			isa = PBXGroup;
 			children = (
-				1DACE7F51E2E14F400F5E38E /* ICBaseCommand.swift */,
-				1DACE7F61E2E14F400F5E38E /* ICGetCardDataCommand.swift */,
-				1DACE7F71E2E14F400F5E38E /* ICGetTransactionStatusCommand.swift */,
-				1DACE7F81E2E14F400F5E38E /* ICPurchaseCommand.swift */,
-				1DACE7F91E2E14F400F5E38E /* ICRefundCommand.swift */,
-				1DACE7FA1E2E14F400F5E38E /* ICReversalCommand.swift */,
-				1DACE7FB1E2E14F400F5E38E /* ICStoreCardCommand.swift */,
-				1DACE7FC1E2E14F400F5E38E /* ICUpdateStoredCardCommand.swift */,
+				1D7A78451E408B0000DA6196 /* ICBaseCommand.h */,
+				1D7A78461E408B0000DA6196 /* ICBaseCommand.m */,
+				1D7A78491E408D8200DA6196 /* ICGetCardDataCommand.h */,
+				1D7A784A1E408D8200DA6196 /* ICGetCardDataCommand.m */,
+				1D7A784D1E408E4900DA6196 /* ICGetTransactionStatusCommand.h */,
+				1D7A784E1E408E4900DA6196 /* ICGetTransactionStatusCommand.m */,
+				1D7A78551E408F3B00DA6196 /* ICPurchaseCommand.h */,
+				1D7A78561E408F3B00DA6196 /* ICPurchaseCommand.m */,
+				1D7A78591E4090A500DA6196 /* ICRefundCommand.h */,
+				1D7A785A1E4090A500DA6196 /* ICRefundCommand.m */,
+				1D7A785D1E40935100DA6196 /* ICReversalCommand.h */,
+				1D7A785E1E40935100DA6196 /* ICReversalCommand.m */,
+				1D7A78611E4093E700DA6196 /* ICStoreCardCommand.h */,
+				1D7A78621E4093E700DA6196 /* ICStoreCardCommand.m */,
+				1D7A78651E40954600DA6196 /* ICUpdateStoredCardCommand.h */,
+				1D7A78661E40954600DA6196 /* ICUpdateStoredCardCommand.m */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
 		};
-		1DACE8011E2E14F400F5E38E /* Singletons */ = {
-			isa = PBXGroup;
-			children = (
-				1DACE8021E2E14F400F5E38E /* ICApplicationManager.swift */,
-				1DACE8031E2E14F400F5E38E /* ICBaseManager.swift */,
-				1DACE8041E2E14F400F5E38E /* ICCommunicationManager.swift */,
-				1DACE8051E2E14F400F5E38E /* ICMobilePaymentManager.swift */,
-				1DACE8061E2E14F400F5E38E /* ICRSAManager.swift */,
-				1DACE8071E2E14F400F5E38E /* ICThemeManager.swift */,
-			);
-			name = Singletons;
-			path = MobilePaymentSDK/Singletons;
-			sourceTree = SOURCE_ROOT;
-		};
 		1DACE8081E2E14F400F5E38E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1DACE8091E2E14F400F5E38E /* ICCardView.swift */,
+				1D3D7FB61E7A80790043BF9D /* BSKeyboardControls.h */,
+				1D3D7FB71E7A80790043BF9D /* BSKeyboardControls.m */,
+				1D7A78791E40B44B00DA6196 /* ICCardView.h */,
+				1D7A787A1E40B44B00DA6196 /* ICCardView.m */,
 				1DACE80A1E2E14F400F5E38E /* ICCardView.xib */,
-				1DACE80B1E2E14F400F5E38E /* ICThemedTextField.swift */,
+				1D7A787D1E40B4A900DA6196 /* ICThemedTextField.h */,
+				1D7A787E1E40B4A900DA6196 /* ICThemedTextField.m */,
+				1D3D7FBA1E7A80840043BF9D /* MBProgressHUD.h */,
+				1D3D7FBB1E7A80840043BF9D /* MBProgressHUD.m */,
+				1D3D7FBE1E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.h */,
+				1D3D7FBF1E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.m */,
+				1D3D7FC01E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				1D3D7FC11E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 			);
 			name = Views;
 			path = MobilePaymentSDK/Views;
 			sourceTree = SOURCE_ROOT;
-		};
-		1DACE8401E2E151000F5E38E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1DACE8411E2E151100F5E38E /* MobilePaymentSDKUtils.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -329,13 +432,55 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DACE8431E2E152900F5E38E /* MobilePaymentSDKProtocols.swift in Headers */,
-				1DACE8441E2E152900F5E38E /* PaymentViewController.swift in Headers */,
-				1DACE8451E2E152900F5E38E /* StoreCardViewController.swift in Headers */,
-				1DACE8461E2E152900F5E38E /* UpdateStoredCardViewController.swift in Headers */,
-				1DACE8471E2E152900F5E38E /* MobilePaymentSDKError.swift in Headers */,
-				1DACE8481E2E152900F5E38E /* Article.swift in Headers */,
-				1DACE8491E2E152900F5E38E /* MobilePaymentSDK.swift in Headers */,
+				1D7A78A31E40E61400DA6196 /* MobilePaymentSDK.h in Headers */,
+				1D7A78A51E40EC3200DA6196 /* MobilePaymentSDKProtocols.h in Headers */,
+				1D7A78331E407B1100DA6196 /* Card.h in Headers */,
+				1D3D7FB41E7A806A0043BF9D /* MobilePaymentSDKError.h in Headers */,
+				1D7A78931E40D56F00DA6196 /* UpdateStoredCardViewController.h in Headers */,
+				1D7A788F1E40D41B00DA6196 /* StoreCardViewController.h in Headers */,
+				1D7A786B1E40ACCE00DA6196 /* PaymentViewController.h in Headers */,
+				1D3D7FC81E7A86590043BF9D /* MobilePaymentTheme.h in Headers */,
+				1D7A780A1E3F924300DA6196 /* CartItem.h in Headers */,
+				1D3D7F9D1E7A805C0043BF9D /* UIColor+HexString.h in Headers */,
+				1D3D7FC21E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.h in Headers */,
+				1D3D7FB81E7A80790043BF9D /* BSKeyboardControls.h in Headers */,
+				1D3D7FDB1E7A86E20043BF9D /* ICCommunicationManager.h in Headers */,
+				1D7A78631E4093E700DA6196 /* ICStoreCardCommand.h in Headers */,
+				1D7A78471E408B0000DA6196 /* ICBaseCommand.h in Headers */,
+				1D7A78731E40B01100DA6196 /* IC3DSecureWebViewController.h in Headers */,
+				1D3D7FAD1E7A806A0043BF9D /* ICConstants.h in Headers */,
+				1D7A784F1E408E4900DA6196 /* ICGetTransactionStatusCommand.h in Headers */,
+				1D7A785B1E4090A500DA6196 /* ICRefundCommand.h in Headers */,
+				1D3D7FAB1E7A806A0043BF9D /* CryptoUtil.h in Headers */,
+				1D3D7F991E7A805C0043BF9D /* NSString+Helpers.h in Headers */,
+				1D7A789F1E40E36300DA6196 /* ICPaymentViewController.h in Headers */,
+				1D7A783B1E407DD000DA6196 /* ICHTTPOperation.h in Headers */,
+				1D3D7FAF1E7A806A0043BF9D /* ICHelpers.h in Headers */,
+				1D3D7F951E7A805C0043BF9D /* NSData+SHA.h in Headers */,
+				1D3D7FD91E7A86E20043BF9D /* ICBaseManager.h in Headers */,
+				1D3D7FB21E7A806A0043BF9D /* ICUtil.h in Headers */,
+				1D3D7FC41E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.h in Headers */,
+				1D7A78671E40954600DA6196 /* ICUpdateStoredCardCommand.h in Headers */,
+				1D3D7F971E7A805C0043BF9D /* NSDictionary+Helpers.h in Headers */,
+				1D7A78571E408F3B00DA6196 /* ICPurchaseCommand.h in Headers */,
+				1D3D7FDD1E7A86E20043BF9D /* ICMobilePaymentManager.h in Headers */,
+				1D32E62B1E7AE24E00B066A0 /* ICPrivateKey.h in Headers */,
+				1D7A785F1E40935100DA6196 /* ICReversalCommand.h in Headers */,
+				1D7A78771E40B3CC00DA6196 /* ICCardViewController.h in Headers */,
+				1D7A78371E407BEF00DA6196 /* ICURLRequest.h in Headers */,
+				1D7A787B1E40B44B00DA6196 /* ICCardView.h in Headers */,
+				1D3D7FBC1E7A80840043BF9D /* MBProgressHUD.h in Headers */,
+				1D7A786F1E40AEF000DA6196 /* ICBaseViewController.h in Headers */,
+				1D3D7FDF1E7A86E20043BF9D /* ICRSAManager.h in Headers */,
+				1D7A78971E40E08100DA6196 /* ICStoreCardViewController.h in Headers */,
+				1D7A784B1E408D8200DA6196 /* ICGetCardDataCommand.h in Headers */,
+				1D7A789B1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.h in Headers */,
+				1D7A787F1E40B4A900DA6196 /* ICThemedTextField.h in Headers */,
+				1D3D7FD71E7A86E20043BF9D /* ICApplicationManager.h in Headers */,
+				1D3D7F931E7A805C0043BF9D /* Base64.h in Headers */,
+				1D3D7FE11E7A86E20043BF9D /* ICThemeManager.h in Headers */,
+				1D3D7FB01E7A806A0043BF9D /* ICLogger.h in Headers */,
+				1D3D7F9B1E7A805C0043BF9D /* UIColor+Helpers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +517,7 @@
 					1DACE7C11E2E14B300F5E38E = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2SSZUB73NA;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -411,55 +557,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DACE8331E2E14F400F5E38E /* ICURLRequest.swift in Sources */,
-				1DACE8281E2E14F400F5E38E /* Article.swift in Sources */,
-				1DACE8141E2E14F400F5E38E /* StoreCardViewController.swift in Sources */,
-				1DACE81A1E2E14F400F5E38E /* UIColor+Helpers.swift in Sources */,
-				1DACE81F1E2E14F400F5E38E /* SwiftyRSA.swift in Sources */,
-				1DACE8311E2E14F400F5E38E /* ICCard.swift in Sources */,
-				1DACE82F1E2E14F400F5E38E /* ICStoreCardCommand.swift in Sources */,
-				1DACE8221E2E14F400F5E38E /* ICLogger.swift in Sources */,
-				1DACE8351E2E14F400F5E38E /* ICApplicationManager.swift in Sources */,
-				1DACE8391E2E14F400F5E38E /* ICRSAManager.swift in Sources */,
-				1DACE8161E2E14F400F5E38E /* Dictionary+Helpers.swift in Sources */,
-				1DACE83A1E2E14F400F5E38E /* ICThemeManager.swift in Sources */,
-				1DACE81D1E2E14F400F5E38E /* Message.swift in Sources */,
-				1DACE8111E2E14F400F5E38E /* ICUpdateStoredCardViewController.swift in Sources */,
-				1DACE8241E2E14F400F5E38E /* ICResponseStatus.swift in Sources */,
-				1DACE8151E2E14F400F5E38E /* UpdateStoredCardViewController.swift in Sources */,
-				1DACE8181E2E14F400F5E38E /* Float+Helpers.swift in Sources */,
-				1DACE81B1E2E14F400F5E38E /* UIColor+HexString.swift in Sources */,
-				1DACE82D1E2E14F400F5E38E /* ICRefundCommand.swift in Sources */,
-				1DACE82A1E2E14F400F5E38E /* ICGetCardDataCommand.swift in Sources */,
-				1DACE80E1E2E14F400F5E38E /* ICCardViewController.swift in Sources */,
-				1DACE81E1E2E14F400F5E38E /* Signature.swift in Sources */,
-				1DACE81C1E2E14F400F5E38E /* Key.swift in Sources */,
-				1DACE83F1E2E14FE00F5E38E /* MobilePaymentSDK.swift in Sources */,
-				1DACE8341E2E14F400F5E38E /* MobilePaymentTheme.swift in Sources */,
-				1DACE8371E2E14F400F5E38E /* ICCommunicationManager.swift in Sources */,
-				1DACE8211E2E14F400F5E38E /* ICLocalization.swift in Sources */,
-				1DACE8291E2E14F400F5E38E /* ICBaseCommand.swift in Sources */,
-				1DACE8231E2E14F400F5E38E /* ICNotifications.swift in Sources */,
-				1DACE8201E2E14F400F5E38E /* ICConstants.swift in Sources */,
-				1DACE8191E2E14F400F5E38E /* String+Helpers.swift in Sources */,
-				1DACE83D1E2E14F400F5E38E /* ICThemedTextField.swift in Sources */,
-				1DACE8301E2E14F400F5E38E /* ICUpdateStoredCardCommand.swift in Sources */,
-				1DACE82B1E2E14F400F5E38E /* ICGetTransactionStatusCommand.swift in Sources */,
-				1DACE80F1E2E14F400F5E38E /* ICPaymentViewController.swift in Sources */,
-				1DACE8131E2E14F400F5E38E /* PaymentViewController.swift in Sources */,
-				1DACE8381E2E14F400F5E38E /* ICMobilePaymentManager.swift in Sources */,
-				1DACE82C1E2E14F400F5E38E /* ICPurchaseCommand.swift in Sources */,
-				1DACE83B1E2E14F400F5E38E /* ICCardView.swift in Sources */,
-				1DACE8361E2E14F400F5E38E /* ICBaseManager.swift in Sources */,
-				1DACE8121E2E14F400F5E38E /* MobilePaymentSDKProtocols.swift in Sources */,
-				1DACE8261E2E14F400F5E38E /* MobilePaymentSDKError.swift in Sources */,
-				1DACE8321E2E14F400F5E38E /* ICHttpOperation.swift in Sources */,
-				1DACE8171E2E14F400F5E38E /* Double+Helpers.swift in Sources */,
-				1DACE82E1E2E14F400F5E38E /* ICReversalCommand.swift in Sources */,
-				1DACE8101E2E14F400F5E38E /* ICStoreCardViewController.swift in Sources */,
-				1DACE80C1E2E14F400F5E38E /* IC3DSecureWebViewController.swift in Sources */,
-				1DACE80D1E2E14F400F5E38E /* ICBaseViewController.swift in Sources */,
-				1DACE8251E2E14F400F5E38E /* ICUtil.swift in Sources */,
+				1D7A78481E408B0000DA6196 /* ICBaseCommand.m in Sources */,
+				1D7A78681E40954600DA6196 /* ICUpdateStoredCardCommand.m in Sources */,
+				1D7A785C1E4090A500DA6196 /* ICRefundCommand.m in Sources */,
+				1D7A789C1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.m in Sources */,
+				1D7A783C1E407DD000DA6196 /* ICHTTPOperation.m in Sources */,
+				1D7A787C1E40B44B00DA6196 /* ICCardView.m in Sources */,
+				1D7A78941E40D56F00DA6196 /* UpdateStoredCardViewController.m in Sources */,
+				1D7A78741E40B01100DA6196 /* IC3DSecureWebViewController.m in Sources */,
+				1D7A78701E40AEF000DA6196 /* ICBaseViewController.m in Sources */,
+				1D7A78901E40D41B00DA6196 /* StoreCardViewController.m in Sources */,
+				1D32E62C1E7AE24E00B066A0 /* ICPrivateKey.m in Sources */,
+				1D7A78601E40935100DA6196 /* ICReversalCommand.m in Sources */,
+				1D7A784C1E408D8200DA6196 /* ICGetCardDataCommand.m in Sources */,
+				1D7A78A41E40E61400DA6196 /* MobilePaymentSDK.m in Sources */,
+				1D7A78981E40E08100DA6196 /* ICStoreCardViewController.m in Sources */,
+				1D3D7FB91E7A80790043BF9D /* BSKeyboardControls.m in Sources */,
+				1D3D7FAE1E7A806A0043BF9D /* ICConstants.m in Sources */,
+				1D3D7FB11E7A806A0043BF9D /* ICLogger.m in Sources */,
+				1D3D7F9E1E7A805C0043BF9D /* UIColor+HexString.m in Sources */,
+				1D3D7FC31E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.m in Sources */,
+				1D3D7FDC1E7A86E20043BF9D /* ICCommunicationManager.m in Sources */,
+				1D7A78801E40B4A900DA6196 /* ICThemedTextField.m in Sources */,
+				1D3D7FBD1E7A80840043BF9D /* MBProgressHUD.m in Sources */,
+				1D3D7F9A1E7A805C0043BF9D /* NSString+Helpers.m in Sources */,
+				1D3D7F9C1E7A805C0043BF9D /* UIColor+Helpers.m in Sources */,
+				1D3D7F961E7A805C0043BF9D /* NSData+SHA.m in Sources */,
+				1D3D7FB51E7A806A0043BF9D /* MobilePaymentSDKError.m in Sources */,
+				1D3D7FD81E7A86E20043BF9D /* ICApplicationManager.m in Sources */,
+				1D3D7FE01E7A86E20043BF9D /* ICRSAManager.m in Sources */,
+				1D7A786C1E40ACCE00DA6196 /* PaymentViewController.m in Sources */,
+				1D3D7FAC1E7A806A0043BF9D /* CryptoUtil.m in Sources */,
+				1D3D7FDA1E7A86E20043BF9D /* ICBaseManager.m in Sources */,
+				1D7A78381E407BEF00DA6196 /* ICURLRequest.m in Sources */,
+				1D3D7FE21E7A86E20043BF9D /* ICThemeManager.m in Sources */,
+				1D3D7FC51E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				1D7A78641E4093E700DA6196 /* ICStoreCardCommand.m in Sources */,
+				1D7A78341E407B1100DA6196 /* Card.m in Sources */,
+				1D7A78A01E40E36300DA6196 /* ICPaymentViewController.m in Sources */,
+				1D3D7F941E7A805C0043BF9D /* Base64.m in Sources */,
+				1D3D7FDE1E7A86E20043BF9D /* ICMobilePaymentManager.m in Sources */,
+				1D3D7FC91E7A86590043BF9D /* MobilePaymentTheme.m in Sources */,
+				1D7A78581E408F3B00DA6196 /* ICPurchaseCommand.m in Sources */,
+				1D7A780B1E3F924300DA6196 /* CartItem.m in Sources */,
+				1D3D7F981E7A805C0043BF9D /* NSDictionary+Helpers.m in Sources */,
+				1D7A78781E40B3CC00DA6196 /* ICCardViewController.m in Sources */,
+				1D7A78501E408E4900DA6196 /* ICGetTransactionStatusCommand.m in Sources */,
+				1D3D7FB31E7A806A0043BF9D /* ICUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +718,7 @@
 					x86_64,
 					armv7s,
 				);
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2SSZUB73NA;
@@ -592,6 +737,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ipay.Mobile-Payment-SDK";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -605,6 +751,7 @@
 					x86_64,
 					armv7s,
 				);
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2SSZUB73NA;

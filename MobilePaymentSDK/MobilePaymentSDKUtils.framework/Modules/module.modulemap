@@ -1,6 +1,0 @@
-framework module MobilePaymentSDKUtils {
-  umbrella header "MobilePaymentSDKUtils.h"
-
-  export *
-  module * { export * }
-}
