@@ -1,0 +1,6 @@
+framework module MobilePaymentSDK {
+  umbrella header "MobilePaymentSDK.h"
+
+  export *
+  module * { export * }
+}

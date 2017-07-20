@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D26F59F1E24C00D007CEEE7 /* public_cert.der in Resources */ = {isa = PBXBuildFile; fileRef = 1D26F59E1E24C004007CEEE7 /* public_cert.der */; };
+		1D32E5A21E7AB11200B066A0 /* MobilePaymentSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1D32E5A41E7AC06000B066A0 /* private_key.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1D32E5A31E7AC06000B066A0 /* private_key.txt */; };
+		1D3D73771E2D0AC60086AA5B /* ICArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73701E2D0AC60086AA5B /* ICArticlesTableViewController.swift */; };
+		1D3D73781E2D0AC60086AA5B /* ICBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73711E2D0AC60086AA5B /* ICBaseTableViewController.swift */; };
+		1D3D73791E2D0AC60086AA5B /* ICUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73731E2D0AC60086AA5B /* ICUtils.swift */; };
+		1D3D737A1E2D0AC60086AA5B /* ICArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73751E2D0AC60086AA5B /* ICArticleTableViewCell.swift */; };
+		1D3D737B1E2D0AC60086AA5B /* ICBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73761E2D0AC60086AA5B /* ICBaseTableViewCell.swift */; };
+		1D3D737E1E2D0B0A0086AA5B /* UserDefaults+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D737D1E2D0B0A0086AA5B /* UserDefaults+Helpers.swift */; };
+		1D3D73811E2D0B420086AA5B /* ICCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73801E2D0B420086AA5B /* ICCard.swift */; };
+		1D3D73831E2D0C4C0086AA5B /* ICConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73821E2D0C4C0086AA5B /* ICConstants.swift */; };
+		1D3D73851E2D0D100086AA5B /* ICCardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73841E2D0D100086AA5B /* ICCardsTableViewController.swift */; };
+		1D3D73871E2D0E3F0086AA5B /* ICCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73861E2D0E3F0086AA5B /* ICCardTableViewCell.swift */; };
+		1D3D73891E2D128C0086AA5B /* ICTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73881E2D128C0086AA5B /* ICTransaction.swift */; };
+		1D3D738B1E2D12EA0086AA5B /* ICOrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D738A1E2D12EA0086AA5B /* ICOrdersTableViewController.swift */; };
+		1D3D738D1E2D133F0086AA5B /* ICOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D738C1E2D133F0086AA5B /* ICOrderTableViewCell.swift */; };
+		1D3D738F1E2D193F0086AA5B /* ICTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D738E1E2D193F0086AA5B /* ICTransactionTableViewCell.swift */; };
+		1D3D73911E2D199D0086AA5B /* ICTransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73901E2D199D0086AA5B /* ICTransactionsTableViewController.swift */; };
+		1D3D7FE41E7A909A0043BF9D /* MobilePaymentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */; };
+		1D66DA571E8D224400079DF0 /* JGProgressHUD Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1D66DA3F1E8D224400079DF0 /* JGProgressHUD Resources.bundle */; };
+		1D66DA581E8D224400079DF0 /* JGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA421E8D224400079DF0 /* JGProgressHUD.m */; };
+		1D66DA591E8D224400079DF0 /* JGProgressHUDAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA441E8D224400079DF0 /* JGProgressHUDAnimation.m */; };
+		1D66DA5A1E8D224400079DF0 /* JGProgressHUDErrorIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA461E8D224400079DF0 /* JGProgressHUDErrorIndicatorView.m */; };
+		1D66DA5B1E8D224400079DF0 /* JGProgressHUDFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA481E8D224400079DF0 /* JGProgressHUDFadeAnimation.m */; };
+		1D66DA5C1E8D224400079DF0 /* JGProgressHUDFadeZoomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA4A1E8D224400079DF0 /* JGProgressHUDFadeZoomAnimation.m */; };
+		1D66DA5D1E8D224400079DF0 /* JGProgressHUDImageIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA4C1E8D224400079DF0 /* JGProgressHUDImageIndicatorView.m */; };
+		1D66DA5E1E8D224400079DF0 /* JGProgressHUDIndeterminateIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA4E1E8D224400079DF0 /* JGProgressHUDIndeterminateIndicatorView.m */; };
+		1D66DA5F1E8D224400079DF0 /* JGProgressHUDIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA501E8D224400079DF0 /* JGProgressHUDIndicatorView.m */; };
+		1D66DA601E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA521E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m */; };
+		1D66DA611E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA541E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m */; };
+		1D66DA621E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA561E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m */; };
+		1D87639F1E7BDF3E00AAEC3A /* private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 1D87639E1E7BDF3E00AAEC3A /* private_key.pem */; };
+		1DA95B921E16584D005C3EB3 /* MobilePaymentSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DA95B901E16584D005C3EB3 /* MobilePaymentSDK.strings */; };
+		1DB58EEE1E029D2800875E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB58EED1E029D2800875E9F /* AppDelegate.swift */; };
+		1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF11E029D2800875E9F /* Main.storyboard */; };
+		1DB58EF51E029D2800875E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF41E029D2800875E9F /* Assets.xcassets */; };
+		1DB58EF81E029D2800875E9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF61E029D2800875E9F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1DC267521E262F0C00278F60 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1D32E5A21E7AB11200B066A0 /* MobilePaymentSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1D26F59E1E24C004007CEEE7 /* public_cert.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_cert.der; sourceTree = "<group>"; };
+		1D32E5A31E7AC06000B066A0 /* private_key.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private_key.txt; sourceTree = "<group>"; };
+		1D3C0D2A1E1650E700755FB4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		1D3C0D2B1E1650E700755FB4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		1D3D73701E2D0AC60086AA5B /* ICArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICArticlesTableViewController.swift; sourceTree = "<group>"; };
+		1D3D73711E2D0AC60086AA5B /* ICBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICBaseTableViewController.swift; sourceTree = "<group>"; };
+		1D3D73731E2D0AC60086AA5B /* ICUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICUtils.swift; sourceTree = "<group>"; };
+		1D3D73751E2D0AC60086AA5B /* ICArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICArticleTableViewCell.swift; sourceTree = "<group>"; };
+		1D3D73761E2D0AC60086AA5B /* ICBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICBaseTableViewCell.swift; sourceTree = "<group>"; };
+		1D3D737D1E2D0B0A0086AA5B /* UserDefaults+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Helpers.swift"; sourceTree = "<group>"; };
+		1D3D73801E2D0B420086AA5B /* ICCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICCard.swift; sourceTree = "<group>"; };
+		1D3D73821E2D0C4C0086AA5B /* ICConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICConstants.swift; sourceTree = "<group>"; };
+		1D3D73841E2D0D100086AA5B /* ICCardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICCardsTableViewController.swift; sourceTree = "<group>"; };
+		1D3D73861E2D0E3F0086AA5B /* ICCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICCardTableViewCell.swift; sourceTree = "<group>"; };
+		1D3D73881E2D128C0086AA5B /* ICTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTransaction.swift; sourceTree = "<group>"; };
+		1D3D738A1E2D12EA0086AA5B /* ICOrdersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICOrdersTableViewController.swift; sourceTree = "<group>"; };
+		1D3D738C1E2D133F0086AA5B /* ICOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICOrderTableViewCell.swift; sourceTree = "<group>"; };
+		1D3D738E1E2D193F0086AA5B /* ICTransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTransactionTableViewCell.swift; sourceTree = "<group>"; };
+		1D3D73901E2D199D0086AA5B /* ICTransactionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTransactionsTableViewController.swift; sourceTree = "<group>"; };
+		1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobilePaymentSDK.framework; path = "Mobile Payment Test/MobilePaymentSDK.framework"; sourceTree = "<group>"; };
+		1D3D7FE51E7A90B30043BF9D /* Mobile Payment Test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobile Payment Test-Bridging-Header.h"; sourceTree = "<group>"; };
+		1D66DA3F1E8D224400079DF0 /* JGProgressHUD Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "JGProgressHUD Resources.bundle"; sourceTree = "<group>"; };
+		1D66DA401E8D224400079DF0 /* JGProgressHUD-Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JGProgressHUD-Defines.h"; sourceTree = "<group>"; };
+		1D66DA411E8D224400079DF0 /* JGProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUD.h; sourceTree = "<group>"; };
+		1D66DA421E8D224400079DF0 /* JGProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUD.m; sourceTree = "<group>"; };
+		1D66DA431E8D224400079DF0 /* JGProgressHUDAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDAnimation.h; sourceTree = "<group>"; };
+		1D66DA441E8D224400079DF0 /* JGProgressHUDAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDAnimation.m; sourceTree = "<group>"; };
+		1D66DA451E8D224400079DF0 /* JGProgressHUDErrorIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDErrorIndicatorView.h; sourceTree = "<group>"; };
+		1D66DA461E8D224400079DF0 /* JGProgressHUDErrorIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDErrorIndicatorView.m; sourceTree = "<group>"; };
+		1D66DA471E8D224400079DF0 /* JGProgressHUDFadeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDFadeAnimation.h; sourceTree = "<group>"; };
+		1D66DA481E8D224400079DF0 /* JGProgressHUDFadeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDFadeAnimation.m; sourceTree = "<group>"; };
+		1D66DA491E8D224400079DF0 /* JGProgressHUDFadeZoomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDFadeZoomAnimation.h; sourceTree = "<group>"; };
+		1D66DA4A1E8D224400079DF0 /* JGProgressHUDFadeZoomAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDFadeZoomAnimation.m; sourceTree = "<group>"; };
+		1D66DA4B1E8D224400079DF0 /* JGProgressHUDImageIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDImageIndicatorView.h; sourceTree = "<group>"; };
+		1D66DA4C1E8D224400079DF0 /* JGProgressHUDImageIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDImageIndicatorView.m; sourceTree = "<group>"; };
+		1D66DA4D1E8D224400079DF0 /* JGProgressHUDIndeterminateIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDIndeterminateIndicatorView.h; sourceTree = "<group>"; };
+		1D66DA4E1E8D224400079DF0 /* JGProgressHUDIndeterminateIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDIndeterminateIndicatorView.m; sourceTree = "<group>"; };
+		1D66DA4F1E8D224400079DF0 /* JGProgressHUDIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDIndicatorView.h; sourceTree = "<group>"; };
+		1D66DA501E8D224400079DF0 /* JGProgressHUDIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDIndicatorView.m; sourceTree = "<group>"; };
+		1D66DA511E8D224400079DF0 /* JGProgressHUDPieIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDPieIndicatorView.h; sourceTree = "<group>"; };
+		1D66DA521E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDPieIndicatorView.m; sourceTree = "<group>"; };
+		1D66DA531E8D224400079DF0 /* JGProgressHUDRingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDRingIndicatorView.h; sourceTree = "<group>"; };
+		1D66DA541E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDRingIndicatorView.m; sourceTree = "<group>"; };
+		1D66DA551E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDSuccessIndicatorView.h; sourceTree = "<group>"; };
+		1D66DA561E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDSuccessIndicatorView.m; sourceTree = "<group>"; };
+		1D87639E1E7BDF3E00AAEC3A /* private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private_key.pem; sourceTree = "<group>"; };
+		1DA95B911E16584D005C3EB3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "Mobile Payment Test/de.lproj/MobilePaymentSDK.strings"; sourceTree = "<group>"; };
+		1DA95B931E16585A005C3EB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Mobile Payment Test/en.lproj/MobilePaymentSDK.strings"; sourceTree = "<group>"; };
+		1DB58EEA1E029D2800875E9F /* Mobile Payment Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Payment Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DB58EED1E029D2800875E9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DB58EF21E029D2800875E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DB58EF41E029D2800875E9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DB58EF71E029D2800875E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DB58EF91E029D2800875E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DB58EE71E029D2800875E9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D3D7FE41E7A909A0043BF9D /* MobilePaymentSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D3D736F1E2D0AC60086AA5B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D3D73711E2D0AC60086AA5B /* ICBaseTableViewController.swift */,
+				1D3D73701E2D0AC60086AA5B /* ICArticlesTableViewController.swift */,
+				1D3D73841E2D0D100086AA5B /* ICCardsTableViewController.swift */,
+				1D3D738A1E2D12EA0086AA5B /* ICOrdersTableViewController.swift */,
+				1D3D73901E2D199D0086AA5B /* ICTransactionsTableViewController.swift */,
+			);
+			name = Controllers;
+			path = Classes/Controllers;
+			sourceTree = "<group>";
+		};
+		1D3D73721E2D0AC60086AA5B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1D3D73731E2D0AC60086AA5B /* ICUtils.swift */,
+				1D3D73821E2D0C4C0086AA5B /* ICConstants.swift */,
+			);
+			name = Helpers;
+			path = Classes/Helpers;
+			sourceTree = "<group>";
+		};
+		1D3D73741E2D0AC60086AA5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D66DA3E1E8D224400079DF0 /* JGProgressHUD */,
+				1D3D73761E2D0AC60086AA5B /* ICBaseTableViewCell.swift */,
+				1D3D73751E2D0AC60086AA5B /* ICArticleTableViewCell.swift */,
+				1D3D73861E2D0E3F0086AA5B /* ICCardTableViewCell.swift */,
+				1D3D738C1E2D133F0086AA5B /* ICOrderTableViewCell.swift */,
+				1D3D738E1E2D193F0086AA5B /* ICTransactionTableViewCell.swift */,
+			);
+			name = Views;
+			path = Classes/Views;
+			sourceTree = "<group>";
+		};
+		1D3D737C1E2D0AF60086AA5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1D3D737D1E2D0B0A0086AA5B /* UserDefaults+Helpers.swift */,
+			);
+			name = Extensions;
+			path = Classes/Extensions;
+			sourceTree = "<group>";
+		};
+		1D3D737F1E2D0B390086AA5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D3D73801E2D0B420086AA5B /* ICCard.swift */,
+				1D3D73881E2D128C0086AA5B /* ICTransaction.swift */,
+			);
+			name = Models;
+			path = Classes/Models;
+			sourceTree = "<group>";
+		};
+		1D66DA3E1E8D224400079DF0 /* JGProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				1D66DA3F1E8D224400079DF0 /* JGProgressHUD Resources.bundle */,
+				1D66DA401E8D224400079DF0 /* JGProgressHUD-Defines.h */,
+				1D66DA411E8D224400079DF0 /* JGProgressHUD.h */,
+				1D66DA421E8D224400079DF0 /* JGProgressHUD.m */,
+				1D66DA431E8D224400079DF0 /* JGProgressHUDAnimation.h */,
+				1D66DA441E8D224400079DF0 /* JGProgressHUDAnimation.m */,
+				1D66DA451E8D224400079DF0 /* JGProgressHUDErrorIndicatorView.h */,
+				1D66DA461E8D224400079DF0 /* JGProgressHUDErrorIndicatorView.m */,
+				1D66DA471E8D224400079DF0 /* JGProgressHUDFadeAnimation.h */,
+				1D66DA481E8D224400079DF0 /* JGProgressHUDFadeAnimation.m */,
+				1D66DA491E8D224400079DF0 /* JGProgressHUDFadeZoomAnimation.h */,
+				1D66DA4A1E8D224400079DF0 /* JGProgressHUDFadeZoomAnimation.m */,
+				1D66DA4B1E8D224400079DF0 /* JGProgressHUDImageIndicatorView.h */,
+				1D66DA4C1E8D224400079DF0 /* JGProgressHUDImageIndicatorView.m */,
+				1D66DA4D1E8D224400079DF0 /* JGProgressHUDIndeterminateIndicatorView.h */,
+				1D66DA4E1E8D224400079DF0 /* JGProgressHUDIndeterminateIndicatorView.m */,
+				1D66DA4F1E8D224400079DF0 /* JGProgressHUDIndicatorView.h */,
+				1D66DA501E8D224400079DF0 /* JGProgressHUDIndicatorView.m */,
+				1D66DA511E8D224400079DF0 /* JGProgressHUDPieIndicatorView.h */,
+				1D66DA521E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m */,
+				1D66DA531E8D224400079DF0 /* JGProgressHUDRingIndicatorView.h */,
+				1D66DA541E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m */,
+				1D66DA551E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.h */,
+				1D66DA561E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m */,
+			);
+			path = JGProgressHUD;
+			sourceTree = "<group>";
+		};
+		1DA95B841E1655AF005C3EB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1DB58EE11E029D2800875E9F = {
+			isa = PBXGroup;
+			children = (
+				1DB58EEC1E029D2800875E9F /* Mobile Payment Test */,
+				1DB58EEB1E029D2800875E9F /* Products */,
+				1DA95B841E1655AF005C3EB3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1DB58EEB1E029D2800875E9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DB58EEA1E029D2800875E9F /* Mobile Payment Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DB58EEC1E029D2800875E9F /* Mobile Payment Test */ = {
+			isa = PBXGroup;
+			children = (
+				1D3D736F1E2D0AC60086AA5B /* Controllers */,
+				1D3D737C1E2D0AF60086AA5B /* Extensions */,
+				1D3D73721E2D0AC60086AA5B /* Helpers */,
+				1D3D737F1E2D0B390086AA5B /* Models */,
+				1D3D73741E2D0AC60086AA5B /* Views */,
+				1DB58EED1E029D2800875E9F /* AppDelegate.swift */,
+				1DB58EF11E029D2800875E9F /* Main.storyboard */,
+				1DB58EF61E029D2800875E9F /* LaunchScreen.storyboard */,
+				1DA95B901E16584D005C3EB3 /* MobilePaymentSDK.strings */,
+				1D26F59E1E24C004007CEEE7 /* public_cert.der */,
+				1D87639E1E7BDF3E00AAEC3A /* private_key.pem */,
+				1D32E5A31E7AC06000B066A0 /* private_key.txt */,
+				1DB58EF41E029D2800875E9F /* Assets.xcassets */,
+				1DB58EF91E029D2800875E9F /* Info.plist */,
+				1D3D7FE51E7A90B30043BF9D /* Mobile Payment Test-Bridging-Header.h */,
+			);
+			path = "Mobile Payment Test";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DB58EE91E029D2800875E9F /* Mobile Payment Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DB58EFC1E029D2800875E9F /* Build configuration list for PBXNativeTarget "Mobile Payment Test" */;
+			buildPhases = (
+				1DB58EE61E029D2800875E9F /* Sources */,
+				1DB58EE71E029D2800875E9F /* Frameworks */,
+				1DB58EE81E029D2800875E9F /* Resources */,
+				1DC267521E262F0C00278F60 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mobile Payment Test";
+			productName = "Mobile Payment Test";
+			productReference = 1DB58EEA1E029D2800875E9F /* Mobile Payment Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DB58EE21E029D2800875E9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Intercard Finance AD";
+				TargetAttributes = {
+					1DB58EE91E029D2800875E9F = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = XV5EK9R9VL;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1DB58EE51E029D2800875E9F /* Build configuration list for PBXProject "Mobile Payment Test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = 1DB58EE11E029D2800875E9F;
+			productRefGroup = 1DB58EEB1E029D2800875E9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DB58EE91E029D2800875E9F /* Mobile Payment Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DB58EE81E029D2800875E9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D66DA571E8D224400079DF0 /* JGProgressHUD Resources.bundle in Resources */,
+				1D26F59F1E24C00D007CEEE7 /* public_cert.der in Resources */,
+				1D87639F1E7BDF3E00AAEC3A /* private_key.pem in Resources */,
+				1DA95B921E16584D005C3EB3 /* MobilePaymentSDK.strings in Resources */,
+				1D32E5A41E7AC06000B066A0 /* private_key.txt in Resources */,
+				1DB58EF81E029D2800875E9F /* LaunchScreen.storyboard in Resources */,
+				1DB58EF51E029D2800875E9F /* Assets.xcassets in Resources */,
+				1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DB58EE61E029D2800875E9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D3D738F1E2D193F0086AA5B /* ICTransactionTableViewCell.swift in Sources */,
+				1D3D73811E2D0B420086AA5B /* ICCard.swift in Sources */,
+				1D3D737A1E2D0AC60086AA5B /* ICArticleTableViewCell.swift in Sources */,
+				1D3D73781E2D0AC60086AA5B /* ICBaseTableViewController.swift in Sources */,
+				1D66DA5E1E8D224400079DF0 /* JGProgressHUDIndeterminateIndicatorView.m in Sources */,
+				1D66DA5C1E8D224400079DF0 /* JGProgressHUDFadeZoomAnimation.m in Sources */,
+				1D3D73791E2D0AC60086AA5B /* ICUtils.swift in Sources */,
+				1D3D738B1E2D12EA0086AA5B /* ICOrdersTableViewController.swift in Sources */,
+				1D66DA5A1E8D224400079DF0 /* JGProgressHUDErrorIndicatorView.m in Sources */,
+				1D3D73911E2D199D0086AA5B /* ICTransactionsTableViewController.swift in Sources */,
+				1D3D73771E2D0AC60086AA5B /* ICArticlesTableViewController.swift in Sources */,
+				1D3D73891E2D128C0086AA5B /* ICTransaction.swift in Sources */,
+				1D66DA611E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m in Sources */,
+				1D3D73871E2D0E3F0086AA5B /* ICCardTableViewCell.swift in Sources */,
+				1D66DA591E8D224400079DF0 /* JGProgressHUDAnimation.m in Sources */,
+				1D3D737B1E2D0AC60086AA5B /* ICBaseTableViewCell.swift in Sources */,
+				1D3D737E1E2D0B0A0086AA5B /* UserDefaults+Helpers.swift in Sources */,
+				1DB58EEE1E029D2800875E9F /* AppDelegate.swift in Sources */,
+				1D66DA5D1E8D224400079DF0 /* JGProgressHUDImageIndicatorView.m in Sources */,
+				1D3D73831E2D0C4C0086AA5B /* ICConstants.swift in Sources */,
+				1D3D73851E2D0D100086AA5B /* ICCardsTableViewController.swift in Sources */,
+				1D66DA601E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m in Sources */,
+				1D3D738D1E2D133F0086AA5B /* ICOrderTableViewCell.swift in Sources */,
+				1D66DA5B1E8D224400079DF0 /* JGProgressHUDFadeAnimation.m in Sources */,
+				1D66DA5F1E8D224400079DF0 /* JGProgressHUDIndicatorView.m in Sources */,
+				1D66DA621E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m in Sources */,
+				1D66DA581E8D224400079DF0 /* JGProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1DA95B901E16584D005C3EB3 /* MobilePaymentSDK.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DA95B911E16584D005C3EB3 /* de */,
+				1DA95B931E16585A005C3EB3 /* en */,
+			);
+			name = MobilePaymentSDK.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		1DB58EF11E029D2800875E9F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DB58EF21E029D2800875E9F /* Base */,
+				1D3C0D2A1E1650E700755FB4 /* de */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1DB58EF61E029D2800875E9F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DB58EF71E029D2800875E9F /* Base */,
+				1D3C0D2B1E1650E700755FB4 /* de */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DB58EFA1E029D2800875E9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DB58EFB1E029D2800875E9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DB58EFD1E029D2800875E9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XV5EK9R9VL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
+				);
+				INFOPLIST_FILE = "Mobile Payment Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vc.Mobile-Payment-Testtt";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mobile Payment Test/Mobile Payment Test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1DB58EFE1E029D2800875E9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XV5EK9R9VL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
+				);
+				INFOPLIST_FILE = "Mobile Payment Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vc.Mobile-Payment-Testtt";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mobile Payment Test/Mobile Payment Test-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DB58EE51E029D2800875E9F /* Build configuration list for PBXProject "Mobile Payment Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DB58EFA1E029D2800875E9F /* Debug */,
+				1DB58EFB1E029D2800875E9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DB58EFC1E029D2800875E9F /* Build configuration list for PBXNativeTarget "Mobile Payment Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DB58EFD1E029D2800875E9F /* Debug */,
+				1DB58EFE1E029D2800875E9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DB58EE21E029D2800875E9F /* Project object */;
+}
