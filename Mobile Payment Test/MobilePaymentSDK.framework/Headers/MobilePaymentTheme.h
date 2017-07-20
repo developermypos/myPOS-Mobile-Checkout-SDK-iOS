@@ -21,6 +21,11 @@
 @property (nonatomic, strong) UIColor *navigationTitleColor;
 @property (nonatomic, strong) UIColor *textFieldBorderColor;
 
+/*!
+ * @method setTheme:
+ *
+ * @param theme A custom theme that will be applied across the SDK screens. 
+ */
 - (void)setTheme:(MobilePaymentTheme *)theme;
 
 @end

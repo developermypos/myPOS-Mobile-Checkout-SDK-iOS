@@ -12,6 +12,14 @@
 
 @interface StoreCardViewController : UINavigationController
 
+/*!
+ * @method initWithVerificationAmount:delegate:
+ *
+ * @param verificationAmount    A veritification amount.
+ * @param delegate              A delegate to implement the StoreCardDelegate protocol methods.
+ *
+ * @see                         StoreCardDelegate
+ */
 - (nonnull instancetype)initWithVerificationAmount:(CGFloat)verificationAmount delegate:(nullable id<StoreCardDelegate>)delegate;
 
 @end

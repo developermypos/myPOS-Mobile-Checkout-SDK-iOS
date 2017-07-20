@@ -12,6 +12,15 @@
 
 @interface UpdateStoredCardViewController : UINavigationController
 
+/*!
+ * @method initWithCardToken:verificationAmount:delegate:
+ *
+ * @param cardToken             The token of the stored card to be updated.
+ * @param verificationAmount    A veritification amount.
+ * @param delegate              A delegate to implement the StoreCardDelegate protocol methods.
+ *
+ * @see                         StoreCardDelegate
+ */
 - (nonnull instancetype)initWithCardToken:(nonnull NSString *)cardToken verificationAmount:(CGFloat)verificationAmount delegate:(nullable id<StoreCardDelegate>)delegate;
 
 @end
