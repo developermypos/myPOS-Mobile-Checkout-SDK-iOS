@@ -1,4 +1,4 @@
-# myPOS™ Mobile Checkout Android iOS
+# myPOS™ Mobile Checkout iOS
 Accepting mobile payments for merchants
 
 ### Table of Contents
@@ -72,7 +72,7 @@ Accepting mobile payments for merchants
   
   ## Requirements
   
-  * Xcode 8 and Swift 3
+  * Xcode 8 and above
   
   ## Setup
   
@@ -80,7 +80,7 @@ Accepting mobile payments for merchants
   
   openssl x509 -outform der -in public_cert.txt -out public_cert.der
  
- After generating and copying the private key save it to a file with .pem extension.
+ After generating and copying the private key save it to a file with .txt extension.
  
  Note: Include the certificate and private key files in your project. Then go to Build Phases -> Copy Bundle Resource and add the files.
  
