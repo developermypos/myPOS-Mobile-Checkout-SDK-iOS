@@ -7,6 +7,7 @@
 //
 
 #import "ICCommunicationManager.h"
+#import "ICMobilePaymentManager.h"
 
 #import "Card.h"
 #import "ICUtil.h"
@@ -15,6 +16,7 @@
 #import "ICHelpers.h"
 #import "ICConstants.h"
 #import "ICURLRequest.h"
+#import "ICReachability.h"
 #import "ICHTTPOperation.h"
 
 #import "ICPurchaseCommand.h"
@@ -31,6 +33,7 @@
 @interface ICCommunicationManager() {
     NSOperationQueue *_operationQueue;
     dispatch_queue_t _communicationQueue;
+    ICReachability *_reachability;
 }
 
 
@@ -57,11 +60,24 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
 
 - (instancetype)init {
     if (self = [super init]) {
+        __weak ICCommunicationManager *weakSelf = self;
+        
         _operationQueue     = [[NSOperationQueue alloc] init];
         _communicationQueue = dispatch_queue_create(kCommunicationQueue, NULL);
+        
+        _reachability = [ICReachability reachabilityWithHostname:@"www.google.com"];
+        _reachability.unreachableBlock = ^(ICReachability *reach) {
+            [weakSelf cancelOperations];
+        };
+        
+        [_reachability startNotifier];
     }
     
     return self;
+}
+
+- (void)cancelOperations {
+    [_operationQueue cancelAllOperations];
 }
 
 #pragma mark - Public Methods
@@ -223,7 +239,7 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
                                  [command.data formData], ICParameterSignature, [signature urlEncoded]];
         
         [ICLogger log:command.requestInfo];
-        [ICLogger logDebug:[NSString stringWithFormat:@"Request: %@?%@", ICURLAPI, requestData]];
+        [ICLogger logDebug:[NSString stringWithFormat:@"Request: %@?%@", [ICMobilePaymentManager apiUrl], requestData]];
         
         NSData *body = [requestData dataUsingEncoding:NSUTF8StringEncoding];
         
@@ -332,6 +348,10 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
         
         for (NSString *paramName in paramNames) {
             @autoreleasepool {
+                if (![response objectForKey:paramName]) {
+                    continue;
+                }
+                
                 [parameters setObject:[response objectForKey:paramName] forKey:paramName];
             }
         }

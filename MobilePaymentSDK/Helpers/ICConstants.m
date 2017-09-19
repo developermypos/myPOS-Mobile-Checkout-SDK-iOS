@@ -131,8 +131,11 @@ NSString * const ICHTTPMethodPOST = @"POST";
 
 #pragma mark - URLs
 
-NSString * const ICURLAPI      = @"https://devs.icards.eu/mypos.eu/branches/ipc_ia2/vmp/checkout/";
-NSString * const ICURL3DSecure = @"https://devs.icards.eu/mypos_tdsgateway/";
+NSString * const ICSandboxApiUrl      = @"https://devs.icards.eu/mypos.eu/trunk/vmp/checkout/";
+NSString * const ICSandbox3DSecureUrl = @"https://devs.icards.eu/mypos_tdsgateway/";
+
+NSString * const ICProductionApiUrl      = @"https://www.mypos.eu/vmp/checkout";
+NSString * const ICProduction3DSecureUrl = @"https://leupay.eu/tds/";
 
 #pragma mark - Card Types
 

@@ -10,9 +10,11 @@
 #import "ICLogger.h"
 #import "ICHelpers.h"
 #import "ICPrivateKey.h"
+#import "ICConstants.h"
 #import "Base64.h"
 
 @interface ICMobilePaymentManager () {
+    BOOL _inSandbox;
     NSString *_publicKey;
     NSString *_privateKey;
 }
@@ -43,23 +45,54 @@
              privateKey:(NSString *)privateKey
                  bundle:(NSBundle *)bundle
                language:(NSString *)language
-               keyIndex:(NSInteger)keyIndex {
+               keyIndex:(NSInteger)keyIndex
+              inSandbox:(BOOL)inSandbox {
     
     _bundle       = bundle;
     _storeId      = storeId;
     _currency     = [self currencyRawValue:currency];
     _language     = language;
     _keyIndex     = keyIndex;
+    _inSandbox    = inSandbox;
     _publicKey    = publicKey;
     _privateKey   = privateKey;
     _walletNumber = walletNumber;
 }
 
 - (BOOL)isInitialized {
-    return [self.storeId      length] > 0 &&
-           [self.walletNumber length] > 0 &&
-           self.publicKey  != nil         &&
-           self.privateKey != nil;
+    if (_storeId.length == 0) {
+        [ICLogger log:@"Store id not provided"];
+        return NO;
+    }
+    
+    if (_walletNumber.length == 0) {
+        [ICLogger log:@"Account number not provided"];
+        return NO;
+    }
+    
+    if (!self.publicKey) {
+        [ICLogger log:@"Certificate (public key) file is corrupted"];
+        return NO;
+    }
+    
+    if (!self.privateKey) {
+        [ICLogger log:@"Private key file is corrupted"];
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (BOOL)isInSandbox {
+    return _inSandbox;
+}
+
++ (NSString *)apiUrl {
+    return [[ICMobilePaymentManager sharedManager] isInSandbox] ? ICSandboxApiUrl : ICProductionApiUrl;
+}
+
++ (NSString *)secureUrl {
+    return [[ICMobilePaymentManager sharedManager] isInSandbox] ? ICSandbox3DSecureUrl : ICProduction3DSecureUrl;
 }
 
 - (ICPrivateKey *)privateKey {
@@ -114,10 +147,11 @@
         return nil;
     }
     
-    SecCertificateRef cert = SecCertificateCreateWithData(NULL, (CFDataRef)certData);
-    SecKeyRef key = NULL;
-    SecTrustRef trust = NULL;
+    SecKeyRef    key    = NULL;
+    SecTrustRef  trust  = NULL;
     SecPolicyRef policy = NULL;
+    
+    SecCertificateRef cert = SecCertificateCreateWithData(NULL, (CFDataRef)certData);
     
     if (cert != NULL) {
         policy = SecPolicyCreateBasicX509();
@@ -127,11 +161,18 @@
             return nil;
         }
         
-        if (SecTrustCreateWithCertificates((CFTypeRef)cert, policy, &trust) == noErr) {
+        OSStatus status = SecTrustCreateWithCertificates((CFTypeRef)cert, policy, &trust);
+        
+        if (status == noErr) {
             SecTrustResultType result;
             SecTrustEvaluate(trust, &result);
             
+            [ICLogger log:[NSString stringWithFormat:@"SecTrustResultType from SecTrustEvaluate returned %d", result]];
+            
             key = SecTrustCopyPublicKey(trust);
+        }
+        else {
+            [ICLogger log:[NSString stringWithFormat:@"SecTrustCreateWithCertificates failed with status %d", (int)status]];
         }
     }
     

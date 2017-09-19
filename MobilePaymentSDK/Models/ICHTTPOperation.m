@@ -96,6 +96,7 @@ static const char *kOperationQueue = "com.ipay.mobilePaymentSDK-operation";
     }
     
     [self completeOperation];
+    [self connectivityError];
 }
 
 #pragma mark - NSURLConnection Delegate
@@ -155,7 +156,7 @@ static const char *kOperationQueue = "com.ipay.mobilePaymentSDK-operation";
         return;
     }
     
-    NSMutableArray *rawResponseData = [[rawResponse componentsSeparatedByString:@","] mutableCopy];
+    NSMutableArray *rawResponseData = [[rawResponse componentsSeparatedByString:@",\""] mutableCopy];
     
     NSError      *error    = nil;
     NSDictionary *response = [NSJSONSerialization JSONObjectWithData:_responseData options:NSJSONReadingMutableContainers error:&error];
@@ -198,7 +199,7 @@ static const char *kOperationQueue = "com.ipay.mobilePaymentSDK-operation";
     
     for (NSString *rawData in rawResponseData) {
         @autoreleasepool {
-            NSString *value = [[rawData componentsSeparatedByString:@":"] lastObject];
+            NSString *value = [[rawData componentsSeparatedByString:@"\":"] lastObject];
             
             if (!value) {
                 continue;
@@ -222,7 +223,7 @@ static const char *kOperationQueue = "com.ipay.mobilePaymentSDK-operation";
     }
     
     if (status != ICResponseStatusOK) {
-        [self communicationError];
+        [self completeWithStatus:status];
         return;
     }
     
@@ -235,6 +236,10 @@ static const char *kOperationQueue = "com.ipay.mobilePaymentSDK-operation";
 
 - (void)communicationError {
     [self completeWithStatus:MobilePaymentSDKCommunicationError];
+}
+
+- (void)connectivityError {
+    [self completeWithStatus:MobilePaymentSDKConnectivityChangedError];
 }
 
 - (void)signatureError {

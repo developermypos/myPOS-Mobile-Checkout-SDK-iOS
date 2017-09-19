@@ -15,6 +15,8 @@
 #import "ICConstants.h"
 #import "ICMobilePaymentManager.h"
 
+#import "NSString+Helpers.h"
+
 @interface ICCardView() <UITextFieldDelegate, BSKeyboardControlsDelegate> {
     BSKeyboardControls *_keyboardControls;
 }
@@ -34,6 +36,11 @@
 @end
 
 @implementation ICCardView
+
+static NSInteger const kMaxLength     = 30;
+static NSInteger const kExpDateLength = 4;
+static NSInteger const kCVCMaxLength  = 4;
+static NSInteger const kPanMaxLength  = 19;
 
 #pragma mark - Initializers
 
@@ -62,6 +69,44 @@
     return NO;
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if (string.length == 0) {
+        return YES;
+    }
+    
+    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    
+    if ([textField isEqual:self.panTextField] && newString.length > kPanMaxLength) {
+        return NO;
+    }
+    
+    if (([textField isEqual:self.expiryDateTextField] && newString.length > kExpDateLength)) {
+        return NO;
+    }
+    
+    if (([textField isEqual:self.cvcTextField] && newString.length > kCVCMaxLength)) {
+        return NO;
+    }
+    
+    if (([textField isEqual:self.embossNameTextField] || [textField isEqual:self.customNameTextField]) && newString.length > kMaxLength) {
+        return NO;
+    }
+    
+    if ([textField isEqual:self.panTextField] || [textField isEqual:self.cvcTextField] || [textField isEqual:self.expiryDateTextField]) {
+        return [string matchesRegEx:@"^[0-9]+$"];
+    }
+    
+    if ([textField isEqual:self.embossNameTextField]) {
+        return [string matchesRegEx:@"^[a-zA-Z' ]+$"];
+    }
+    
+    if ([textField isEqual:self.customNameTextField]) {
+        return [string matchesRegEx:@"^[a-zA-Z0-9' ]+$"];
+    }
+    
+    return YES;
+}
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     _keyboardControls.activeField = textField;
     
@@ -83,6 +128,13 @@
 }
 
 #pragma mark - Public Methods
+
+- (BOOL)isFilled {
+    return self.pan.trimmed.length        > 0 &&
+           self.cvc.trimmed.length        > 0 &&
+           self.expiryDate.trimmed.length > 0 &&
+           self.embossName.trimmed.length > 0;
+}
 
 - (NSString *)pan {
     return self.panTextField.text;

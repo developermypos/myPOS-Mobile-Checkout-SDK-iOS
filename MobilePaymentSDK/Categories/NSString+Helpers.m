@@ -7,12 +7,25 @@
 //
 
 #import "NSString+Helpers.h"
+#import "NSRegularExpression+Helpers.h"
 
 #import "ICRSAManager.h"
 
 @implementation NSString (Helpers)
 
 #pragma mark - Public Methods
+
+- (BOOL)isValidSignatureOf:(NSString *)plainText {
+    return [[ICRSAManager sharedManager] signatureIsValid:self plainString:plainText];
+}
+
+- (BOOL)matchesRegEx:(NSString *)regEx {
+    return [NSRegularExpression string:self matchesRegularExpression:regEx];
+}
+
+- (NSString *)trimmed {
+    return [self stringByReplacingOccurrencesOfString:@" " withString:@""];
+}
 
 - (NSString *)encrypted {
     return [[ICRSAManager sharedManager] encryptedString:self];
@@ -28,10 +41,6 @@
 
 - (NSString *)urlDecoded {
     return [self stringByRemovingPercentEncoding];
-}
-
-- (BOOL)isValidSignatureOf:(NSString *)plainText {
-    return [[ICRSAManager sharedManager] signatureIsValid:self plainString:plainText];
 }
 
 - (NSString *)urlEncoded {

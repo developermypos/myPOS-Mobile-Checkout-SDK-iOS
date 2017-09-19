@@ -8,6 +8,7 @@
 
 #import "ICURLRequest.h"
 #import "ICConstants.h"
+#import "ICMobilePaymentManager.h"
 
 @interface ICURLRequest() {
     NSMutableURLRequest *_urlRequest;
@@ -21,7 +22,7 @@
 
 - (instancetype)initWithBody:(NSData *)body {
     if (self = [super init]) {
-        _urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:ICURLAPI]];
+        _urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[ICMobilePaymentManager apiUrl]]];
         
         [_urlRequest setHTTPBody:body];
         [_urlRequest setHTTPMethod:ICHTTPMethodPOST];

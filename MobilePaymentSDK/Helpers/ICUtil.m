@@ -110,7 +110,7 @@
     
 //    ICLogger.log("3DS - body: \(body)")
     
-    NSURL *url = [NSURL URLWithString:ICURL3DSecure];
+    NSURL *url = [NSURL URLWithString:[ICMobilePaymentManager secureUrl]];
     
     
     if (!url) {

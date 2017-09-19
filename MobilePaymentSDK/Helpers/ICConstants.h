@@ -113,8 +113,11 @@ extern NSString * const ICControllerIdentifierUpdateStoredCard;
 extern NSString * const ICHTTPMethodGET;
 extern NSString * const ICHTTPMethodPOST;
 
-extern NSString * const ICURLAPI;
-extern NSString * const ICURL3DSecure;
+extern NSString * const ICSandboxApiUrl;
+extern NSString * const ICSandbox3DSecureUrl;
+
+extern NSString * const ICProductionApiUrl;
+extern NSString * const ICProduction3DSecureUrl;
 
 extern NSString * const ICCardTypeMastercard;
 extern NSString * const ICCardTypeMaestro;

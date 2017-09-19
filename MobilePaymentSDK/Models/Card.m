@@ -34,6 +34,22 @@
     return self;
 }
 
+- (instancetype)initWithCard:(Card *)card {
+    return [[Card alloc] initWithPan:card.pan
+                          expiryDate:card.expiryDate
+                                 cvc:card.cvc
+                          embossName:card.embossName
+                          customName:card.customName];
+}
+
+- (instancetype)copy {
+    return [self copyWithZone:nil];
+}
+
+- (instancetype)copyWithZone:(NSZone *)zone {
+    return [[Card allocWithZone:zone] initWithCard:self];
+}
+
 - (void)dealloc {
     _expiryDate = nil;
 }

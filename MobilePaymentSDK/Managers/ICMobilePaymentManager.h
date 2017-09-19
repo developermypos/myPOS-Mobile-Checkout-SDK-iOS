@@ -28,9 +28,13 @@
              privateKey:(NSString *)privateKey
                  bundle:(NSBundle *)bundle
                language:(NSString *)language
-               keyIndex:(NSInteger)keyIndex;
+               keyIndex:(NSInteger)keyIndex
+              inSandbox:(BOOL)inSandbox;
 
 - (BOOL)isInitialized;
+- (BOOL)isInSandbox;
++ (NSString *)apiUrl;
++ (NSString *)secureUrl;
 - (ICPrivateKey *)privateKey;
 
 @end

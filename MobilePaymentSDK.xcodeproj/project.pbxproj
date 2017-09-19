@@ -54,6 +54,12 @@
 		1D3D7FE01E7A86E20043BF9D /* ICRSAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FD41E7A86E20043BF9D /* ICRSAManager.m */; };
 		1D3D7FE11E7A86E20043BF9D /* ICThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FD51E7A86E20043BF9D /* ICThemeManager.h */; };
 		1D3D7FE21E7A86E20043BF9D /* ICThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FD61E7A86E20043BF9D /* ICThemeManager.m */; };
+		1D52AA531ED6EEFA00D30724 /* ICReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D52AA511ED6EEFA00D30724 /* ICReachability.h */; };
+		1D52AA541ED6EEFA00D30724 /* ICReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D52AA521ED6EEFA00D30724 /* ICReachability.m */; };
+		1D52AA571ED6EF3A00D30724 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D52AA551ED6EF3A00D30724 /* Reachability.h */; };
+		1D52AA581ED6EF3A00D30724 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D52AA561ED6EF3A00D30724 /* Reachability.m */; };
+		1D55A4E11EA8963700F41037 /* NSRegularExpression+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D55A4DF1EA8963700F41037 /* NSRegularExpression+Helpers.h */; };
+		1D55A4E21EA8963700F41037 /* NSRegularExpression+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D55A4E01EA8963700F41037 /* NSRegularExpression+Helpers.m */; };
 		1D7A780A1E3F924300DA6196 /* CartItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78081E3F924300DA6196 /* CartItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D7A780B1E3F924300DA6196 /* CartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78091E3F924300DA6196 /* CartItem.m */; };
 		1D7A78331E407B1100DA6196 /* Card.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78311E407B1100DA6196 /* Card.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -106,6 +112,8 @@
 		1DACE8271E2E14F400F5E38E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DACE7F11E2E14F400F5E38E /* Images.xcassets */; };
 		1DACE83C1E2E14F400F5E38E /* ICCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DACE80A1E2E14F400F5E38E /* ICCardView.xib */; };
 		1DACE84C1E2E1E7A00F5E38E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DACE84B1E2E1E7A00F5E38E /* Storyboard.storyboard */; };
+		1DD42BFF1EB8794400F83DA9 /* UIAlertController+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DD42BFD1EB8794400F83DA9 /* UIAlertController+Helpers.h */; };
+		1DD42C001EB8794400F83DA9 /* UIAlertController+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD42BFE1EB8794400F83DA9 /* UIAlertController+Helpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +164,12 @@
 		1D3D7FD41E7A86E20043BF9D /* ICRSAManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICRSAManager.m; sourceTree = "<group>"; };
 		1D3D7FD51E7A86E20043BF9D /* ICThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThemeManager.h; sourceTree = "<group>"; };
 		1D3D7FD61E7A86E20043BF9D /* ICThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICThemeManager.m; sourceTree = "<group>"; };
+		1D52AA511ED6EEFA00D30724 /* ICReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICReachability.h; sourceTree = "<group>"; };
+		1D52AA521ED6EEFA00D30724 /* ICReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICReachability.m; sourceTree = "<group>"; };
+		1D52AA551ED6EF3A00D30724 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		1D52AA561ED6EF3A00D30724 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		1D55A4DF1EA8963700F41037 /* NSRegularExpression+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegularExpression+Helpers.h"; sourceTree = "<group>"; };
+		1D55A4E01EA8963700F41037 /* NSRegularExpression+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegularExpression+Helpers.m"; sourceTree = "<group>"; };
 		1D7A78081E3F924300DA6196 /* CartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartItem.h; sourceTree = "<group>"; };
 		1D7A78091E3F924300DA6196 /* CartItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CartItem.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1D7A78101E3F965400DA6196 /* MobilePaymentSDKProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePaymentSDKProtocols.h; sourceTree = "<group>"; };
@@ -210,6 +224,8 @@
 		1DACE7F11E2E14F400F5E38E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MobilePaymentSDK/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		1DACE80A1E2E14F400F5E38E /* ICCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ICCardView.xib; sourceTree = "<group>"; };
 		1DACE84B1E2E1E7A00F5E38E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = MobilePaymentSDK/Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
+		1DD42BFD1EB8794400F83DA9 /* UIAlertController+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Helpers.h"; sourceTree = "<group>"; };
+		1DD42BFE1EB8794400F83DA9 /* UIAlertController+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Helpers.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +254,10 @@
 				1D3D7F901E7A805C0043BF9D /* UIColor+Helpers.m */,
 				1D3D7F911E7A805C0043BF9D /* UIColor+HexString.h */,
 				1D3D7F921E7A805C0043BF9D /* UIColor+HexString.m */,
+				1D55A4DF1EA8963700F41037 /* NSRegularExpression+Helpers.h */,
+				1D55A4E01EA8963700F41037 /* NSRegularExpression+Helpers.m */,
+				1DD42BFD1EB8794400F83DA9 /* UIAlertController+Helpers.h */,
+				1DD42BFE1EB8794400F83DA9 /* UIAlertController+Helpers.m */,
 			);
 			name = Categories;
 			path = MobilePaymentSDK/Categories;
@@ -374,6 +394,10 @@
 				1D7A78361E407BEF00DA6196 /* ICURLRequest.m */,
 				1D3D7FC61E7A86590043BF9D /* MobilePaymentTheme.h */,
 				1D3D7FC71E7A86590043BF9D /* MobilePaymentTheme.m */,
+				1D52AA551ED6EF3A00D30724 /* Reachability.h */,
+				1D52AA561ED6EF3A00D30724 /* Reachability.m */,
+				1D52AA511ED6EEFA00D30724 /* ICReachability.h */,
+				1D52AA521ED6EEFA00D30724 /* ICReachability.m */,
 				1D32E6291E7AE24E00B066A0 /* ICPrivateKey.h */,
 				1D32E62A1E7AE24E00B066A0 /* ICPrivateKey.m */,
 			);
@@ -436,14 +460,16 @@
 				1D7A78A51E40EC3200DA6196 /* MobilePaymentSDKProtocols.h in Headers */,
 				1D7A78331E407B1100DA6196 /* Card.h in Headers */,
 				1D3D7FB41E7A806A0043BF9D /* MobilePaymentSDKError.h in Headers */,
+				1D55A4E11EA8963700F41037 /* NSRegularExpression+Helpers.h in Headers */,
 				1D7A78931E40D56F00DA6196 /* UpdateStoredCardViewController.h in Headers */,
 				1D7A788F1E40D41B00DA6196 /* StoreCardViewController.h in Headers */,
 				1D7A786B1E40ACCE00DA6196 /* PaymentViewController.h in Headers */,
 				1D3D7FC81E7A86590043BF9D /* MobilePaymentTheme.h in Headers */,
+				1D3D7FB81E7A80790043BF9D /* BSKeyboardControls.h in Headers */,
+				1D52AA571ED6EF3A00D30724 /* Reachability.h in Headers */,
 				1D7A780A1E3F924300DA6196 /* CartItem.h in Headers */,
 				1D3D7F9D1E7A805C0043BF9D /* UIColor+HexString.h in Headers */,
 				1D3D7FC21E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.h in Headers */,
-				1D3D7FB81E7A80790043BF9D /* BSKeyboardControls.h in Headers */,
 				1D3D7FDB1E7A86E20043BF9D /* ICCommunicationManager.h in Headers */,
 				1D7A78631E4093E700DA6196 /* ICStoreCardCommand.h in Headers */,
 				1D7A78471E408B0000DA6196 /* ICBaseCommand.h in Headers */,
@@ -467,6 +493,7 @@
 				1D32E62B1E7AE24E00B066A0 /* ICPrivateKey.h in Headers */,
 				1D7A785F1E40935100DA6196 /* ICReversalCommand.h in Headers */,
 				1D7A78771E40B3CC00DA6196 /* ICCardViewController.h in Headers */,
+				1DD42BFF1EB8794400F83DA9 /* UIAlertController+Helpers.h in Headers */,
 				1D7A78371E407BEF00DA6196 /* ICURLRequest.h in Headers */,
 				1D7A787B1E40B44B00DA6196 /* ICCardView.h in Headers */,
 				1D3D7FBC1E7A80840043BF9D /* MBProgressHUD.h in Headers */,
@@ -477,6 +504,7 @@
 				1D7A789B1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.h in Headers */,
 				1D7A787F1E40B4A900DA6196 /* ICThemedTextField.h in Headers */,
 				1D3D7FD71E7A86E20043BF9D /* ICApplicationManager.h in Headers */,
+				1D52AA531ED6EEFA00D30724 /* ICReachability.h in Headers */,
 				1D3D7F931E7A805C0043BF9D /* Base64.h in Headers */,
 				1D3D7FE11E7A86E20043BF9D /* ICThemeManager.h in Headers */,
 				1D3D7FB01E7A806A0043BF9D /* ICLogger.h in Headers */,
@@ -511,7 +539,7 @@
 		1DACE7B91E2E14B300F5E38E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Intercard Finance AD";
 				TargetAttributes = {
 					1DACE7C11E2E14B300F5E38E = {
@@ -562,6 +590,7 @@
 				1D7A785C1E4090A500DA6196 /* ICRefundCommand.m in Sources */,
 				1D7A789C1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.m in Sources */,
 				1D7A783C1E407DD000DA6196 /* ICHTTPOperation.m in Sources */,
+				1DD42C001EB8794400F83DA9 /* UIAlertController+Helpers.m in Sources */,
 				1D7A787C1E40B44B00DA6196 /* ICCardView.m in Sources */,
 				1D7A78941E40D56F00DA6196 /* UpdateStoredCardViewController.m in Sources */,
 				1D7A78741E40B01100DA6196 /* IC3DSecureWebViewController.m in Sources */,
@@ -572,6 +601,7 @@
 				1D7A784C1E408D8200DA6196 /* ICGetCardDataCommand.m in Sources */,
 				1D7A78A41E40E61400DA6196 /* MobilePaymentSDK.m in Sources */,
 				1D7A78981E40E08100DA6196 /* ICStoreCardViewController.m in Sources */,
+				1D52AA581ED6EF3A00D30724 /* Reachability.m in Sources */,
 				1D3D7FB91E7A80790043BF9D /* BSKeyboardControls.m in Sources */,
 				1D3D7FAE1E7A806A0043BF9D /* ICConstants.m in Sources */,
 				1D3D7FB11E7A806A0043BF9D /* ICLogger.m in Sources */,
@@ -586,6 +616,7 @@
 				1D3D7FB51E7A806A0043BF9D /* MobilePaymentSDKError.m in Sources */,
 				1D3D7FD81E7A86E20043BF9D /* ICApplicationManager.m in Sources */,
 				1D3D7FE01E7A86E20043BF9D /* ICRSAManager.m in Sources */,
+				1D52AA541ED6EEFA00D30724 /* ICReachability.m in Sources */,
 				1D7A786C1E40ACCE00DA6196 /* PaymentViewController.m in Sources */,
 				1D3D7FAC1E7A806A0043BF9D /* CryptoUtil.m in Sources */,
 				1D3D7FDA1E7A86E20043BF9D /* ICBaseManager.m in Sources */,
@@ -598,6 +629,7 @@
 				1D3D7F941E7A805C0043BF9D /* Base64.m in Sources */,
 				1D3D7FDE1E7A86E20043BF9D /* ICMobilePaymentManager.m in Sources */,
 				1D3D7FC91E7A86590043BF9D /* MobilePaymentTheme.m in Sources */,
+				1D55A4E21EA8963700F41037 /* NSRegularExpression+Helpers.m in Sources */,
 				1D7A78581E408F3B00DA6196 /* ICPurchaseCommand.m in Sources */,
 				1D7A780B1E3F924300DA6196 /* CartItem.m in Sources */,
 				1D3D7F981E7A805C0043BF9D /* NSDictionary+Helpers.m in Sources */,
@@ -712,12 +744,6 @@
 		1DACE7CB1E2E14B300F5E38E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					i386,
-					x86_64,
-					armv7s,
-				);
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -739,18 +765,13 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
 			name = Debug;
 		};
 		1DACE7CC1E2E14B300F5E38E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					i386,
-					x86_64,
-					armv7s,
-				);
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -770,6 +791,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
 			name = Release;
 		};

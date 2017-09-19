@@ -8,6 +8,8 @@
 
 #import "ICCardViewController.h"
 
+#import "UIAlertController+Helpers.h"
+
 @implementation ICCardViewController
 
 static NSString * const kSecureSegue = @"3DSecure";
@@ -43,6 +45,11 @@ static NSString * const kSecureSegue = @"3DSecure";
 }
 
 - (IBAction)confirm:(id)sender {
+    if (![_cardView isFilled]) {
+        [UIAlertController showAlert:ICLocalizedString(@"Please fill all fields") withTitle:ICLocalizedString(@"Empty fields") inController:self];
+        return;
+    }
+    
     [self showLoadingHUD];
     [[ICCommunicationManager sharedManager] getCardData:_cardView.pan completion:[self getCardDataCompleted] failure:[self getCardDataFailed]];
 }

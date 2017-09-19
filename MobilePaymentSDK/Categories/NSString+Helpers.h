@@ -10,12 +10,14 @@
 
 @interface NSString (Helpers)
 
+- (BOOL)matchesRegEx:(NSString *)regEx;
+- (BOOL)isValidSignatureOf:(NSString *)plainText;
+
+- (NSString *)trimmed;
 - (NSString *)encrypted;
 - (NSString *)decrypted;
 - (NSString *)signature;
 - (NSString *)urlEncoded;
 - (NSString *)urlDecoded;
-
-- (BOOL)isValidSignatureOf:(NSString *)plainText;
 
 @end

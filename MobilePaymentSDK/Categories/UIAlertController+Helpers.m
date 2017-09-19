@@ -1,0 +1,28 @@
+//
+//  UIAlertController+Helpers.m
+//  MobilePaymentSDK
+//
+//  Created by Valio Cholakov on 5/2/17.
+//  Copyright © 2017 Intercard Finance AD. All rights reserved.
+//
+
+#import "UIAlertController+Helpers.h"
+
+#import "ICHelpers.h"
+#import "ICConstants.h"
+#import "ICMobilePaymentManager.h"
+
+@implementation UIAlertController (Helpers)
+
+#pragma mark - Public Methods
+
++ (void)showAlert:(NSString *)message withTitle:(NSString *)title inController:(UIViewController *)sender {
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:ICLocalizedString(@"Ok") style:UIAlertActionStyleCancel handler:nil];
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:okAction];
+    
+    [sender presentViewController:alertController animated:YES completion:nil];
+}
+
+@end

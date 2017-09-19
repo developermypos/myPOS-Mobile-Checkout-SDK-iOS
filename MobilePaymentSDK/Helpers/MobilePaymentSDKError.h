@@ -18,6 +18,7 @@
 
 @end
 
+extern NSInteger const MobilePaymentSDKConnectivityChangedError;
 extern NSInteger const MobilePaymentSDKNotInitializedError;
 extern NSInteger const MobilePaymentSDKSignatureValidationError;
 extern NSInteger const MobilePaymentSDKCommunicationError;
@@ -35,4 +36,5 @@ extern NSInteger const MobilePaymentSDKInactiveAccountError;
 extern NSInteger const MobilePaymentSDKInvalidAccountError;
 extern NSInteger const MobilePaymentSDKAccountLimitExceededError;
 extern NSInteger const MobilePaymentSDKOrderIdAlreadyUsedError;
+extern NSInteger const MobilePaymentSDKDeclinedByCardIssuerError;
 extern NSInteger const MobilePaymentSDKUndefinedError;
