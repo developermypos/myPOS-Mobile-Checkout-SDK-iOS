@@ -76,11 +76,10 @@ Accepting mobile payments for merchants
   
   ## Setup
   
-  Start using myPOS™ Mobile Checkout iOS SDK by initializing it. Find your account’s unique number on the Dashboard. Choose a store, which will accept the payments. Provide its store id to the SDK. Set the currency to match the store’s one and in which payments will be processed. Follow the instructions regarding the key generation on page. After obtaining a certificate and private key, you will need to convert it to DER format. Use to following command: 
-  
-  openssl x509 -outform der -in public_cert.txt -out public_cert.der
+  Start using myPOS™ Mobile Checkout iOS SDK by initializing it. Find your account’s unique number on the Dashboard. Choose a store, which will accept the payments. Provide its store id to the SDK. Set the currency to match the store’s one and in which payments will be processed. Follow the instructions regarding the key generation on page.
  
- After generating and copying the private key save it to a file with .txt extension.
+ Save the certificate to a file with .txt extension.
+ Save the private key to a file with .txt extension.
  
  Note: Include the certificate and private key files in your project. Then go to Build Phases -> Copy Bundle Resource and add the files.
  
