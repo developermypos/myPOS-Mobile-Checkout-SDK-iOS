@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D32E62B1E7AE24E00B066A0 /* ICPrivateKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D32E6291E7AE24E00B066A0 /* ICPrivateKey.h */; };
-		1D32E62C1E7AE24E00B066A0 /* ICPrivateKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D32E62A1E7AE24E00B066A0 /* ICPrivateKey.m */; };
 		1D3D7F931E7A805C0043BF9D /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7F871E7A805C0043BF9D /* Base64.h */; };
 		1D3D7F941E7A805C0043BF9D /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7F881E7A805C0043BF9D /* Base64.m */; };
 		1D3D7F951E7A805C0043BF9D /* NSData+SHA.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7F891E7A805C0043BF9D /* NSData+SHA.h */; };
@@ -60,6 +58,8 @@
 		1D52AA581ED6EF3A00D30724 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D52AA561ED6EF3A00D30724 /* Reachability.m */; };
 		1D55A4E11EA8963700F41037 /* NSRegularExpression+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D55A4DF1EA8963700F41037 /* NSRegularExpression+Helpers.h */; };
 		1D55A4E21EA8963700F41037 /* NSRegularExpression+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D55A4E01EA8963700F41037 /* NSRegularExpression+Helpers.m */; };
+		1D6AE8B61F738FCD00124B54 /* ICASN.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D6AE8B41F738FCD00124B54 /* ICASN.h */; };
+		1D6AE8B71F738FCD00124B54 /* ICASN.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6AE8B51F738FCD00124B54 /* ICASN.m */; };
 		1D7A780A1E3F924300DA6196 /* CartItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78081E3F924300DA6196 /* CartItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D7A780B1E3F924300DA6196 /* CartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78091E3F924300DA6196 /* CartItem.m */; };
 		1D7A78331E407B1100DA6196 /* Card.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78311E407B1100DA6196 /* Card.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -117,8 +117,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D32E6291E7AE24E00B066A0 /* ICPrivateKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICPrivateKey.h; sourceTree = "<group>"; };
-		1D32E62A1E7AE24E00B066A0 /* ICPrivateKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPrivateKey.m; sourceTree = "<group>"; };
 		1D3D7F871E7A805C0043BF9D /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		1D3D7F881E7A805C0043BF9D /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		1D3D7F891E7A805C0043BF9D /* NSData+SHA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SHA.h"; sourceTree = "<group>"; };
@@ -170,6 +168,8 @@
 		1D52AA561ED6EF3A00D30724 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		1D55A4DF1EA8963700F41037 /* NSRegularExpression+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegularExpression+Helpers.h"; sourceTree = "<group>"; };
 		1D55A4E01EA8963700F41037 /* NSRegularExpression+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegularExpression+Helpers.m"; sourceTree = "<group>"; };
+		1D6AE8B41F738FCD00124B54 /* ICASN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICASN.h; sourceTree = "<group>"; };
+		1D6AE8B51F738FCD00124B54 /* ICASN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICASN.m; sourceTree = "<group>"; };
 		1D7A78081E3F924300DA6196 /* CartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartItem.h; sourceTree = "<group>"; };
 		1D7A78091E3F924300DA6196 /* CartItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CartItem.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1D7A78101E3F965400DA6196 /* MobilePaymentSDKProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePaymentSDKProtocols.h; sourceTree = "<group>"; };
@@ -398,8 +398,8 @@
 				1D52AA561ED6EF3A00D30724 /* Reachability.m */,
 				1D52AA511ED6EEFA00D30724 /* ICReachability.h */,
 				1D52AA521ED6EEFA00D30724 /* ICReachability.m */,
-				1D32E6291E7AE24E00B066A0 /* ICPrivateKey.h */,
-				1D32E62A1E7AE24E00B066A0 /* ICPrivateKey.m */,
+				1D6AE8B41F738FCD00124B54 /* ICASN.h */,
+				1D6AE8B51F738FCD00124B54 /* ICASN.m */,
 			);
 			name = Models;
 			path = MobilePaymentSDK/Models;
@@ -482,6 +482,7 @@
 				1D7A789F1E40E36300DA6196 /* ICPaymentViewController.h in Headers */,
 				1D7A783B1E407DD000DA6196 /* ICHTTPOperation.h in Headers */,
 				1D3D7FAF1E7A806A0043BF9D /* ICHelpers.h in Headers */,
+				1D6AE8B61F738FCD00124B54 /* ICASN.h in Headers */,
 				1D3D7F951E7A805C0043BF9D /* NSData+SHA.h in Headers */,
 				1D3D7FD91E7A86E20043BF9D /* ICBaseManager.h in Headers */,
 				1D3D7FB21E7A806A0043BF9D /* ICUtil.h in Headers */,
@@ -490,7 +491,6 @@
 				1D3D7F971E7A805C0043BF9D /* NSDictionary+Helpers.h in Headers */,
 				1D7A78571E408F3B00DA6196 /* ICPurchaseCommand.h in Headers */,
 				1D3D7FDD1E7A86E20043BF9D /* ICMobilePaymentManager.h in Headers */,
-				1D32E62B1E7AE24E00B066A0 /* ICPrivateKey.h in Headers */,
 				1D7A785F1E40935100DA6196 /* ICReversalCommand.h in Headers */,
 				1D7A78771E40B3CC00DA6196 /* ICCardViewController.h in Headers */,
 				1DD42BFF1EB8794400F83DA9 /* UIAlertController+Helpers.h in Headers */,
@@ -545,7 +545,7 @@
 					1DACE7C11E2E14B300F5E38E = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2SSZUB73NA;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -589,6 +589,7 @@
 				1D7A78681E40954600DA6196 /* ICUpdateStoredCardCommand.m in Sources */,
 				1D7A785C1E4090A500DA6196 /* ICRefundCommand.m in Sources */,
 				1D7A789C1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.m in Sources */,
+				1D6AE8B71F738FCD00124B54 /* ICASN.m in Sources */,
 				1D7A783C1E407DD000DA6196 /* ICHTTPOperation.m in Sources */,
 				1DD42C001EB8794400F83DA9 /* UIAlertController+Helpers.m in Sources */,
 				1D7A787C1E40B44B00DA6196 /* ICCardView.m in Sources */,
@@ -596,7 +597,6 @@
 				1D7A78741E40B01100DA6196 /* IC3DSecureWebViewController.m in Sources */,
 				1D7A78701E40AEF000DA6196 /* ICBaseViewController.m in Sources */,
 				1D7A78901E40D41B00DA6196 /* StoreCardViewController.m in Sources */,
-				1D32E62C1E7AE24E00B066A0 /* ICPrivateKey.m in Sources */,
 				1D7A78601E40935100DA6196 /* ICReversalCommand.m in Sources */,
 				1D7A784C1E408D8200DA6196 /* ICGetCardDataCommand.m in Sources */,
 				1D7A78A41E40E61400DA6196 /* MobilePaymentSDK.m in Sources */,
@@ -683,7 +683,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -730,7 +730,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -757,7 +757,7 @@
 				);
 				INFOPLIST_FILE = MobilePaymentSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ipay.Mobile-Payment-SDK";
@@ -785,7 +785,7 @@
 				);
 				INFOPLIST_FILE = MobilePaymentSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ipay.Mobile-Payment-SDK";
 				PRODUCT_NAME = "$(TARGET_NAME)";

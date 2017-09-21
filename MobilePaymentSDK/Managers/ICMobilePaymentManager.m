@@ -9,19 +9,23 @@
 #import "ICMobilePaymentManager.h"
 #import "ICLogger.h"
 #import "ICHelpers.h"
-#import "ICPrivateKey.h"
 #import "ICConstants.h"
 #import "Base64.h"
 
+#import "ICRSAManager.h"
+
 @interface ICMobilePaymentManager () {
     BOOL _inSandbox;
-    NSString *_publicKey;
-    NSString *_privateKey;
+    NSString *_publicKeyName;
+    NSString *_privateKeyName;
 }
 
 @end;
 
 @implementation ICMobilePaymentManager
+
+@synthesize publicKey  = _publicKey;
+@synthesize privateKey = _privateKey;
 
 #pragma mark - Singleton
 
@@ -36,6 +40,14 @@
     return manager;
 }
 
+- (void)dealloc {
+    _publicKeyName  = nil;
+    _privateKeyName = nil;
+    
+    if (_publicKey)  { CFRelease(_publicKey);  }
+    if (_privateKey) { CFRelease(_privateKey); }
+}
+
 #pragma mark - Public Methods
 
 - (void)setWalletNumber:(NSString *)walletNumber
@@ -48,15 +60,15 @@
                keyIndex:(NSInteger)keyIndex
               inSandbox:(BOOL)inSandbox {
     
-    _bundle       = bundle;
-    _storeId      = storeId;
-    _currency     = [self currencyRawValue:currency];
-    _language     = language;
-    _keyIndex     = keyIndex;
-    _inSandbox    = inSandbox;
-    _publicKey    = publicKey;
-    _privateKey   = privateKey;
-    _walletNumber = walletNumber;
+    _bundle         = bundle;
+    _storeId        = storeId;
+    _currency       = [self currencyRawValue:currency];
+    _language       = language;
+    _keyIndex       = keyIndex;
+    _inSandbox      = inSandbox;
+    _publicKeyName  = publicKey;
+    _privateKeyName = privateKey;
+    _walletNumber   = walletNumber;
 }
 
 - (BOOL)isInitialized {
@@ -70,13 +82,13 @@
         return NO;
     }
     
-    if (!self.publicKey) {
-        [ICLogger log:@"Certificate (public key) file is corrupted"];
+    if (!self.privateKey) {
+        [ICLogger log:@"Private key file is corrupted"];
         return NO;
     }
     
-    if (!self.privateKey) {
-        [ICLogger log:@"Private key file is corrupted"];
+    if (!self.publicKey) {
+        [ICLogger log:@"Certificate (public key) file is corrupted"];
         return NO;
     }
     
@@ -95,95 +107,69 @@
     return [[ICMobilePaymentManager sharedManager] isInSandbox] ? ICSandbox3DSecureUrl : ICProduction3DSecureUrl;
 }
 
-- (ICPrivateKey *)privateKey {
-    NSURL *keyURL = [self.bundle URLForResource:_privateKey withExtension:@"txt"];
-    
-    if (!keyURL) {
-        [ICLogger log:@"Cannot get url for private key"];
-        return nil;
+- (SecKeyRef)privateKey {
+    if (_privateKey) {
+        return _privateKey;
     }
     
-    NSData *keyData = [NSData dataWithContentsOfURL:keyURL];
+    NSData *keyData = [self pemToDer:_privateKeyName];
     
-    if (!keyData) {
+    if (!keyData || !keyData.length) {
         [ICLogger log:@"Private key data is nil"];
         return nil;
     }
     
-    NSString *cleanKey      = @"";
-    NSString *base64Encoded = [[NSString alloc] initWithData:keyData encoding:NSUTF8StringEncoding];
-    NSArray  *keyValues     = [base64Encoded componentsSeparatedByString:@"\n"];
+    _privateKey = [[ICRSAManager sharedManager] privateKeyFromFile:keyData];
+    return _privateKey;
+}
+
+- (SecKeyRef)publicKey {
+    if (_publicKey) {
+        return _publicKey;
+    }
+
+    NSData *certData = [self pemToDer:_publicKeyName];
+
+    if (!certData || !certData.length) {
+        [ICLogger log:@"Certificate data is nil"];
+        return nil;
+    }
+
+    _publicKey = [[ICRSAManager sharedManager] publicKeyFromCertificate:certData];
+    return _publicKey;
+}
+
+#pragma mark - Helpers
+
+- (NSData *)pemToDer:(NSString *)pemFileName {
+    NSURL *url = [self.bundle URLForResource:pemFileName withExtension:@"txt"];
+    
+    if (!url) {
+        [ICLogger log:[NSString stringWithFormat:@"Cannot get url for file '%@'", pemFileName]];
+        return nil;
+    }
+    
+    NSError  *error  = nil;
+    NSString *rawPem = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
+    
+    if (error) {
+        [ICLogger log:[NSString stringWithFormat:@"stringWithContentsOfURL error: %@", error]];
+        return nil;
+    }
+    
+    NSString *cleanPem  = @"";
+    NSArray  *keyValues = [rawPem componentsSeparatedByString:@"\n"];
     
     for (NSString *keyValue in keyValues) {
         if ([keyValue hasPrefix:@"-"]) {
             continue;
         }
         
-        cleanKey = [NSString stringWithFormat:@"%@%@\n", cleanKey, keyValue];
+        cleanPem = [NSString stringWithFormat:@"%@%@\n", cleanPem, keyValue];
     }
     
-    NSData *cleanKeyData = [cleanKey base64DecodedData];
-    
-    if (!keyData) {
-        [ICLogger log:@"Private key data is nil after decoding"];
-        return nil;
-    }
-    
-    return [[ICPrivateKey alloc] initWithData:cleanKeyData];
+    return [[NSData alloc] initWithBase64EncodedString:cleanPem options:NSDataBase64DecodingIgnoreUnknownCharacters];
 }
-
-- (SecKeyRef)publicKey {
-    NSURL *certURL = [self.bundle URLForResource:_publicKey withExtension:@"der"];
-    
-    if (!certURL) {
-        [ICLogger log:@"Cannot get url for certificate"];
-        return nil;
-    }
-    
-    NSData *certData = [NSData dataWithContentsOfURL:certURL];
-    
-    if (!certData) {
-        [ICLogger log:@"Certificate data is nil"];
-        return nil;
-    }
-    
-    SecKeyRef    key    = NULL;
-    SecTrustRef  trust  = NULL;
-    SecPolicyRef policy = NULL;
-    
-    SecCertificateRef cert = SecCertificateCreateWithData(NULL, (CFDataRef)certData);
-    
-    if (cert != NULL) {
-        policy = SecPolicyCreateBasicX509();
-        
-        if (!policy) {
-            [ICLogger log:@"Certificate policy initialization failed"];
-            return nil;
-        }
-        
-        OSStatus status = SecTrustCreateWithCertificates((CFTypeRef)cert, policy, &trust);
-        
-        if (status == noErr) {
-            SecTrustResultType result;
-            SecTrustEvaluate(trust, &result);
-            
-            [ICLogger log:[NSString stringWithFormat:@"SecTrustResultType from SecTrustEvaluate returned %d", result]];
-            
-            key = SecTrustCopyPublicKey(trust);
-        }
-        else {
-            [ICLogger log:[NSString stringWithFormat:@"SecTrustCreateWithCertificates failed with status %d", (int)status]];
-        }
-    }
-    
-    if (policy) CFRelease(policy);
-    if (trust)  CFRelease(trust);
-    if (cert)   CFRelease(cert);
-    
-    return key;
-}
-
-#pragma mark - Helpers
 
 - (NSString *)currencyRawValue:(Currency)currency {
     switch (currency) {

@@ -9,9 +9,9 @@
 #import "ICRSAManager.h"
 #import "CryptoUtil.h"
 #import "ICLogger.h"
-#import "ICPrivateKey.h"
+#import "ICConstants.h"
 #import "ICMobilePaymentManager.h"
-
+#import "ICASN.h"
 #import "Base64.h"
 
 @implementation ICRSAManager
@@ -39,14 +39,14 @@
     
     [ICLogger log:[NSString stringWithFormat:@"Base64 data to sign: %@", string]];
     
-    ICPrivateKey *privateKey = [[ICMobilePaymentManager sharedManager] privateKey];
+    SecKeyRef privateKey = [[ICMobilePaymentManager sharedManager] privateKey];
     
     if (!privateKey) {
         [ICLogger log:@"Could not load private key"];
         return nil;
     }
     
-    NSData *signedData = [CryptoUtil signedString:string withKey:privateKey.reference];
+    NSData *signedData = [CryptoUtil signedString:string withKey:privateKey];
     
     if (!signedData) {
         [ICLogger logDebug:@"Signing error"];
@@ -100,14 +100,14 @@
         return nil;
     }
     
-    ICPrivateKey *privateKey = [[ICMobilePaymentManager sharedManager] privateKey];
+    SecKeyRef privateKey = [[ICMobilePaymentManager sharedManager] privateKey];
     
     if (!privateKey) {
         [ICLogger logDebug:@"Could not load private key"];
         return nil;
     }
     
-    NSString *decryptedString = [CryptoUtil decryptString:string withKey:privateKey.reference padding:kSecPaddingPKCS1];
+    NSString *decryptedString = [CryptoUtil decryptString:string withKey:privateKey padding:kSecPaddingPKCS1];
     
     if (!decryptedString) {
         [ICLogger logDebug:@"Decryption failed"];
@@ -117,71 +117,59 @@
     return decryptedString;
 }
 
-- (SecKeyRef)addKey:(NSData *)keyData withTag:(NSString *)tag isPublic:(BOOL)isPublic {
-    if (!keyData) {
+- (SecKeyRef)privateKeyFromFile:(NSData *)fileData {
+    CFErrorRef error = NULL;
+    SecKeyRef privateKey = SecKeyCreateWithData((CFDataRef)fileData, (CFDictionaryRef)[self attributesForRSAKey:kSecAttrKeyClassPrivate], &error);
+    
+    if (error != NULL) {
+        NSLog(@"Invalid key data");
+        CFRelease(error);
         return nil;
     }
     
-    NSData *tagData = [tag dataUsingEncoding:NSUTF8StringEncoding];
-    
-    if (!tagData) {
-        [ICLogger logDebug:[NSString stringWithFormat:@"Couldn't create tag data for %@ key", isPublic ? @"public" : @"private"]];
-        return nil;
+    if (privateKey != NULL) {
+        return privateKey;
     }
     
-    id keyClass = isPublic ? (id)kSecAttrKeyClassPublic : (id)kSecAttrKeyClassPrivate;
-    
-    CFTypeRef ref;
-    NSDictionary *keyAddDict = @{
-                                 (id)kSecClass               : (id)kSecClassKey,
-                                 (id)kSecValueData           : keyData,
-                                 (id)kSecAttrKeyType         : (id)kSecAttrKeyTypeRSA,
-                                 (id)kSecAttrKeyClass        : keyClass,
-                                 (id)kSecAttrAccessible      : (id)kSecAttrAccessibleWhenUnlocked,
-                                 (id)kSecAttrApplicationTag  : tagData,
-                                 (id)kSecReturnPersistentRef : [NSNumber numberWithBool:YES]
-                                 };
-    
-    OSStatus status = SecItemAdd((CFDictionaryRef)keyAddDict, &ref);
-    
-    if (status != noErr && status != errSecDuplicateItem) {
-        [ICLogger log:@"Provided key couldn't be added to the keychain"];
-        return nil;
-    }
-    
-    NSDictionary *keyCopyDict = @{
-                                  (id)kSecClass              : (id)kSecClassKey,
-                                  (id)kSecReturnRef          : [NSNumber numberWithBool:YES],
-                                  (id)kSecAttrKeyType        : (id)kSecAttrKeyTypeRSA,
-                                  (id)kSecAttrKeyClass       : keyClass,
-                                  (id)kSecAttrAccessible     : (id)kSecAttrAccessibleWhenUnlocked,
-                                  (id)kSecAttrApplicationTag : tagData
-                                  };
-    
-    status = SecItemCopyMatching((CFDictionaryRef)keyCopyDict, &ref);
-    
-    if (!ref) {
-        [ICLogger log:@"Couldn't get key reference from the keychain"];
-        return nil;
-    }
-    
-    return (SecKeyRef)ref;
+    NSLog(@"SecKeyCreateWithData failed without error");
+    return nil;
 }
 
-- (void)removeKeyWithTag:(NSString *)tag {
-    NSData *tagData = [tag dataUsingEncoding:NSUTF8StringEncoding];
+- (SecKeyRef)publicKeyFromCertificate:(NSData *)certificateData {
+    ICASN *asn = [[ICASN alloc] initWithData:certificateData];
+    NSData *keyData = asn.keyData;
     
-    if (!tagData) {
-        return;
+    if (!keyData || !keyData.length) {
+        NSLog(@"Cannot extract key from certificate");
+        return nil;
     }
     
-    NSDictionary *keyRemoveDict = @{
-                                    (id)kSecClass              : (id)kSecClassKey,
-                                    (id)kSecAttrKeyType        : (id)kSecAttrKeyTypeRSA,
-                                    (id)kSecAttrApplicationTag : tagData
-                                    };
+    CFErrorRef error = NULL;
+    SecKeyRef publicKey = SecKeyCreateWithData((CFDataRef)asn.keyData, (CFDictionaryRef)[self attributesForRSAKey:kSecAttrKeyClassPublic], &error);
     
-    SecItemDelete((CFDictionaryRef)keyRemoveDict);
+    if (error != NULL) {
+        NSLog(@"Invalid key data");
+        CFRelease(error);
+        return nil;
+    }
+    
+    if (publicKey != NULL) {
+        return publicKey;
+    }
+    
+    NSLog(@"SecKeyCreateWithData failed without error");
+    return nil;
+}
+
+#pragma mark - Helpers
+
+- (NSDictionary *)attributesForRSAKey:(CFStringRef)keyClass {
+    return @{
+             (id)kSecAttrKeyType       : (id)kSecAttrKeyTypeRSA,
+             (id)kSecAttrKeyClass      : (__bridge id)keyClass,
+             (id)kSecAttrKeySizeInBits : [NSNumber numberWithInt:1024]
+             };
 }
 
 @end
+

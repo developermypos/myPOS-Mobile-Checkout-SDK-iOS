@@ -15,7 +15,7 @@
 - (NSString *)encryptedString:(NSString *)string;
 - (NSString *)decryptedString:(NSString *)string;
 
-- (SecKeyRef)addKey:(NSData *)keyData withTag:(NSString *)tag isPublic:(BOOL)isPublic;
-- (void)removeKeyWithTag:(NSString *)tag;
+- (SecKeyRef)publicKeyFromCertificate:(NSData *)certificateData;
+- (SecKeyRef)privateKeyFromFile:(NSData *)fileData;
 
 @end

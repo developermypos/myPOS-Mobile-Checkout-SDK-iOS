@@ -19,5 +19,6 @@
 - (NSString *)signature;
 - (NSString *)urlEncoded;
 - (NSString *)urlDecoded;
++ (NSString *)uuid;
 
 @end

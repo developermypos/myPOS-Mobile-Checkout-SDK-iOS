@@ -18,6 +18,9 @@ extern NSTimeInterval const kCommunicationTimeout;
 extern CGFloat const kSeparatorHeight;
 extern CGFloat const kNavigationBarHeight;
 
+extern NSString * const kPrivateKeyTag;
+extern NSString * const kCertificateTag;
+
 extern NSInteger const ICResponseStatusOK;
 extern NSInteger const ICSecureResponseStatusOK;
 extern NSInteger const ICSecureResponseStatusParamError;

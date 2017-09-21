@@ -29,6 +29,11 @@ NSString * const kContentType        = @"Content-Type";
 NSString * const kContentLength      = @"Content-Length";
 NSString * const kURLEncoded         = @"application/x-www-form-urlencoded";
 
+#pragma mark - Tags
+
+NSString * const kPrivateKeyTag  = @"26f1315c-ebff-4ab6-av92-a7f732d24b9b";
+NSString * const kCertificateTag = @"b7e3865f-ff74-4cca-999d-c293d929fec7";
+
 #pragma mark - Response Statuses
 
 NSInteger const ICResponseStatusOK                    = 0;

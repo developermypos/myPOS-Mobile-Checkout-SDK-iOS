@@ -10,11 +10,13 @@
 #import "MobilePaymentSDK.h"
 
 @class ICPrivateKey;
+@class ICCertificate;
 
 @interface ICMobilePaymentManager : ICBaseManager
 
 @property (nonatomic, readonly) NSInteger keyIndex;
 @property (nonatomic, readonly) SecKeyRef publicKey;
+@property (nonatomic, readonly) SecKeyRef privateKey;
 @property (nonatomic, strong, readonly) NSBundle *bundle;
 @property (nonatomic, strong, readonly) NSString *storeId;
 @property (nonatomic, strong, readonly) NSString *language;
@@ -35,6 +37,5 @@
 - (BOOL)isInSandbox;
 + (NSString *)apiUrl;
 + (NSString *)secureUrl;
-- (ICPrivateKey *)privateKey;
 
 @end
