@@ -53,7 +53,9 @@
         return;
     }
     
-    [MBProgressHUD showHUDAddedTo:view animated:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD showHUDAddedTo:view animated:YES];
+    });
 }
 
 - (void)hideLoadingHUD {
@@ -63,7 +65,9 @@
         return;
     }
     
-    [MBProgressHUD hideAllHUDsForView:view animated:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideAllHUDsForView:view animated:YES];
+    });
 }
 
 #pragma mark - Private Methods
