@@ -149,8 +149,8 @@ static NSString * const kSecureSegue = @"3DSecure";
             return;
         }
         
-        NSInteger is3DSecured = [[_cardData objectForKey:ICParameterIs3DEnabled] integerValue];
-        NSString  *cardType   = [_cardData objectForKey:ICParameterCardType];
+        NSInteger is3DSecured = [[cardData objectForKey:ICParameterIs3DEnabled] integerValue];
+        NSString  *cardType   = [cardData objectForKey:ICParameterCardType];
     
         _cardData = cardData;
         

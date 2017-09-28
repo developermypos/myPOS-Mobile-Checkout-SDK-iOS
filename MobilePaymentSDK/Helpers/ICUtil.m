@@ -98,7 +98,7 @@
         return nil;
     }
     
-    NSString *body = [NSString stringWithFormat:@"%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@",
+    NSString *body = [NSString stringWithFormat:@"%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@",
                       ICParameterData, [encryptedData urlEncoded],
                       IC3DSParameterWalletId, [walletId urlEncoded],
                       ICParameterSource, [kSource urlEncoded],
@@ -106,9 +106,11 @@
                       IC3DSParameterBIN, [bin urlEncoded],
                       IC3DSParameterBillingDesc, [billingDesc urlEncoded],
                       IC3DSParameterAmount, [amount urlEncoded],
+                      ICParameterVersion, [kIPCVersion urlEncoded],
+                      ICParameterSID.lowercaseString, [[[ICMobilePaymentManager sharedManager] storeId] urlEncoded],
                       IC3DSParameterCurrency, [[[ICMobilePaymentManager sharedManager] currency] urlEncoded]];
     
-//    ICLogger.log("3DS - body: \(body)")
+//    [ICLogger logDebug:[NSString stringWithFormat:@"3DS - body: %@", body]];
     
     NSURL *url = [NSURL URLWithString:[ICMobilePaymentManager secureUrl]];
     
