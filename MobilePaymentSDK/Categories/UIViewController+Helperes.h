@@ -10,4 +10,6 @@
 
 @interface UIViewController (Helperes)
 
+- (UIViewController *)presenter;
+
 @end

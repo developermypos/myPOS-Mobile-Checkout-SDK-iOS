@@ -62,6 +62,11 @@
         return NO;
     }
     
+    if (signedString.length == 0) {
+        [ICLogger log:@"Missing signature"];
+        return NO;
+    }
+    
     SecKeyRef publicKey = [[ICMobilePaymentManager sharedManager] publicKey];
     
     if (!publicKey) {

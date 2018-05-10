@@ -12,6 +12,8 @@
 #import "ICConstants.h"
 #import "ICMobilePaymentManager.h"
 
+#import "UIViewController+Helperes.h"
+
 @implementation UIAlertController (Helpers)
 
 #pragma mark - Public Methods
@@ -22,7 +24,7 @@
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:okAction];
     
-    [sender presentViewController:alertController animated:YES completion:nil];
+    [[sender presenter] presentViewController:alertController animated:YES completion:nil];
 }
 
 @end

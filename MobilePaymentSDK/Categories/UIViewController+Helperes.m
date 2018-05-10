@@ -10,4 +10,8 @@
 
 @implementation UIViewController (Helperes)
 
+- (UIViewController *)presenter {
+    return self.navigationController ? : self;
+}
+
 @end

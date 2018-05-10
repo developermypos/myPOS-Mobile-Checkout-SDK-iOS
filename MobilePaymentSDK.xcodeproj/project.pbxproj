@@ -109,6 +109,8 @@
 		1D7A78A31E40E61400DA6196 /* MobilePaymentSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78A11E40E61400DA6196 /* MobilePaymentSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D7A78A41E40E61400DA6196 /* MobilePaymentSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78A21E40E61400DA6196 /* MobilePaymentSDK.m */; };
 		1D7A78A51E40EC3200DA6196 /* MobilePaymentSDKProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78101E3F965400DA6196 /* MobilePaymentSDKProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D9D806C20A2C4320054D7BB /* UIViewController+Helperes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9D806A20A2C4320054D7BB /* UIViewController+Helperes.h */; };
+		1D9D806D20A2C4320054D7BB /* UIViewController+Helperes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D806B20A2C4320054D7BB /* UIViewController+Helperes.m */; };
 		1DACE8271E2E14F400F5E38E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DACE7F11E2E14F400F5E38E /* Images.xcassets */; };
 		1DACE83C1E2E14F400F5E38E /* ICCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DACE80A1E2E14F400F5E38E /* ICCardView.xib */; };
 		1DACE84C1E2E1E7A00F5E38E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DACE84B1E2E1E7A00F5E38E /* Storyboard.storyboard */; };
@@ -219,6 +221,8 @@
 		1D7A789E1E40E36300DA6196 /* ICPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPaymentViewController.m; sourceTree = "<group>"; };
 		1D7A78A11E40E61400DA6196 /* MobilePaymentSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePaymentSDK.h; sourceTree = "<group>"; };
 		1D7A78A21E40E61400DA6196 /* MobilePaymentSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilePaymentSDK.m; sourceTree = "<group>"; };
+		1D9D806A20A2C4320054D7BB /* UIViewController+Helperes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Helperes.h"; sourceTree = "<group>"; };
+		1D9D806B20A2C4320054D7BB /* UIViewController+Helperes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Helperes.m"; sourceTree = "<group>"; };
 		1DACE7C21E2E14B300F5E38E /* MobilePaymentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobilePaymentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DACE7C61E2E14B300F5E38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DACE7F11E2E14F400F5E38E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MobilePaymentSDK/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -258,6 +262,8 @@
 				1D55A4E01EA8963700F41037 /* NSRegularExpression+Helpers.m */,
 				1DD42BFD1EB8794400F83DA9 /* UIAlertController+Helpers.h */,
 				1DD42BFE1EB8794400F83DA9 /* UIAlertController+Helpers.m */,
+				1D9D806A20A2C4320054D7BB /* UIViewController+Helperes.h */,
+				1D9D806B20A2C4320054D7BB /* UIViewController+Helperes.m */,
 			);
 			name = Categories;
 			path = MobilePaymentSDK/Categories;
@@ -479,6 +485,7 @@
 				1D7A785B1E4090A500DA6196 /* ICRefundCommand.h in Headers */,
 				1D3D7FAB1E7A806A0043BF9D /* CryptoUtil.h in Headers */,
 				1D3D7F991E7A805C0043BF9D /* NSString+Helpers.h in Headers */,
+				1D9D806C20A2C4320054D7BB /* UIViewController+Helperes.h in Headers */,
 				1D7A789F1E40E36300DA6196 /* ICPaymentViewController.h in Headers */,
 				1D7A783B1E407DD000DA6196 /* ICHTTPOperation.h in Headers */,
 				1D3D7FAF1E7A806A0043BF9D /* ICHelpers.h in Headers */,
@@ -591,6 +598,7 @@
 				1D7A789C1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.m in Sources */,
 				1D6AE8B71F738FCD00124B54 /* ICASN.m in Sources */,
 				1D7A783C1E407DD000DA6196 /* ICHTTPOperation.m in Sources */,
+				1D9D806D20A2C4320054D7BB /* UIViewController+Helperes.m in Sources */,
 				1DD42C001EB8794400F83DA9 /* UIAlertController+Helpers.m in Sources */,
 				1D7A787C1E40B44B00DA6196 /* ICCardView.m in Sources */,
 				1D7A78941E40D56F00DA6196 /* UpdateStoredCardViewController.m in Sources */,
