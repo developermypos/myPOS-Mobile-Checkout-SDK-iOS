@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D26F59F1E24C00D007CEEE7 /* public_cert.der in Resources */ = {isa = PBXBuildFile; fileRef = 1D26F59E1E24C004007CEEE7 /* public_cert.der */; };
 		1D32E5A21E7AB11200B066A0 /* MobilePaymentSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1D32E5A41E7AC06000B066A0 /* private_key.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1D32E5A31E7AC06000B066A0 /* private_key.txt */; };
 		1D3D73771E2D0AC60086AA5B /* ICArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73701E2D0AC60086AA5B /* ICArticlesTableViewController.swift */; };
 		1D3D73781E2D0AC60086AA5B /* ICBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73711E2D0AC60086AA5B /* ICBaseTableViewController.swift */; };
 		1D3D73791E2D0AC60086AA5B /* ICUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73731E2D0AC60086AA5B /* ICUtils.swift */; };
@@ -38,7 +36,6 @@
 		1D66DA601E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA521E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m */; };
 		1D66DA611E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA541E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m */; };
 		1D66DA621E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA561E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m */; };
-		1D87639F1E7BDF3E00AAEC3A /* private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 1D87639E1E7BDF3E00AAEC3A /* private_key.pem */; };
 		1DA95B921E16584D005C3EB3 /* MobilePaymentSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DA95B901E16584D005C3EB3 /* MobilePaymentSDK.strings */; };
 		1DB58EEE1E029D2800875E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB58EED1E029D2800875E9F /* AppDelegate.swift */; };
 		1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF11E029D2800875E9F /* Main.storyboard */; };
@@ -61,8 +58,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1D26F59E1E24C004007CEEE7 /* public_cert.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_cert.der; sourceTree = "<group>"; };
-		1D32E5A31E7AC06000B066A0 /* private_key.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private_key.txt; sourceTree = "<group>"; };
 		1D3C0D2A1E1650E700755FB4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		1D3C0D2B1E1650E700755FB4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1D3D73701E2D0AC60086AA5B /* ICArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICArticlesTableViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +101,6 @@
 		1D66DA541E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDRingIndicatorView.m; sourceTree = "<group>"; };
 		1D66DA551E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDSuccessIndicatorView.h; sourceTree = "<group>"; };
 		1D66DA561E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDSuccessIndicatorView.m; sourceTree = "<group>"; };
-		1D87639E1E7BDF3E00AAEC3A /* private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private_key.pem; sourceTree = "<group>"; };
 		1DA95B911E16584D005C3EB3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "Mobile Payment Test/de.lproj/MobilePaymentSDK.strings"; sourceTree = "<group>"; };
 		1DA95B931E16585A005C3EB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Mobile Payment Test/en.lproj/MobilePaymentSDK.strings"; sourceTree = "<group>"; };
 		1DB58EEA1E029D2800875E9F /* Mobile Payment Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Payment Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,9 +247,6 @@
 				1DB58EF11E029D2800875E9F /* Main.storyboard */,
 				1DB58EF61E029D2800875E9F /* LaunchScreen.storyboard */,
 				1DA95B901E16584D005C3EB3 /* MobilePaymentSDK.strings */,
-				1D26F59E1E24C004007CEEE7 /* public_cert.der */,
-				1D87639E1E7BDF3E00AAEC3A /* private_key.pem */,
-				1D32E5A31E7AC06000B066A0 /* private_key.txt */,
 				1DB58EF41E029D2800875E9F /* Assets.xcassets */,
 				1DB58EF91E029D2800875E9F /* Info.plist */,
 				1D3D7FE51E7A90B30043BF9D /* Mobile Payment Test-Bridging-Header.h */,
@@ -291,13 +282,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Intercard Finance AD";
 				TargetAttributes = {
 					1DB58EE91E029D2800875E9F = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = XV5EK9R9VL;
-						LastSwiftMigration = 0820;
+						DevelopmentTeam = YG25Y935ZY;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -327,10 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D66DA571E8D224400079DF0 /* JGProgressHUD Resources.bundle in Resources */,
-				1D26F59F1E24C00D007CEEE7 /* public_cert.der in Resources */,
-				1D87639F1E7BDF3E00AAEC3A /* private_key.pem in Resources */,
 				1DA95B921E16584D005C3EB3 /* MobilePaymentSDK.strings in Resources */,
-				1D32E5A41E7AC06000B066A0 /* private_key.txt in Resources */,
 				1DB58EF81E029D2800875E9F /* LaunchScreen.storyboard in Resources */,
 				1DB58EF51E029D2800875E9F /* Assets.xcassets in Resources */,
 				1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */,
@@ -418,15 +406,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -468,15 +464,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -507,7 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XV5EK9R9VL;
+				DEVELOPMENT_TEAM = YG25Y935ZY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -517,11 +521,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vc.Mobile-Payment-Testtt";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mypos.Mobile-Payment-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Mobile Payment Test/Mobile Payment Test-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -531,7 +536,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XV5EK9R9VL;
+				DEVELOPMENT_TEAM = YG25Y935ZY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -540,10 +545,11 @@
 				INFOPLIST_FILE = "Mobile Payment Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vc.Mobile-Payment-Testtt";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mypos.Mobile-Payment-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Mobile Payment Test/Mobile Payment Test-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

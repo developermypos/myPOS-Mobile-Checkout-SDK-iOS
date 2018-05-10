@@ -64,4 +64,8 @@ fastlane/test_output
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
 
-iOSInjectionProject/
+Mobile\ Payment\ Test.xcodeproj/xcuserdata/
+Mobile\ Payment\ Test.xcodeproj/project.xcworkspace/
+Mobile\ Payment\ Test.xcodeproj/project.xcworkspace/xcuserdata/
+.DS_Store
+*.txt

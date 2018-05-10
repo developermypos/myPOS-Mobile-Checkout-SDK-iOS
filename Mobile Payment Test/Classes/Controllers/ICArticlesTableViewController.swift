@@ -138,6 +138,7 @@ class ICArticlesTableViewController: ICBaseTableViewController {
     
     private func setArticles() {
         _cartItems = [
+            CartItem(name: "Test",  price: 0.01,  quantity: 1),
             CartItem(name: "Book",  price: 10.00, quantity: 1),
             CartItem(name: "Shirt", price: 24.00, quantity: 1),
             CartItem(name: "Pens",  price: 0.25,  quantity: 4),

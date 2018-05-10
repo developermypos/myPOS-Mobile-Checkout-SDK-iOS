@@ -114,9 +114,9 @@ class ICBaseTableViewController: UITableViewController, PaymentDelegate, StoreCa
     // MARK: Private Methods
     
     private func applyTheme() {
-        let rgb: Float = 247.0 / 255.0
+        let rgb: CGFloat = 247.0 / 255.0
         
         self.tableView.tableFooterView = UIView()
-        self.tableView.backgroundColor = UIColor.init(colorLiteralRed: rgb, green: rgb, blue: rgb, alpha: 1.0)
+        self.tableView.backgroundColor = UIColor(red: rgb, green: rgb, blue: rgb, alpha: 1.0)
     }
 }

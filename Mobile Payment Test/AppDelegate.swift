@@ -14,13 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        MobilePaymentSDK.initialize(withAccountNumber: "40064699727",
-                                    storeId: "51528",
+        MobilePaymentSDK.initialize(withAccountNumber: "",
+                                    storeId: "",
                                     currency: .EUR,
-                                    certificate: "public_cert",
-                                    privateKey: "private_key",
-                                    bundle: Bundle.main,
-                                    keyIndex: 4)
+                                    certificate: "",
+                                    privateKey: "",
+                                    bundle: .main,
+                                    keyIndex: 1)
         
         return true
     }

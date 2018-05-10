@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ICThemeManager.h"
 
-@interface MobilePaymentTheme : NSObject<ICThemeManager>
+@interface MobilePaymentTheme : NSObject
 
 @property (nonatomic) CGFloat placeholderFontSize;
 @property (nonatomic) NSTextAlignment placeholderAlignment;
