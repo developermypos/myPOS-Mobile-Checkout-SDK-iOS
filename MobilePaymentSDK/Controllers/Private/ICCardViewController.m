@@ -123,7 +123,7 @@ static NSString * const kSecureSegue = @"3DSecure";
 
 #pragma mark - Public Methods
 
-- (void)dismiss:(void (^)())completion {
+- (void)dismiss:(void (^)(void))completion {
     [self hideLoadingHUD];
     [self.presenter dismissViewControllerAnimated:YES completion:completion];
 }
@@ -155,7 +155,7 @@ static NSString * const kSecureSegue = @"3DSecure";
         NSInteger is3DSecured = [[cardData objectForKey:ICParameterIs3DEnabled] integerValue];
         NSString  *cardType   = [cardData objectForKey:ICParameterCardType];
     
-        _cardData = cardData;
+        self->_cardData = cardData;
         
         if (is3DSecured == 1) {
             [self performSegueWithIdentifier:kSecureSegue sender:self];

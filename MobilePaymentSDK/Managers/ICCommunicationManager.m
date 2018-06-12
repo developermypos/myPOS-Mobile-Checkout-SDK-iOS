@@ -253,7 +253,7 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
         ICHTTPOperation *operation = [[ICHTTPOperation alloc] initWithRequest:request
                                                                  successBlock:^(NSDictionary * _Nonnull response) { completion(response); }
                                                                    errorBlock:^(MobilePaymentSDKError * _Nonnull error) { completion(error); }];
-        [_operationQueue addOperation:operation];
+        [self->_operationQueue addOperation:operation];
     });
 }
 

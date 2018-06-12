@@ -42,6 +42,6 @@
 
 - (Card *)card;
 
-- (void)dismiss:(void (^)())completion;
+- (void)dismiss:(void (^)(void))completion;
 
 @end

@@ -8,6 +8,10 @@
 
 #import "ICUpdateStoredCardViewController.h"
 
+#import "StoredCard.h"
+
+#import "NSString+Helpers.h"
+
 @implementation ICUpdateStoredCardViewController
 
 #pragma mark - Controller Methods
@@ -31,6 +35,11 @@
     Card *card = [self card];
     
     if (!card || !_extraData) {
+        [self dismiss:^{
+            if ([self.storeCardDelegate respondsToSelector:@selector(storeCardDidFailWithError:)]) {
+                [self.storeCardDelegate storeCardDidFailWithError:[MobilePaymentSDKError communicationError]];
+            }
+        }];
         return;
     }
     
@@ -52,8 +61,8 @@
 - (void (^)(NSString *))storeCardCompleted {
     return ^(NSString *cardToken) {
         [self dismiss:^{
-            if ([self.storeCardDelegate respondsToSelector:@selector(updateStoredCardDidCompleteWithToken:forCardWithName:)]) {
-                [self.storeCardDelegate updateStoredCardDidCompleteWithToken:cardToken forCardWithName:_cardView.customName];
+            if ([self.storeCardDelegate respondsToSelector:@selector(updateStoredCardDidCompleteWithData:forCardWithToken:)]) {
+                [self.storeCardDelegate updateStoredCardDidCompleteWithData:[self updaredStoredCardWithToken:cardToken] forCardWithToken:self.cardToken];
             }
         }];
     };
@@ -67,6 +76,11 @@
             }
         }];
     };
+}
+
+- (StoredCard *)updaredStoredCardWithToken:(NSString *)token {
+    NSString *cardType = [_extraData objectForKey:ICParameterCardType] ? : @"";
+    return [[StoredCard alloc] initWithCard:[self card] type:[cardType plainCardType] token:token];
 }
 
 @end

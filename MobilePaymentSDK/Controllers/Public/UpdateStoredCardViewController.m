@@ -16,6 +16,7 @@
 #import "UIViewController+Helperes.h"
 
 @interface UpdateStoredCardViewController () {
+    BOOL _withoutCustomName;
     CGFloat _verificationAmount;
     NSString *_cardToken;
 }
@@ -28,12 +29,24 @@
 
 #pragma mark - Initializers
 
-- (instancetype)initWithCardToken:(NSString *)cardToken verificationAmount:(CGFloat)verificationAmount delegate:(id<StoreCardDelegate>)delegate {
+- (instancetype)initWithCardToken:(NSString *)cardToken
+               verificationAmount:(CGFloat)verificationAmount
+                         delegate:(id<StoreCardDelegate>)delegate {
+    
+    return [self initWithCardToken:cardToken verificationAmount:verificationAmount delegate:delegate withoutCustomName:NO];
+}
+
+- (instancetype)initWithCardToken:(NSString *)cardToken
+               verificationAmount:(CGFloat)verificationAmount
+                         delegate:(id<StoreCardDelegate>)delegate
+                withoutCustomName:(BOOL)withoutCustomName {
+    
     if (self = [super initWithNibName:nil bundle:nil]) {
         
         _cardToken          = cardToken;
         _storeCardDelegate  = delegate;
         _verificationAmount = verificationAmount;
+        _withoutCustomName  = withoutCustomName;
         
         [self customInit];
     }
@@ -73,6 +86,7 @@
     
     storeCardController.cardToken              = _cardToken;
     storeCardController.storeCardDelegate      = self.storeCardDelegate;
+    storeCardController.withoutCustomName      = _withoutCustomName;
     storeCardController.cardVerificationAmount = _verificationAmount;
     
     [self setViewControllers:@[storeCardController]];

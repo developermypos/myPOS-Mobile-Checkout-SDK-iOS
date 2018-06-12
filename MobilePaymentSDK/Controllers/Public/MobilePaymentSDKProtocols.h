@@ -45,12 +45,12 @@
 - (void)storeCardDidFailWithError:(nonnull MobilePaymentSDKError *)error;
 
 /*!
- * @method updateStoredCardDidCompleteWithToken:forCardWithName:
+ * @method updateStoredCardDidCompleteWithData:forCardWithName:
  *
- * @param cardToken The token of the successfully updated stored card.
- * @param cardName  The custom name of the successfully updated stored card.
+ * @param storedCard The updared stored card with all it's data.
+ * @param cardToken  The old token of the successfully updated stored card.
  */
-- (void)updateStoredCardDidCompleteWithToken:(nonnull NSString *)cardToken forCardWithName:(nonnull NSString *)cardName;
+- (void)updateStoredCardDidCompleteWithData:(nonnull StoredCard *)storedCard forCardWithToken:(nonnull NSString *)cardToken;
 
 /*!
  * @method updateStoredCardDidFailWithError:
