@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 
 #import "Card.h"
+#import "StoredCard.h"
 #import "CartItem.h"
 #import "MobilePaymentTheme.h"
 #import "MobilePaymentSDKError.h"
@@ -60,9 +61,9 @@ typedef NS_ENUM (NSUInteger, Currency) {
                            keyIndex:(NSInteger)keyIndex
                           isSandbox:(BOOL)isSandbox;
 
-+ (void)applyTheme:( MobilePaymentTheme * _Nonnull )theme;
++ (void)applyTheme:(MobilePaymentTheme * _Nonnull)theme;
 
-+ (void)getOrderStatus:( NSString * _Nonnull)orderId
++ (void)getOrderStatus:(NSString * _Nonnull)orderId
        transactionType:(TransactionType)transactionType
             completion:(void (^ _Nullable)(NSInteger status, NSString * _Nonnull transactionRef))completion
                failure:(void (^ _Nullable)(MobilePaymentSDKError * _Nonnull error))failure;

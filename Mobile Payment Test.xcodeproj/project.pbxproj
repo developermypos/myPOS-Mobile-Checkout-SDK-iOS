@@ -24,6 +24,9 @@
 		1D3D738F1E2D193F0086AA5B /* ICTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D738E1E2D193F0086AA5B /* ICTransactionTableViewCell.swift */; };
 		1D3D73911E2D199D0086AA5B /* ICTransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73901E2D199D0086AA5B /* ICTransactionsTableViewController.swift */; };
 		1D3D7FE41E7A909A0043BF9D /* MobilePaymentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */; };
+		1D53419320CFE21700087AD3 /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D53419220CFE21700087AD3 /* UIViewController+Helpers.swift */; };
+		1D53419820CFED2500087AD3 /* public_cert.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1D53419620CFED2500087AD3 /* public_cert.txt */; };
+		1D53419920CFED2500087AD3 /* private_key.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1D53419720CFED2500087AD3 /* private_key.txt */; };
 		1D66DA571E8D224400079DF0 /* JGProgressHUD Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1D66DA3F1E8D224400079DF0 /* JGProgressHUD Resources.bundle */; };
 		1D66DA581E8D224400079DF0 /* JGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA421E8D224400079DF0 /* JGProgressHUD.m */; };
 		1D66DA591E8D224400079DF0 /* JGProgressHUDAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA441E8D224400079DF0 /* JGProgressHUDAnimation.m */; };
@@ -77,6 +80,9 @@
 		1D3D73901E2D199D0086AA5B /* ICTransactionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTransactionsTableViewController.swift; sourceTree = "<group>"; };
 		1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobilePaymentSDK.framework; path = "Mobile Payment Test/MobilePaymentSDK.framework"; sourceTree = "<group>"; };
 		1D3D7FE51E7A90B30043BF9D /* Mobile Payment Test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobile Payment Test-Bridging-Header.h"; sourceTree = "<group>"; };
+		1D53419220CFE21700087AD3 /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helpers.swift"; sourceTree = "<group>"; };
+		1D53419620CFED2500087AD3 /* public_cert.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = public_cert.txt; sourceTree = "<group>"; };
+		1D53419720CFED2500087AD3 /* private_key.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private_key.txt; sourceTree = "<group>"; };
 		1D66DA3F1E8D224400079DF0 /* JGProgressHUD Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "JGProgressHUD Resources.bundle"; sourceTree = "<group>"; };
 		1D66DA401E8D224400079DF0 /* JGProgressHUD-Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JGProgressHUD-Defines.h"; sourceTree = "<group>"; };
 		1D66DA411E8D224400079DF0 /* JGProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUD.h; sourceTree = "<group>"; };
@@ -164,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				1D3D737D1E2D0B0A0086AA5B /* UserDefaults+Helpers.swift */,
+				1D53419220CFE21700087AD3 /* UIViewController+Helpers.swift */,
 			);
 			name = Extensions;
 			path = Classes/Extensions;
@@ -249,6 +256,8 @@
 				1DA95B901E16584D005C3EB3 /* MobilePaymentSDK.strings */,
 				1DB58EF41E029D2800875E9F /* Assets.xcassets */,
 				1DB58EF91E029D2800875E9F /* Info.plist */,
+				1D53419720CFED2500087AD3 /* private_key.txt */,
+				1D53419620CFED2500087AD3 /* public_cert.txt */,
 				1D3D7FE51E7A90B30043BF9D /* Mobile Payment Test-Bridging-Header.h */,
 			);
 			path = "Mobile Payment Test";
@@ -282,13 +291,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Intercard Finance AD";
 				TargetAttributes = {
 					1DB58EE91E029D2800875E9F = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = YG25Y935ZY;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -320,8 +329,10 @@
 				1D66DA571E8D224400079DF0 /* JGProgressHUD Resources.bundle in Resources */,
 				1DA95B921E16584D005C3EB3 /* MobilePaymentSDK.strings in Resources */,
 				1DB58EF81E029D2800875E9F /* LaunchScreen.storyboard in Resources */,
+				1D53419920CFED2500087AD3 /* private_key.txt in Resources */,
 				1DB58EF51E029D2800875E9F /* Assets.xcassets in Resources */,
 				1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */,
+				1D53419820CFED2500087AD3 /* public_cert.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +363,7 @@
 				1DB58EEE1E029D2800875E9F /* AppDelegate.swift in Sources */,
 				1D66DA5D1E8D224400079DF0 /* JGProgressHUDImageIndicatorView.m in Sources */,
 				1D3D73831E2D0C4C0086AA5B /* ICConstants.swift in Sources */,
+				1D53419320CFE21700087AD3 /* UIViewController+Helpers.swift in Sources */,
 				1D3D73851E2D0D100086AA5B /* ICCardsTableViewController.swift in Sources */,
 				1D66DA601E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m in Sources */,
 				1D3D738D1E2D133F0086AA5B /* ICOrderTableViewCell.swift in Sources */,
@@ -451,6 +463,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 			};
 			name = Debug;
 		};
@@ -501,6 +514,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

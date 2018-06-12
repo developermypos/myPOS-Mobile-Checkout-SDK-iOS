@@ -324,8 +324,8 @@ static CGRect keyboardFrame = (CGRect){{0.0f, 0.0f}, {0.0f, 0.0f}};
             self.indicatorView.frame = indicatorFrame;
         }
         
-        self.textLabel.frame = JGProgressHUD_CGRectIntegral(labelFrame);
-        self.detailTextLabel.frame = JGProgressHUD_CGRectIntegral(detailFrame);
+        self->_textLabel.frame = JGProgressHUD_CGRectIntegral(labelFrame);
+        self->_detailTextLabel.frame = JGProgressHUD_CGRectIntegral(detailFrame);
     };
     
     if (!animateIndicator) {
