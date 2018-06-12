@@ -248,7 +248,7 @@
                 <outlet property="panLabel" destination="h5Y-cK-qzg" id="vSe-S9-dWT"/>
                 <outlet property="panTextField" destination="ECn-IY-c35" id="d36-rm-qSt"/>
             </connections>
-            <point key="canvasLocation" x="-157" y="61"/>
+            <point key="canvasLocation" x="-104" y="58"/>
         </view>
     </objects>
     <resources>
