@@ -33,48 +33,33 @@ class ICBaseTableViewController: UITableViewController, PaymentDelegate, StoreCa
     
     func paymentDidFailWithError(_ error: MobilePaymentSDKError) {
         self.showAlertWithText("Payment error: \(error.localizedDescription)")
-//        self.showAlertWithText("Payment error: \(error.message)")
     }
     
     
     // MARK: Store Card Delegate
     
-    func storeCardDidComplete(withToken cardToken: String, forCardWithName cardName: String) {
-        self.showAlertWithText("Stored card \(cardName) with token \(cardToken)")
+    func storeCardDidComplete(withData storedCard: StoredCard) {
+        self.showAlertWithText("Stored card \(storedCard.customName) with token \(storedCard.token)")
     }
     
     func storeCardDidFailWithError(_ error: MobilePaymentSDKError) {
         self.showAlertWithText("Store card error: \(error.localizedDescription)")
-//        self.showAlertWithText("Store card error: \(error.message)")
     }
     
-    func updateStoredCardDidComplete(withToken cardToken: String, forCardWithName cardName: String) {
-        self.showAlertWithText("Updated stored card \(cardName). New token \(cardToken)")
+    func updateStoredCardDidComplete(withData storedCard: StoredCard, forCardWithToken cardToken: String) {
+        self.showAlertWithText("Updated stored card \(storedCard.customName). New token \(storedCard.token). Old token \(cardToken)")
     }
     
     func updateStoredCardDidFailWithError(_ error: MobilePaymentSDKError) {
         self.showAlertWithText("Update stored card error: \(error.localizedDescription)")
-//        self.showAlertWithText("Update stored card error: \(error.message)")
-    }
-    
-    public func didMakePayment(transactionRef: String) {
-        self.paymentDidComplete(withReference: transactionRef)
     }
     
     func paymentFailed(error: MobilePaymentSDKError) {
         self.paymentDidFailWithError(error)
     }
     
-    public func didStoreCard(cardToken: String, customName: String) {
-        self.storeCardDidComplete(withToken: cardToken, forCardWithName: customName)
-    }
-    
     func storeCardFailed(error: MobilePaymentSDKError) {
         self.storeCardDidFailWithError(error)
-    }
-    
-    func didUpdateStoredCard(cardToken: String, customName: String) {
-        self.updateStoredCardDidComplete(withToken: cardToken, forCardWithName: customName)
     }
     
     func updateStoredCardFailed(error: MobilePaymentSDKError) {
@@ -103,7 +88,6 @@ class ICBaseTableViewController: UITableViewController, PaymentDelegate, StoreCa
                 _ = self.navigationController?.popToRootViewController(animated: true)
             }
         }
-        
         
         alertController.addAction(okAction)
         

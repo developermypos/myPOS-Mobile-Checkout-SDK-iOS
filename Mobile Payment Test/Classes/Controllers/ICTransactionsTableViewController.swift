@@ -129,19 +129,11 @@ class ICTransactionsTableViewController: ICBaseTableViewController {
                 self.hideLoadingHUD()
                 self.showAlertWithText("Refund failed. Error: \(error.localizedDescription)")
             })
-            
-//            MobilePaymentSDK.refundTransaction(transaction.reference, orderId: transaction.orderId, amount: amount, completed: { (transactionRef) in
-//                self.hideLoadingHUD()
-//                self.showAlertWithText("Refund completed successfully", popToRoot: true)
-//            }, failed: { (error) in
-//                self.hideLoadingHUD()
-//                self.showAlertWithText("Refund failed. Error: \(error.message)")
-//            })
         }
         
         alertController.addAction(cancelAction)
         alertController.addAction(refundAction)
         
-        self.present(alertController, animated: true, completion: nil)
+        self.presenter.present(alertController, animated: true, completion: nil)
     }
 }

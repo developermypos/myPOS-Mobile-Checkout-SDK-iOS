@@ -1,3 +1,0 @@
-framework module MobilePaymentSDK {
-    header "MobilePaymentSDK-Swift.h"
-}

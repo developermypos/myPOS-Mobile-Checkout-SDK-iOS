@@ -75,7 +75,7 @@ class ICCardsTableViewController: ICBaseTableViewController {
     
     @IBAction func storeCard(_ sender: Any) {
         let controller = StoreCardViewController(verificationAmount: 1.00, delegate: self)
-        present(controller, animated: true, completion: nil)
+        self.presenter.present(controller, animated: true, completion: nil)
     }
     
     
@@ -91,25 +91,25 @@ class ICCardsTableViewController: ICBaseTableViewController {
     
     // MARK: Store Card Delegate
     
-    override func storeCardDidComplete(withToken cardToken: String, forCardWithName cardName: String) {
-        super.storeCardDidComplete(withToken: cardToken, forCardWithName: cardName)
+    override func storeCardDidComplete(withData storedCard: StoredCard) {
+        super.storeCardDidComplete(withData: storedCard)
         
-        let card = ICCard(name: cardName, token: cardToken)
-        UserDefaults.addCard(card)  
+        let card = ICCard(name: storedCard.customName, token: storedCard.token)
+        UserDefaults.addCard(card)
         
         _cards.append(card)
         self.tableView.insertRows(at: [IndexPath(row: _cards.count - 1, section: 0)], with: .fade)
     }
     
-    override func updateStoredCardDidComplete(withToken cardToken: String, forCardWithName cardName: String) {
-        super.updateStoredCardDidComplete(withToken: cardToken, forCardWithName: cardName)
+    override func updateStoredCardDidComplete(withData storedCard: StoredCard, forCardWithToken cardToken: String) {
+        super.updateStoredCardDidComplete(withData: storedCard, forCardWithToken: cardToken)
         
         // Delete old card
-        let oldCard = ICCard(name: "", token: _selectedCardToken)
+        let oldCard = ICCard(name: "", token: cardToken)
         UserDefaults.deleteCard(oldCard)
         
         // Save new card
-        let card = ICCard(name: cardName, token: cardToken)
+        let card = ICCard(name: storedCard.customName, token: storedCard.token)
         UserDefaults.addCard(card)
         
         // Reload data
@@ -131,11 +131,11 @@ class ICCardsTableViewController: ICBaseTableViewController {
                                                cardToken: _selectedCardToken,
                                                delegate: self)
         
-        present(controller, animated: true, completion: nil)
+        self.presenter.present(controller, animated: true, completion: nil)
     }
     
     func updateCard() {
         let controller = UpdateStoredCardViewController(cardToken: _selectedCardToken, verificationAmount: 1.00, delegate: self)
-        present(controller, animated: true, completion: nil)
+        self.presenter.present(controller, animated: true, completion: nil)
     }
 }

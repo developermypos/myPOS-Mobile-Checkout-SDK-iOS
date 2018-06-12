@@ -209,14 +209,14 @@ The delegate must implement StoreCardDelegate’s methods.
 
 Swift:
 ```Swift
-func didStoreCard(cardToken: String, customName: String)
-func storeCardFailed(error: MobilePaymentSDKError)
+func storeCardDidComplete(withData storedCard: StoredCard)
+func storeCardDidFailWithError(_ error: MobilePaymentSDKError)
 ```
   
 Objective-C:
 ```ObjectiveC
-- (void)didStoreCardWithCardToken:(NSString *)cardToken customName:(NSString *)customName;
-- (void)storeCardFailedWithError:(MobilePaymentSDKError *)error;
+- (void)storeCardDidCompleteWithData:(StoredCard *)storedCard
+- (void)storeCardDidFailWithError:(MobilePaymentSDKError *)error;
 ```
 
   ## Update a Stored Card
@@ -245,14 +245,14 @@ The delegate must implement StoreCardDelegate’s methods.
 
 Swift:
 ```Swift
-func didUpdateStoredCard(cardToken: String, customName: String)
-func updateStoredCardFailed(error: MobilePaymentSDKError)
+func updateStoredCardDidComplete(withData storedCard: StoredCard, forCardWithToken cardToken: String)
+func updateStoredCardDidFailWithError(_ error: MobilePaymentSDKError)
 ```
   
 Objective-C:
 ```ObjectiveC
-- (void)didUpdateStoredCardWithCardToken:(NSString *)cardToken customName:(NSString *)customName;
-- (void)updateStoredCardFailedWithError:(MobilePaymentSDKError *)error;
+- (void)updateStoredCardDidCompleteWithData:(StoredCard *)storedCard forCardWithToken:(NSString *)cardToken
+- (void)updateStoredCardDidFailWithError:(MobilePaymentSDKError *)error
 ```
 
   ## Perform a Refund
