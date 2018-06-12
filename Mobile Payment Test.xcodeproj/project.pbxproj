@@ -252,6 +252,8 @@
 				1DA95B901E16584D005C3EB3 /* MobilePaymentSDK.strings */,
 				1DB58EF41E029D2800875E9F /* Assets.xcassets */,
 				1DB58EF91E029D2800875E9F /* Info.plist */,
+				1D53419720CFED2500087AD3 /* private_key.txt */,
+				1D53419620CFED2500087AD3 /* public_cert.txt */,
 				1D3D7FE51E7A90B30043BF9D /* Mobile Payment Test-Bridging-Header.h */,
 			);
 			path = "Mobile Payment Test";
@@ -323,8 +325,10 @@
 				1D66DA571E8D224400079DF0 /* JGProgressHUD Resources.bundle in Resources */,
 				1DA95B921E16584D005C3EB3 /* MobilePaymentSDK.strings in Resources */,
 				1DB58EF81E029D2800875E9F /* LaunchScreen.storyboard in Resources */,
+				1D53419920CFED2500087AD3 /* private_key.txt in Resources */,
 				1DB58EF51E029D2800875E9F /* Assets.xcassets in Resources */,
 				1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */,
+				1D53419820CFED2500087AD3 /* public_cert.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
