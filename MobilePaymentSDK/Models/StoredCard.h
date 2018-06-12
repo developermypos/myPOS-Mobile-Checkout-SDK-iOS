@@ -10,12 +10,12 @@
 
 @interface StoredCard : NSObject
 
-@property (nonatomic, strong, readonly) NSString *pan;
-@property (nonatomic, strong, readonly) NSString *type;
-@property (nonatomic, strong, readonly) NSString *token;
-@property (nonatomic, strong, readonly) NSString *expiryDate;
-@property (nonatomic, strong, readonly) NSString *embossName;
-@property (nonatomic, strong, readonly) NSString *customName;
+@property (nonatomic, strong, readonly, nonnull) NSString *pan;
+@property (nonatomic, strong, readonly, nonnull) NSString *type;
+@property (nonatomic, strong, readonly, nonnull) NSString *token;
+@property (nonatomic, strong, readonly, nonnull) NSString *expiryDate;
+@property (nonatomic, strong, readonly, nonnull) NSString *embossName;
+@property (nonatomic, strong, readonly, nonnull) NSString *customName;
 
 /*!
  * @method initWithCard:type:token:
@@ -25,9 +25,9 @@
  * @param token The stored card token.
 
  *
- * @return      Returns an initialized StoredCard object from the provided input parameters.
+ * @return      An initialized StoredCard object from the provided input parameters.
  */
 
-- (instancetype)initWithCard:(Card *)card type:(NSString *)type token:(NSString *)token;
+- (nullable instancetype)initWithCard:(nonnull Card *)card type:(nonnull NSString *)type token:(nonnull NSString *)token;
 
 @end
