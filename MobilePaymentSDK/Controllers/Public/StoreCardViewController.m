@@ -13,7 +13,10 @@
 #import "ICLogger.h"
 #import "ICMobilePaymentManager.h"
 
+#import "UIViewController+Helperes.h"
+
 @interface StoreCardViewController () {
+    BOOL _withoutCustomName;
     CGFloat _verificationAmount;
 }
 
@@ -26,9 +29,13 @@
 #pragma mark - Initializers
 
 - (instancetype)initWithVerificationAmount:(CGFloat)verificationAmount delegate:(id<StoreCardDelegate>)delegate {
+    return [self initWithVerificationAmount:verificationAmount delegate:delegate withoutCustomName:NO];
+}
+
+- (instancetype)initWithVerificationAmount:(CGFloat)verificationAmount delegate:(id<StoreCardDelegate>)delegate withoutCustomName:(BOOL)withoutCustomName {
     if (self = [super initWithNibName:nil bundle:nil]) {
-        
         _storeCardDelegate  = delegate;
+        _withoutCustomName  = withoutCustomName;
         _verificationAmount = verificationAmount;
         
         [self customInit];
@@ -58,7 +65,7 @@
         [self.storeCardDelegate storeCardDidFailWithError:[MobilePaymentSDKError notInitializedError]];
     }
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.presenter dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Private Methods
@@ -67,6 +74,7 @@
     ICStoreCardViewController *storeCardController = [ICUtil storeCardController];
     
     storeCardController.storeCardDelegate      = self.storeCardDelegate;
+    storeCardController.withoutCustomName      = _withoutCustomName;
     storeCardController.cardVerificationAmount = _verificationAmount;
     
     [self setViewControllers:@[storeCardController]];

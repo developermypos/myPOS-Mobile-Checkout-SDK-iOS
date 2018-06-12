@@ -13,6 +13,8 @@
 #import "ICLogger.h"
 #import "ICUtil.h"
 
+#import "UIViewController+Helperes.h"
+
 @interface PaymentViewController () {
     NSString *_orderId;
     NSString *_cardToken;
@@ -74,7 +76,7 @@
         [self.paymentDelegate paymentDidFailWithError:[MobilePaymentSDKError notInitializedError]];
     }
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.presenter dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Private Methods
@@ -86,6 +88,7 @@
     paymentController.cartItems              = _cartItems;
     paymentController.cardToken              = _cardToken;
     paymentController.paymentDelegate        = self.paymentDelegate;
+    paymentController.withoutCustomName      = YES;
     paymentController.cardVerificationAmount = [[ICUtil itemsTotalAmount:_cartItems] floatValue];
     
     [self setViewControllers:@[paymentController]];

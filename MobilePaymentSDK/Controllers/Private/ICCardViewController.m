@@ -8,7 +8,9 @@
 
 #import "ICCardViewController.h"
 
+#import "NSString+Helpers.h"
 #import "UIAlertController+Helpers.h"
+#import "UIViewController+Helperes.h"
 
 @implementation ICCardViewController
 
@@ -19,7 +21,7 @@ static NSString * const kSecureSegue = @"3DSecure";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _cardView = [ICCardView cardViewWithFrame:self.contentView.bounds];
+    _cardView = [ICCardView cardViewWithFrame:self.contentView.bounds withoutCustomName:self.withoutCustomName];
     [self.contentView addSubview:_cardView];
 }
 
@@ -41,7 +43,7 @@ static NSString * const kSecureSegue = @"3DSecure";
 #pragma mark - Actions
 
 - (IBAction)cancel:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.presenter dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)confirm:(id)sender {
@@ -123,17 +125,18 @@ static NSString * const kSecureSegue = @"3DSecure";
 
 - (void)dismiss:(void (^)())completion {
     [self hideLoadingHUD];
-    [self dismissViewControllerAnimated:YES completion:completion];
+    [self.presenter dismissViewControllerAnimated:YES completion:completion];
 }
 
 #pragma mark - Helpers
 
 - (Card *)card {
+    NSString *cardType = [_extraData objectForKey:ICParameterCardType] ? : @"";
     return [[Card alloc] initWithPan:_cardView.pan
                           expiryDate:_cardView.expiryDate
                                  cvc:_cardView.cvc
                           embossName:_cardView.embossName
-                          customName:_cardView.customName];
+                          customName:_cardView.withoutCustomName ? [NSString stringWithFormat:@"%@ %@", [cardType plainCardType], [_cardView.pan shortPan]] : _cardView.customName];
 }
 
 - (void (^)(NSDictionary *data))getCardDataCompleted {
@@ -141,7 +144,7 @@ static NSString * const kSecureSegue = @"3DSecure";
         [self hideLoadingHUD];
         
         if (![cardData objectForKey:ICParameterIs3DEnabled] || ![cardData objectForKey:ICParameterIs3DEnabled]) {
-            [self dismissViewControllerAnimated:YES completion:^{
+            [self.presenter dismissViewControllerAnimated:YES completion:^{
                 if ([self.storeCardDelegate respondsToSelector:@selector(storeCardDidFailWithError:)]) {
                     [self.storeCardDelegate storeCardDidFailWithError:[MobilePaymentSDKError communicationError]];
                 }

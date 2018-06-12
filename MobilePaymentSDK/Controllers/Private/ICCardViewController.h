@@ -34,6 +34,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *confirmButton;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 
+@property (nonatomic) BOOL withoutCustomName;
 @property (weak, nonatomic) id<PaymentDelegate> paymentDelegate;
 @property (weak, nonatomic) id<StoreCardDelegate> storeCardDelegate;
 

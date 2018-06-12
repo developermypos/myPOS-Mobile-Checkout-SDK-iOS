@@ -13,6 +13,8 @@
 #import "ICLogger.h"
 #import "ICMobilePaymentManager.h"
 
+#import "UIViewController+Helperes.h"
+
 @interface UpdateStoredCardViewController () {
     CGFloat _verificationAmount;
     NSString *_cardToken;
@@ -61,7 +63,7 @@
         [self.storeCardDelegate storeCardDidFailWithError:[MobilePaymentSDKError notInitializedError]];
     }
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.presenter dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Private Methods

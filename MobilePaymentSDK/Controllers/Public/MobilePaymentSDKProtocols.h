@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MobilePaymentSDKError.h"
+#import "StoredCard.h"
 
 @protocol PaymentDelegate <NSObject>
 
@@ -30,12 +31,11 @@
 @protocol StoreCardDelegate <NSObject>
 
 /*!
- * @method storeCardDidCompleteWithToken:forCardWithName:
+ * @method storeCardDidCompleteWithData:
  *
- * @param cardToken The token of the successfully stored card.
- * @param cardName  The custom name of the successfully stored card.
+ * @param storedCard The stored card with all it's data.
  */
-- (void)storeCardDidCompleteWithToken:(nonnull NSString *)cardToken forCardWithName:(nonnull NSString *)cardName;
+- (void)storeCardDidCompleteWithData:(nonnull StoredCard *)storedCard;
 
 /*!
  * @method storeCardDidFailWithError:

@@ -18,10 +18,10 @@
 #import "NSString+Helpers.h"
 
 @interface ICCardView() <UITextFieldDelegate, BSKeyboardControlsDelegate> {
+    BOOL _withoutCustomName;
     BSKeyboardControls *_keyboardControls;
 }
 
-@property (weak, nonatomic) IBOutlet TPKeyboardAvoidingScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *panLabel;
 @property (weak, nonatomic) IBOutlet ICThemedTextField *panTextField;
 @property (weak, nonatomic) IBOutlet UILabel *expiryDateLabel;
@@ -44,13 +44,20 @@ static NSInteger const kPanMaxLength  = 19;
 
 #pragma mark - Initializers
 
-+ (instancetype)cardViewWithFrame:(CGRect)frame {
-    ICCardView *cardView = [[[NSBundle bundleForClass:[ICMobilePaymentManager class]] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil] firstObject];;
++ (instancetype)cardViewWithFrame:(CGRect)frame withoutCustomName:(BOOL)withoutCustomName {
+    ICCardView *cardView = [[[NSBundle bundleForClass:[ICMobilePaymentManager class]] loadNibNamed:NSStringFromClass([self class])
+                                                                                             owner:self
+                                                                                           options:nil] firstObject];
     
     [cardView setFrame:frame];
     [cardView customInit];
     [cardView localize];
     [cardView applyTheme];
+    
+    if (withoutCustomName) {
+        [cardView hideCustomName];
+    }
+    
     [cardView layoutIfNeeded];
     
     return cardView;
@@ -109,8 +116,6 @@ static NSInteger const kPanMaxLength  = 19;
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     _keyboardControls.activeField = textField;
-    
-    [self.scrollView scrollToActiveTextField];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
@@ -129,11 +134,16 @@ static NSInteger const kPanMaxLength  = 19;
 
 #pragma mark - Public Methods
 
+- (BOOL)withoutCustomName {
+    return _withoutCustomName;
+}
+
 - (BOOL)isFilled {
     return self.pan.trimmed.length        > 0 &&
            self.cvc.trimmed.length        > 0 &&
            self.expiryDate.trimmed.length > 0 &&
-           self.embossName.trimmed.length > 0;
+           self.embossName.trimmed.length > 0 &&
+           (_withoutCustomName || self.customName.trimmed.length > 0);
 }
 
 - (NSString *)pan {
@@ -184,6 +194,17 @@ static NSInteger const kPanMaxLength  = 19;
 
 - (void)applyTheme {
     
+}
+
+- (void)hideCustomName {
+    _withoutCustomName = YES;
+    
+    [self.customNameLabel     setHidden:YES];
+    [self.customNameTextField setHidden:YES];
+    
+    NSMutableArray *fields = [_keyboardControls.fields mutableCopy];
+    [fields removeObject:self.customNameTextField];
+    _keyboardControls.fields = (NSArray *)fields;
 }
 
 @end

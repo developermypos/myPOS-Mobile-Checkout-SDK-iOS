@@ -56,6 +56,8 @@
 		1D52AA541ED6EEFA00D30724 /* ICReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D52AA521ED6EEFA00D30724 /* ICReachability.m */; };
 		1D52AA571ED6EF3A00D30724 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D52AA551ED6EF3A00D30724 /* Reachability.h */; };
 		1D52AA581ED6EF3A00D30724 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D52AA561ED6EF3A00D30724 /* Reachability.m */; };
+		1D53418220CFA7BF00087AD3 /* StoredCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D53418020CFA7BF00087AD3 /* StoredCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D53418320CFA7BF00087AD3 /* StoredCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D53418120CFA7BF00087AD3 /* StoredCard.m */; };
 		1D55A4E11EA8963700F41037 /* NSRegularExpression+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D55A4DF1EA8963700F41037 /* NSRegularExpression+Helpers.h */; };
 		1D55A4E21EA8963700F41037 /* NSRegularExpression+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D55A4E01EA8963700F41037 /* NSRegularExpression+Helpers.m */; };
 		1D6AE8B61F738FCD00124B54 /* ICASN.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D6AE8B41F738FCD00124B54 /* ICASN.h */; };
@@ -168,6 +170,8 @@
 		1D52AA521ED6EEFA00D30724 /* ICReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICReachability.m; sourceTree = "<group>"; };
 		1D52AA551ED6EF3A00D30724 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1D52AA561ED6EF3A00D30724 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		1D53418020CFA7BF00087AD3 /* StoredCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoredCard.h; sourceTree = "<group>"; };
+		1D53418120CFA7BF00087AD3 /* StoredCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoredCard.m; sourceTree = "<group>"; };
 		1D55A4DF1EA8963700F41037 /* NSRegularExpression+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegularExpression+Helpers.h"; sourceTree = "<group>"; };
 		1D55A4E01EA8963700F41037 /* NSRegularExpression+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegularExpression+Helpers.m"; sourceTree = "<group>"; };
 		1D6AE8B41F738FCD00124B54 /* ICASN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICASN.h; sourceTree = "<group>"; };
@@ -392,6 +396,8 @@
 				1DACE7F41E2E14F400F5E38E /* Commands */,
 				1D7A78311E407B1100DA6196 /* Card.h */,
 				1D7A78321E407B1100DA6196 /* Card.m */,
+				1D53418020CFA7BF00087AD3 /* StoredCard.h */,
+				1D53418120CFA7BF00087AD3 /* StoredCard.m */,
 				1D7A78081E3F924300DA6196 /* CartItem.h */,
 				1D7A78091E3F924300DA6196 /* CartItem.m */,
 				1D7A78391E407DD000DA6196 /* ICHTTPOperation.h */,
@@ -469,6 +475,7 @@
 				1D55A4E11EA8963700F41037 /* NSRegularExpression+Helpers.h in Headers */,
 				1D7A78931E40D56F00DA6196 /* UpdateStoredCardViewController.h in Headers */,
 				1D7A788F1E40D41B00DA6196 /* StoreCardViewController.h in Headers */,
+				1D53418220CFA7BF00087AD3 /* StoredCard.h in Headers */,
 				1D7A786B1E40ACCE00DA6196 /* PaymentViewController.h in Headers */,
 				1D3D7FC81E7A86590043BF9D /* MobilePaymentTheme.h in Headers */,
 				1D3D7FB81E7A80790043BF9D /* BSKeyboardControls.h in Headers */,
@@ -605,6 +612,7 @@
 				1D7A78741E40B01100DA6196 /* IC3DSecureWebViewController.m in Sources */,
 				1D7A78701E40AEF000DA6196 /* ICBaseViewController.m in Sources */,
 				1D7A78901E40D41B00DA6196 /* StoreCardViewController.m in Sources */,
+				1D53418320CFA7BF00087AD3 /* StoredCard.m in Sources */,
 				1D7A78601E40935100DA6196 /* ICReversalCommand.m in Sources */,
 				1D7A784C1E408D8200DA6196 /* ICGetCardDataCommand.m in Sources */,
 				1D7A78A41E40E61400DA6196 /* MobilePaymentSDK.m in Sources */,

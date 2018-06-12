@@ -24,7 +24,9 @@
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:okAction];
     
-    [[sender presenter] presentViewController:alertController animated:YES completion:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[sender presenter] presentViewController:alertController animated:YES completion:nil];
+    });
 }
 
 @end

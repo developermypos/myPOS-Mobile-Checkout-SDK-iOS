@@ -13,6 +13,8 @@
 - (BOOL)matchesRegEx:(NSString *)regEx;
 - (BOOL)isValidSignatureOf:(NSString *)plainText;
 
+- (NSString *)shortPan;
+- (NSString *)plainCardType;
 - (NSString *)trimmed;
 - (NSString *)encrypted;
 - (NSString *)decrypted;

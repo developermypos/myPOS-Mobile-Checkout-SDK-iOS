@@ -13,6 +13,8 @@
 #import "ICHelpers.h"
 #import "ICLogger.h"
 
+#import "UIViewController+Helperes.h"
+
 @interface IC3DSecureWebViewController () <UIWebViewDelegate>
 
 @end
@@ -59,7 +61,7 @@
         [self.delegate didCancel3DS];
     }
     
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [self.presenter dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Web View Delegate
@@ -125,7 +127,7 @@
         [self.delegate didReceive3DSecureResponse:json];
     }
     
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [self.presenter dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -55,6 +55,11 @@
     Card *card = [self card];
     
     if (!card || !_extraData) {
+        [self dismiss:^{
+            if ([self.storeCardDelegate respondsToSelector:@selector(storeCardDidFailWithError:)]) {
+                [self.storeCardDelegate storeCardDidFailWithError:[MobilePaymentSDKError communicationError]];
+            }
+        }];
         return;
     }
     

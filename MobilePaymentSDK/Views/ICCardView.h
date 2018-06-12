@@ -10,8 +10,9 @@
 
 @interface ICCardView : UIView
 
-+ (instancetype)cardViewWithFrame:(CGRect)frame;
++ (instancetype)cardViewWithFrame:(CGRect)frame withoutCustomName:(BOOL)withoutCustomName;
 
+- (BOOL)withoutCustomName;
 - (BOOL)isFilled;
 - (NSString *)pan;
 - (NSString *)cvc;
