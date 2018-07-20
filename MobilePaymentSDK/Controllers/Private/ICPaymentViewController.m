@@ -1,6 +1,6 @@
 //
 //  ICPaymentViewController.m
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -52,12 +52,12 @@
 - (void)didReceive3DSecureResponse:(NSDictionary *)response {
     [super didReceive3DSecureResponse:response];
     
-    Card *card = [self card];
+    MPCard *card = [self card];
     
     if (!card || !_extraData) {
         [self dismiss:^{
             if ([self.storeCardDelegate respondsToSelector:@selector(storeCardDidFailWithError:)]) {
-                [self.storeCardDelegate storeCardDidFailWithError:[MobilePaymentSDKError communicationError]];
+                [self.storeCardDelegate storeCardDidFailWithError:[MPCheckoutError communicationError]];
             }
         }];
         return;
@@ -84,8 +84,8 @@
     };
 }
 
-- (void (^)(MobilePaymentSDKError *))paymentFailed {
-    return ^(MobilePaymentSDKError *error) {
+- (void (^)(MPCheckoutError *))paymentFailed {
+    return ^(MPCheckoutError *error) {
         [self dismiss:^{
             if ([self.paymentDelegate respondsToSelector:@selector(paymentDidFailWithError:)]) {
                 [self.paymentDelegate paymentDidFailWithError:error];

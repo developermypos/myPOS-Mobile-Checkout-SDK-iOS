@@ -26,10 +26,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzr-CD-CvY">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="462"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="462" id="rQR-VU-m9E"/>
+                                            <constraint firstAttribute="height" constant="523" id="rQR-VU-m9E"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -65,8 +65,10 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="cancelButton" destination="03t-i7-u4H" id="wAZ-GU-DEk"/>
+                        <outlet property="cardViewHeight" destination="rQR-VU-m9E" id="Jtv-iD-WMC"/>
                         <outlet property="confirmButton" destination="vPl-uR-VsH" id="J6Q-hl-Odf"/>
                         <outlet property="contentView" destination="Jzr-CD-CvY" id="eoo-kp-hSQ"/>
+                        <outlet property="mainView" destination="gbL-LP-qj3" id="Gx2-xr-SI3"/>
                         <segue destination="DOs-E6-8UT" kind="presentation" identifier="3DSecure" id="MWR-cA-Exn"/>
                     </connections>
                 </viewController>
@@ -90,10 +92,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbC-q5-oZC">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="462"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="462" id="vTH-D7-fAJ"/>
+                                            <constraint firstAttribute="height" constant="523" id="vTH-D7-fAJ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -129,8 +131,10 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="cancelButton" destination="rru-Q5-XJB" id="SCs-Q7-PWT"/>
+                        <outlet property="cardViewHeight" destination="vTH-D7-fAJ" id="zVh-ru-AZc"/>
                         <outlet property="confirmButton" destination="Tn3-J6-Vl8" id="QbA-0K-naJ"/>
                         <outlet property="contentView" destination="SbC-q5-oZC" id="IBf-KF-OKG"/>
+                        <outlet property="mainView" destination="q1b-d5-jgV" id="KdK-S0-6p9"/>
                         <segue destination="DOs-E6-8UT" kind="presentation" identifier="3DSecure" id="zro-db-Uyv"/>
                     </connections>
                 </viewController>
@@ -288,10 +292,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGr-qW-bXe">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="462"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="462" id="MUV-gI-BUI"/>
+                                            <constraint firstAttribute="height" constant="523" id="MUV-gI-BUI"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -327,8 +331,10 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="cancelButton" destination="SIR-0p-3Ju" id="08F-lL-14R"/>
+                        <outlet property="cardViewHeight" destination="MUV-gI-BUI" id="cMj-ot-lcf"/>
                         <outlet property="confirmButton" destination="Hq1-2J-CYy" id="IyZ-oI-Vkr"/>
                         <outlet property="contentView" destination="eGr-qW-bXe" id="cvg-Gs-Mex"/>
+                        <outlet property="mainView" destination="iSy-9R-QCS" id="qwp-fn-xds"/>
                         <segue destination="DOs-E6-8UT" kind="presentation" identifier="3DSecure" id="vy9-cY-jdI"/>
                     </connections>
                 </viewController>

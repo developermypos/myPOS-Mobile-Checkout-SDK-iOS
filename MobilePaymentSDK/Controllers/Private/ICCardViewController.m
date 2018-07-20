@@ -1,6 +1,6 @@
 //
 //  ICCardViewController.m
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -23,6 +23,9 @@ static NSString * const kSecureSegue = @"3DSecure";
     
     _cardView = [ICCardView cardViewWithFrame:self.contentView.bounds withoutCustomName:self.withoutCustomName];
     [self.contentView addSubview:_cardView];
+    
+    [self.cardViewHeight setConstant:self.withoutCustomName ? 433.0f : 523.0f];
+    [self.view layoutIfNeeded];
 }
 
 - (void)localize {
@@ -130,9 +133,9 @@ static NSString * const kSecureSegue = @"3DSecure";
 
 #pragma mark - Helpers
 
-- (Card *)card {
+- (MPCard *)card {
     NSString *cardType = [_extraData objectForKey:ICParameterCardType] ? : @"";
-    return [[Card alloc] initWithPan:_cardView.pan
+    return [[MPCard alloc] initWithPan:_cardView.pan
                           expiryDate:_cardView.expiryDate
                                  cvc:_cardView.cvc
                           embossName:_cardView.embossName
@@ -146,7 +149,7 @@ static NSString * const kSecureSegue = @"3DSecure";
         if (![cardData objectForKey:ICParameterIs3DEnabled] || ![cardData objectForKey:ICParameterIs3DEnabled]) {
             [self.presenter dismissViewControllerAnimated:YES completion:^{
                 if ([self.storeCardDelegate respondsToSelector:@selector(storeCardDidFailWithError:)]) {
-                    [self.storeCardDelegate storeCardDidFailWithError:[MobilePaymentSDKError communicationError]];
+                    [self.storeCardDelegate storeCardDidFailWithError:[MPCheckoutError communicationError]];
                 }
             }];
             return;
@@ -172,8 +175,8 @@ static NSString * const kSecureSegue = @"3DSecure";
     };
 }
 
-- (void (^)(MobilePaymentSDKError *error))getCardDataFailed {
-    return ^(MobilePaymentSDKError *error) {
+- (void (^)(MPCheckoutError *error))getCardDataFailed {
+    return ^(MPCheckoutError *error) {
         [self dismiss:^{
             if ([self.storeCardDelegate respondsToSelector:@selector(storeCardDidFailWithError:)]) {
                 [self.storeCardDelegate storeCardDidFailWithError:error];

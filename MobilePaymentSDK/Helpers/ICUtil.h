@@ -1,6 +1,6 @@
 //
 //  ICUtil.h
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@class Card;
-@class CartItem;
+@class MPCard;
+@class MPCartItem;
 @class ICPaymentViewController;
 @class ICStoreCardViewController;
 @class ICUpdateStoredCardViewController;
@@ -22,7 +22,7 @@
 + (ICUpdateStoredCardViewController *)updateCardController;
 
 + (NSString *)signedData:(NSDictionary<NSString *, NSString *> *)data;
-+ (NSString *)itemsTotalAmount:(NSArray<CartItem *> *)cartItems;
-+ (NSURLRequest *)cardValidationURLRequest:(Card *)card cardData:(NSDictionary *)cardData amount:(NSString *)amount;
++ (NSString *)itemsTotalAmount:(NSArray<MPCartItem *> *)cartItems;
++ (NSURLRequest *)cardValidationURLRequest:(MPCard *)card cardData:(NSDictionary *)cardData amount:(NSString *)amount;
 
 @end

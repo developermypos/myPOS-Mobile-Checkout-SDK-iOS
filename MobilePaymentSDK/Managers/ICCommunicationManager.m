@@ -1,6 +1,6 @@
 //
 //  ICCommunicationManager.m
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -9,9 +9,9 @@
 #import "ICCommunicationManager.h"
 #import "ICMobilePaymentManager.h"
 
-#import "Card.h"
+#import "MPCard.h"
 #import "ICUtil.h"
-#import "CartItem.h"
+#import "MPCartItem.h"
 #import "ICLogger.h"
 #import "ICHelpers.h"
 #import "ICConstants.h"
@@ -82,23 +82,23 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
 
 #pragma mark - Public Methods
 
-- (void)makePurchaseForItems:(NSArray<CartItem *> *)cartItems
+- (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
                      orderId:(NSString *)orderId
                    cardToken:(NSString *)cardToken
                   completion:(void (^)(NSString *transactionRef))completionBlock
-                     failure:(void (^)(MobilePaymentSDKError *error))errorBlock {
+                     failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     NSDictionary *cardData = @{ ICParameterCardToken : cardToken };
     
     [self makePurchaseForItems:cartItems orderId:orderId cardData:cardData completion:completionBlock failure:errorBlock];
 }
 
-- (void)makePurchaseForItems:(NSArray<CartItem *> *)cartItems
+- (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
                      orderId:(NSString *)orderId
-                        card:(Card *)card
+                        card:(MPCard *)card
                     cardData:(NSDictionary *)cardData
                   completion:(void (^)(NSString *transactionRef))completionBlock
-                     failure:(void (^)(MobilePaymentSDKError *error))errorBlock {
+                     failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     NSString *pan        = [card.pan        encrypted];
     NSString *cvc        = [card.cvc        encrypted];
@@ -128,7 +128,7 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
 
 - (void)makeReversalForTransaction:(NSString *)transactionRef
                         completion:(void (^)(NSString *transactionRef))completionBlock
-                           failure:(void (^)(MobilePaymentSDKError *error))errorBlock {
+                           failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     ICReversalCommand *command = [[ICReversalCommand alloc] initWithTransactionRef:transactionRef];
     [self sendCommand:command completion:[self financeOperationCompletion:completionBlock failure:errorBlock]];
@@ -138,7 +138,7 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
        transactionRef:(NSString *)transactionRef
               orderId:(NSString *)orderId
            completion:(void (^)(NSString *transactionRef))completionBlock
-              failure:(void (^)(MobilePaymentSDKError *error))errorBlock {
+              failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     ICRefundCommand *command = [[ICRefundCommand alloc] initWithTransactionRef:transactionRef orderId:orderId amount:amount];
     [self sendCommand:command completion:[self financeOperationCompletion:completionBlock failure:errorBlock]];
@@ -152,7 +152,7 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
            amount:(NSString *)amount
         extraData:(NSDictionary *)extraData
        completion:(void (^)(NSString *cardToken))completionBlock
-          failure:(void (^)(MobilePaymentSDKError *error))errorBlock {
+          failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     ICStoreCardCommand *command = [[ICStoreCardCommand alloc] initWithPan:pan cvc:cvc
                                                                expiryDate:expiryDate
@@ -173,7 +173,7 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
                   amount:(NSString *)amount
                extraData:(NSDictionary *)extraData
               completion:(void (^)(NSString *cardToken))completionBlock
-                 failure:(void (^)(MobilePaymentSDKError *error))errorBlock {
+                 failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     ICUpdateStoredCardCommand *command = [[ICUpdateStoredCardCommand alloc] initWithToken:token
                                                                                       pan:pan
@@ -189,7 +189,7 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
 
 - (void)getCardData:(NSString *)pan
          completion:(void (^)(NSDictionary *data))completionBlock
-            failure:(void (^)(MobilePaymentSDKError *error))errorBlock {
+            failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     NSArray<NSString *> *parameters = @[
                                         ICParameterMID,
@@ -207,7 +207,7 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
 - (void)getTransactionStatusForOrder:(NSString *)orderId
                      transactionType:(TransactionType)transactionType
                           completion:(void (^)(NSInteger status, NSString *transactionRef))completion
-                             failure:(void (^)(MobilePaymentSDKError *error))errorBlock {
+                             failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     ICGetTransactionStatusCommand *command = [[ICGetTransactionStatusCommand alloc] initWithOrderId:orderId transactionType:transactionType];
     [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterTransactionStatus, ICParameterTransactionReference]
@@ -252,18 +252,18 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
         ICURLRequest    *request   = [[ICURLRequest alloc] initWithBody:body];
         ICHTTPOperation *operation = [[ICHTTPOperation alloc] initWithRequest:request
                                                                  successBlock:^(NSDictionary * _Nonnull response) { completion(response); }
-                                                                   errorBlock:^(MobilePaymentSDKError * _Nonnull error) { completion(error); }];
+                                                                   errorBlock:^(MPCheckoutError * _Nonnull error) { completion(error); }];
         [self->_operationQueue addOperation:operation];
     });
 }
 
 #pragma mark - Helpers
 
-- (void)makePurchaseForItems:(NSArray<CartItem *> *)cartItems
+- (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
                      orderId:(NSString *)orderId
                     cardData:(NSDictionary<NSString *, NSString *> *)cardData
                   completion:(void (^)(NSString *transactionRef))completionBlock
-                     failure:(void (^)(MobilePaymentSDKError *error))errorBlock {
+                     failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     __block CGFloat amount = 0.0f;
     NSMutableDictionary<NSString *, NSString *> *extraData = [@{
@@ -272,7 +272,7 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
                                                                 }
                                                               mutableCopy];
     
-    [cartItems enumerateObjectsUsingBlock:^(CartItem * _Nonnull cartItem, NSUInteger idx, BOOL * _Nonnull stop) {
+    [cartItems enumerateObjectsUsingBlock:^(MPCartItem * _Nonnull cartItem, NSUInteger idx, BOOL * _Nonnull stop) {
         amount += (cartItem.price * cartItem.quantity);
         
         [extraData addEntriesFromDictionary:[cartItem formattedData:idx + 1]];
@@ -284,19 +284,19 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
     [self sendCommand:command completion:[self financeOperationCompletion:completionBlock failure:errorBlock]];
 }
 
-- (void (^)(id response))financeOperationCompletion:(void (^)(NSString *transactionRef))completionBlock failure:(void (^)(MobilePaymentSDKError *error))errorBlock {
+- (void (^)(id response))financeOperationCompletion:(void (^)(NSString *transactionRef))completionBlock failure:(void (^)(MPCheckoutError *error))errorBlock {
     return [self operationCompletion:ICParameterTransactionRef completion:completionBlock failed:errorBlock];
 }
 
-- (void (^)(id response))cardOperationCompletion:(void (^)(NSString *transactionRef))completionBlock failure:(void (^)(MobilePaymentSDKError *error))errorBlock {
+- (void (^)(id response))cardOperationCompletion:(void (^)(NSString *transactionRef))completionBlock failure:(void (^)(MPCheckoutError *error))errorBlock {
     return [self operationCompletion:ICParameterCardToken completion:completionBlock failed:errorBlock];
 }
 
 - (void (^)(id response))operationCompletion:(NSString *)paramName
                              completion:(void (^)(NSString *data))completion
-                                 failed:(void (^)(MobilePaymentSDKError *error))failed {
+                                 failed:(void (^)(MPCheckoutError *error))failed {
     return ^(id response) {
-        if ([response isKindOfClass:[MobilePaymentSDKError class]]) {
+        if ([response isKindOfClass:[MPCheckoutError class]]) {
             failed(response);
             return;
         }
@@ -319,9 +319,9 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
 
 - (void (^)(id response))fullOperationCompletion:(NSArray<NSString *> *)paramNames
                                  completion:(void (^)(NSDictionary *data))completion
-                                     failed:(void (^)(MobilePaymentSDKError *error))failed {
+                                     failed:(void (^)(MPCheckoutError *error))failed {
     return ^(id response) {
-        if ([response isKindOfClass:[MobilePaymentSDKError class]]) {
+        if ([response isKindOfClass:[MPCheckoutError class]]) {
             failed(response);
             return;
         }
@@ -360,12 +360,12 @@ static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communicati
     };
 }
 
-- (MobilePaymentSDKError *)communicationError {
-    return [MobilePaymentSDKError communicationError];
+- (MPCheckoutError *)communicationError {
+    return [MPCheckoutError communicationError];
 }
 
-- (MobilePaymentSDKError *)unknownError {
-    return [MobilePaymentSDKError undefinedError];
+- (MPCheckoutError *)unknownError {
+    return [MPCheckoutError undefinedError];
 }
 
 @end

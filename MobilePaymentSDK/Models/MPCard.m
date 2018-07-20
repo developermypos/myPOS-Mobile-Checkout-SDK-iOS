@@ -1,20 +1,20 @@
 //
-//  Card.m
-//  MobilePaymentSDK
+//  MPCard.m
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
 //
 
-#import "Card.h"
+#import "MPCard.h"
 
-@interface Card() {
+@interface MPCard() {
     NSString *_expiryDate;
 }
 
 @end
 
-@implementation Card
+@implementation MPCard
 
 #pragma mark - Initializers
 
@@ -34,8 +34,8 @@
     return self;
 }
 
-- (instancetype)initWithCard:(Card *)card {
-    return [[Card alloc] initWithPan:card.pan
+- (instancetype)initWithCard:(MPCard *)card {
+    return [[MPCard alloc] initWithPan:card.pan
                           expiryDate:card.expiryDate
                                  cvc:card.cvc
                           embossName:card.embossName
@@ -47,7 +47,7 @@
 }
 
 - (instancetype)copyWithZone:(NSZone *)zone {
-    return [[Card allocWithZone:zone] initWithCard:self];
+    return [[MPCard allocWithZone:zone] initWithCard:self];
 }
 
 - (void)dealloc {

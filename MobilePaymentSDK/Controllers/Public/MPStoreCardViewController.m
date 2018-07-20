@@ -1,12 +1,12 @@
 //
-//  StoreCardViewController.m
-//  MobilePaymentSDK
+//  MPStoreCardViewController.m
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
 //
 
-#import "StoreCardViewController.h"
+#import "MPStoreCardViewController.h"
 #import "ICStoreCardViewController.h"
 
 #import "ICUtil.h"
@@ -15,24 +15,24 @@
 
 #import "UIViewController+Helperes.h"
 
-@interface StoreCardViewController () {
+@interface MPStoreCardViewController () {
     BOOL _withoutCustomName;
     CGFloat _verificationAmount;
 }
 
-@property(nonatomic, weak) id<StoreCardDelegate> storeCardDelegate;
+@property(nonatomic, weak) id<MPStoreCardDelegate> storeCardDelegate;
 
 @end
 
-@implementation StoreCardViewController
+@implementation MPStoreCardViewController
 
 #pragma mark - Initializers
 
-- (instancetype)initWithVerificationAmount:(CGFloat)verificationAmount delegate:(id<StoreCardDelegate>)delegate {
+- (instancetype)initWithVerificationAmount:(CGFloat)verificationAmount delegate:(id<MPStoreCardDelegate>)delegate {
     return [self initWithVerificationAmount:verificationAmount delegate:delegate withoutCustomName:NO];
 }
 
-- (instancetype)initWithVerificationAmount:(CGFloat)verificationAmount delegate:(id<StoreCardDelegate>)delegate withoutCustomName:(BOOL)withoutCustomName {
+- (instancetype)initWithVerificationAmount:(CGFloat)verificationAmount delegate:(id<MPStoreCardDelegate>)delegate withoutCustomName:(BOOL)withoutCustomName {
     if (self = [super initWithNibName:nil bundle:nil]) {
         _storeCardDelegate  = delegate;
         _withoutCustomName  = withoutCustomName;
@@ -62,7 +62,7 @@
     [ICLogger log:@"SDK not initialized"];
     
     if ([self.storeCardDelegate respondsToSelector:@selector(storeCardDidFailWithError:)]) {
-        [self.storeCardDelegate storeCardDidFailWithError:[MobilePaymentSDKError notInitializedError]];
+        [self.storeCardDelegate storeCardDidFailWithError:[MPCheckoutError notInitializedError]];
     }
     
     [self.presenter dismissViewControllerAnimated:YES completion:nil];

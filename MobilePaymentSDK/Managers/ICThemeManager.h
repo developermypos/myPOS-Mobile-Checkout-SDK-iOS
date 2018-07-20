@@ -169,11 +169,11 @@ typedef enum : NSUInteger
 
 @end
 
-@class MobilePaymentTheme;
+@class MPCheckoutTheme;
 
 @interface ICThemeManager : NSObject
 
-+ (MobilePaymentTheme <ICThemeManager> *)sharedTheme;
++ (MPCheckoutTheme <ICThemeManager> *)sharedTheme;
 + (UIColor *)lightGrayColor;
 + (UIColor *)customGrayColor;
 + (void)customizeAppAppearance;

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3AC1E9C2A8DFF769D46024BBDB851C3EEB520E5E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D7EC9216846F6E4306AB27F7AC989BD985AFA01B" : 9223372036854775807,
+    "3AC1E9C2A8DFF769D46024BBDB851C3EEB520E5E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5172DA1A-15A6-44A0-949C-127504AAACD8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D7EC9216846F6E4306AB27F7AC989BD985AFA01B" : "myPOSBluetoothSDK\/",
+    "3AC1E9C2A8DFF769D46024BBDB851C3EEB520E5E" : "MobilePaymentSDK_New\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MobilePaymentSDK",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MobilePaymentSDK.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/bitbucket.org\/valioicard\/mobile-payment-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3AC1E9C2A8DFF769D46024BBDB851C3EEB520E5E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:MKDimitrov\/iosmyposbluetoothsdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D7EC9216846F6E4306AB27F7AC989BD985AFA01B"
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 //
-//  PaymentViewController.m
-//  MobilePaymentSDK
+//  MPPaymentViewController.m
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
 //
 
-#import "PaymentViewController.h"
+#import "MPPaymentViewController.h"
 #import "ICPaymentViewController.h"
 
 #import "ICMobilePaymentManager.h"
@@ -15,21 +15,21 @@
 
 #import "UIViewController+Helperes.h"
 
-@interface PaymentViewController () {
+@interface MPPaymentViewController () {
     NSString *_orderId;
     NSString *_cardToken;
-    NSArray<CartItem *> *_cartItems;
+    NSArray<MPCartItem *> *_cartItems;
 }
 
-@property (weak, nonatomic) id<PaymentDelegate> paymentDelegate;
+@property (weak, nonatomic) id<MPPaymentDelegate> paymentDelegate;
 
 @end
 
-@implementation PaymentViewController
+@implementation MPPaymentViewController
 
 #pragma mark - Initializers/Deinitializer
 
-- (instancetype)initWithCartItems:(NSArray *)cartItems orderId:(NSString *)orderId delegate:(id<PaymentDelegate>)delegate {
+- (instancetype)initWithCartItems:(NSArray *)cartItems orderId:(NSString *)orderId delegate:(id<MPPaymentDelegate>)delegate {
     if (self = [super initWithNibName:nil bundle:nil]) {
         _orderId         = orderId;
         _cartItems       = cartItems;
@@ -41,7 +41,7 @@
     return self;
 }
 
-- (instancetype)initWithCartItems:(NSArray<CartItem *> *)cartItems orderId:(NSString *)orderId cardToken:(NSString *)cardToken delegate:(id<PaymentDelegate>)delegate {
+- (instancetype)initWithCartItems:(NSArray<MPCartItem *> *)cartItems orderId:(NSString *)orderId cardToken:(NSString *)cardToken delegate:(id<MPPaymentDelegate>)delegate {
     if (self = [super initWithNibName:nil bundle:nil]) {
         _orderId         = orderId;
         _cartItems       = cartItems;
@@ -73,7 +73,7 @@
     [ICLogger log:@"SDK not initialized"];
     
     if ([self.paymentDelegate respondsToSelector:@selector(paymentDidFailWithError:)]) {
-        [self.paymentDelegate paymentDidFailWithError:[MobilePaymentSDKError notInitializedError]];
+        [self.paymentDelegate paymentDidFailWithError:[MPCheckoutError notInitializedError]];
     }
     
     [self.presenter dismissViewControllerAnimated:YES completion:nil];
@@ -90,6 +90,7 @@
     paymentController.paymentDelegate        = self.paymentDelegate;
     paymentController.withoutCustomName      = YES;
     paymentController.cardVerificationAmount = [[ICUtil itemsTotalAmount:_cartItems] floatValue];
+    paymentController.backgroundColor        = self.backgroundColor;
     
     [self setViewControllers:@[paymentController]];
 }

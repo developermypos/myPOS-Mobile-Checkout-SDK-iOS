@@ -1,25 +1,26 @@
 //
-//  MobilePaymentTheme.m
-//  MobilePaymentSDK
+//  MPCheckoutTheme.m
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
 //
 
-#import "MobilePaymentTheme.h"
+#import "MPCheckoutTheme.h"
 #import "ICThemeManager.h"
 
 #import "UIColor+Helpers.h"
 #import "UIColor+HexString.h"
 
-@interface MobilePaymentTheme () <ICThemeManager>
+@interface MPCheckoutTheme () <ICThemeManager>
 
 @end
 
-@implementation MobilePaymentTheme
+@implementation MPCheckoutTheme
 
 - (instancetype)init {
     if (self = [super init]) {
+        self.labelFontSize        = 13.0f;
         self.placeholderFontSize  = 13.0f;
         self.textFieldBorderColor = [[UIColor grayColor] colorWithAlphaComponent:0.3f];
         self.placeholderAlignment = NSTextAlignmentLeft;
@@ -36,7 +37,8 @@
 
 #pragma mark - Public Methods
 
-- (void)setTheme:(MobilePaymentTheme *)theme {
+- (void)setTheme:(MPCheckoutTheme *)theme {
+    self.labelFontSize        = theme.labelFontSize;
     self.placeholderFontSize  = theme.placeholderFontSize;
     self.textFieldBorderColor = theme.textFieldBorderColor;
     self.placeholderAlignment = theme.placeholderAlignment;
@@ -46,6 +48,7 @@
     self.barButtonItemColor   = theme.barButtonItemColor;
     self.textFieldTextColor   = theme.textFieldTextColor;
     self.navigationTitleColor = theme.navigationTitleColor;
+    self.navigationBarColor   = theme.navigationBarColor;
 }
 
 #pragma mark - ICTheme Implementation

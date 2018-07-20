@@ -1,12 +1,12 @@
 //
-//  UpdateStoredCardViewController.m
-//  MobilePaymentSDK
+//  MPUpdateStoredCardViewController.m
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
 //
 
-#import "UpdateStoredCardViewController.h"
+#import "MPUpdateStoredCardViewController.h"
 #import "ICUpdateStoredCardViewController.h"
 
 #import "ICUtil.h"
@@ -15,30 +15,30 @@
 
 #import "UIViewController+Helperes.h"
 
-@interface UpdateStoredCardViewController () {
+@interface MPUpdateStoredCardViewController () {
     BOOL _withoutCustomName;
     CGFloat _verificationAmount;
     NSString *_cardToken;
 }
 
-@property(nonatomic, weak) id<StoreCardDelegate> storeCardDelegate;
+@property(nonatomic, weak) id<MPStoreCardDelegate> storeCardDelegate;
 
 @end
 
-@implementation UpdateStoredCardViewController
+@implementation MPUpdateStoredCardViewController
 
 #pragma mark - Initializers
 
 - (instancetype)initWithCardToken:(NSString *)cardToken
                verificationAmount:(CGFloat)verificationAmount
-                         delegate:(id<StoreCardDelegate>)delegate {
+                         delegate:(id<MPStoreCardDelegate>)delegate {
     
     return [self initWithCardToken:cardToken verificationAmount:verificationAmount delegate:delegate withoutCustomName:NO];
 }
 
 - (instancetype)initWithCardToken:(NSString *)cardToken
                verificationAmount:(CGFloat)verificationAmount
-                         delegate:(id<StoreCardDelegate>)delegate
+                         delegate:(id<MPStoreCardDelegate>)delegate
                 withoutCustomName:(BOOL)withoutCustomName {
     
     if (self = [super initWithNibName:nil bundle:nil]) {
@@ -73,7 +73,7 @@
     [ICLogger log:@"SDK not initialized"];
     
     if ([self.storeCardDelegate respondsToSelector:@selector(storeCardDidFailWithError:)]) {
-        [self.storeCardDelegate storeCardDidFailWithError:[MobilePaymentSDKError notInitializedError]];
+        [self.storeCardDelegate storeCardDidFailWithError:[MPCheckoutError notInitializedError]];
     }
     
     [self.presenter dismissViewControllerAnimated:YES completion:nil];
@@ -88,6 +88,7 @@
     storeCardController.storeCardDelegate      = self.storeCardDelegate;
     storeCardController.withoutCustomName      = _withoutCustomName;
     storeCardController.cardVerificationAmount = _verificationAmount;
+    storeCardController.backgroundColor        = self.backgroundColor;
     
     [self setViewControllers:@[storeCardController]];
 }

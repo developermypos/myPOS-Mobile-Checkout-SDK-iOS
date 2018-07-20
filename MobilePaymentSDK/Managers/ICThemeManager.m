@@ -10,7 +10,7 @@
 
 #import "ICThemeManager.h"
 
-#import "MobilePaymentTheme.h"
+#import "MPCheckoutTheme.h"
 
 #import "UIColor+Helpers.h"
 #import "UIColor+HexString.h"
@@ -136,11 +136,11 @@ const CGFloat kNameLabelDefaultFontSize     = 14.0f;
 
 #pragma mark - Public Methods
 
-+ (MobilePaymentTheme <ICThemeManager> *)sharedTheme {
-	static MobilePaymentTheme <ICThemeManager> *sharedTheme = nil;
++ (MPCheckoutTheme <ICThemeManager> *)sharedTheme {
+	static MPCheckoutTheme <ICThemeManager> *sharedTheme = nil;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-		sharedTheme = [[MobilePaymentTheme alloc] init];
+		sharedTheme = [[MPCheckoutTheme alloc] init];
 	});
 
 	return sharedTheme;
@@ -356,7 +356,7 @@ const CGFloat kNameLabelDefaultFontSize     = 14.0f;
 }
 
 + (void)customizeAppAppearance {
-    MobilePaymentTheme <ICThemeManager> *theme = [self sharedTheme];
+    MPCheckoutTheme <ICThemeManager> *theme = [self sharedTheme];
     
 	// Status bar
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:NO];

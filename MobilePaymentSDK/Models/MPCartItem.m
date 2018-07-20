@@ -1,19 +1,19 @@
 //
-//  CartItem.m
-//  MobilePaymentSDK
+//  MPCartItem.m
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/30/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
 //
 
-#import "CartItem.h"
+#import "MPCartItem.h"
 #import "ICConstants.h"
 #import "ICHelpers.h"
 #import "ICMobilePaymentManager.h"
 
 #import "NSString+Helpers.h"
 
-@implementation CartItem
+@implementation MPCartItem
 
 #define ICParamName(name, number) [NSString stringWithFormat:@"%@_%@", name, [@(number) stringValue]]
 #define ICFormattedPrice(price)   [NSString stringWithFormat:@"%.02f", price]

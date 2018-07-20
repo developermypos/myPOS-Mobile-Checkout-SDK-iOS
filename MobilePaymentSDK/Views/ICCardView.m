@@ -1,6 +1,6 @@
 //
 //  ICCardView.m
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -13,6 +13,7 @@
 
 #import "ICHelpers.h"
 #import "ICConstants.h"
+#import "ICThemeManager.h"
 #import "ICMobilePaymentManager.h"
 
 #import "NSString+Helpers.h"
@@ -32,6 +33,8 @@
 @property (weak, nonatomic) IBOutlet ICThemedTextField *embossNameTextField;
 @property (weak, nonatomic) IBOutlet UILabel *customNameLabel;
 @property (weak, nonatomic) IBOutlet ICThemedTextField *customNameTextField;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *noCustomNameConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *hasCustomNameConstraint;
 
 @end
 
@@ -189,11 +192,17 @@ static NSInteger const kPanMaxLength  = 19;
     self.panTextField.placeholder        = ICLocalizedString(@"Enter card number");
     self.cvcTextField.placeholder        = ICLocalizedString(@"Enter CVC code");
     self.embossNameTextField.placeholder = ICLocalizedString(@"Enter name on card");
-    self.customNameTextField.placeholder = ICLocalizedString(@"Enter custom name");
+    self.customNameTextField.placeholder = ICLocalizedString(@"Enter custom name (optional)");
 }
 
 - (void)applyTheme {
-    
+    [self customizeLabels:@[self.panLabel,
+                            self.expiryDateLabel,
+                            self.cvcLabel,
+                            self.embossNameLabel,
+                            self.customNameLabel]
+                 fontSize:[[ICThemeManager sharedTheme] labelFontSize]
+                textColor:[[ICThemeManager sharedTheme] labelTextColor]];
 }
 
 - (void)hideCustomName {
@@ -205,6 +214,20 @@ static NSInteger const kPanMaxLength  = 19;
     NSMutableArray *fields = [_keyboardControls.fields mutableCopy];
     [fields removeObject:self.customNameTextField];
     _keyboardControls.fields = (NSArray *)fields;
+    
+    [self.hasCustomNameConstraint setActive:NO];
+    [self.noCustomNameConstraint  setActive:YES];
+    
+    [self layoutIfNeeded];
+}
+
+#pragma mark - Helpers
+
+- (void)customizeLabels:(NSArray<UILabel *> *)labels fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
+    for (UILabel *label in labels) {
+        label.font      = [UIFont systemFontOfSize:fontSize];
+        label.textColor = textColor;
+    }
 }
 
 @end

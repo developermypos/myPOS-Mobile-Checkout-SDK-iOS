@@ -1,18 +1,18 @@
 //
-//  StoredCard.m
-//  MobilePaymentSDK
+//  MPStoredCard.m
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 6/12/18.
 //  Copyright © 2018 Intercard Finance AD. All rights reserved.
 //
 
-#import "StoredCard.h"
+#import "MPStoredCard.h"
 
 #import "NSString+Helpers.h"
 
-@implementation StoredCard
+@implementation MPStoredCard
 
-- (instancetype)initWithCard:(Card *)card type:(NSString *)type token:(NSString *)token {
+- (instancetype)initWithCard:(MPCard *)card type:(NSString *)type token:(NSString *)token {
     if (self = [self init]) {
         _pan        = card.pan.shortPan;
         _type       = type;

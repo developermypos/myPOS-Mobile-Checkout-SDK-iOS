@@ -28,8 +28,8 @@
 		1D3D7FB11E7A806A0043BF9D /* ICLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FA61E7A806A0043BF9D /* ICLogger.m */; };
 		1D3D7FB21E7A806A0043BF9D /* ICUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FA71E7A806A0043BF9D /* ICUtil.h */; };
 		1D3D7FB31E7A806A0043BF9D /* ICUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FA81E7A806A0043BF9D /* ICUtil.m */; };
-		1D3D7FB41E7A806A0043BF9D /* MobilePaymentSDKError.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FA91E7A806A0043BF9D /* MobilePaymentSDKError.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D3D7FB51E7A806A0043BF9D /* MobilePaymentSDKError.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FAA1E7A806A0043BF9D /* MobilePaymentSDKError.m */; };
+		1D3D7FB41E7A806A0043BF9D /* MPCheckoutError.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FA91E7A806A0043BF9D /* MPCheckoutError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D3D7FB51E7A806A0043BF9D /* MPCheckoutError.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FAA1E7A806A0043BF9D /* MPCheckoutError.m */; };
 		1D3D7FB81E7A80790043BF9D /* BSKeyboardControls.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FB61E7A80790043BF9D /* BSKeyboardControls.h */; };
 		1D3D7FB91E7A80790043BF9D /* BSKeyboardControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FB71E7A80790043BF9D /* BSKeyboardControls.m */; };
 		1D3D7FBC1E7A80840043BF9D /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FBA1E7A80840043BF9D /* MBProgressHUD.h */; };
@@ -38,8 +38,8 @@
 		1D3D7FC31E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FBF1E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.m */; };
 		1D3D7FC41E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FC01E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.h */; };
 		1D3D7FC51E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FC11E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
-		1D3D7FC81E7A86590043BF9D /* MobilePaymentTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FC61E7A86590043BF9D /* MobilePaymentTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D3D7FC91E7A86590043BF9D /* MobilePaymentTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FC71E7A86590043BF9D /* MobilePaymentTheme.m */; };
+		1D3D7FC81E7A86590043BF9D /* MPCheckoutTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FC61E7A86590043BF9D /* MPCheckoutTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D3D7FC91E7A86590043BF9D /* MPCheckoutTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FC71E7A86590043BF9D /* MPCheckoutTheme.m */; };
 		1D3D7FD71E7A86E20043BF9D /* ICApplicationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FCB1E7A86E20043BF9D /* ICApplicationManager.h */; };
 		1D3D7FD81E7A86E20043BF9D /* ICApplicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FCC1E7A86E20043BF9D /* ICApplicationManager.m */; };
 		1D3D7FD91E7A86E20043BF9D /* ICBaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FCD1E7A86E20043BF9D /* ICBaseManager.h */; };
@@ -52,20 +52,22 @@
 		1D3D7FE01E7A86E20043BF9D /* ICRSAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FD41E7A86E20043BF9D /* ICRSAManager.m */; };
 		1D3D7FE11E7A86E20043BF9D /* ICThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3D7FD51E7A86E20043BF9D /* ICThemeManager.h */; };
 		1D3D7FE21E7A86E20043BF9D /* ICThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D7FD61E7A86E20043BF9D /* ICThemeManager.m */; };
+		1D4144F72101D213003F697D /* MPCheckoutController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4144F52101D213003F697D /* MPCheckoutController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D4144F82101D213003F697D /* MPCheckoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4144F62101D213003F697D /* MPCheckoutController.m */; };
 		1D52AA531ED6EEFA00D30724 /* ICReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D52AA511ED6EEFA00D30724 /* ICReachability.h */; };
 		1D52AA541ED6EEFA00D30724 /* ICReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D52AA521ED6EEFA00D30724 /* ICReachability.m */; };
 		1D52AA571ED6EF3A00D30724 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D52AA551ED6EF3A00D30724 /* Reachability.h */; };
 		1D52AA581ED6EF3A00D30724 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D52AA561ED6EF3A00D30724 /* Reachability.m */; };
-		1D53418220CFA7BF00087AD3 /* StoredCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D53418020CFA7BF00087AD3 /* StoredCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D53418320CFA7BF00087AD3 /* StoredCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D53418120CFA7BF00087AD3 /* StoredCard.m */; };
+		1D53418220CFA7BF00087AD3 /* MPStoredCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D53418020CFA7BF00087AD3 /* MPStoredCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D53418320CFA7BF00087AD3 /* MPStoredCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D53418120CFA7BF00087AD3 /* MPStoredCard.m */; };
 		1D55A4E11EA8963700F41037 /* NSRegularExpression+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D55A4DF1EA8963700F41037 /* NSRegularExpression+Helpers.h */; };
 		1D55A4E21EA8963700F41037 /* NSRegularExpression+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D55A4E01EA8963700F41037 /* NSRegularExpression+Helpers.m */; };
 		1D6AE8B61F738FCD00124B54 /* ICASN.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D6AE8B41F738FCD00124B54 /* ICASN.h */; };
 		1D6AE8B71F738FCD00124B54 /* ICASN.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6AE8B51F738FCD00124B54 /* ICASN.m */; };
-		1D7A780A1E3F924300DA6196 /* CartItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78081E3F924300DA6196 /* CartItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D7A780B1E3F924300DA6196 /* CartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78091E3F924300DA6196 /* CartItem.m */; };
-		1D7A78331E407B1100DA6196 /* Card.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78311E407B1100DA6196 /* Card.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D7A78341E407B1100DA6196 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78321E407B1100DA6196 /* Card.m */; };
+		1D7A780A1E3F924300DA6196 /* MPCartItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78081E3F924300DA6196 /* MPCartItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D7A780B1E3F924300DA6196 /* MPCartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78091E3F924300DA6196 /* MPCartItem.m */; };
+		1D7A78331E407B1100DA6196 /* MPCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78311E407B1100DA6196 /* MPCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D7A78341E407B1100DA6196 /* MPCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78321E407B1100DA6196 /* MPCard.m */; };
 		1D7A78371E407BEF00DA6196 /* ICURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78351E407BEF00DA6196 /* ICURLRequest.h */; };
 		1D7A78381E407BEF00DA6196 /* ICURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78361E407BEF00DA6196 /* ICURLRequest.m */; };
 		1D7A783B1E407DD000DA6196 /* ICHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78391E407DD000DA6196 /* ICHTTPOperation.h */; };
@@ -86,8 +88,8 @@
 		1D7A78641E4093E700DA6196 /* ICStoreCardCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78621E4093E700DA6196 /* ICStoreCardCommand.m */; };
 		1D7A78671E40954600DA6196 /* ICUpdateStoredCardCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78651E40954600DA6196 /* ICUpdateStoredCardCommand.h */; };
 		1D7A78681E40954600DA6196 /* ICUpdateStoredCardCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78661E40954600DA6196 /* ICUpdateStoredCardCommand.m */; };
-		1D7A786B1E40ACCE00DA6196 /* PaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78691E40ACCE00DA6196 /* PaymentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D7A786C1E40ACCE00DA6196 /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A786A1E40ACCE00DA6196 /* PaymentViewController.m */; };
+		1D7A786B1E40ACCE00DA6196 /* MPPaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78691E40ACCE00DA6196 /* MPPaymentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D7A786C1E40ACCE00DA6196 /* MPPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A786A1E40ACCE00DA6196 /* MPPaymentViewController.m */; };
 		1D7A786F1E40AEF000DA6196 /* ICBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A786D1E40AEF000DA6196 /* ICBaseViewController.h */; };
 		1D7A78701E40AEF000DA6196 /* ICBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A786E1E40AEF000DA6196 /* ICBaseViewController.m */; };
 		1D7A78731E40B01100DA6196 /* IC3DSecureWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78711E40B01100DA6196 /* IC3DSecureWebViewController.h */; };
@@ -98,19 +100,19 @@
 		1D7A787C1E40B44B00DA6196 /* ICCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A787A1E40B44B00DA6196 /* ICCardView.m */; };
 		1D7A787F1E40B4A900DA6196 /* ICThemedTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A787D1E40B4A900DA6196 /* ICThemedTextField.h */; };
 		1D7A78801E40B4A900DA6196 /* ICThemedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A787E1E40B4A900DA6196 /* ICThemedTextField.m */; };
-		1D7A788F1E40D41B00DA6196 /* StoreCardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A788D1E40D41B00DA6196 /* StoreCardViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D7A78901E40D41B00DA6196 /* StoreCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A788E1E40D41B00DA6196 /* StoreCardViewController.m */; };
-		1D7A78931E40D56F00DA6196 /* UpdateStoredCardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78911E40D56F00DA6196 /* UpdateStoredCardViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D7A78941E40D56F00DA6196 /* UpdateStoredCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78921E40D56F00DA6196 /* UpdateStoredCardViewController.m */; };
+		1D7A788F1E40D41B00DA6196 /* MPStoreCardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A788D1E40D41B00DA6196 /* MPStoreCardViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D7A78901E40D41B00DA6196 /* MPStoreCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A788E1E40D41B00DA6196 /* MPStoreCardViewController.m */; };
+		1D7A78931E40D56F00DA6196 /* MPUpdateStoredCardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78911E40D56F00DA6196 /* MPUpdateStoredCardViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D7A78941E40D56F00DA6196 /* MPUpdateStoredCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78921E40D56F00DA6196 /* MPUpdateStoredCardViewController.m */; };
 		1D7A78971E40E08100DA6196 /* ICStoreCardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78951E40E08100DA6196 /* ICStoreCardViewController.h */; };
 		1D7A78981E40E08100DA6196 /* ICStoreCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78961E40E08100DA6196 /* ICStoreCardViewController.m */; };
 		1D7A789B1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78991E40E2DA00DA6196 /* ICUpdateStoredCardViewController.h */; };
 		1D7A789C1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A789A1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.m */; };
 		1D7A789F1E40E36300DA6196 /* ICPaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A789D1E40E36300DA6196 /* ICPaymentViewController.h */; };
 		1D7A78A01E40E36300DA6196 /* ICPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A789E1E40E36300DA6196 /* ICPaymentViewController.m */; };
-		1D7A78A31E40E61400DA6196 /* MobilePaymentSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78A11E40E61400DA6196 /* MobilePaymentSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D7A78A41E40E61400DA6196 /* MobilePaymentSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78A21E40E61400DA6196 /* MobilePaymentSDK.m */; };
-		1D7A78A51E40EC3200DA6196 /* MobilePaymentSDKProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78101E3F965400DA6196 /* MobilePaymentSDKProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D7A78A31E40E61400DA6196 /* MPCheckout.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78A11E40E61400DA6196 /* MPCheckout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D7A78A41E40E61400DA6196 /* MPCheckout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78A21E40E61400DA6196 /* MPCheckout.m */; };
+		1D7A78A51E40EC3200DA6196 /* MPCheckoutProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78101E3F965400DA6196 /* MPCheckoutProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D9D806C20A2C4320054D7BB /* UIViewController+Helperes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9D806A20A2C4320054D7BB /* UIViewController+Helperes.h */; };
 		1D9D806D20A2C4320054D7BB /* UIViewController+Helperes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D806B20A2C4320054D7BB /* UIViewController+Helperes.m */; };
 		1DACE8271E2E14F400F5E38E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DACE7F11E2E14F400F5E38E /* Images.xcassets */; };
@@ -142,8 +144,8 @@
 		1D3D7FA61E7A806A0043BF9D /* ICLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICLogger.m; sourceTree = "<group>"; };
 		1D3D7FA71E7A806A0043BF9D /* ICUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUtil.h; sourceTree = "<group>"; };
 		1D3D7FA81E7A806A0043BF9D /* ICUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICUtil.m; sourceTree = "<group>"; };
-		1D3D7FA91E7A806A0043BF9D /* MobilePaymentSDKError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePaymentSDKError.h; sourceTree = "<group>"; };
-		1D3D7FAA1E7A806A0043BF9D /* MobilePaymentSDKError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilePaymentSDKError.m; sourceTree = "<group>"; };
+		1D3D7FA91E7A806A0043BF9D /* MPCheckoutError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCheckoutError.h; sourceTree = "<group>"; };
+		1D3D7FAA1E7A806A0043BF9D /* MPCheckoutError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCheckoutError.m; sourceTree = "<group>"; };
 		1D3D7FB61E7A80790043BF9D /* BSKeyboardControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSKeyboardControls.h; sourceTree = "<group>"; };
 		1D3D7FB71E7A80790043BF9D /* BSKeyboardControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSKeyboardControls.m; sourceTree = "<group>"; };
 		1D3D7FBA1E7A80840043BF9D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -152,8 +154,8 @@
 		1D3D7FBF1E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		1D3D7FC01E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		1D3D7FC11E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
-		1D3D7FC61E7A86590043BF9D /* MobilePaymentTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePaymentTheme.h; sourceTree = "<group>"; };
-		1D3D7FC71E7A86590043BF9D /* MobilePaymentTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilePaymentTheme.m; sourceTree = "<group>"; };
+		1D3D7FC61E7A86590043BF9D /* MPCheckoutTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCheckoutTheme.h; sourceTree = "<group>"; };
+		1D3D7FC71E7A86590043BF9D /* MPCheckoutTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCheckoutTheme.m; sourceTree = "<group>"; };
 		1D3D7FCB1E7A86E20043BF9D /* ICApplicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICApplicationManager.h; sourceTree = "<group>"; };
 		1D3D7FCC1E7A86E20043BF9D /* ICApplicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICApplicationManager.m; sourceTree = "<group>"; };
 		1D3D7FCD1E7A86E20043BF9D /* ICBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICBaseManager.h; sourceTree = "<group>"; };
@@ -166,21 +168,23 @@
 		1D3D7FD41E7A86E20043BF9D /* ICRSAManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICRSAManager.m; sourceTree = "<group>"; };
 		1D3D7FD51E7A86E20043BF9D /* ICThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThemeManager.h; sourceTree = "<group>"; };
 		1D3D7FD61E7A86E20043BF9D /* ICThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICThemeManager.m; sourceTree = "<group>"; };
+		1D4144F52101D213003F697D /* MPCheckoutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPCheckoutController.h; sourceTree = "<group>"; };
+		1D4144F62101D213003F697D /* MPCheckoutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPCheckoutController.m; sourceTree = "<group>"; };
 		1D52AA511ED6EEFA00D30724 /* ICReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICReachability.h; sourceTree = "<group>"; };
 		1D52AA521ED6EEFA00D30724 /* ICReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICReachability.m; sourceTree = "<group>"; };
 		1D52AA551ED6EF3A00D30724 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1D52AA561ED6EF3A00D30724 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		1D53418020CFA7BF00087AD3 /* StoredCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoredCard.h; sourceTree = "<group>"; };
-		1D53418120CFA7BF00087AD3 /* StoredCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoredCard.m; sourceTree = "<group>"; };
+		1D53418020CFA7BF00087AD3 /* MPStoredCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPStoredCard.h; sourceTree = "<group>"; };
+		1D53418120CFA7BF00087AD3 /* MPStoredCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPStoredCard.m; sourceTree = "<group>"; };
 		1D55A4DF1EA8963700F41037 /* NSRegularExpression+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegularExpression+Helpers.h"; sourceTree = "<group>"; };
 		1D55A4E01EA8963700F41037 /* NSRegularExpression+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegularExpression+Helpers.m"; sourceTree = "<group>"; };
 		1D6AE8B41F738FCD00124B54 /* ICASN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICASN.h; sourceTree = "<group>"; };
 		1D6AE8B51F738FCD00124B54 /* ICASN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICASN.m; sourceTree = "<group>"; };
-		1D7A78081E3F924300DA6196 /* CartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartItem.h; sourceTree = "<group>"; };
-		1D7A78091E3F924300DA6196 /* CartItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CartItem.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1D7A78101E3F965400DA6196 /* MobilePaymentSDKProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobilePaymentSDKProtocols.h; sourceTree = "<group>"; };
-		1D7A78311E407B1100DA6196 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		1D7A78321E407B1100DA6196 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		1D7A78081E3F924300DA6196 /* MPCartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCartItem.h; sourceTree = "<group>"; };
+		1D7A78091E3F924300DA6196 /* MPCartItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MPCartItem.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1D7A78101E3F965400DA6196 /* MPCheckoutProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPCheckoutProtocols.h; sourceTree = "<group>"; };
+		1D7A78311E407B1100DA6196 /* MPCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCard.h; sourceTree = "<group>"; };
+		1D7A78321E407B1100DA6196 /* MPCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCard.m; sourceTree = "<group>"; };
 		1D7A78351E407BEF00DA6196 /* ICURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICURLRequest.h; sourceTree = "<group>"; };
 		1D7A78361E407BEF00DA6196 /* ICURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICURLRequest.m; sourceTree = "<group>"; };
 		1D7A78391E407DD000DA6196 /* ICHTTPOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICHTTPOperation.h; sourceTree = "<group>"; };
@@ -201,8 +205,8 @@
 		1D7A78621E4093E700DA6196 /* ICStoreCardCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICStoreCardCommand.m; sourceTree = "<group>"; };
 		1D7A78651E40954600DA6196 /* ICUpdateStoredCardCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUpdateStoredCardCommand.h; sourceTree = "<group>"; };
 		1D7A78661E40954600DA6196 /* ICUpdateStoredCardCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICUpdateStoredCardCommand.m; sourceTree = "<group>"; };
-		1D7A78691E40ACCE00DA6196 /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
-		1D7A786A1E40ACCE00DA6196 /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
+		1D7A78691E40ACCE00DA6196 /* MPPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPaymentViewController.h; sourceTree = "<group>"; };
+		1D7A786A1E40ACCE00DA6196 /* MPPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPaymentViewController.m; sourceTree = "<group>"; };
 		1D7A786D1E40AEF000DA6196 /* ICBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICBaseViewController.h; sourceTree = "<group>"; };
 		1D7A786E1E40AEF000DA6196 /* ICBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICBaseViewController.m; sourceTree = "<group>"; };
 		1D7A78711E40B01100DA6196 /* IC3DSecureWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IC3DSecureWebViewController.h; sourceTree = "<group>"; };
@@ -213,21 +217,21 @@
 		1D7A787A1E40B44B00DA6196 /* ICCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCardView.m; sourceTree = "<group>"; };
 		1D7A787D1E40B4A900DA6196 /* ICThemedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICThemedTextField.h; sourceTree = "<group>"; };
 		1D7A787E1E40B4A900DA6196 /* ICThemedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICThemedTextField.m; sourceTree = "<group>"; };
-		1D7A788D1E40D41B00DA6196 /* StoreCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCardViewController.h; sourceTree = "<group>"; };
-		1D7A788E1E40D41B00DA6196 /* StoreCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCardViewController.m; sourceTree = "<group>"; };
-		1D7A78911E40D56F00DA6196 /* UpdateStoredCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateStoredCardViewController.h; sourceTree = "<group>"; };
-		1D7A78921E40D56F00DA6196 /* UpdateStoredCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateStoredCardViewController.m; sourceTree = "<group>"; };
+		1D7A788D1E40D41B00DA6196 /* MPStoreCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPStoreCardViewController.h; sourceTree = "<group>"; };
+		1D7A788E1E40D41B00DA6196 /* MPStoreCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPStoreCardViewController.m; sourceTree = "<group>"; };
+		1D7A78911E40D56F00DA6196 /* MPUpdateStoredCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPUpdateStoredCardViewController.h; sourceTree = "<group>"; };
+		1D7A78921E40D56F00DA6196 /* MPUpdateStoredCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPUpdateStoredCardViewController.m; sourceTree = "<group>"; };
 		1D7A78951E40E08100DA6196 /* ICStoreCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICStoreCardViewController.h; sourceTree = "<group>"; };
 		1D7A78961E40E08100DA6196 /* ICStoreCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICStoreCardViewController.m; sourceTree = "<group>"; };
 		1D7A78991E40E2DA00DA6196 /* ICUpdateStoredCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUpdateStoredCardViewController.h; sourceTree = "<group>"; };
 		1D7A789A1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICUpdateStoredCardViewController.m; sourceTree = "<group>"; };
 		1D7A789D1E40E36300DA6196 /* ICPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICPaymentViewController.h; sourceTree = "<group>"; };
 		1D7A789E1E40E36300DA6196 /* ICPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPaymentViewController.m; sourceTree = "<group>"; };
-		1D7A78A11E40E61400DA6196 /* MobilePaymentSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePaymentSDK.h; sourceTree = "<group>"; };
-		1D7A78A21E40E61400DA6196 /* MobilePaymentSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilePaymentSDK.m; sourceTree = "<group>"; };
+		1D7A78A11E40E61400DA6196 /* MPCheckout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCheckout.h; sourceTree = "<group>"; };
+		1D7A78A21E40E61400DA6196 /* MPCheckout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCheckout.m; sourceTree = "<group>"; };
 		1D9D806A20A2C4320054D7BB /* UIViewController+Helperes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Helperes.h"; sourceTree = "<group>"; };
 		1D9D806B20A2C4320054D7BB /* UIViewController+Helperes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Helperes.m"; sourceTree = "<group>"; };
-		1DACE7C21E2E14B300F5E38E /* MobilePaymentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobilePaymentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DACE7C21E2E14B300F5E38E /* MPCheckout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MPCheckout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DACE7C61E2E14B300F5E38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DACE7F11E2E14F400F5E38E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MobilePaymentSDK/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		1DACE80A1E2E14F400F5E38E /* ICCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ICCardView.xib; sourceTree = "<group>"; };
@@ -285,8 +289,8 @@
 				1D3D7FA61E7A806A0043BF9D /* ICLogger.m */,
 				1D3D7FA71E7A806A0043BF9D /* ICUtil.h */,
 				1D3D7FA81E7A806A0043BF9D /* ICUtil.m */,
-				1D3D7FA91E7A806A0043BF9D /* MobilePaymentSDKError.h */,
-				1D3D7FAA1E7A806A0043BF9D /* MobilePaymentSDKError.m */,
+				1D3D7FA91E7A806A0043BF9D /* MPCheckoutError.h */,
+				1D3D7FAA1E7A806A0043BF9D /* MPCheckoutError.m */,
 			);
 			name = Helpers;
 			path = MobilePaymentSDK/Helpers;
@@ -315,7 +319,7 @@
 		1DACE7B81E2E14B300F5E38E = {
 			isa = PBXGroup;
 			children = (
-				1DACE7C41E2E14B300F5E38E /* Mobile Payment SDK */,
+				1DACE7C41E2E14B300F5E38E /* MPCheckout */,
 				1DACE7C31E2E14B300F5E38E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -323,12 +327,12 @@
 		1DACE7C31E2E14B300F5E38E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1DACE7C21E2E14B300F5E38E /* MobilePaymentSDK.framework */,
+				1DACE7C21E2E14B300F5E38E /* MPCheckout.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1DACE7C41E2E14B300F5E38E /* Mobile Payment SDK */ = {
+		1DACE7C41E2E14B300F5E38E /* MPCheckout */ = {
 			isa = PBXGroup;
 			children = (
 				1D3D7F861E7A805C0043BF9D /* Categories */,
@@ -338,12 +342,12 @@
 				1D3D7FCA1E7A86E20043BF9D /* Managers */,
 				1DACE7F21E2E14F400F5E38E /* Models */,
 				1DACE8081E2E14F400F5E38E /* Views */,
-				1D7A78A11E40E61400DA6196 /* MobilePaymentSDK.h */,
-				1D7A78A21E40E61400DA6196 /* MobilePaymentSDK.m */,
+				1D7A78A11E40E61400DA6196 /* MPCheckout.h */,
+				1D7A78A21E40E61400DA6196 /* MPCheckout.m */,
 				1DACE84B1E2E1E7A00F5E38E /* Storyboard.storyboard */,
 				1DACE7C61E2E14B300F5E38E /* Info.plist */,
 			);
-			name = "Mobile Payment SDK";
+			name = MPCheckout;
 			path = ../myPOSBluetoothSDK/myPOSBluetoothSDK;
 			sourceTree = "<group>";
 		};
@@ -379,13 +383,15 @@
 		1DACE7D71E2E14F400F5E38E /* Public */ = {
 			isa = PBXGroup;
 			children = (
-				1D7A78101E3F965400DA6196 /* MobilePaymentSDKProtocols.h */,
-				1D7A78691E40ACCE00DA6196 /* PaymentViewController.h */,
-				1D7A786A1E40ACCE00DA6196 /* PaymentViewController.m */,
-				1D7A788D1E40D41B00DA6196 /* StoreCardViewController.h */,
-				1D7A788E1E40D41B00DA6196 /* StoreCardViewController.m */,
-				1D7A78911E40D56F00DA6196 /* UpdateStoredCardViewController.h */,
-				1D7A78921E40D56F00DA6196 /* UpdateStoredCardViewController.m */,
+				1D7A78101E3F965400DA6196 /* MPCheckoutProtocols.h */,
+				1D4144F52101D213003F697D /* MPCheckoutController.h */,
+				1D4144F62101D213003F697D /* MPCheckoutController.m */,
+				1D7A78691E40ACCE00DA6196 /* MPPaymentViewController.h */,
+				1D7A786A1E40ACCE00DA6196 /* MPPaymentViewController.m */,
+				1D7A788D1E40D41B00DA6196 /* MPStoreCardViewController.h */,
+				1D7A788E1E40D41B00DA6196 /* MPStoreCardViewController.m */,
+				1D7A78911E40D56F00DA6196 /* MPUpdateStoredCardViewController.h */,
+				1D7A78921E40D56F00DA6196 /* MPUpdateStoredCardViewController.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -394,18 +400,18 @@
 			isa = PBXGroup;
 			children = (
 				1DACE7F41E2E14F400F5E38E /* Commands */,
-				1D7A78311E407B1100DA6196 /* Card.h */,
-				1D7A78321E407B1100DA6196 /* Card.m */,
-				1D53418020CFA7BF00087AD3 /* StoredCard.h */,
-				1D53418120CFA7BF00087AD3 /* StoredCard.m */,
-				1D7A78081E3F924300DA6196 /* CartItem.h */,
-				1D7A78091E3F924300DA6196 /* CartItem.m */,
+				1D7A78311E407B1100DA6196 /* MPCard.h */,
+				1D7A78321E407B1100DA6196 /* MPCard.m */,
+				1D53418020CFA7BF00087AD3 /* MPStoredCard.h */,
+				1D53418120CFA7BF00087AD3 /* MPStoredCard.m */,
+				1D7A78081E3F924300DA6196 /* MPCartItem.h */,
+				1D7A78091E3F924300DA6196 /* MPCartItem.m */,
 				1D7A78391E407DD000DA6196 /* ICHTTPOperation.h */,
 				1D7A783A1E407DD000DA6196 /* ICHTTPOperation.m */,
 				1D7A78351E407BEF00DA6196 /* ICURLRequest.h */,
 				1D7A78361E407BEF00DA6196 /* ICURLRequest.m */,
-				1D3D7FC61E7A86590043BF9D /* MobilePaymentTheme.h */,
-				1D3D7FC71E7A86590043BF9D /* MobilePaymentTheme.m */,
+				1D3D7FC61E7A86590043BF9D /* MPCheckoutTheme.h */,
+				1D3D7FC71E7A86590043BF9D /* MPCheckoutTheme.m */,
 				1D52AA551ED6EF3A00D30724 /* Reachability.h */,
 				1D52AA561ED6EF3A00D30724 /* Reachability.m */,
 				1D52AA511ED6EEFA00D30724 /* ICReachability.h */,
@@ -468,19 +474,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D7A78A31E40E61400DA6196 /* MobilePaymentSDK.h in Headers */,
-				1D7A78A51E40EC3200DA6196 /* MobilePaymentSDKProtocols.h in Headers */,
-				1D7A78331E407B1100DA6196 /* Card.h in Headers */,
-				1D3D7FB41E7A806A0043BF9D /* MobilePaymentSDKError.h in Headers */,
+				1D7A78A31E40E61400DA6196 /* MPCheckout.h in Headers */,
+				1D7A78A51E40EC3200DA6196 /* MPCheckoutProtocols.h in Headers */,
+				1D7A78331E407B1100DA6196 /* MPCard.h in Headers */,
+				1D3D7FB41E7A806A0043BF9D /* MPCheckoutError.h in Headers */,
 				1D55A4E11EA8963700F41037 /* NSRegularExpression+Helpers.h in Headers */,
-				1D7A78931E40D56F00DA6196 /* UpdateStoredCardViewController.h in Headers */,
-				1D7A788F1E40D41B00DA6196 /* StoreCardViewController.h in Headers */,
-				1D53418220CFA7BF00087AD3 /* StoredCard.h in Headers */,
-				1D7A786B1E40ACCE00DA6196 /* PaymentViewController.h in Headers */,
-				1D3D7FC81E7A86590043BF9D /* MobilePaymentTheme.h in Headers */,
+				1D7A78931E40D56F00DA6196 /* MPUpdateStoredCardViewController.h in Headers */,
+				1D4144F72101D213003F697D /* MPCheckoutController.h in Headers */,
+				1D7A788F1E40D41B00DA6196 /* MPStoreCardViewController.h in Headers */,
+				1D53418220CFA7BF00087AD3 /* MPStoredCard.h in Headers */,
+				1D7A786B1E40ACCE00DA6196 /* MPPaymentViewController.h in Headers */,
+				1D3D7FC81E7A86590043BF9D /* MPCheckoutTheme.h in Headers */,
 				1D3D7FB81E7A80790043BF9D /* BSKeyboardControls.h in Headers */,
 				1D52AA571ED6EF3A00D30724 /* Reachability.h in Headers */,
-				1D7A780A1E3F924300DA6196 /* CartItem.h in Headers */,
+				1D7A780A1E3F924300DA6196 /* MPCartItem.h in Headers */,
 				1D3D7F9D1E7A805C0043BF9D /* UIColor+HexString.h in Headers */,
 				1D3D7FC21E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.h in Headers */,
 				1D3D7FDB1E7A86E20043BF9D /* ICCommunicationManager.h in Headers */,
@@ -529,9 +536,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1DACE7C11E2E14B300F5E38E /* MobilePaymentSDK */ = {
+		1DACE7C11E2E14B300F5E38E /* MPCheckout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DACE7CA1E2E14B300F5E38E /* Build configuration list for PBXNativeTarget "MobilePaymentSDK" */;
+			buildConfigurationList = 1DACE7CA1E2E14B300F5E38E /* Build configuration list for PBXNativeTarget "MPCheckout" */;
 			buildPhases = (
 				1DACE7BD1E2E14B300F5E38E /* Sources */,
 				1DACE7BE1E2E14B300F5E38E /* Frameworks */,
@@ -542,9 +549,9 @@
 			);
 			dependencies = (
 			);
-			name = MobilePaymentSDK;
+			name = MPCheckout;
 			productName = "Mobile Payment SDK";
-			productReference = 1DACE7C21E2E14B300F5E38E /* MobilePaymentSDK.framework */;
+			productReference = 1DACE7C21E2E14B300F5E38E /* MPCheckout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -564,7 +571,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1DACE7BC1E2E14B300F5E38E /* Build configuration list for PBXProject "MobilePaymentSDK" */;
+			buildConfigurationList = 1DACE7BC1E2E14B300F5E38E /* Build configuration list for PBXProject "MPCheckout" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -576,7 +583,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1DACE7C11E2E14B300F5E38E /* MobilePaymentSDK */,
+				1DACE7C11E2E14B300F5E38E /* MPCheckout */,
 			);
 		};
 /* End PBXProject section */
@@ -608,14 +615,14 @@
 				1D9D806D20A2C4320054D7BB /* UIViewController+Helperes.m in Sources */,
 				1DD42C001EB8794400F83DA9 /* UIAlertController+Helpers.m in Sources */,
 				1D7A787C1E40B44B00DA6196 /* ICCardView.m in Sources */,
-				1D7A78941E40D56F00DA6196 /* UpdateStoredCardViewController.m in Sources */,
+				1D7A78941E40D56F00DA6196 /* MPUpdateStoredCardViewController.m in Sources */,
 				1D7A78741E40B01100DA6196 /* IC3DSecureWebViewController.m in Sources */,
 				1D7A78701E40AEF000DA6196 /* ICBaseViewController.m in Sources */,
-				1D7A78901E40D41B00DA6196 /* StoreCardViewController.m in Sources */,
-				1D53418320CFA7BF00087AD3 /* StoredCard.m in Sources */,
+				1D7A78901E40D41B00DA6196 /* MPStoreCardViewController.m in Sources */,
+				1D53418320CFA7BF00087AD3 /* MPStoredCard.m in Sources */,
 				1D7A78601E40935100DA6196 /* ICReversalCommand.m in Sources */,
 				1D7A784C1E408D8200DA6196 /* ICGetCardDataCommand.m in Sources */,
-				1D7A78A41E40E61400DA6196 /* MobilePaymentSDK.m in Sources */,
+				1D7A78A41E40E61400DA6196 /* MPCheckout.m in Sources */,
 				1D7A78981E40E08100DA6196 /* ICStoreCardViewController.m in Sources */,
 				1D52AA581ED6EF3A00D30724 /* Reachability.m in Sources */,
 				1D3D7FB91E7A80790043BF9D /* BSKeyboardControls.m in Sources */,
@@ -629,25 +636,26 @@
 				1D3D7F9A1E7A805C0043BF9D /* NSString+Helpers.m in Sources */,
 				1D3D7F9C1E7A805C0043BF9D /* UIColor+Helpers.m in Sources */,
 				1D3D7F961E7A805C0043BF9D /* NSData+SHA.m in Sources */,
-				1D3D7FB51E7A806A0043BF9D /* MobilePaymentSDKError.m in Sources */,
+				1D3D7FB51E7A806A0043BF9D /* MPCheckoutError.m in Sources */,
 				1D3D7FD81E7A86E20043BF9D /* ICApplicationManager.m in Sources */,
+				1D4144F82101D213003F697D /* MPCheckoutController.m in Sources */,
 				1D3D7FE01E7A86E20043BF9D /* ICRSAManager.m in Sources */,
 				1D52AA541ED6EEFA00D30724 /* ICReachability.m in Sources */,
-				1D7A786C1E40ACCE00DA6196 /* PaymentViewController.m in Sources */,
+				1D7A786C1E40ACCE00DA6196 /* MPPaymentViewController.m in Sources */,
 				1D3D7FAC1E7A806A0043BF9D /* CryptoUtil.m in Sources */,
 				1D3D7FDA1E7A86E20043BF9D /* ICBaseManager.m in Sources */,
 				1D7A78381E407BEF00DA6196 /* ICURLRequest.m in Sources */,
 				1D3D7FE21E7A86E20043BF9D /* ICThemeManager.m in Sources */,
 				1D3D7FC51E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				1D7A78641E4093E700DA6196 /* ICStoreCardCommand.m in Sources */,
-				1D7A78341E407B1100DA6196 /* Card.m in Sources */,
+				1D7A78341E407B1100DA6196 /* MPCard.m in Sources */,
 				1D7A78A01E40E36300DA6196 /* ICPaymentViewController.m in Sources */,
 				1D3D7F941E7A805C0043BF9D /* Base64.m in Sources */,
 				1D3D7FDE1E7A86E20043BF9D /* ICMobilePaymentManager.m in Sources */,
-				1D3D7FC91E7A86590043BF9D /* MobilePaymentTheme.m in Sources */,
+				1D3D7FC91E7A86590043BF9D /* MPCheckoutTheme.m in Sources */,
 				1D55A4E21EA8963700F41037 /* NSRegularExpression+Helpers.m in Sources */,
 				1D7A78581E408F3B00DA6196 /* ICPurchaseCommand.m in Sources */,
-				1D7A780B1E3F924300DA6196 /* CartItem.m in Sources */,
+				1D7A780B1E3F924300DA6196 /* MPCartItem.m in Sources */,
 				1D3D7F981E7A805C0043BF9D /* NSDictionary+Helpers.m in Sources */,
 				1D7A78781E40B3CC00DA6196 /* ICCardViewController.m in Sources */,
 				1D7A78501E408E4900DA6196 /* ICGetTransactionStatusCommand.m in Sources */,
@@ -830,7 +838,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DACE7BC1E2E14B300F5E38E /* Build configuration list for PBXProject "MobilePaymentSDK" */ = {
+		1DACE7BC1E2E14B300F5E38E /* Build configuration list for PBXProject "MPCheckout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DACE7C81E2E14B300F5E38E /* Debug */,
@@ -839,7 +847,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DACE7CA1E2E14B300F5E38E /* Build configuration list for PBXNativeTarget "MobilePaymentSDK" */ = {
+		1DACE7CA1E2E14B300F5E38E /* Build configuration list for PBXNativeTarget "MPCheckout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DACE7CB1E2E14B300F5E38E /* Debug */,

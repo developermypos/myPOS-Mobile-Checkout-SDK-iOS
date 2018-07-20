@@ -1,6 +1,6 @@
 //
-//  CartItem.h
-//  MobilePaymentSDK
+//  MPCartItem.h
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/30/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CartItem : NSObject
+@interface MPCartItem : NSObject
 
 @property (nonatomic, readonly) CGFloat price;
 @property (nonatomic, readonly) NSInteger quantity;

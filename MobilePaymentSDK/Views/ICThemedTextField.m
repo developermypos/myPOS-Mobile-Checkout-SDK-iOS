@@ -1,6 +1,6 @@
 //
 //  ICThemedTextField.m
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -10,7 +10,7 @@
 
 #import "ICThemeManager.h"
 #import "ICConstants.h"
-#import "MobilePaymentTheme.h"
+#import "MPCheckoutTheme.h"
 
 @interface ICThemedTextField() {
     CALayer *_bottomBorder;
@@ -67,7 +67,7 @@ static CGFloat const kTextFieldInsets = 4.0f;
         return;
     }
     
-    MobilePaymentTheme <ICThemeManager> *theme = [self theme];
+    MPCheckoutTheme <ICThemeManager> *theme = [self theme];
     
     CGFloat xOrigin          = 0.0f;
     UIFont  *placeholderFont = [theme lightFontWithSize:self.placeholderFontSize > 0 ? self.placeholderFontSize : [theme placeholderFontSize]];
@@ -149,10 +149,11 @@ static CGFloat const kTextFieldInsets = 4.0f;
     [self setBorderStyle:UITextBorderStyleNone];
     [self setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
     
-    MobilePaymentTheme *theme = [self theme];
+    MPCheckoutTheme *theme = [self theme];
     
     [self setFont:[theme textFieldFont]];
     [self setTextColor:[theme textFieldTextColor]];
+    [self setTintColor:[theme textFieldTextColor]];
 }
 
 - (void)redrawPlaceholder {
@@ -168,7 +169,7 @@ static CGFloat const kTextFieldInsets = 4.0f;
 
 #pragma mark - Helpers
 
-- (MobilePaymentTheme <ICThemeManager> *)theme {
+- (MPCheckoutTheme <ICThemeManager> *)theme {
     return [ICThemeManager sharedTheme];
 }
 

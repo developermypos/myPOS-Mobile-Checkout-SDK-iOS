@@ -1,6 +1,6 @@
 //
 //  ICBaseViewController.m
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -11,6 +11,8 @@
 #import "MBProgressHUD.h"
 
 #import "ICConstants.h"
+#import "ICThemeManager.h"
+#import "MPCheckoutTheme.h"
 
 @interface ICBaseViewController ()
 
@@ -35,11 +37,22 @@
 #pragma mark - Abstract Methods
 
 - (void)localize {
-    // Should be implemeted by inheriting controllers
+    
 }
 
 - (void)applyTheme {
-    // Should be implemeted by inheriting controllers
+    self.mainView.backgroundColor = self.backgroundColor;
+    
+    UIColor *navigationBarColor = [[ICThemeManager sharedTheme] navigationBarColor];
+    
+    [self.navigationController.navigationBar setTranslucent:navigationBarColor == nil];
+    [self.navigationController.navigationBar setBarTintColor:navigationBarColor];
+    
+    [self.navigationController.navigationBar setTintColor:[[ICThemeManager sharedTheme] barButtonItemColor]];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{
+                                                      NSFontAttributeName            : [[ICThemeManager sharedTheme] mediumFontWithSize:16.0f],
+                                                      NSForegroundColorAttributeName : [[ICThemeManager sharedTheme] navigationTitleColor]
+                                                      }];
 }
 
 #pragma mark - Public Methods

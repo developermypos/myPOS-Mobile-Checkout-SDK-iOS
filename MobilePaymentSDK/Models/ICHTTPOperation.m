@@ -1,6 +1,6 @@
 //
 //  ICHTTPOperation.m
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -235,20 +235,20 @@ static const char *kOperationQueue = "com.ipay.mobilePaymentSDK-operation";
 }
 
 - (void)communicationError {
-    [self completeWithStatus:MobilePaymentSDKCommunicationError];
+    [self completeWithStatus:MPCheckoutCommunicationError];
 }
 
 - (void)connectivityError {
-    [self completeWithStatus:MobilePaymentSDKConnectivityChangedError];
+    [self completeWithStatus:MPCheckoutConnectivityChangedError];
 }
 
 - (void)signatureError {
-    [self completeWithStatus:MobilePaymentSDKSignatureValidationError];
+    [self completeWithStatus:MPCheckoutSignatureValidationError];
 }
 
 - (void)completeWithStatus:(NSInteger)status {
     if (_errorBlock) {
-        _errorBlock([MobilePaymentSDKError errorWithStatus:status]);
+        _errorBlock([MPCheckoutError errorWithStatus:status]);
     }
     
     [self completeOperation];
@@ -256,7 +256,7 @@ static const char *kOperationQueue = "com.ipay.mobilePaymentSDK-operation";
 
 - (void)operationEncounteredAnError:(NSError *)error {
     if (!_errorBlock) {
-        _errorBlock((MobilePaymentSDKError *)error);
+        _errorBlock((MPCheckoutError *)error);
     }
     
     [self completeOperation];

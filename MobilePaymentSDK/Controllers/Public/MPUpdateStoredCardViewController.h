@@ -1,6 +1,6 @@
 //
-//  UpdateStoredCardViewController.h
-//  MobilePaymentSDK
+//  MPUpdateStoredCardViewController.h
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "MobilePaymentSDKProtocols.h"
+#import "MPCheckoutController.h"
+#import "MPCheckoutProtocols.h"
 
-@interface UpdateStoredCardViewController : UINavigationController
+@interface MPUpdateStoredCardViewController : MPCheckoutController
 
 /*!
  * @method initWithCardToken:verificationAmount:delegate:
@@ -23,7 +24,7 @@
  */
 - (nonnull instancetype)initWithCardToken:(nonnull NSString *)cardToken
                        verificationAmount:(CGFloat)verificationAmount
-                                 delegate:(nullable id<StoreCardDelegate>)delegate;
+                                 delegate:(nullable id<MPStoreCardDelegate>)delegate;
 
 /*!
  * @method initWithCardToken:verificationAmount:delegate:
@@ -37,7 +38,7 @@
  */
 - (nonnull instancetype)initWithCardToken:(nonnull NSString *)cardToken
                        verificationAmount:(CGFloat)verificationAmount
-                                 delegate:(nullable id<StoreCardDelegate>)delegate
+                                 delegate:(nullable id<MPStoreCardDelegate>)delegate
                         withoutCustomName:(BOOL)withoutCustomName;
 
 @end

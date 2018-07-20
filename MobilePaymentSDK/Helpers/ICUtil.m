@@ -1,14 +1,14 @@
 //
 //  ICUtil.m
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
 //
 
-#import "Card.h"
+#import "MPCard.h"
 #import "ICUtil.h"
-#import "CartItem.h"
+#import "MPCartItem.h"
 #import "ICHelpers.h"
 #import "ICConstants.h"
 #import "ICLogger.h"
@@ -51,7 +51,7 @@
     return [[ICRSAManager sharedManager] signString:[dataToSign base64EncodedString]];
 }
 
-+ (NSURLRequest *)cardValidationURLRequest:(Card *)card cardData:(NSDictionary *)cardData amount:(NSString *)amount {
++ (NSURLRequest *)cardValidationURLRequest:(MPCard *)card cardData:(NSDictionary *)cardData amount:(NSString *)amount {
     NSString *mid         = [cardData objectForKey:ICParameterMID];
     NSString *bin         = [cardData objectForKey:ICParameterBIN];
     NSString *billingDesc = [cardData objectForKey:ICParameterBillingDescriptor];
@@ -138,10 +138,10 @@
     return (NSURLRequest *)request;
 }
 
-+ (NSString *)itemsTotalAmount:(NSArray<CartItem *> *)cartItems {
++ (NSString *)itemsTotalAmount:(NSArray<MPCartItem *> *)cartItems {
     CGFloat amount = 0.0f;
     
-    for (CartItem *item in cartItems) {
+    for (MPCartItem *item in cartItems) {
         @autoreleasepool {
             amount += item.price * item.quantity;
         }

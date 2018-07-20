@@ -1,6 +1,6 @@
 //
 //  ICASN.h
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 9/21/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.

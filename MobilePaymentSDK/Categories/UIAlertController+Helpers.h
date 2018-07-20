@@ -1,6 +1,6 @@
 //
 //  UIAlertController+Helpers.h
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 5/2/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.

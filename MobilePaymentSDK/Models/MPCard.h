@@ -1,6 +1,6 @@
 //
-//  Card.h
-//  MobilePaymentSDK
+//  MPCard.h
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Card : NSObject <NSCopying>
+@interface MPCard : NSObject <NSCopying>
 
 @property (nonatomic, strong, readonly) NSString *pan;
 @property (nonatomic, strong, readonly) NSString *cvc;

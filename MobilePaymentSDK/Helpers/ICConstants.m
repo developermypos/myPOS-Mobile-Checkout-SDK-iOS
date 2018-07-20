@@ -1,6 +1,6 @@
 //
 //  ICConstants.m
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/30/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -22,9 +22,9 @@ NSString * const kIPCVersion         = @"1.3";
 NSString * const kOutputFormat       = @"json";
 NSString * const kSource             = @"2";
 NSString * const kCardVerification   = @"2";
-NSString * const kErrorDomain        = @"mobilePaymentSDKErrorDomain";
+NSString * const kErrorDomain        = @"MPCheckoutErrorDomain";
 NSString * const kStoryboardName     = @"Storyboard";
-NSString * const kLocalizationsTable = @"MobilePaymentSDK";
+NSString * const kLocalizationsTable = @"MPCheckout";
 NSString * const kContentType        = @"Content-Type";
 NSString * const kContentLength      = @"Content-Length";
 NSString * const kURLEncoded         = @"application/x-www-form-urlencoded";

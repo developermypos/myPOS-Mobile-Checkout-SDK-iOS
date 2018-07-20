@@ -1,6 +1,6 @@
 //
 //  ICStoreCardViewController.m
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "ICStoreCardViewController.h"
 
-#import "StoredCard.h"
+#import "MPStoredCard.h"
 
 #import "NSString+Helpers.h"
 
@@ -28,12 +28,12 @@
 - (void)didReceive3DSecureResponse:(NSDictionary *)response {
     [super didReceive3DSecureResponse:response];
     
-    Card *card = [self card];
+    MPCard *card = [self card];
     
     if (!card || !_extraData) {
         [self dismiss:^{
             if ([self.storeCardDelegate respondsToSelector:@selector(storeCardDidFailWithError:)]) {
-                [self.storeCardDelegate storeCardDidFailWithError:[MobilePaymentSDKError communicationError]];
+                [self.storeCardDelegate storeCardDidFailWithError:[MPCheckoutError communicationError]];
             }
         }];
         return;
@@ -63,8 +63,8 @@
     };
 }
 
-- (void (^)(MobilePaymentSDKError *))storeCardFailed {
-    return ^(MobilePaymentSDKError *error) {
+- (void (^)(MPCheckoutError *))storeCardFailed {
+    return ^(MPCheckoutError *error) {
         [self dismiss:^{
             if ([self.storeCardDelegate respondsToSelector:@selector(storeCardDidFailWithError:)]) {
                 [self.storeCardDelegate storeCardDidFailWithError:error];
@@ -73,9 +73,9 @@
     };
 }
 
-- (StoredCard *)storedCardWithToken:(NSString *)token {
+- (MPStoredCard *)storedCardWithToken:(NSString *)token {
     NSString *cardType = [_extraData objectForKey:ICParameterCardType] ? : @"";
-    return [[StoredCard alloc] initWithCard:[self card] type:[cardType plainCardType] token:token];
+    return [[MPStoredCard alloc] initWithCard:[self card] type:[cardType plainCardType] token:token];
 }
 
 @end

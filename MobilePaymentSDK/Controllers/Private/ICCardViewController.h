@@ -1,6 +1,6 @@
 //
 //  ICCardViewController.h
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -11,7 +11,7 @@
 
 #import "ICCardView.h"
 
-#import "Card.h"
+#import "MPCard.h"
 #import "ICUtil.h"
 #import "ICLogger.h"
 #import "ICHelpers.h"
@@ -20,7 +20,6 @@
 #import "ICCommunicationManager.h"
 #import "ICMobilePaymentManager.h"
 
-@class Card;
 @class ICCardView;
 
 @interface ICCardViewController : ICBaseViewController <IC3DSecureDelegate> {
@@ -33,14 +32,15 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *confirmButton;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cardViewHeight;
 
 @property (nonatomic) BOOL withoutCustomName;
-@property (weak, nonatomic) id<PaymentDelegate> paymentDelegate;
-@property (weak, nonatomic) id<StoreCardDelegate> storeCardDelegate;
+@property (weak, nonatomic) id<MPPaymentDelegate> paymentDelegate;
+@property (weak, nonatomic) id<MPStoreCardDelegate> storeCardDelegate;
 
 @property (nonatomic) CGFloat cardVerificationAmount;
 
-- (Card *)card;
+- (MPCard *)card;
 
 - (void)dismiss:(void (^)(void))completion;
 

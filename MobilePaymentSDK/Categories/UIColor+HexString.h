@@ -1,6 +1,6 @@
 //
 //  UIColor+HexString.h
-//  MobilePaymentSDK
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/30/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
