@@ -1,5 +1,5 @@
 //
-//  MPMobilePaymentSDKProtocols.h
+//  MPPaymentDelegate.h
 //  MPCheckout
 //
 //  Created by Valio Cholakov on 1/30/17.

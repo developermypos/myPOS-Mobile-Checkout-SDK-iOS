@@ -33,7 +33,7 @@
 
 @implementation ICHTTPOperation
 
-static const char *kOperationQueue = "com.ipay.mobilePaymentSDK-operation";
+static const char *kOperationQueue = "com.mypos.MPCheckout-operation";
 
 #pragma mark - Initializers
 

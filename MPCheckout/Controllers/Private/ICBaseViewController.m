@@ -14,7 +14,9 @@
 #import "ICThemeManager.h"
 #import "MPCheckoutTheme.h"
 
-@interface ICBaseViewController ()
+@interface ICBaseViewController () {
+    BOOL _viewDidAppear;
+}
 
 @end
 
@@ -28,6 +30,20 @@
     [self addListeners];
     [self localize];
     [self applyTheme];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    if (!_viewDidAppear) {
+        [self.mainView setContentOffset:CGPointZero];
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    _viewDidAppear = YES;
 }
 
 - (void)dealloc {

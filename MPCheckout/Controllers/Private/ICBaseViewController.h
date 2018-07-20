@@ -11,7 +11,7 @@
 
 @interface ICBaseViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIView *mainView;
+@property (weak, nonatomic) IBOutlet UIScrollView *mainView;
 @property (nonatomic, nullable) UIColor *backgroundColor;
 
 - (void)localize;

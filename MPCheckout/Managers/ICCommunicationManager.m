@@ -41,7 +41,7 @@
 
 @implementation ICCommunicationManager
 
-static char * const kCommunicationQueue = "com.ipay.MobilePaymentSDK-communication";
+static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
 
 #pragma mark - Singleton
 

@@ -10,6 +10,7 @@
 
 @interface MPCheckoutController : UINavigationController
 
+
 @property (weak, nonatomic, nullable) UIView *navigationTitleView;
 @property (weak, nonatomic, nullable) UIColor *backgroundColor;
 @property (weak, nonatomic, nullable) UIColor *navigationBarBackgroundColor;
