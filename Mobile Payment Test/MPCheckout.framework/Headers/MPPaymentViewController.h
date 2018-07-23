@@ -1,6 +1,6 @@
 //
-//  PaymentViewController.h
-//  MobilePaymentSDK
+//  MPPaymentViewController.h
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "CartItem.h"
-#import "MobilePaymentSDKProtocols.h"
+#import "MPCartItem.h"
+#import "MPCheckoutController.h"
+#import "MPCheckoutProtocols.h"
 
-@interface PaymentViewController : UINavigationController
+@interface MPPaymentViewController : MPCheckoutController
 
 /*!
  * @method initWithCartItems:orderId:delegate:
@@ -23,7 +24,9 @@
  * @see             CartItem
  * @seealso         PaymentDelegate
  */
-- (nonnull instancetype)initWithCartItems:(nonnull NSArray<CartItem *> *)cartItems orderId:(nonnull NSString *)orderId delegate:(nullable id<PaymentDelegate>)delegate;
+- (nonnull instancetype)initWithCartItems:(nonnull NSArray<MPCartItem *> *)cartItems
+                                  orderId:(nonnull NSString *)orderId
+                                 delegate:(nullable id<MPPaymentDelegate>)delegate;
 
 /*!
  * @method initWithCartItems:orderId:cardToken:delegate:
@@ -36,6 +39,9 @@
  * @see             CartItem
  * @seealso         PaymentDelegate
  */
-- (nonnull instancetype)initWithCartItems:(nonnull NSArray<CartItem *> *)cartItems orderId:(nonnull NSString *)orderId cardToken:(nonnull NSString *)cardToken delegate:(nullable id<PaymentDelegate>)delegate;
+- (nonnull instancetype)initWithCartItems:(nonnull NSArray<MPCartItem *> *)cartItems
+                                  orderId:(nonnull NSString *)orderId
+                                cardToken:(nonnull NSString *)cardToken
+                                 delegate:(nullable id<MPPaymentDelegate>)delegate;
 
 @end

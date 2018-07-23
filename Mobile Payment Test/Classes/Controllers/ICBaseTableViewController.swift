@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import MobilePaymentSDK
+import MPCheckout
 
-class ICBaseTableViewController: UITableViewController, PaymentDelegate, StoreCardDelegate {
+class ICBaseTableViewController: UITableViewController, MPPaymentDelegate, MPStoreCardDelegate {
     
     // MARK: Constants
     
@@ -31,38 +31,38 @@ class ICBaseTableViewController: UITableViewController, PaymentDelegate, StoreCa
         self.showAlertWithText("Payment completed with reference: \(transactionReference)", popToRoot: true)
     }
     
-    func paymentDidFailWithError(_ error: MobilePaymentSDKError) {
+    func paymentDidFailWithError(_ error: MPCheckoutError) {
         self.showAlertWithText("Payment error: \(error.localizedDescription)")
     }
     
     
     // MARK: Store Card Delegate
     
-    func storeCardDidComplete(withData storedCard: StoredCard) {
+    func storeCardDidComplete(withData storedCard: MPStoredCard) {
         self.showAlertWithText("Stored card \(storedCard.customName) with token \(storedCard.token)")
     }
     
-    func storeCardDidFailWithError(_ error: MobilePaymentSDKError) {
+    func storeCardDidFailWithError(_ error: MPCheckoutError) {
         self.showAlertWithText("Store card error: \(error.localizedDescription)")
     }
     
-    func updateStoredCardDidComplete(withData storedCard: StoredCard, forCardWithToken cardToken: String) {
+    func updateStoredCardDidComplete(withData storedCard: MPStoredCard, forCardWithToken cardToken: String) {
         self.showAlertWithText("Updated stored card \(storedCard.customName). New token \(storedCard.token). Old token \(cardToken)")
     }
     
-    func updateStoredCardDidFailWithError(_ error: MobilePaymentSDKError) {
+    func updateStoredCardDidFailWithError(_ error: MPCheckoutError) {
         self.showAlertWithText("Update stored card error: \(error.localizedDescription)")
     }
     
-    func paymentFailed(error: MobilePaymentSDKError) {
+    func paymentFailed(error: MPCheckoutError) {
         self.paymentDidFailWithError(error)
     }
     
-    func storeCardFailed(error: MobilePaymentSDKError) {
+    func storeCardFailed(error: MPCheckoutError) {
         self.storeCardDidFailWithError(error)
     }
     
-    func updateStoredCardFailed(error: MobilePaymentSDKError) {
+    func updateStoredCardFailed(error: MPCheckoutError) {
         self.updateStoredCardDidFailWithError(error)
     }
     

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MobilePaymentSDK
+import MPCheckout
 
 class ICArticlesTableViewController: ICBaseTableViewController {
     
@@ -20,8 +20,8 @@ class ICArticlesTableViewController: ICBaseTableViewController {
     // MARK: Variables
     
     private var orderId: String?
-    private var _cartItems: [CartItem] = []
-    private var _selectedItems: [CartItem] = []
+    private var _cartItems: [MPCartItem] = []
+    private var _selectedItems: [MPCartItem] = []
     
 
     // MARK: Controller Methods
@@ -123,7 +123,7 @@ class ICArticlesTableViewController: ICBaseTableViewController {
         UserDefaults.addTransaction(transaction)
     }
     
-    override func paymentDidFailWithError(_ error: MobilePaymentSDKError) {
+    override func paymentDidFailWithError(_ error: MPCheckoutError) {
         super.paymentDidFailWithError(error)
         
         guard let orderId = self.orderId else {
@@ -138,11 +138,11 @@ class ICArticlesTableViewController: ICBaseTableViewController {
     
     private func setArticles() {
         _cartItems = [
-            CartItem(name: "Book",  price: 10.00, quantity: 1),
-            CartItem(name: "Shirt", price: 24.00, quantity: 1),
-            CartItem(name: "Pens",  price: 0.25,  quantity: 4),
-            CartItem(name: "Shoes", price: 45.75, quantity: 1),
-            CartItem(name: "Chair", price: 72.55, quantity: 1),
+            MPCartItem(name: "Book",  price: 10.00, quantity: 1),
+            MPCartItem(name: "Shirt", price: 24.00, quantity: 1),
+            MPCartItem(name: "Pens",  price: 0.25,  quantity: 4),
+            MPCartItem(name: "Shoes", price: 45.75, quantity: 1),
+            MPCartItem(name: "Chair", price: 72.55, quantity: 1),
         ]
     }
     
@@ -153,7 +153,7 @@ class ICArticlesTableViewController: ICBaseTableViewController {
             
             UserDefaults.addOrder(orderId)
             
-            let controller = PaymentViewController(cartItems: self._selectedItems, orderId: orderId, delegate: self)
+            let controller = MPPaymentViewController(cartItems: self._selectedItems, orderId: orderId, delegate: self)
             self.presenter.present(controller, animated: true, completion: nil)
         }
     }

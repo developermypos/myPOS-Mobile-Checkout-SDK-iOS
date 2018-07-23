@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D32E5A21E7AB11200B066A0 /* MobilePaymentSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1D32E5A21E7AB11200B066A0 /* MPCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3D7FE31E7A909A0043BF9D /* MPCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1D3D73771E2D0AC60086AA5B /* ICArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73701E2D0AC60086AA5B /* ICArticlesTableViewController.swift */; };
 		1D3D73781E2D0AC60086AA5B /* ICBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73711E2D0AC60086AA5B /* ICBaseTableViewController.swift */; };
 		1D3D73791E2D0AC60086AA5B /* ICUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73731E2D0AC60086AA5B /* ICUtils.swift */; };
@@ -23,7 +23,7 @@
 		1D3D738D1E2D133F0086AA5B /* ICOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D738C1E2D133F0086AA5B /* ICOrderTableViewCell.swift */; };
 		1D3D738F1E2D193F0086AA5B /* ICTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D738E1E2D193F0086AA5B /* ICTransactionTableViewCell.swift */; };
 		1D3D73911E2D199D0086AA5B /* ICTransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73901E2D199D0086AA5B /* ICTransactionsTableViewController.swift */; };
-		1D3D7FE41E7A909A0043BF9D /* MobilePaymentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */; };
+		1D3D7FE41E7A909A0043BF9D /* MPCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3D7FE31E7A909A0043BF9D /* MPCheckout.framework */; };
 		1D53419320CFE21700087AD3 /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D53419220CFE21700087AD3 /* UIViewController+Helpers.swift */; };
 		1D66DA571E8D224400079DF0 /* JGProgressHUD Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1D66DA3F1E8D224400079DF0 /* JGProgressHUD Resources.bundle */; };
 		1D66DA581E8D224400079DF0 /* JGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA421E8D224400079DF0 /* JGProgressHUD.m */; };
@@ -37,7 +37,7 @@
 		1D66DA601E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA521E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m */; };
 		1D66DA611E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA541E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m */; };
 		1D66DA621E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA561E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m */; };
-		1DA95B921E16584D005C3EB3 /* MobilePaymentSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DA95B901E16584D005C3EB3 /* MobilePaymentSDK.strings */; };
+		1DA95B921E16584D005C3EB3 /* MPCheckout.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DA95B901E16584D005C3EB3 /* MPCheckout.strings */; };
 		1DB58EEE1E029D2800875E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB58EED1E029D2800875E9F /* AppDelegate.swift */; };
 		1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF11E029D2800875E9F /* Main.storyboard */; };
 		1DB58EF51E029D2800875E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF41E029D2800875E9F /* Assets.xcassets */; };
@@ -51,7 +51,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1D32E5A21E7AB11200B066A0 /* MobilePaymentSDK.framework in Embed Frameworks */,
+				1D32E5A21E7AB11200B066A0 /* MPCheckout.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,7 +76,7 @@
 		1D3D738C1E2D133F0086AA5B /* ICOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICOrderTableViewCell.swift; sourceTree = "<group>"; };
 		1D3D738E1E2D193F0086AA5B /* ICTransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTransactionTableViewCell.swift; sourceTree = "<group>"; };
 		1D3D73901E2D199D0086AA5B /* ICTransactionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTransactionsTableViewController.swift; sourceTree = "<group>"; };
-		1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobilePaymentSDK.framework; path = "Mobile Payment Test/MobilePaymentSDK.framework"; sourceTree = "<group>"; };
+		1D3D7FE31E7A909A0043BF9D /* MPCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MPCheckout.framework; path = "Mobile Payment Test/MPCheckout.framework"; sourceTree = "<group>"; };
 		1D3D7FE51E7A90B30043BF9D /* Mobile Payment Test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobile Payment Test-Bridging-Header.h"; sourceTree = "<group>"; };
 		1D53419220CFE21700087AD3 /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helpers.swift"; sourceTree = "<group>"; };
 		1D66DA3F1E8D224400079DF0 /* JGProgressHUD Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "JGProgressHUD Resources.bundle"; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 		1D66DA541E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDRingIndicatorView.m; sourceTree = "<group>"; };
 		1D66DA551E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDSuccessIndicatorView.h; sourceTree = "<group>"; };
 		1D66DA561E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDSuccessIndicatorView.m; sourceTree = "<group>"; };
-		1DA95B911E16584D005C3EB3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "Mobile Payment Test/de.lproj/MobilePaymentSDK.strings"; sourceTree = "<group>"; };
-		1DA95B931E16585A005C3EB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Mobile Payment Test/en.lproj/MobilePaymentSDK.strings"; sourceTree = "<group>"; };
+		1DA95B911E16584D005C3EB3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "Mobile Payment Test/de.lproj/MPCheckout.strings"; sourceTree = "<group>"; };
+		1DA95B931E16585A005C3EB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Mobile Payment Test/en.lproj/MPCheckout.strings"; sourceTree = "<group>"; };
 		1DB58EEA1E029D2800875E9F /* Mobile Payment Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Payment Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB58EED1E029D2800875E9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DB58EF21E029D2800875E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D3D7FE41E7A909A0043BF9D /* MobilePaymentSDK.framework in Frameworks */,
+				1D3D7FE41E7A909A0043BF9D /* MPCheckout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +216,7 @@
 		1DA95B841E1655AF005C3EB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */,
+				1D3D7FE31E7A909A0043BF9D /* MPCheckout.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -249,11 +249,9 @@
 				1DB58EED1E029D2800875E9F /* AppDelegate.swift */,
 				1DB58EF11E029D2800875E9F /* Main.storyboard */,
 				1DB58EF61E029D2800875E9F /* LaunchScreen.storyboard */,
-				1DA95B901E16584D005C3EB3 /* MobilePaymentSDK.strings */,
+				1DA95B901E16584D005C3EB3 /* MPCheckout.strings */,
 				1DB58EF41E029D2800875E9F /* Assets.xcassets */,
 				1DB58EF91E029D2800875E9F /* Info.plist */,
-				1D53419720CFED2500087AD3 /* private_key.txt */,
-				1D53419620CFED2500087AD3 /* public_cert.txt */,
 				1D3D7FE51E7A90B30043BF9D /* Mobile Payment Test-Bridging-Header.h */,
 			);
 			path = "Mobile Payment Test";
@@ -323,12 +321,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D66DA571E8D224400079DF0 /* JGProgressHUD Resources.bundle in Resources */,
-				1DA95B921E16584D005C3EB3 /* MobilePaymentSDK.strings in Resources */,
+				1DA95B921E16584D005C3EB3 /* MPCheckout.strings in Resources */,
 				1DB58EF81E029D2800875E9F /* LaunchScreen.storyboard in Resources */,
-				1D53419920CFED2500087AD3 /* private_key.txt in Resources */,
 				1DB58EF51E029D2800875E9F /* Assets.xcassets in Resources */,
 				1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */,
-				1D53419820CFED2500087AD3 /* public_cert.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,13 +369,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1DA95B901E16584D005C3EB3 /* MobilePaymentSDK.strings */ = {
+		1DA95B901E16584D005C3EB3 /* MPCheckout.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1DA95B911E16584D005C3EB3 /* de */,
 				1DA95B931E16585A005C3EB3 /* en */,
 			);
-			name = MobilePaymentSDK.strings;
+			name = MPCheckout.strings;
 			path = ..;
 			sourceTree = "<group>";
 		};

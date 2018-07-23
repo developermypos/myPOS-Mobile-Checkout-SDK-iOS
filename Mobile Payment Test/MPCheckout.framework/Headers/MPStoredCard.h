@@ -1,14 +1,14 @@
 //
-//  StoredCard.h
-//  MobilePaymentSDK
+//  MPStoredCard.h
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 6/12/18.
 //  Copyright © 2018 Intercard Finance AD. All rights reserved.
 //
 
-#import "Card.h"
+#import "MPCard.h"
 
-@interface StoredCard : NSObject
+@interface MPStoredCard : NSObject
 
 @property (nonatomic, strong, readonly, nonnull) NSString *pan;
 @property (nonatomic, strong, readonly, nonnull) NSString *type;
@@ -28,6 +28,6 @@
  * @return      An initialized StoredCard object from the provided input parameters.
  */
 
-- (nullable instancetype)initWithCard:(nonnull Card *)card type:(nonnull NSString *)type token:(nonnull NSString *)token;
+- (nullable instancetype)initWithCard:(nonnull MPCard *)card type:(nonnull NSString *)type token:(nonnull NSString *)token;
 
 @end

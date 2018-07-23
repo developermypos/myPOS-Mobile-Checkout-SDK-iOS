@@ -14,15 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        MobilePaymentSDK.initialize(withAccountNumber: "",
-                                    storeId: "",
-                                    currency: .EUR,
-                                    certificate: "",
-                                    privateKey: "",
-                                    bundle: Bundle.main,
-                                    keyIndex: 1,
-                                    isSandbox: true)
-
+        MPCheckout.initialize(withAccountNumber: "",
+                              storeId: "",
+                              currency: .EUR,
+                              certificate: "",
+                              privateKey: "",
+                              bundle: Bundle.main,
+                              keyIndex: 1,
+                              isSandbox: true)
+        
         return true
     }
 }

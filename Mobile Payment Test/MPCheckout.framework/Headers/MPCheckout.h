@@ -1,6 +1,6 @@
 //
-//  MobilePaymentSDK.h
-//  MobilePaymentSDK
+//  MPCheckout.h
+//  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-#import "Card.h"
-#import "StoredCard.h"
-#import "CartItem.h"
-#import "MobilePaymentTheme.h"
-#import "MobilePaymentSDKError.h"
-#import "MobilePaymentSDKProtocols.h"
-#import "PaymentViewController.h"
-#import "StoreCardViewController.h"
-#import "UpdateStoredCardViewController.h"
+#import "MPCard.h"
+#import "MPStoredCard.h"
+#import "MPCartItem.h"
+#import "MPCheckoutTheme.h"
+#import "MPCheckoutError.h"
+#import "MPCheckoutProtocols.h"
+#import "MPPaymentViewController.h"
+#import "MPStoreCardViewController.h"
+#import "MPUpdateStoredCardViewController.h"
 
 typedef NS_ENUM (NSUInteger, TransactionType) {
     TransactionTypeUnknown,
@@ -42,7 +42,7 @@ typedef NS_ENUM (NSUInteger, Currency) {
     CurrencyPLN,
 };
 
-@interface MobilePaymentSDK : NSObject
+@interface MPCheckout : NSObject
 
 + (void)initializeWithAccountNumber:(NSString * _Nonnull)accountNumber
                             storeId:(NSString * _Nonnull)storeId
@@ -61,17 +61,17 @@ typedef NS_ENUM (NSUInteger, Currency) {
                            keyIndex:(NSInteger)keyIndex
                           isSandbox:(BOOL)isSandbox;
 
-+ (void)applyTheme:(MobilePaymentTheme * _Nonnull)theme;
++ (void)applyTheme:(MPCheckoutTheme * _Nonnull)theme;
 
 + (void)getOrderStatus:(NSString * _Nonnull)orderId
        transactionType:(TransactionType)transactionType
             completion:(void (^ _Nullable)(NSInteger status, NSString * _Nonnull transactionRef))completion
-               failure:(void (^ _Nullable)(MobilePaymentSDKError * _Nonnull error))failure;
+               failure:(void (^ _Nullable)(MPCheckoutError * _Nonnull error))failure;
 
 + (void)refundTransaction:(NSString * _Nonnull)transactionRef
                 fromOrder:(NSString * _Nonnull)orderId
                    amount:(CGFloat)amount
                completion:(void (^ _Nullable)(NSString * _Nonnull transactionRef))completion
-                  failure:(void (^ _Nullable)(MobilePaymentSDKError * _Nonnull error))failure;
+                  failure:(void (^ _Nullable)(MPCheckoutError * _Nonnull error))failure;
 
 @end

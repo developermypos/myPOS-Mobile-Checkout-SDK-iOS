@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MobilePaymentSDK
+import MPCheckout
 
 class ICTransactionsTableViewController: ICBaseTableViewController {
 
@@ -122,7 +122,7 @@ class ICTransactionsTableViewController: ICBaseTableViewController {
             
             self.showLoadingHUD()
             
-            MobilePaymentSDK.refundTransaction(transaction.reference, fromOrder: transaction.orderId, amount: CGFloat(amount), completion: { (transactionRef) in
+            MPCheckout.refundTransaction(transaction.reference, fromOrder: transaction.orderId, amount: CGFloat(amount), completion: { (transactionRef) in
                 self.hideLoadingHUD()
                 self.showAlertWithText("Refund completed successfully", popToRoot: true)
             }, failure: { (error) in

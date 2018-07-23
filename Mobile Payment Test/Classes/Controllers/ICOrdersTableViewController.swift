@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MobilePaymentSDK
+import MPCheckout
 
 class ICOrdersTableViewController: ICBaseTableViewController {
 
@@ -90,16 +90,16 @@ class ICOrdersTableViewController: ICBaseTableViewController {
     private func getOrderStatus(_ orderId: String, type: TransactionType) {
         self.showLoadingHUD()
         
-        MobilePaymentSDK.getOrderStatus(orderId,
-                                        transactionType: type,
-                                        completion: { (status, reference) in
-                                            self.hideLoadingHUD()
-                                            self.showAlertWithText("Order \(orderId). " +
-                                                "Status - \(status) | Reference - \(reference)")
+        MPCheckout.getOrderStatus(orderId,
+                                  transactionType: type,
+                                  completion: { (status, reference) in
+                                    self.hideLoadingHUD()
+                                    self.showAlertWithText("Order \(orderId). " +
+                                        "Status - \(status) | Reference - \(reference)")
         },
-                                        failure: { (error) in
-                                            self.showAlertWithText("Error while getting order status: \(error.localizedDescription)")
-                                            self.hideLoadingHUD()
+                                  failure: { (error) in
+                                    self.showAlertWithText("Error while getting order status: \(error.localizedDescription)")
+                                    self.hideLoadingHUD()
         })
     }
 }

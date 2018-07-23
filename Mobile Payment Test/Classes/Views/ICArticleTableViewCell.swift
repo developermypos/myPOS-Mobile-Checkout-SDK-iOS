@@ -17,7 +17,7 @@ class ICArticleTableViewCell: ICBaseTableViewCell {
     
     // MARK: Properties
     
-    var cartItem: CartItem? {
+    var cartItem: MPCartItem? {
         didSet {
             self.setData()
         }

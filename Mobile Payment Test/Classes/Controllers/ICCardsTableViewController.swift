@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MobilePaymentSDK
+import MPCheckout
 
 class ICCardsTableViewController: ICBaseTableViewController {
     
@@ -18,7 +18,7 @@ class ICCardsTableViewController: ICBaseTableViewController {
     
     // MARK: Variables
     
-    var cartItems: [CartItem] = []
+    var cartItems: [MPCartItem] = []
     private var orderId: String?
     private var _selectedCardToken: String = ""
     private var _cards: [ICCard] = ICUtils.cards
@@ -74,7 +74,7 @@ class ICCardsTableViewController: ICBaseTableViewController {
     // MARK: Actions
     
     @IBAction func storeCard(_ sender: Any) {
-        let controller = StoreCardViewController(verificationAmount: 1.00, delegate: self)
+        let controller = MPStoreCardViewController(verificationAmount: 1.00, delegate: self)
         self.presenter.present(controller, animated: true, completion: nil)
     }
     
@@ -91,7 +91,7 @@ class ICCardsTableViewController: ICBaseTableViewController {
     
     // MARK: Store Card Delegate
     
-    override func storeCardDidComplete(withData storedCard: StoredCard) {
+    override func storeCardDidComplete(withData storedCard: MPStoredCard) {
         super.storeCardDidComplete(withData: storedCard)
         
         let card = ICCard(name: storedCard.customName, token: storedCard.token)
@@ -101,7 +101,7 @@ class ICCardsTableViewController: ICBaseTableViewController {
         self.tableView.insertRows(at: [IndexPath(row: _cards.count - 1, section: 0)], with: .fade)
     }
     
-    override func updateStoredCardDidComplete(withData storedCard: StoredCard, forCardWithToken cardToken: String) {
+    override func updateStoredCardDidComplete(withData storedCard: MPStoredCard, forCardWithToken cardToken: String) {
         super.updateStoredCardDidComplete(withData: storedCard, forCardWithToken: cardToken)
         
         // Delete old card
@@ -126,16 +126,16 @@ class ICCardsTableViewController: ICBaseTableViewController {
         
         UserDefaults.addOrder(orderId)
         
-        let controller = PaymentViewController(cartItems: self.cartItems,
-                                               orderId: orderId,
-                                               cardToken: _selectedCardToken,
-                                               delegate: self)
+        let controller = MPPaymentViewController(cartItems: self.cartItems,
+                                                 orderId: orderId,
+                                                 cardToken: _selectedCardToken,
+                                                 delegate: self)
         
         self.presenter.present(controller, animated: true, completion: nil)
     }
     
     func updateCard() {
-        let controller = UpdateStoredCardViewController(cardToken: _selectedCardToken, verificationAmount: 1.00, delegate: self)
+        let controller = MPUpdateStoredCardViewController(cardToken: _selectedCardToken, verificationAmount: 1.00, delegate: self)
         self.presenter.present(controller, animated: true, completion: nil)
     }
 }
