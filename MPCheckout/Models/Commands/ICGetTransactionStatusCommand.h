@@ -11,6 +11,6 @@
 
 @interface ICGetTransactionStatusCommand : ICBaseCommand
 
-- (instancetype)initWithOrderId:(NSString *)orderId transactionType:(TransactionType)transactionType;
+- (instancetype)initWithOrderId:(NSString *)orderId transactionType:(MPTransactionType)transactionType;
 
 @end

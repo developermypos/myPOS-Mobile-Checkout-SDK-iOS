@@ -18,6 +18,7 @@ NSInteger const MPCheckoutInvalidInputParametersError  = -3;
 NSInteger const MPCheckoutAPIError                     = -2;
 NSInteger const MPCheckoutTimeoutError                 = -1;
 NSInteger const MPCheckoutNoError                      = 0;
+NSInteger const MPCheckoutCardIssuerError              = 3;
 NSInteger const MPCheckoutInvalidStoreIdError          = 4;
 NSInteger const MPCheckoutInvalidParametersError       = 5;
 NSInteger const MPCheckoutInvalidAmountError           = 9;
@@ -66,6 +67,9 @@ static NSString * const kErrorDomain = @"com.ipay.MPCheckoutError";
             
         case MPCheckoutInvalidStoreIdError:
             return @"Invalid Store Id";
+            
+        case MPCheckoutCardIssuerError:
+            return @"Declined by card issuer";
             
         case MPCheckoutInvalidInputParametersError:
         case MPCheckoutInvalidParametersError:

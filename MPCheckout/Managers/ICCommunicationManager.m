@@ -205,7 +205,7 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
 }
 
 - (void)getTransactionStatusForOrder:(NSString *)orderId
-                     transactionType:(TransactionType)transactionType
+                     transactionType:(MPTransactionType)transactionType
                           completion:(void (^)(NSInteger status, NSString *transactionRef))completion
                              failure:(void (^)(MPCheckoutError *error))errorBlock {
     

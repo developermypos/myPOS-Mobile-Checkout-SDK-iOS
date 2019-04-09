@@ -12,7 +12,7 @@
 
 #pragma mark - Initializers
 
-- (instancetype)initWithOrderId:(NSString *)orderId transactionType:(TransactionType)transactionType {
+- (instancetype)initWithOrderId:(NSString *)orderId transactionType:(MPTransactionType)transactionType {
     if (self = [super init]) {
         [_data setObject:orderId                            forKey:ICParameterOrderId];
         [_data setObject:ICMethodGetTransactionStatus       forKey:ICParameterMethod];

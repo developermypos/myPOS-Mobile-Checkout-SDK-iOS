@@ -52,7 +52,7 @@
 
 - (void)setWalletNumber:(NSString *)walletNumber
                 storeId:(NSString *)storeId
-               currency:(Currency)currency
+               currency:(MPCurrency)currency
               publicKey:(NSString *)publicKey
              privateKey:(NSString *)privateKey
                  bundle:(NSBundle *)bundle
@@ -171,48 +171,48 @@
     return [[NSData alloc] initWithBase64EncodedString:cleanPem options:NSDataBase64DecodingIgnoreUnknownCharacters];
 }
 
-- (NSString *)currencyRawValue:(Currency)currency {
+- (NSString *)currencyRawValue:(MPCurrency)currency {
     switch (currency) {
-        case CurrencyHRK:
+        case MPCurrencyHRK:
             return @"HRK";
             
-        case CurrencyCZK:
+        case MPCurrencyCZK:
             return @"CZK";
             
-        case CurrencyDKK:
+        case MPCurrencyDKK:
             return @"DKK";
             
-        case CurrencyHUF:
+        case MPCurrencyHUF:
             return @"HUF";
             
-        case CurrencyISK:
+        case MPCurrencyISK:
             return @"ISK";
             
-        case CurrencyNOK:
+        case MPCurrencyNOK:
             return @"NOK";
             
-        case CurrencySEK:
+        case MPCurrencySEK:
             return @"SEK";
             
-        case CurrencyCHF:
+        case MPCurrencyCHF:
             return @"CHF";
             
-        case CurrencyGBP:
+        case MPCurrencyGBP:
             return @"GBP";
             
-        case CurrencyUSD:
+        case MPCurrencyUSD:
             return @"USD";
             
-        case CurrencyRON:
+        case MPCurrencyRON:
             return @"RON";
             
-        case CurrencyBGN:
+        case MPCurrencyBGN:
             return @"BGN";
             
-        case CurrencyEUR:
+        case MPCurrencyEUR:
             return @"EUR";
             
-        case CurrencyPLN:
+        case MPCurrencyPLN:
             return @"PLN";
     }
 }

@@ -19,34 +19,34 @@
 #import "MPStoreCardViewController.h"
 #import "MPUpdateStoredCardViewController.h"
 
-typedef NS_ENUM (NSUInteger, TransactionType) {
-    TransactionTypeUnknown,
-    TransactionTypePurchase,
-    TransactionTypeRefund,
+typedef NS_ENUM (NSUInteger, MPTransactionType) {
+    MPTransactionTypeUnknown,
+    MPTransactionTypePurchase,
+    MPTransactionTypeRefund,
 };
 
-typedef NS_ENUM (NSUInteger, Currency) {
-    CurrencyHRK,
-    CurrencyCZK,
-    CurrencyDKK,
-    CurrencyHUF,
-    CurrencyISK,
-    CurrencyNOK,
-    CurrencySEK,
-    CurrencyCHF,
-    CurrencyGBP,
-    CurrencyUSD,
-    CurrencyRON,
-    CurrencyBGN,
-    CurrencyEUR,
-    CurrencyPLN,
+typedef NS_ENUM (NSUInteger, MPCurrency) {
+    MPCurrencyHRK,
+    MPCurrencyCZK,
+    MPCurrencyDKK,
+    MPCurrencyHUF,
+    MPCurrencyISK,
+    MPCurrencyNOK,
+    MPCurrencySEK,
+    MPCurrencyCHF,
+    MPCurrencyGBP,
+    MPCurrencyUSD,
+    MPCurrencyRON,
+    MPCurrencyBGN,
+    MPCurrencyEUR,
+    MPCurrencyPLN,
 };
 
 @interface MPCheckout : NSObject
 
 + (void)initializeWithAccountNumber:(NSString * _Nonnull)accountNumber
                             storeId:(NSString * _Nonnull)storeId
-                           currency:(Currency)currency
+                           currency:(MPCurrency)currency
                         certificate:(NSString * _Nonnull)certificate
                          privateKey:(NSString * _Nonnull)privateKey
                              bundle:(NSBundle * _Nullable)bundle
@@ -54,7 +54,7 @@ typedef NS_ENUM (NSUInteger, Currency) {
 
 + (void)initializeWithAccountNumber:(NSString * _Nonnull)accountNumber
                             storeId:(NSString * _Nonnull)storeId
-                           currency:(Currency)currency
+                           currency:(MPCurrency)currency
                         certificate:(NSString * _Nonnull)certificate
                          privateKey:(NSString * _Nonnull)privateKey
                              bundle:(NSBundle * _Nullable)bundle
@@ -64,7 +64,7 @@ typedef NS_ENUM (NSUInteger, Currency) {
 + (void)applyTheme:(MPCheckoutTheme * _Nonnull)theme;
 
 + (void)getOrderStatus:(NSString * _Nonnull)orderId
-       transactionType:(TransactionType)transactionType
+       transactionType:(MPTransactionType)transactionType
             completion:(void (^ _Nullable)(NSInteger status, NSString * _Nonnull transactionRef))completion
                failure:(void (^ _Nullable)(MPCheckoutError * _Nonnull error))failure;
 

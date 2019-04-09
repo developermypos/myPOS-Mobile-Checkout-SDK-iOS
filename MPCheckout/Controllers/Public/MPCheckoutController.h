@@ -20,9 +20,4 @@
  */
 @property (weak, nonatomic, nullable) UIColor *backgroundColor;
 
-/*!
- * Sets the navigationBar's background color.
- */
-@property (weak, nonatomic, nullable) UIColor *navigationBarBackgroundColor;
-
 @end

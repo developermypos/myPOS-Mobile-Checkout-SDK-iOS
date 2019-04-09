@@ -27,6 +27,7 @@ extern NSInteger const MPCheckoutAPIError;
 extern NSInteger const MPCheckoutTimeoutError;
 extern NSInteger const MPCheckoutNoError;
 extern NSInteger const MPCheckoutInvalidStoreIdError;
+extern NSInteger const MPCheckoutCardIssuerError;
 extern NSInteger const MPCheckoutInvalidParametersError;
 extern NSInteger const MPCheckoutInvalidAmountError;
 extern NSInteger const MPCheckoutInsufficientFundsError;

@@ -19,7 +19,7 @@
 
 + (void)initializeWithAccountNumber:(NSString *)accountNumber
                             storeId:(NSString *)storeId
-                           currency:(Currency)currency
+                           currency:(MPCurrency)currency
                         certificate:(NSString *)certificate
                          privateKey:(NSString *)privateKey
                              bundle:(NSBundle *)bundle
@@ -37,7 +37,7 @@
 
 + (void)initializeWithAccountNumber:(NSString *)accountNumber
                             storeId:(NSString *)storeId
-                           currency:(Currency)currency
+                           currency:(MPCurrency)currency
                         certificate:(NSString *)certificate
                          privateKey:(NSString *)privateKey
                              bundle:(NSBundle *)bundle
@@ -62,7 +62,7 @@
 }
 
 + (void)getOrderStatus:(NSString *)orderId
-       transactionType:(TransactionType)transactionType
+       transactionType:(MPTransactionType)transactionType
             completion:(void (^)(NSInteger status, NSString *transactionRef))completion
                failure:(void (^)(MPCheckoutError *error))failure {
     

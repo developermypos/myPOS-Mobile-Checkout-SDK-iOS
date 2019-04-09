@@ -25,7 +25,7 @@
 
 - (void)setWalletNumber:(NSString *)walletNumber
                 storeId:(NSString *)storeId
-               currency:(Currency)currency
+               currency:(MPCurrency)currency
               publicKey:(NSString *)publicKey
              privateKey:(NSString *)privateKey
                  bundle:(NSBundle *)bundle
