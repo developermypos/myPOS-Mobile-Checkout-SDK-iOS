@@ -136,7 +136,7 @@ NSString * const ICHTTPMethodPOST = @"POST";
 
 #pragma mark - URLs
 
-NSString * const ICSandboxApiUrl      = @"http://devs.mypos.com/mypos.eu/trunk/public/vmp/checkout-test/";
+NSString * const ICSandboxApiUrl      = @"https://devs.mypos.com/mypos.eu/trunk/public/vmp/checkout-test/";
 NSString * const ICSandbox3DSecureUrl = @"https://devs.icards.eu/mypos_tdsgateway/";
 
 NSString * const ICProductionApiUrl      = @"https://www.mypos.eu/vmp/checkout";
