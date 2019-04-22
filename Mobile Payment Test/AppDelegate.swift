@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                               currency: .EUR,
                               certificate: "",
                               privateKey: "",
-                              bundle: Bundle.main,
+                              bundle: .main,
                               keyIndex: 1,
                               isSandbox: true)
         

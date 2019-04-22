@@ -87,7 +87,7 @@ class ICOrdersTableViewController: ICBaseTableViewController {
         self.presenter.present(alertController, animated: true, completion: nil)
     }
     
-    private func getOrderStatus(_ orderId: String, type: TransactionType) {
+    private func getOrderStatus(_ orderId: String, type: MPTransactionType) {
         self.showLoadingHUD()
         
         MPCheckout.getOrderStatus(orderId,
