@@ -37,6 +37,8 @@
 		1D66DA601E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA521E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m */; };
 		1D66DA611E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA541E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m */; };
 		1D66DA621E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA561E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m */; };
+		1D9AFC122282B3AC00E8AAB5 /* public_cert.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1D9AFC102282B3AC00E8AAB5 /* public_cert.txt */; };
+		1D9AFC132282B3AC00E8AAB5 /* private_key.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1D9AFC112282B3AC00E8AAB5 /* private_key.txt */; };
 		1DA95B921E16584D005C3EB3 /* MPCheckout.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DA95B901E16584D005C3EB3 /* MPCheckout.strings */; };
 		1DB58EEE1E029D2800875E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB58EED1E029D2800875E9F /* AppDelegate.swift */; };
 		1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF11E029D2800875E9F /* Main.storyboard */; };
@@ -103,6 +105,8 @@
 		1D66DA541E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDRingIndicatorView.m; sourceTree = "<group>"; };
 		1D66DA551E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDSuccessIndicatorView.h; sourceTree = "<group>"; };
 		1D66DA561E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDSuccessIndicatorView.m; sourceTree = "<group>"; };
+		1D9AFC102282B3AC00E8AAB5 /* public_cert.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = public_cert.txt; sourceTree = "<group>"; };
+		1D9AFC112282B3AC00E8AAB5 /* private_key.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private_key.txt; sourceTree = "<group>"; };
 		1DA95B911E16584D005C3EB3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "Mobile Payment Test/de.lproj/MPCheckout.strings"; sourceTree = "<group>"; };
 		1DA95B931E16585A005C3EB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Mobile Payment Test/en.lproj/MPCheckout.strings"; sourceTree = "<group>"; };
 		1DB58EEA1E029D2800875E9F /* Mobile Payment Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Payment Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +256,8 @@
 				1DA95B901E16584D005C3EB3 /* MPCheckout.strings */,
 				1DB58EF41E029D2800875E9F /* Assets.xcassets */,
 				1DB58EF91E029D2800875E9F /* Info.plist */,
+				1D9AFC112282B3AC00E8AAB5 /* private_key.txt */,
+				1D9AFC102282B3AC00E8AAB5 /* public_cert.txt */,
 				1D3D7FE51E7A90B30043BF9D /* Mobile Payment Test-Bridging-Header.h */,
 			);
 			path = "Mobile Payment Test";
@@ -324,8 +330,10 @@
 				1D66DA571E8D224400079DF0 /* JGProgressHUD Resources.bundle in Resources */,
 				1DA95B921E16584D005C3EB3 /* MPCheckout.strings in Resources */,
 				1DB58EF81E029D2800875E9F /* LaunchScreen.storyboard in Resources */,
+				1D9AFC132282B3AC00E8AAB5 /* private_key.txt in Resources */,
 				1DB58EF51E029D2800875E9F /* Assets.xcassets in Resources */,
 				1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */,
+				1D9AFC122282B3AC00E8AAB5 /* public_cert.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

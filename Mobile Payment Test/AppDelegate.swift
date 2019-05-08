@@ -14,11 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        MPCheckout.initialize(withAccountNumber: "",
-                              storeId: "",
+        MPCheckout.initialize(withAccountNumber: "61938166610",
+                              storeId: "000000000000010",
                               currency: .EUR,
-                              certificate: "",
-                              privateKey: "",
+                              certificate: "public_cert",
+                              privateKey: "private_key",
                               bundle: .main,
                               keyIndex: 1,
                               isSandbox: true)
