@@ -76,9 +76,10 @@
 
 - (void (^)(NSString *))paymentCompleted {
     return ^(NSString *transactionRef) {
+        NSString *trnReference = [transactionRef isKindOfClass:[NSNumber class]] ? [(id)transactionRef stringValue] : transactionRef;
         [self dismiss:^{
             if ([self.paymentDelegate respondsToSelector:@selector(paymentDidCompleteWithReference:)]) {
-                [self.paymentDelegate paymentDidCompleteWithReference:transactionRef];
+                [self.paymentDelegate paymentDidCompleteWithReference:trnReference];
             }
         }];
     };

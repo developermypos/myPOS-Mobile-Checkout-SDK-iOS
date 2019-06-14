@@ -67,7 +67,7 @@
                                                    IC3DSParameterExpiryMonth : card.expiryMonth,
                                                    };
     
-    [ICLogger logDebug:[NSString stringWithFormat:@"3DS - JSON: %@", json]];
+//    [ICLogger logDebug:[NSString stringWithFormat:@"3DS - JSON: %@", json]];
     
     NSError *error    = nil;
     NSData  *jsonData = [NSJSONSerialization dataWithJSONObject:json options:NSJSONWritingPrettyPrinted error:&error];
@@ -114,7 +114,6 @@
     
     NSURL *url = [NSURL URLWithString:[ICMobilePaymentManager secureUrl]];
     
-    
     if (!url) {
         [ICLogger logDebug:@"Invalid communication URL"];
         return nil;
@@ -126,6 +125,8 @@
         [ICLogger logDebug:@"Could not get bytes of body"];
         return nil;
     }
+    
+//    [ICLogger logDebug:[NSString stringWithFormat:@"Starting 3DSecure request to URL '%@' with body '%@", url, body]];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     

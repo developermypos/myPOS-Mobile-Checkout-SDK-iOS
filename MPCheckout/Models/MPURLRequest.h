@@ -1,5 +1,5 @@
 //
-//  ICURLRequest.h
+//  MPURLRequest.h
 //  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface ICURLRequest : NSURLRequest
+@interface MPURLRequest : NSURLRequest
 
 - (instancetype)initWithBody:(NSData *)body;
 

@@ -7,7 +7,7 @@
 //
 
 #import "ICHTTPOperation.h"
-#import "ICURLRequest.h"
+#import "MPURLRequest.h"
 #import "ICLogger.h"
 #import "ICConstants.h"
 
@@ -37,7 +37,7 @@ static const char *kOperationQueue = "com.mypos.MPCheckout-operation";
 
 #pragma mark - Initializers
 
-- (instancetype)initWithRequest:(ICURLRequest *)request successBlock:(ICHTTPOperatonSuccessBlock)successBlock errorBlock:(ICHTTPOperatonErrorBlock)errorBlock {
+- (instancetype)initWithRequest:(MPURLRequest *)request successBlock:(ICHTTPOperatonSuccessBlock)successBlock errorBlock:(ICHTTPOperatonErrorBlock)errorBlock {
     if (self = [super init]) {
         _urlRequest     = request.urlRequest;
         _errorBlock     = errorBlock;

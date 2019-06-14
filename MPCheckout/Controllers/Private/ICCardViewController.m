@@ -82,7 +82,7 @@ static NSString * const kSecureSegue = @"3DSecure";
 - (void)didReceive3DSecureResponse:(NSDictionary *)response {
     _extraData = nil;
     
-//    [ICLogger logDebug:[NSString stringWithFormat:@"3DS response: %@", response]];
+    [ICLogger logDebug:[NSString stringWithFormat:@"3DS response: %@", response]];
     
     NSString *_status = [response objectForKey:IC3DSParameterStatus];
     

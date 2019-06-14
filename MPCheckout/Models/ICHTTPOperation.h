@@ -11,14 +11,14 @@
 
 #import "MPCheckoutError.h"
 
-@class ICURLRequest;
+@class MPURLRequest;
 
 typedef void (^ _Nullable ICHTTPOperatonSuccessBlock)(NSDictionary * _Nonnull response);
 typedef void (^ _Nullable ICHTTPOperatonErrorBlock)(MPCheckoutError * _Nonnull error);
 
 @interface ICHTTPOperation : NSOperation
 
-- (nullable instancetype)initWithRequest:(nonnull ICURLRequest *)request
+- (nullable instancetype)initWithRequest:(nonnull MPURLRequest *)request
                             successBlock:(nullable ICHTTPOperatonSuccessBlock)successBlock
                               errorBlock:(nullable ICHTTPOperatonErrorBlock)errorBlock;
 

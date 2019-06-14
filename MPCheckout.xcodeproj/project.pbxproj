@@ -68,8 +68,8 @@
 		1D7A780B1E3F924300DA6196 /* MPCartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78091E3F924300DA6196 /* MPCartItem.m */; };
 		1D7A78331E407B1100DA6196 /* MPCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78311E407B1100DA6196 /* MPCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D7A78341E407B1100DA6196 /* MPCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78321E407B1100DA6196 /* MPCard.m */; };
-		1D7A78371E407BEF00DA6196 /* ICURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78351E407BEF00DA6196 /* ICURLRequest.h */; };
-		1D7A78381E407BEF00DA6196 /* ICURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78361E407BEF00DA6196 /* ICURLRequest.m */; };
+		1D7A78371E407BEF00DA6196 /* MPURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78351E407BEF00DA6196 /* MPURLRequest.h */; };
+		1D7A78381E407BEF00DA6196 /* MPURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78361E407BEF00DA6196 /* MPURLRequest.m */; };
 		1D7A783B1E407DD000DA6196 /* ICHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78391E407DD000DA6196 /* ICHTTPOperation.h */; };
 		1D7A783C1E407DD000DA6196 /* ICHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A783A1E407DD000DA6196 /* ICHTTPOperation.m */; };
 		1D7A78471E408B0000DA6196 /* ICBaseCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78451E408B0000DA6196 /* ICBaseCommand.h */; };
@@ -185,8 +185,8 @@
 		1D7A78101E3F965400DA6196 /* MPCheckoutProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPCheckoutProtocols.h; sourceTree = "<group>"; };
 		1D7A78311E407B1100DA6196 /* MPCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCard.h; sourceTree = "<group>"; };
 		1D7A78321E407B1100DA6196 /* MPCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCard.m; sourceTree = "<group>"; };
-		1D7A78351E407BEF00DA6196 /* ICURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICURLRequest.h; sourceTree = "<group>"; };
-		1D7A78361E407BEF00DA6196 /* ICURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICURLRequest.m; sourceTree = "<group>"; };
+		1D7A78351E407BEF00DA6196 /* MPURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPURLRequest.h; sourceTree = "<group>"; };
+		1D7A78361E407BEF00DA6196 /* MPURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPURLRequest.m; sourceTree = "<group>"; };
 		1D7A78391E407DD000DA6196 /* ICHTTPOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICHTTPOperation.h; sourceTree = "<group>"; };
 		1D7A783A1E407DD000DA6196 /* ICHTTPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICHTTPOperation.m; sourceTree = "<group>"; };
 		1D7A78451E408B0000DA6196 /* ICBaseCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICBaseCommand.h; sourceTree = "<group>"; };
@@ -407,8 +407,8 @@
 				1D7A78091E3F924300DA6196 /* MPCartItem.m */,
 				1D7A78391E407DD000DA6196 /* ICHTTPOperation.h */,
 				1D7A783A1E407DD000DA6196 /* ICHTTPOperation.m */,
-				1D7A78351E407BEF00DA6196 /* ICURLRequest.h */,
-				1D7A78361E407BEF00DA6196 /* ICURLRequest.m */,
+				1D7A78351E407BEF00DA6196 /* MPURLRequest.h */,
+				1D7A78361E407BEF00DA6196 /* MPURLRequest.m */,
 				1D3D7FC61E7A86590043BF9D /* MPCheckoutTheme.h */,
 				1D3D7FC71E7A86590043BF9D /* MPCheckoutTheme.m */,
 				1D52AA551ED6EF3A00D30724 /* Reachability.h */,
@@ -514,7 +514,7 @@
 				1D7A785F1E40935100DA6196 /* ICReversalCommand.h in Headers */,
 				1D7A78771E40B3CC00DA6196 /* ICCardViewController.h in Headers */,
 				1DD42BFF1EB8794400F83DA9 /* UIAlertController+Helpers.h in Headers */,
-				1D7A78371E407BEF00DA6196 /* ICURLRequest.h in Headers */,
+				1D7A78371E407BEF00DA6196 /* MPURLRequest.h in Headers */,
 				1D7A787B1E40B44B00DA6196 /* ICCardView.h in Headers */,
 				1D3D7FBC1E7A80840043BF9D /* MBProgressHUD.h in Headers */,
 				1D7A786F1E40AEF000DA6196 /* ICBaseViewController.h in Headers */,
@@ -574,6 +574,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 1DACE7B81E2E14B300F5E38E;
@@ -642,7 +643,7 @@
 				1D7A786C1E40ACCE00DA6196 /* MPPaymentViewController.m in Sources */,
 				1D3D7FAC1E7A806A0043BF9D /* CryptoUtil.m in Sources */,
 				1D3D7FDA1E7A86E20043BF9D /* ICBaseManager.m in Sources */,
-				1D7A78381E407BEF00DA6196 /* ICURLRequest.m in Sources */,
+				1D7A78381E407BEF00DA6196 /* MPURLRequest.m in Sources */,
 				1D3D7FE21E7A86E20043BF9D /* ICThemeManager.m in Sources */,
 				1D3D7FC51E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				1D7A78641E4093E700DA6196 /* ICStoreCardCommand.m in Sources */,
@@ -782,6 +783,7 @@
 		1DACE7CB1E2E14B300F5E38E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -798,6 +800,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mypos.MPCheckout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -810,6 +813,7 @@
 		1DACE7CC1E2E14B300F5E38E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -825,6 +829,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mypos.MPCheckout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

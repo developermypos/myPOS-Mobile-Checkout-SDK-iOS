@@ -1,22 +1,22 @@
 //
-//  ICURLRequest.m
+//  MPURLRequest.m
 //  MPCheckout
 //
 //  Created by Valio Cholakov on 1/31/17.
 //  Copyright © 2017 Intercard Finance AD. All rights reserved.
 //
 
-#import "ICURLRequest.h"
+#import "MPURLRequest.h"
 #import "ICConstants.h"
 #import "ICMobilePaymentManager.h"
 
-@interface ICURLRequest() {
+@interface MPURLRequest() {
     NSMutableURLRequest *_urlRequest;
 }
 
 @end
 
-@implementation ICURLRequest
+@implementation MPURLRequest
 
 #pragma mark - Initializers
 

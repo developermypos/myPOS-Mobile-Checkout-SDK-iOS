@@ -15,7 +15,7 @@
 #import "ICLogger.h"
 #import "ICHelpers.h"
 #import "ICConstants.h"
-#import "ICURLRequest.h"
+#import "MPURLRequest.h"
 #import "ICReachability.h"
 #import "ICHTTPOperation.h"
 
@@ -212,8 +212,10 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
     ICGetTransactionStatusCommand *command = [[ICGetTransactionStatusCommand alloc] initWithOrderId:orderId transactionType:transactionType];
     [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterTransactionStatus, ICParameterTransactionReference]
                                                             completion:^(NSDictionary *data) {
+                                                                id trnRef = [data objectForKey:ICParameterTransactionReference];
+                                                                NSString *transactionRef = [trnRef isKindOfClass:[NSNumber class]] ? [trnRef stringValue] : trnRef;
                                                                 completion([[data objectForKey:ICParameterTransactionStatus] integerValue],
-                                                                           [data objectForKey:ICParameterTransactionReference]);
+                                                                           transactionRef);
                                                             } failed:errorBlock]];
 }
 
@@ -249,7 +251,7 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
             return;
         }
         
-        ICURLRequest    *request   = [[ICURLRequest alloc] initWithBody:body];
+        MPURLRequest    *request   = [[MPURLRequest alloc] initWithBody:body];
         ICHTTPOperation *operation = [[ICHTTPOperation alloc] initWithRequest:request
                                                                  successBlock:^(NSDictionary * _Nonnull response) { completion(response); }
                                                                    errorBlock:^(MPCheckoutError * _Nonnull error) { completion(error); }];

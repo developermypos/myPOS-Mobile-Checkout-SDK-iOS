@@ -129,18 +129,18 @@ NSString * const ICControllerIdentifierPayment          = @"Payment";
 NSString * const ICControllerIdentifierStoreCard        = @"StoreCard";
 NSString * const ICControllerIdentifierUpdateStoredCard = @"UpdateStoredCard";
 
-#pragma mark - HTTP Methods
+#pragma mark - HTTP Methods`
 
 NSString * const ICHTTPMethodGET  = @"GET";
 NSString * const ICHTTPMethodPOST = @"POST";
 
 #pragma mark - URLs
 
-NSString * const ICSandboxApiUrl      = @"https://devs.mypos.com/mypos.eu/trunk/public/vmp/checkout-test/";
+NSString * const ICSandboxApiUrl      = @"https://www.mypos.eu/vmp/checkout-test";
 NSString * const ICSandbox3DSecureUrl = @"https://devs.icards.eu/mypos_tdsgateway/";
 
 NSString * const ICProductionApiUrl      = @"https://www.mypos.eu/vmp/checkout";
-NSString * const ICProduction3DSecureUrl = @"https://leupay.eu/tds/";
+NSString * const ICProduction3DSecureUrl = @"https://www.mypos.eu/tds/";
 
 #pragma mark - Card Types
 
