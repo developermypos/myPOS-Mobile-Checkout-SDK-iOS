@@ -27,6 +27,6 @@
  *
  * @param theme A custom theme that will be applied across the SDK screens. 
  */
-- (void)setTheme:(MPCheckoutTheme *)theme;
+- (void)setTheme:(nonnull MPCheckoutTheme *)theme;
 
 @end
