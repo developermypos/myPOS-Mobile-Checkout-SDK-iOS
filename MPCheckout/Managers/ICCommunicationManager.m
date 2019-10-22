@@ -154,7 +154,8 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
        completion:(void (^)(NSString *cardToken))completionBlock
           failure:(void (^)(MPCheckoutError *error))errorBlock {
     
-    ICStoreCardCommand *command = [[ICStoreCardCommand alloc] initWithPan:pan cvc:cvc
+    ICStoreCardCommand *command = [[ICStoreCardCommand alloc] initWithPan:pan
+                                                                      cvc:cvc
                                                                expiryDate:expiryDate
                                                                embossName:embossName
                                                                customName:customName

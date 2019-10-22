@@ -70,7 +70,9 @@ static NSString * const kSecureSegue = @"3DSecure";
     IC3DSecureWebViewController *secureController     = navigationController.viewControllers.firstObject;
     
     secureController.delegate   = self;
-    secureController.urlRequest = [ICUtil cardValidationURLRequest:[self card] cardData:_cardData amount:ICFormatterAmount(self.cardVerificationAmount)];
+    secureController.urlRequest = [ICUtil cardValidationURLRequest:[self card]
+                                                          cardData:_cardData
+                                                            amount:ICFormatterAmount(self.cardVerificationAmount)];
 }
 
 #pragma mark - 3DSecure Delegate

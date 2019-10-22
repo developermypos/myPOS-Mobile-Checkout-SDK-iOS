@@ -21,15 +21,21 @@
                      amount:(NSString *)amount
                   extraData:(NSDictionary *)extraData {
     if (self = [super init]) {
-        [_data setObject:amount forKey:ICParameterAmount];
         [_data setObject:ICMethodStoreCard                                 forKey:ICParameterMethod];
         [_data setObject:embossName                                        forKey:ICParameterEmbossName];
         [_data setObject:customName                                        forKey:ICParameterCustomName];
         [_data setObject:[pan        encrypted]                            forKey:ICParameterPAN];
         [_data setObject:[cvc        encrypted]                            forKey:ICParameterCVC];
         [_data setObject:[expiryDate encrypted]                            forKey:ICParameterExpiryDate];
-        [_data setObject:kCardVerification                                 forKey:ICParameterCardVerification];
         [_data setObject:[[ICMobilePaymentManager sharedManager] currency] forKey:ICParameterCurrency];
+        
+        if (amount.doubleValue == 0.00) {
+            [_data setObject:@"1" forKey:ICParameterCardVerification];
+        }
+        else {
+            [_data setObject:@"2"   forKey:ICParameterCardVerification];
+            [_data setObject:amount forKey:ICParameterAmount];
+        }
         
         [_data addEntriesFromDictionary:extraData];
     }
