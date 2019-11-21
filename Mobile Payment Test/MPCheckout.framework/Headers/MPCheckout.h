@@ -74,4 +74,8 @@ typedef NS_ENUM (NSUInteger, MPCurrency) {
                completion:(void (^ _Nullable)(NSString * _Nonnull transactionRef))completion
                   failure:(void (^ _Nullable)(MPCheckoutError * _Nonnull error))failure;
 
++ (void)reverseTransaction:(NSString * _Nonnull)transactionRef
+                completion:(void (^ _Nullable)(NSString * _Nonnull transactionRef))completion
+                   failure:(void (^ _Nullable)(MPCheckoutError * _Nonnull error))failure;
+
 @end
