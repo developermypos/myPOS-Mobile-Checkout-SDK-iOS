@@ -192,7 +192,7 @@ static NSInteger const kPanMaxLength  = 19;
     self.panTextField.placeholder        = ICLocalizedString(@"Enter card number");
     self.cvcTextField.placeholder        = ICLocalizedString(@"Enter CVC code");
     self.embossNameTextField.placeholder = ICLocalizedString(@"Enter name on card");
-    self.customNameTextField.placeholder = ICLocalizedString(@"Enter custom name (optional)");
+    self.customNameTextField.placeholder = ICLocalizedString(@"Enter custom name");
 }
 
 - (void)applyTheme {

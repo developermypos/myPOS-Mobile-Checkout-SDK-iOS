@@ -31,7 +31,8 @@
                  bundle:(NSBundle *)bundle
                language:(NSString *)language
                keyIndex:(NSInteger)keyIndex
-              inSandbox:(BOOL)inSandbox;
+              inSandbox:(BOOL)inSandbox
+   usesConfigurationKey:(BOOL)usesConfigurationKey;
 
 - (BOOL)isInitialized;
 - (BOOL)isInSandbox;

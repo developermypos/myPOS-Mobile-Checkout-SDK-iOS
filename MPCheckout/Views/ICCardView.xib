@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,13 +23,13 @@
                                     <rect key="frame" x="118" y="0.0" width="139" height="61"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypos-logo" translatesAutoresizingMaskIntoConstraints="NO" id="YES-F0-vfq">
-                                            <rect key="frame" x="0.5" y="14" width="27.5" height="35"/>
+                                            <rect key="frame" x="0.0" y="14" width="27.5" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="YES-F0-vfq" secondAttribute="height" multiplier="95:120" id="eD4-7g-Za9"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYMENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qp0-40-GiG">
-                                            <rect key="frame" x="36" y="12" width="103.5" height="20"/>
+                                            <rect key="frame" x="35.5" y="12" width="103.5" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="VQD-MJ-eXb"/>
                                             </constraints>
@@ -41,14 +38,14 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8g-nZ-zyR">
-                                            <rect key="frame" x="36" y="32" width="103.5" height="17"/>
+                                            <rect key="frame" x="35.5" y="32" width="103.5" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="KMr-0d-CWi"/>
                                             </constraints>
                                             <attributedString key="attributedText">
                                                 <fragment content="powered by ">
                                                     <attributes>
-                                                        <font key="NSFont" size="11" name=".AppleSystemUIFont"/>
+                                                        <font key="NSFont" metaFont="menu" size="11"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -98,7 +95,6 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="DvN-Ph-Kpv"/>
                                     </constraints>
-                                    <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                 </textField>
@@ -137,7 +133,6 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="YuI-qb-28W"/>
                                     </constraints>
-                                    <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                 </textField>
@@ -176,7 +171,6 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="CrG-Qg-k3B"/>
                                     </constraints>
-                                    <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" secureTextEntry="YES"/>
                                 </textField>
@@ -215,9 +209,8 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="8jk-3j-gQ6"/>
                                     </constraints>
-                                    <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="next"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" returnKeyType="next"/>
                                 </textField>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="focus-emboss" translatesAutoresizingMaskIntoConstraints="NO" id="IDq-9G-qdr">
                                     <rect key="frame" x="309" y="24" width="50" height="32"/>
@@ -254,9 +247,8 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="9mL-fH-VcX"/>
                                     </constraints>
-                                    <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -328,10 +320,10 @@
         </view>
     </objects>
     <resources>
-        <image name="focus-cvc" width="54" height="35"/>
-        <image name="focus-emboss" width="54" height="35"/>
-        <image name="focus-expiry-date" width="54" height="35"/>
-        <image name="focus-pan" width="54" height="35"/>
-        <image name="mypos-logo" width="95" height="120"/>
+        <image name="focus-cvc" width="54.5" height="35"/>
+        <image name="focus-emboss" width="54.5" height="35"/>
+        <image name="focus-expiry-date" width="54.5" height="35"/>
+        <image name="focus-pan" width="54.5" height="35"/>
+        <image name="mypos-logo" width="95.5" height="120"/>
     </resources>
 </document>

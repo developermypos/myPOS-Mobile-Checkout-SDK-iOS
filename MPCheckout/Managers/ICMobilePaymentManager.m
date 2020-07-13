@@ -15,6 +15,7 @@
 #import "ICRSAManager.h"
 
 @interface ICMobilePaymentManager () {
+    BOOL _usesConfigurationKey;
     BOOL _inSandbox;
     NSString *_publicKeyName;
     NSString *_privateKeyName;
@@ -58,17 +59,19 @@
                  bundle:(NSBundle *)bundle
                language:(NSString *)language
                keyIndex:(NSInteger)keyIndex
-              inSandbox:(BOOL)inSandbox {
+              inSandbox:(BOOL)inSandbox
+   usesConfigurationKey:(BOOL)usesConfigurationKey {
     
-    _bundle         = bundle;
-    _storeId        = storeId;
-    _currency       = [self currencyRawValue:currency];
-    _language       = language;
-    _keyIndex       = keyIndex;
-    _inSandbox      = inSandbox;
-    _publicKeyName  = publicKey;
-    _privateKeyName = privateKey;
-    _walletNumber   = walletNumber;
+    _bundle         	  = bundle;
+    _storeId              = storeId;
+    _currency             = [self currencyRawValue:currency];
+    _language             = language;
+    _keyIndex             = keyIndex;
+    _inSandbox            = inSandbox;
+    _publicKeyName        = publicKey;
+    _privateKeyName       = privateKey;
+    _walletNumber         = walletNumber;
+    _usesConfigurationKey = usesConfigurationKey;
 }
 
 - (BOOL)isInitialized {
@@ -142,19 +145,26 @@
 #pragma mark - Helpers
 
 - (NSData *)pemToDer:(NSString *)pemFileName {
-    NSURL *url = [self.bundle URLForResource:pemFileName withExtension:@"txt"];
+    NSString *rawPem = nil;
     
-    if (!url) {
-        [ICLogger log:[NSString stringWithFormat:@"Cannot get url for file '%@'", pemFileName]];
-        return nil;
+    if (_usesConfigurationKey) {
+        rawPem = pemFileName;
     }
-    
-    NSError  *error  = nil;
-    NSString *rawPem = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
-    
-    if (error) {
-        [ICLogger log:[NSString stringWithFormat:@"stringWithContentsOfURL error: %@", error]];
-        return nil;
+    else {
+        NSURL *url = [self.bundle URLForResource:pemFileName withExtension:@"txt"];
+        
+        if (!url) {
+            [ICLogger log:[NSString stringWithFormat:@"Cannot get url for file '%@'", pemFileName]];
+            return nil;
+        }
+        
+        NSError  *error  = nil;
+        rawPem = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
+        
+        if (error) {
+            [ICLogger log:[NSString stringWithFormat:@"stringWithContentsOfURL error: %@", error]];
+            return nil;
+        }
     }
     
     NSString *cleanPem  = @"";

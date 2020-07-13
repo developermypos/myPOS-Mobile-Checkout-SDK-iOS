@@ -18,6 +18,7 @@
 #import "ICPaymentViewController.h"
 #import "ICStoreCardViewController.h"
 #import "ICUpdateStoredCardViewController.h"
+#import "ICPreAuthorizationViewController.h"
 
 #import "Base64.h"
 #import "NSString+Helpers.h"
@@ -36,6 +37,10 @@
 
 + (ICUpdateStoredCardViewController *)updateCardController {
     return (ICUpdateStoredCardViewController *)[self controllerWithIdentifier:ICControllerIdentifierUpdateStoredCard];
+}
+
++ (ICPreAuthorizationViewController *)preAuthorizationController {
+    return (ICPreAuthorizationViewController *)[self controllerWithIdentifier:ICControllerIdentifierPreAuthorization];
 }
 
 + (NSString *)signedData:(NSDictionary<NSString *, NSString *> *)data {

@@ -14,7 +14,7 @@
 #import "ICMobilePaymentManager.h"
 
 @interface ICBaseCommand : NSObject {
-    NSMutableDictionary <NSString *, NSString *> *_data;
+    NSMutableDictionary <NSString *, id> *_data;
 }
 
 - (NSDictionary *)data;

@@ -11,6 +11,7 @@
 
 @class MPCard;
 @class MPCartItem;
+@class MPAuthorization;
 @class MPCheckoutError;
 
 @interface ICCommunicationManager : ICBaseManager
@@ -67,5 +68,46 @@
                      transactionType:(MPTransactionType)transactionType
                           completion:(void (^)(NSInteger status, NSString *transactionRef))completion
                              failure:(void (^)(MPCheckoutError *error))errorBlock;
+
+- (void)makePreAuthorizationFor:(CGFloat)amount
+                       itemName:(NSString *)itemName
+                        orderId:(NSString *)orderId
+                           card:(MPCard *)card
+                       cardData:(NSDictionary *)cardData
+                     completion:(void (^)(NSString *transactionRef))completion
+                        failure:(void (^)(MPCheckoutError *error))errorBlock;
+
+- (void)completePreAuthorization:(NSString *)orderId
+                       forAmount:(CGFloat)amount
+                      inCurrency:(MPCurrency)currency
+                      completion:(void (^)(NSString *orderId))completion
+                         failure:(void (^)(MPCheckoutError *error))errorBlock;
+
+- (void)cancelPreAuthorization:(NSString *)orderId
+                    completion:(void (^)(void))completion
+                       failure:(void (^)(MPCheckoutError *error))errorBlock;
+
+- (void)getPreAuthorizationStatus:(NSString *)orderId
+                       completion:(void (^)(MPPreAuthorizationStatus status, NSString *expiryDate))completion
+                          failure:(void (^)(MPCheckoutError *error))errorBlock;
+
+- (void)makeAuthorizationFor:(CGFloat)amount
+                    itemName:(NSString *)itemName
+                     orderId:(NSString *)orderId
+                   cardToken:(NSString *)cardToken
+                  completion:(void (^)(NSString *transactionReference))completion
+                     failure:(void (^)(MPCheckoutError *))errorBlock;
+
+- (void)captureAuthorizationAmounr:(CGFloat)amount
+                         fromOrder:(NSString *)orderId
+                        completion:(void (^)(NSString *transactionReference))completion
+                           failure:(void (^)(MPCheckoutError *))errorBlock;
+
+- (void)cancelAuthorization:(NSString *)orderId
+                 completion:(void (^)(NSString *transactionReference))completion
+                    failure:(void (^)(MPCheckoutError *))errorBlock;
+
+- (void)listAuthorizationsWithCompletion:(void (^)(NSArray<MPAuthorization *> *authorizations))completion
+                                 failure:(void (^)(MPCheckoutError *))errorBlock;
 
 @end

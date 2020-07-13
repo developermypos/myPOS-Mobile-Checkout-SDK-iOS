@@ -62,6 +62,18 @@
 		1D53418320CFA7BF00087AD3 /* MPStoredCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D53418120CFA7BF00087AD3 /* MPStoredCard.m */; };
 		1D55A4E11EA8963700F41037 /* NSRegularExpression+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D55A4DF1EA8963700F41037 /* NSRegularExpression+Helpers.h */; };
 		1D55A4E21EA8963700F41037 /* NSRegularExpression+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D55A4E01EA8963700F41037 /* NSRegularExpression+Helpers.m */; };
+		1D6735AD24B5BB1E004814C4 /* ICPreAuthorizationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D6735AB24B5BB1E004814C4 /* ICPreAuthorizationViewController.h */; };
+		1D6735AE24B5BB1E004814C4 /* ICPreAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6735AC24B5BB1E004814C4 /* ICPreAuthorizationViewController.m */; };
+		1D6735B124B5D818004814C4 /* ICPreAuthorizationCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D6735AF24B5D818004814C4 /* ICPreAuthorizationCommand.h */; };
+		1D6735B224B5D818004814C4 /* ICPreAuthorizationCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6735B024B5D818004814C4 /* ICPreAuthorizationCommand.m */; };
+		1D6735B524B6FA66004814C4 /* ICPreAuthorizationCompletionCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D6735B324B6FA66004814C4 /* ICPreAuthorizationCompletionCommand.h */; };
+		1D6735B624B6FA66004814C4 /* ICPreAuthorizationCompletionCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6735B424B6FA66004814C4 /* ICPreAuthorizationCompletionCommand.m */; };
+		1D6735B924B6FB32004814C4 /* ICPreAuthorizationCancellationCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D6735B724B6FB32004814C4 /* ICPreAuthorizationCancellationCommand.h */; };
+		1D6735BA24B6FB32004814C4 /* ICPreAuthorizationCancellationCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6735B824B6FB32004814C4 /* ICPreAuthorizationCancellationCommand.m */; };
+		1D6735BD24B70AE9004814C4 /* ICGetPreAuthorizationStatusCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D6735BB24B70AE9004814C4 /* ICGetPreAuthorizationStatusCommand.h */; };
+		1D6735BE24B70AE9004814C4 /* ICGetPreAuthorizationStatusCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6735BC24B70AE9004814C4 /* ICGetPreAuthorizationStatusCommand.m */; };
+		1D6735C124B7168E004814C4 /* MPPreAuthorizationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D6735BF24B7168E004814C4 /* MPPreAuthorizationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D6735C224B7168E004814C4 /* MPPreAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6735C024B7168E004814C4 /* MPPreAuthorizationViewController.m */; };
 		1D6AE8B61F738FCD00124B54 /* ICASN.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D6AE8B41F738FCD00124B54 /* ICASN.h */; };
 		1D6AE8B71F738FCD00124B54 /* ICASN.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6AE8B51F738FCD00124B54 /* ICASN.m */; };
 		1D7A780A1E3F924300DA6196 /* MPCartItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78081E3F924300DA6196 /* MPCartItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -113,6 +125,16 @@
 		1D7A78A31E40E61400DA6196 /* MPCheckout.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78A11E40E61400DA6196 /* MPCheckout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D7A78A41E40E61400DA6196 /* MPCheckout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A78A21E40E61400DA6196 /* MPCheckout.m */; };
 		1D7A78A51E40EC3200DA6196 /* MPCheckoutProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A78101E3F965400DA6196 /* MPCheckoutProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D8206F024B840CB00CA3728 /* ICAuthorizationCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8206EE24B840CB00CA3728 /* ICAuthorizationCommand.h */; };
+		1D8206F124B840CB00CA3728 /* ICAuthorizationCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8206EF24B840CB00CA3728 /* ICAuthorizationCommand.m */; };
+		1D8206F424B8902400CA3728 /* ICAuthorizationCaptureCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8206F224B8902400CA3728 /* ICAuthorizationCaptureCommand.h */; };
+		1D8206F524B8902400CA3728 /* ICAuthorizationCaptureCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8206F324B8902400CA3728 /* ICAuthorizationCaptureCommand.m */; };
+		1D8206F824B891E800CA3728 /* ICAuthorizationReverseCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8206F624B891E800CA3728 /* ICAuthorizationReverseCommand.h */; };
+		1D8206F924B891E800CA3728 /* ICAuthorizationReverseCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8206F724B891E800CA3728 /* ICAuthorizationReverseCommand.m */; };
+		1D8206FC24B8926400CA3728 /* MPAuthorization.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8206FA24B8926400CA3728 /* MPAuthorization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D8206FD24B8926400CA3728 /* MPAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8206FB24B8926400CA3728 /* MPAuthorization.m */; };
+		1D82070024B893C300CA3728 /* ICAuthorizationListCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8206FE24B893C300CA3728 /* ICAuthorizationListCommand.h */; };
+		1D82070124B893C300CA3728 /* ICAuthorizationListCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8206FF24B893C300CA3728 /* ICAuthorizationListCommand.m */; };
 		1D9D806C20A2C4320054D7BB /* UIViewController+Helperes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9D806A20A2C4320054D7BB /* UIViewController+Helperes.h */; };
 		1D9D806D20A2C4320054D7BB /* UIViewController+Helperes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D806B20A2C4320054D7BB /* UIViewController+Helperes.m */; };
 		1DACE8271E2E14F400F5E38E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DACE7F11E2E14F400F5E38E /* Images.xcassets */; };
@@ -178,6 +200,18 @@
 		1D53418120CFA7BF00087AD3 /* MPStoredCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPStoredCard.m; sourceTree = "<group>"; };
 		1D55A4DF1EA8963700F41037 /* NSRegularExpression+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegularExpression+Helpers.h"; sourceTree = "<group>"; };
 		1D55A4E01EA8963700F41037 /* NSRegularExpression+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegularExpression+Helpers.m"; sourceTree = "<group>"; };
+		1D6735AB24B5BB1E004814C4 /* ICPreAuthorizationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICPreAuthorizationViewController.h; sourceTree = "<group>"; };
+		1D6735AC24B5BB1E004814C4 /* ICPreAuthorizationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICPreAuthorizationViewController.m; sourceTree = "<group>"; };
+		1D6735AF24B5D818004814C4 /* ICPreAuthorizationCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICPreAuthorizationCommand.h; sourceTree = "<group>"; };
+		1D6735B024B5D818004814C4 /* ICPreAuthorizationCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICPreAuthorizationCommand.m; sourceTree = "<group>"; };
+		1D6735B324B6FA66004814C4 /* ICPreAuthorizationCompletionCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICPreAuthorizationCompletionCommand.h; sourceTree = "<group>"; };
+		1D6735B424B6FA66004814C4 /* ICPreAuthorizationCompletionCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICPreAuthorizationCompletionCommand.m; sourceTree = "<group>"; };
+		1D6735B724B6FB32004814C4 /* ICPreAuthorizationCancellationCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICPreAuthorizationCancellationCommand.h; sourceTree = "<group>"; };
+		1D6735B824B6FB32004814C4 /* ICPreAuthorizationCancellationCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICPreAuthorizationCancellationCommand.m; sourceTree = "<group>"; };
+		1D6735BB24B70AE9004814C4 /* ICGetPreAuthorizationStatusCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICGetPreAuthorizationStatusCommand.h; sourceTree = "<group>"; };
+		1D6735BC24B70AE9004814C4 /* ICGetPreAuthorizationStatusCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICGetPreAuthorizationStatusCommand.m; sourceTree = "<group>"; };
+		1D6735BF24B7168E004814C4 /* MPPreAuthorizationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPPreAuthorizationViewController.h; sourceTree = "<group>"; };
+		1D6735C024B7168E004814C4 /* MPPreAuthorizationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPPreAuthorizationViewController.m; sourceTree = "<group>"; };
 		1D6AE8B41F738FCD00124B54 /* ICASN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICASN.h; sourceTree = "<group>"; };
 		1D6AE8B51F738FCD00124B54 /* ICASN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICASN.m; sourceTree = "<group>"; };
 		1D7A78081E3F924300DA6196 /* MPCartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCartItem.h; sourceTree = "<group>"; };
@@ -229,6 +263,16 @@
 		1D7A789E1E40E36300DA6196 /* ICPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPaymentViewController.m; sourceTree = "<group>"; };
 		1D7A78A11E40E61400DA6196 /* MPCheckout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCheckout.h; sourceTree = "<group>"; };
 		1D7A78A21E40E61400DA6196 /* MPCheckout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCheckout.m; sourceTree = "<group>"; };
+		1D8206EE24B840CB00CA3728 /* ICAuthorizationCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICAuthorizationCommand.h; sourceTree = "<group>"; };
+		1D8206EF24B840CB00CA3728 /* ICAuthorizationCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICAuthorizationCommand.m; sourceTree = "<group>"; };
+		1D8206F224B8902400CA3728 /* ICAuthorizationCaptureCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICAuthorizationCaptureCommand.h; sourceTree = "<group>"; };
+		1D8206F324B8902400CA3728 /* ICAuthorizationCaptureCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICAuthorizationCaptureCommand.m; sourceTree = "<group>"; };
+		1D8206F624B891E800CA3728 /* ICAuthorizationReverseCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICAuthorizationReverseCommand.h; sourceTree = "<group>"; };
+		1D8206F724B891E800CA3728 /* ICAuthorizationReverseCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICAuthorizationReverseCommand.m; sourceTree = "<group>"; };
+		1D8206FA24B8926400CA3728 /* MPAuthorization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPAuthorization.h; sourceTree = "<group>"; };
+		1D8206FB24B8926400CA3728 /* MPAuthorization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPAuthorization.m; sourceTree = "<group>"; };
+		1D8206FE24B893C300CA3728 /* ICAuthorizationListCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICAuthorizationListCommand.h; sourceTree = "<group>"; };
+		1D8206FF24B893C300CA3728 /* ICAuthorizationListCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICAuthorizationListCommand.m; sourceTree = "<group>"; };
 		1D9D806A20A2C4320054D7BB /* UIViewController+Helperes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Helperes.h"; sourceTree = "<group>"; };
 		1D9D806B20A2C4320054D7BB /* UIViewController+Helperes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Helperes.m"; sourceTree = "<group>"; };
 		1DACE7C21E2E14B300F5E38E /* MPCheckout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MPCheckout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -375,6 +419,8 @@
 				1D7A78961E40E08100DA6196 /* ICStoreCardViewController.m */,
 				1D7A78991E40E2DA00DA6196 /* ICUpdateStoredCardViewController.h */,
 				1D7A789A1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.m */,
+				1D6735AB24B5BB1E004814C4 /* ICPreAuthorizationViewController.h */,
+				1D6735AC24B5BB1E004814C4 /* ICPreAuthorizationViewController.m */,
 			);
 			path = Private;
 			sourceTree = "<group>";
@@ -391,6 +437,8 @@
 				1D7A788E1E40D41B00DA6196 /* MPStoreCardViewController.m */,
 				1D7A78911E40D56F00DA6196 /* MPUpdateStoredCardViewController.h */,
 				1D7A78921E40D56F00DA6196 /* MPUpdateStoredCardViewController.m */,
+				1D6735BF24B7168E004814C4 /* MPPreAuthorizationViewController.h */,
+				1D6735C024B7168E004814C4 /* MPPreAuthorizationViewController.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -417,6 +465,8 @@
 				1D52AA521ED6EEFA00D30724 /* ICReachability.m */,
 				1D6AE8B41F738FCD00124B54 /* ICASN.h */,
 				1D6AE8B51F738FCD00124B54 /* ICASN.m */,
+				1D8206FA24B8926400CA3728 /* MPAuthorization.h */,
+				1D8206FB24B8926400CA3728 /* MPAuthorization.m */,
 			);
 			name = Models;
 			path = MPCheckout/Models;
@@ -441,6 +491,22 @@
 				1D7A78621E4093E700DA6196 /* ICStoreCardCommand.m */,
 				1D7A78651E40954600DA6196 /* ICUpdateStoredCardCommand.h */,
 				1D7A78661E40954600DA6196 /* ICUpdateStoredCardCommand.m */,
+				1D6735AF24B5D818004814C4 /* ICPreAuthorizationCommand.h */,
+				1D6735B024B5D818004814C4 /* ICPreAuthorizationCommand.m */,
+				1D6735B324B6FA66004814C4 /* ICPreAuthorizationCompletionCommand.h */,
+				1D6735B424B6FA66004814C4 /* ICPreAuthorizationCompletionCommand.m */,
+				1D6735B724B6FB32004814C4 /* ICPreAuthorizationCancellationCommand.h */,
+				1D6735B824B6FB32004814C4 /* ICPreAuthorizationCancellationCommand.m */,
+				1D6735BB24B70AE9004814C4 /* ICGetPreAuthorizationStatusCommand.h */,
+				1D6735BC24B70AE9004814C4 /* ICGetPreAuthorizationStatusCommand.m */,
+				1D8206EE24B840CB00CA3728 /* ICAuthorizationCommand.h */,
+				1D8206EF24B840CB00CA3728 /* ICAuthorizationCommand.m */,
+				1D8206F224B8902400CA3728 /* ICAuthorizationCaptureCommand.h */,
+				1D8206F324B8902400CA3728 /* ICAuthorizationCaptureCommand.m */,
+				1D8206F624B891E800CA3728 /* ICAuthorizationReverseCommand.h */,
+				1D8206F724B891E800CA3728 /* ICAuthorizationReverseCommand.m */,
+				1D8206FE24B893C300CA3728 /* ICAuthorizationListCommand.h */,
+				1D8206FF24B893C300CA3728 /* ICAuthorizationListCommand.m */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -473,19 +539,26 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D8206FC24B8926400CA3728 /* MPAuthorization.h in Headers */,
+				1D6735C124B7168E004814C4 /* MPPreAuthorizationViewController.h in Headers */,
 				1D7A78A31E40E61400DA6196 /* MPCheckout.h in Headers */,
 				1D7A78A51E40EC3200DA6196 /* MPCheckoutProtocols.h in Headers */,
 				1D7A78331E407B1100DA6196 /* MPCard.h in Headers */,
 				1D3D7FB41E7A806A0043BF9D /* MPCheckoutError.h in Headers */,
+				1D8206F424B8902400CA3728 /* ICAuthorizationCaptureCommand.h in Headers */,
 				1D55A4E11EA8963700F41037 /* NSRegularExpression+Helpers.h in Headers */,
 				1D7A78931E40D56F00DA6196 /* MPUpdateStoredCardViewController.h in Headers */,
 				1D4144F72101D213003F697D /* MPCheckoutController.h in Headers */,
 				1D7A788F1E40D41B00DA6196 /* MPStoreCardViewController.h in Headers */,
+				1D6735B124B5D818004814C4 /* ICPreAuthorizationCommand.h in Headers */,
 				1D53418220CFA7BF00087AD3 /* MPStoredCard.h in Headers */,
 				1D7A786B1E40ACCE00DA6196 /* MPPaymentViewController.h in Headers */,
+				1D8206F024B840CB00CA3728 /* ICAuthorizationCommand.h in Headers */,
 				1D3D7FC81E7A86590043BF9D /* MPCheckoutTheme.h in Headers */,
 				1D3D7FB81E7A80790043BF9D /* BSKeyboardControls.h in Headers */,
 				1D52AA571ED6EF3A00D30724 /* Reachability.h in Headers */,
+				1D6735AD24B5BB1E004814C4 /* ICPreAuthorizationViewController.h in Headers */,
+				1D6735BD24B70AE9004814C4 /* ICGetPreAuthorizationStatusCommand.h in Headers */,
 				1D7A780A1E3F924300DA6196 /* MPCartItem.h in Headers */,
 				1D3D7F9D1E7A805C0043BF9D /* UIColor+HexString.h in Headers */,
 				1D3D7FC21E7A808B0043BF9D /* TPKeyboardAvoidingScrollView.h in Headers */,
@@ -496,6 +569,7 @@
 				1D3D7FAD1E7A806A0043BF9D /* ICConstants.h in Headers */,
 				1D7A784F1E408E4900DA6196 /* ICGetTransactionStatusCommand.h in Headers */,
 				1D7A785B1E4090A500DA6196 /* ICRefundCommand.h in Headers */,
+				1D6735B524B6FA66004814C4 /* ICPreAuthorizationCompletionCommand.h in Headers */,
 				1D3D7FAB1E7A806A0043BF9D /* CryptoUtil.h in Headers */,
 				1D3D7F991E7A805C0043BF9D /* NSString+Helpers.h in Headers */,
 				1D9D806C20A2C4320054D7BB /* UIViewController+Helperes.h in Headers */,
@@ -504,9 +578,12 @@
 				1D3D7FAF1E7A806A0043BF9D /* ICHelpers.h in Headers */,
 				1D6AE8B61F738FCD00124B54 /* ICASN.h in Headers */,
 				1D3D7F951E7A805C0043BF9D /* NSData+SHA.h in Headers */,
+				1D8206F824B891E800CA3728 /* ICAuthorizationReverseCommand.h in Headers */,
 				1D3D7FD91E7A86E20043BF9D /* ICBaseManager.h in Headers */,
 				1D3D7FB21E7A806A0043BF9D /* ICUtil.h in Headers */,
+				1D82070024B893C300CA3728 /* ICAuthorizationListCommand.h in Headers */,
 				1D3D7FC41E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.h in Headers */,
+				1D6735B924B6FB32004814C4 /* ICPreAuthorizationCancellationCommand.h in Headers */,
 				1D7A78671E40954600DA6196 /* ICUpdateStoredCardCommand.h in Headers */,
 				1D3D7F971E7A805C0043BF9D /* NSDictionary+Helpers.h in Headers */,
 				1D7A78571E408F3B00DA6196 /* ICPurchaseCommand.h in Headers */,
@@ -614,14 +691,21 @@
 				1D9D806D20A2C4320054D7BB /* UIViewController+Helperes.m in Sources */,
 				1DD42C001EB8794400F83DA9 /* UIAlertController+Helpers.m in Sources */,
 				1D7A787C1E40B44B00DA6196 /* ICCardView.m in Sources */,
+				1D8206F924B891E800CA3728 /* ICAuthorizationReverseCommand.m in Sources */,
 				1D7A78941E40D56F00DA6196 /* MPUpdateStoredCardViewController.m in Sources */,
 				1D7A78741E40B01100DA6196 /* IC3DSecureWebViewController.m in Sources */,
 				1D7A78701E40AEF000DA6196 /* ICBaseViewController.m in Sources */,
 				1D7A78901E40D41B00DA6196 /* MPStoreCardViewController.m in Sources */,
 				1D53418320CFA7BF00087AD3 /* MPStoredCard.m in Sources */,
+				1D6735AE24B5BB1E004814C4 /* ICPreAuthorizationViewController.m in Sources */,
+				1D8206F124B840CB00CA3728 /* ICAuthorizationCommand.m in Sources */,
 				1D7A78601E40935100DA6196 /* ICReversalCommand.m in Sources */,
 				1D7A784C1E408D8200DA6196 /* ICGetCardDataCommand.m in Sources */,
+				1D6735B624B6FA66004814C4 /* ICPreAuthorizationCompletionCommand.m in Sources */,
+				1D6735B224B5D818004814C4 /* ICPreAuthorizationCommand.m in Sources */,
 				1D7A78A41E40E61400DA6196 /* MPCheckout.m in Sources */,
+				1D82070124B893C300CA3728 /* ICAuthorizationListCommand.m in Sources */,
+				1D6735BA24B6FB32004814C4 /* ICPreAuthorizationCancellationCommand.m in Sources */,
 				1D7A78981E40E08100DA6196 /* ICStoreCardViewController.m in Sources */,
 				1D52AA581ED6EF3A00D30724 /* Reachability.m in Sources */,
 				1D3D7FB91E7A80790043BF9D /* BSKeyboardControls.m in Sources */,
@@ -636,7 +720,9 @@
 				1D3D7F9C1E7A805C0043BF9D /* UIColor+Helpers.m in Sources */,
 				1D3D7F961E7A805C0043BF9D /* NSData+SHA.m in Sources */,
 				1D3D7FB51E7A806A0043BF9D /* MPCheckoutError.m in Sources */,
+				1D8206F524B8902400CA3728 /* ICAuthorizationCaptureCommand.m in Sources */,
 				1D3D7FD81E7A86E20043BF9D /* ICApplicationManager.m in Sources */,
+				1D6735BE24B70AE9004814C4 /* ICGetPreAuthorizationStatusCommand.m in Sources */,
 				1D4144F82101D213003F697D /* MPCheckoutController.m in Sources */,
 				1D3D7FE01E7A86E20043BF9D /* ICRSAManager.m in Sources */,
 				1D52AA541ED6EEFA00D30724 /* ICReachability.m in Sources */,
@@ -645,6 +731,7 @@
 				1D3D7FDA1E7A86E20043BF9D /* ICBaseManager.m in Sources */,
 				1D7A78381E407BEF00DA6196 /* MPURLRequest.m in Sources */,
 				1D3D7FE21E7A86E20043BF9D /* ICThemeManager.m in Sources */,
+				1D6735C224B7168E004814C4 /* MPPreAuthorizationViewController.m in Sources */,
 				1D3D7FC51E7A808B0043BF9D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				1D7A78641E4093E700DA6196 /* ICStoreCardCommand.m in Sources */,
 				1D7A78341E407B1100DA6196 /* MPCard.m in Sources */,
@@ -654,6 +741,7 @@
 				1D3D7FC91E7A86590043BF9D /* MPCheckoutTheme.m in Sources */,
 				1D55A4E21EA8963700F41037 /* NSRegularExpression+Helpers.m in Sources */,
 				1D7A78581E408F3B00DA6196 /* ICPurchaseCommand.m in Sources */,
+				1D8206FD24B8926400CA3728 /* MPAuthorization.m in Sources */,
 				1D7A780B1E3F924300DA6196 /* MPCartItem.m in Sources */,
 				1D3D7F981E7A805C0043BF9D /* NSDictionary+Helpers.m in Sources */,
 				1D7A78781E40B3CC00DA6196 /* ICCardViewController.m in Sources */,

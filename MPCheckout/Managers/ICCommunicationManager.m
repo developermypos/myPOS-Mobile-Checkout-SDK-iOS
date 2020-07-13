@@ -18,6 +18,7 @@
 #import "MPURLRequest.h"
 #import "ICReachability.h"
 #import "ICHTTPOperation.h"
+#import "MPAuthorization.h"
 
 #import "ICPurchaseCommand.h"
 #import "ICReversalCommand.h"
@@ -26,6 +27,16 @@
 #import "ICGetCardDataCommand.h"
 #import "ICUpdateStoredCardCommand.h"
 #import "ICGetTransactionStatusCommand.h"
+
+#import "ICPreAuthorizationCommand.h"
+#import "ICPreAuthorizationCompletionCommand.h"
+#import "ICPreAuthorizationCancellationCommand.h"
+#import "ICGetPreAuthorizationStatusCommand.h"
+
+#import "ICAuthorizationCommand.h"
+#import "ICAuthorizationCaptureCommand.h"
+#import "ICAuthorizationReverseCommand.h"
+#import "ICAuthorizationListCommand.h"
 
 #import "NSString+Helpers.h"
 #import "NSDictionary+Helpers.h"
@@ -220,6 +231,147 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
                                                             } failed:errorBlock]];
 }
 
+- (void)makePreAuthorizationFor:(CGFloat)amount
+                       itemName:(NSString *)itemName
+                        orderId:(NSString *)orderId
+                           card:(MPCard *)card
+                       cardData:(NSDictionary *)cardData
+                     completion:(void (^)(NSString *))completion
+                        failure:(void (^)(MPCheckoutError *))errorBlock {
+    
+    NSString *pan        = [card.pan        encrypted];
+    NSString *cvc        = [card.cvc        encrypted];
+    NSString *expiryDate = [card.expiryDate encrypted];
+    
+    if (!pan || !cvc || !expiryDate) {
+        if (errorBlock) {
+            errorBlock([self unknownError]);
+        }
+        
+        [ICLogger logDebug:@"Internal error"];
+        return;
+    }
+    
+    NSMutableDictionary *fullCardData = [@{
+                                           ICParameterPAN        : pan,
+                                           ICParameterCVC        : cvc,
+                                           ICParameterExpiryDate : expiryDate,
+                                           ICParameterCustomName : card.customName,
+                                           ICParameterEmbossName : card.embossName
+                                          }
+                                         mutableCopy];
+    
+    [fullCardData addEntriesFromDictionary:cardData];
+    
+    NSMutableDictionary<NSString *, NSString *> *extraData = [@{
+                                                                ICParameterOrderId  : orderId,
+                                                                ICParameterItemName : itemName
+                                                                }
+                                                              mutableCopy];
+    
+    [extraData addEntriesFromDictionary:cardData];
+    
+    ICPreAuthorizationCommand *command = [[ICPreAuthorizationCommand alloc] initWithAmount:ICFormatterAmount(amount) extraData:extraData];
+    [self sendCommand:command completion:[self financeOperationCompletion:completion failure:errorBlock]];
+}
+
+- (void)completePreAuthorization:(NSString *)orderId
+                       forAmount:(CGFloat)amount
+                      inCurrency:(MPCurrency)currency
+                      completion:(void (^)(NSString *orderId))completion
+                         failure:(void (^)(MPCheckoutError *error))errorBlock {
+    
+    ICPreAuthorizationCompletionCommand *command = [[ICPreAuthorizationCompletionCommand alloc] initWithOrderId:orderId amount:ICFormatterAmount(amount)];
+    [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterAmount, ICParameterCurrency, ICParameterOrderId]
+                                                            completion:^(NSDictionary *data) {
+        completion([data objectForKey:ICParameterOrderId]);
+    }
+                                                                failed:errorBlock]];
+}
+
+- (void)cancelPreAuthorization:(NSString *)orderId
+                    completion:(void (^)(void))completion
+                       failure:(void (^)(MPCheckoutError *error))errorBlock {
+    
+    ICPreAuthorizationCancellationCommand *command = [[ICPreAuthorizationCancellationCommand alloc] initWithOrderId:orderId];
+    [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterAmount, ICParameterCurrency]
+                                                            completion:^(NSDictionary *data) { completion(); }
+                                                                failed:errorBlock]];
+}
+
+- (void)getPreAuthorizationStatus:(NSString *)orderId
+                       completion:(void (^)(MPPreAuthorizationStatus status, NSString *expiryDate))completion
+                          failure:(void (^)(MPCheckoutError *error))errorBlock {
+    
+    ICGetPreAuthorizationStatusCommand *command = [[ICGetPreAuthorizationStatusCommand alloc] initWithOrderId:orderId];
+    [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterOrderId, IPCParameterPreAuthStatus, ICParameterPreAuthExpDate]
+                                                            completion:^(NSDictionary *data) {
+        completion((MPPreAuthorizationStatus)[[data objectForKey:IPCParameterPreAuthStatus] integerValue],
+                   [data objectForKey:ICParameterPreAuthExpDate]);
+    }
+                                                                failed:errorBlock]];
+}
+
+- (void)makeAuthorizationFor:(CGFloat)amount
+                    itemName:(NSString *)itemName
+                     orderId:(NSString *)orderId
+                   cardToken:(NSString *)cardToken
+                  completion:(void (^)(NSString *transactionReference))completion
+                     failure:(void (^)(MPCheckoutError *))errorBlock {
+    
+    ICAuthorizationCommand *command = [[ICAuthorizationCommand alloc] initWithAmount:ICFormatterAmount(amount)
+                                                                             orderId:orderId
+                                                                            itemName:itemName
+                                                                           cardToken:cardToken];
+    [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterOrderId, ICParameterAuthorizationTrnRef, ICParameterPreAuthExpDate]
+                                                            completion:^(NSDictionary *data) {
+        completion([data objectForKey:ICParameterAuthorizationTrnRef]);
+    } failed:errorBlock]];
+}
+
+- (void)captureAuthorizationAmounr:(CGFloat)amount
+                         fromOrder:(NSString *)orderId
+                        completion:(void (^)(NSString *transactionReference))completion
+                           failure:(void (^)(MPCheckoutError *))errorBlock {
+    
+    ICAuthorizationCaptureCommand *command = [[ICAuthorizationCaptureCommand alloc] initWithAmount:ICFormatterAmount(amount) orderId:orderId];
+    [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterOrderId, ICParameterAuthorizationTrnRef]
+                                                            completion:^(NSDictionary *data) {
+        completion([data objectForKey:ICParameterAuthorizationTrnRef]);
+    }
+                                                                failed:errorBlock]];
+}
+
+- (void)cancelAuthorization:(NSString *)orderId
+                 completion:(void (^)(NSString *transactionReference))completion
+                    failure:(void (^)(MPCheckoutError *))errorBlock {
+    
+    ICAuthorizationReverseCommand *command = [[ICAuthorizationReverseCommand alloc] initWithOrderId:orderId];
+    [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterOrderId]
+                                                            completion:^(NSDictionary *data) {
+        completion([data objectForKey:ICParameterOrderId]);
+    }
+                                                                failed:errorBlock]];
+}
+
+- (void)listAuthorizationsWithCompletion:(void (^)(NSArray<MPAuthorization *> *authorizations))completion
+                                 failure:(void (^)(MPCheckoutError *))errorBlock {
+    
+    ICAuthorizationListCommand *command = [[ICAuthorizationListCommand alloc] init];
+    [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterAuthorization]
+                                                            completion:^(NSDictionary *data) {
+        NSArray *authorizationsData = [data objectForKey:ICParameterAuthorization];
+        NSMutableArray<MPAuthorization *> *authorizations = [[NSMutableArray alloc] initWithCapacity:authorizationsData.count];
+        
+        for (NSDictionary *authorizationData in authorizationsData) {
+            [authorizations addObject:[[MPAuthorization alloc] initFromData:authorizationData]];
+        }
+        
+        completion(authorizations);
+    }
+                                                                failed:errorBlock]];
+}
+
 #pragma mark - Private Methods
 
 - (void)sendCommand:(ICBaseCommand *)command completion:(void (^)(id response))completion {
@@ -296,8 +448,8 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
 }
 
 - (void (^)(id response))operationCompletion:(NSString *)paramName
-                             completion:(void (^)(NSString *data))completion
-                                 failed:(void (^)(MPCheckoutError *error))failed {
+                                  completion:(void (^)(NSString *data))completion
+                                      failed:(void (^)(MPCheckoutError *error))failed {
     return ^(id response) {
         if ([response isKindOfClass:[MPCheckoutError class]]) {
             failed(response);

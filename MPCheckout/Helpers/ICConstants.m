@@ -18,7 +18,7 @@ CGFloat const kSeparatorHeight     = 1.0f;
 CGFloat const kTextFieldInsets     = 4.0f;
 CGFloat const kNavigationBarHeight = 64.0f;
 
-NSString * const kIPCVersion         = @"1.3";
+NSString * const kIPCVersion         = @"1.4";
 NSString * const kOutputFormat       = @"json";
 NSString * const kSource             = @"2";
 NSString * const kCardVerification   = @"2";
@@ -50,57 +50,72 @@ NSString * const ICColorBackgroundGray = @"F9F9F9";
 
 #pragma mark - Methods
 
-NSString * const ICMethodRefund               = @"IPCRefund";
-NSString * const ICMethodPurchase             = @"IPCIAPurchase";
-NSString * const ICMethodReversal             = @"IPCReversal";
-NSString * const ICMethodStoreCard            = @"IPCIAStoreCard";
-NSString * const ICMethodGetCardData          = @"IPCIATdsBin";
-NSString * const ICMethodUpdateStoredCard     = @"IPCIAStoredCardUpdate";
-NSString * const ICMethodGetTransactionStatus = @"IPCIAGetTxnStatus";
+NSString * const ICMethodRefund                       = @"IPCRefund";
+NSString * const ICMethodPurchase                     = @"IPCIAPurchase";
+NSString * const ICMethodReversal                     = @"IPCReversal";
+NSString * const ICMethodStoreCard                    = @"IPCIAStoreCard";
+NSString * const ICMethodGetCardData                  = @"IPCIATdsBin";
+NSString * const ICMethodUpdateStoredCard             = @"IPCIAStoredCardUpdate";
+NSString * const ICMethodGetTransactionStatus         = @"IPCIAGetTxnStatus";
+NSString * const ICMethodPreAuthorization             = @"IPCIAPreAuthorization";
+NSString * const ICMethodPreAuthorizationCompletion   = @"IPCPreAuthCompletion";
+NSString * const ICMethodPreAuthorizationCancellation = @"IPCPreAuthCancellation";
+NSString * const ICMethodGetPreAuthorizationStatus    = @"IPCPreAuthStatus";
+NSString * const ICMethodAuthorization                = @"IPCAuthorization";
+NSString * const ICMethodCaptureAuthorization         = @"IPCAuthorizationCapture";
+NSString * const ICMethodReverseAuthorization         = @"IPCAuthorizationReverse";
+NSString * const ICMethodListAuthorizations           = @"IPCAuthorizationList";
 
 #pragma mark - Parameters
 
-NSString * const ICParameterMID                  = @"MID";
-NSString * const ICParameterBIN                  = @"BIN";
-NSString * const ICParameterPAN                  = @"PAN";
-NSString * const ICParameterCVC                  = @"CVC";
-NSString * const ICParameterECI                  = @"ECI";
-NSString * const ICParameterAVV                  = @"AVV";
-NSString * const ICParameterXID                  = @"XID";
-NSString * const ICParameterSID                  = @"SID";
-NSString * const ICParameterData                 = @"data";
-NSString * const ICParameterPrice                = @"Price";
-NSString * const ICParameterAmount               = @"Amount";
-NSString * const ICParameterSource               = @"source";
-NSString * const ICParameterMethod               = @"IPCMethod";
-NSString * const ICParameterStatus               = @"Status";
-NSString * const ICParameterVersion              = @"version";
-NSString * const ICParameterOrderId              = @"OrderID";
-NSString * const ICParameterArticle              = @"Article";
-NSString * const ICParameterCardType             = @"CardType";
-NSString * const ICParameterWalletId             = @"WalletID";
-NSString * const ICParameterQuantity             = @"Quantity";
-NSString * const ICParameterKeyIndex             = @"KeyIndex";
-NSString * const ICParameterCurrency             = @"Currency";
-NSString * const ICParameterLanguage             = @"IPCLanguage";
-NSString * const ICParameterSignature            = @"Signature";
-NSString * const ICParameterCartItems            = @"CartItems";
-NSString * const ICParameterCardToken            = @"CardToken";
-NSString * const ICParameterIPCVersion           = @"IPCVersion";
-NSString * const ICParameterCustomName           = @"CustomName";
-NSString * const ICParameterEmbossName           = @"CardholderName";
-NSString * const ICParameterExpiryDate           = @"ExpDate";
-NSString * const ICParameterIs3DEnabled          = @"Enabled3DS";
-NSString * const ICParameter3DSecureBin          = @"3ds_bin";
-NSString * const ICParameterWalletNumber         = @"Walletnumber";
-NSString * const ICParameterOutputFormat         = @"OutputFormat";
-NSString * const ICParameterStatusMessage        = @"StatusMsg";
-NSString * const ICParameterTransactionRef       = @"IPC_Trnref";
-NSString * const ICParameterTransactionType      = @"TxnType";
-NSString * const ICParameterCardVerification     = @"CardVerification";
-NSString * const ICParameterBillingDescriptor    = @"BillingDescriptor";
-NSString * const ICParameterTransactionStatus    = @"TrnStatus";
-NSString * const ICParameterTransactionReference = @"TrnRef";
+NSString * const ICParameterMID                    = @"MID";
+NSString * const ICParameterBIN                    = @"BIN";
+NSString * const ICParameterPAN                    = @"PAN";
+NSString * const ICParameterCVC                    = @"CVC";
+NSString * const ICParameterECI                    = @"ECI";
+NSString * const ICParameterAVV                    = @"AVV";
+NSString * const ICParameterXID                    = @"XID";
+NSString * const ICParameterSID                    = @"SID";
+NSString * const ICParameterData                   = @"data";
+NSString * const ICParameterDate                   = @"Date";
+NSString * const ICParameterPrice                  = @"Price";
+NSString * const ICParameterAmount                 = @"Amount";
+NSString * const ICParameterSource                 = @"source";
+NSString * const ICParameterMethod                 = @"IPCMethod";
+NSString * const ICParameterStatus                 = @"Status";
+NSString * const ICParameterVersion                = @"version";
+NSString * const ICParameterOrderId                = @"OrderID";
+NSString * const ICParameterArticle                = @"Article";
+NSString * const ICParameterItemName               = @"ItemName";
+NSString * const ICParameterCardType               = @"CardType";
+NSString * const ICParameterWalletId               = @"WalletID";
+NSString * const ICParameterQuantity               = @"Quantity";
+NSString * const ICParameterKeyIndex               = @"KeyIndex";
+NSString * const ICParameterCurrency               = @"Currency";
+NSString * const ICParameterLanguage               = @"IPCLanguage";
+NSString * const ICParameterSignature              = @"Signature";
+NSString * const ICParameterCartItems              = @"CartItems";
+NSString * const ICParameterCardToken              = @"CardToken";
+NSString * const ICParameterIPCVersion             = @"IPCVersion";
+NSString * const ICParameterCustomName             = @"CustomName";
+NSString * const ICParameterEmbossName             = @"CardholderName";
+NSString * const ICParameterExpiryDate             = @"ExpDate";
+NSString * const ICParameterIs3DEnabled            = @"Enabled3DS";
+NSString * const ICParameter3DSecureBin            = @"3ds_bin";
+NSString * const ICParameterWalletNumber           = @"Walletnumber";
+NSString * const ICParameterOutputFormat           = @"OutputFormat";
+NSString * const ICParameterStatusMessage          = @"StatusMsg";
+NSString * const ICParameterAuthorization          = @"Authorization";
+NSString * const ICParameterTransactionRef         = @"IPC_Trnref";
+NSString * const IPCParameterPreAuthStatus         = @"IPCParameterPreAuthStatus";
+NSString * const ICParameterPreAuthExpDate         = @"PreAuthExpDate";
+NSString * const ICParameterTransactionType        = @"TxnType";
+NSString * const ICParameterCardVerification       = @"CardVerification";
+NSString * const ICParameterBillingDescriptor      = @"BillingDescriptor";
+NSString * const ICParameterTransactionStatus      = @"TrnStatus";
+NSString * const ICParameterAuthorizationTrnRef    = @"IPCTrnref";
+NSString * const ICParameterTransactionReference   = @"TrnRef";
+NSString * const ICParameterPreAuthorizationStatus = @"IPCPreAuthStatus";
 
 #pragma mark - 3DS Parameters
 
@@ -128,6 +143,7 @@ NSString * const ICNotificationThemeChanged = @"ThemeChanged";
 NSString * const ICControllerIdentifierPayment          = @"Payment";
 NSString * const ICControllerIdentifierStoreCard        = @"StoreCard";
 NSString * const ICControllerIdentifierUpdateStoredCard = @"UpdateStoredCard";
+NSString * const ICControllerIdentifierPreAuthorization = @"PreAuthorization";
 
 #pragma mark - HTTP Methods`
 
@@ -137,7 +153,8 @@ NSString * const ICHTTPMethodPOST = @"POST";
 #pragma mark - URLs
 
 NSString * const ICSandboxApiUrl      = @"https://www.mypos.eu/vmp/checkout-test";
-NSString * const ICSandbox3DSecureUrl = @"https://devs.icards.eu/mypos_tdsgateway/";
+//NSString * const ICSandboxApiUrl      = @"https://devs.mypos.com/mypos.eu/trunk/public/vmp/checkout";
+NSString * const ICSandbox3DSecureUrl = @"https://devs.mypos.com/mypos_tdsgateway/";
 
 NSString * const ICProductionApiUrl      = @"https://www.mypos.eu/vmp/checkout";
 NSString * const ICProduction3DSecureUrl = @"https://www.mypos.eu/tds/";

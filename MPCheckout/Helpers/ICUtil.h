@@ -14,12 +14,14 @@
 @class ICPaymentViewController;
 @class ICStoreCardViewController;
 @class ICUpdateStoredCardViewController;
+@class ICPreAuthorizationViewController;
 
 @interface ICUtil : NSObject
 
 + (ICPaymentViewController *)paymentController;
 + (ICStoreCardViewController *)storeCardController;
 + (ICUpdateStoredCardViewController *)updateCardController;
++ (ICPreAuthorizationViewController *)preAuthorizationController;
 
 + (NSString *)signedData:(NSDictionary<NSString *, NSString *> *)data;
 + (NSString *)itemsTotalAmount:(NSArray<MPCartItem *> *)cartItems;

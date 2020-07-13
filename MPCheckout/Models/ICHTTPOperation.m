@@ -157,12 +157,14 @@ static const char *kOperationQueue = "com.mypos.MPCheckout-operation";
     }
     
     NSMutableArray *rawResponseData = [[rawResponse componentsSeparatedByString:@",\""] mutableCopy];
+    [ICLogger logDebug:rawResponseData.debugDescription];
     
     NSError      *error    = nil;
     NSDictionary *response = [NSJSONSerialization JSONObjectWithData:_responseData options:NSJSONReadingMutableContainers error:&error];
     
     if (error) {
         [ICLogger logDebug:@"Cannot parse response to JSON"];
+//        [ICLogger logDebug:rawResponse];
         [self communicationError];
         return;
     }
@@ -197,16 +199,33 @@ static const char *kOperationQueue = "com.mypos.MPCheckout-operation";
     
     [rawResponseData removeLastObject]; // Remove signature
     
+    if (error) {
+        [ICLogger log:error.description];
+        [self signatureError];
+        return;
+    }
+    
     for (NSString *rawData in rawResponseData) {
-        @autoreleasepool {
-            NSString *value = [[rawData componentsSeparatedByString:@"\":"] lastObject];
-            
-            if (!value) {
-                continue;
+        @autoreleasepool {            
+            for (NSString *rawString in [rawData componentsSeparatedByString:@"},{"]) {
+                if ([rawString hasPrefix:@"[{"]) {
+                    continue;
+                }
+                
+                NSString *value = [[rawString componentsSeparatedByString:@"\":"] lastObject];
+                
+                if ([value hasSuffix:@"}]"]) {
+                    value = [value substringToIndex:value.length - 2];
+                }
+                
+                dataToValidate = [NSString stringWithFormat:@"%@-%@", dataToValidate, value];
             }
-            
-            dataToValidate = [NSString stringWithFormat:@"%@-%@", dataToValidate, value];
         }
+    }
+    
+    if (dataToValidate.length == 0) {
+        [self signatureError];
+        return;
     }
     
     dataToValidate = [[dataToValidate substringFromIndex:1] stringByReplacingOccurrencesOfString:@"\"" withString:@""];
