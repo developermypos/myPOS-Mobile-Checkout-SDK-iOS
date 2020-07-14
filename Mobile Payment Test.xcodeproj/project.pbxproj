@@ -7,23 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D32E5A21E7AB11200B066A0 /* MobilePaymentSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1D3D73771E2D0AC60086AA5B /* ICArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73701E2D0AC60086AA5B /* ICArticlesTableViewController.swift */; };
-		1D3D73781E2D0AC60086AA5B /* ICBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73711E2D0AC60086AA5B /* ICBaseTableViewController.swift */; };
-		1D3D73791E2D0AC60086AA5B /* ICUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73731E2D0AC60086AA5B /* ICUtils.swift */; };
-		1D3D737A1E2D0AC60086AA5B /* ICArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73751E2D0AC60086AA5B /* ICArticleTableViewCell.swift */; };
-		1D3D737B1E2D0AC60086AA5B /* ICBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73761E2D0AC60086AA5B /* ICBaseTableViewCell.swift */; };
+		1D3D73771E2D0AC60086AA5B /* MPArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73701E2D0AC60086AA5B /* MPArticlesTableViewController.swift */; };
+		1D3D73781E2D0AC60086AA5B /* MPBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73711E2D0AC60086AA5B /* MPBaseTableViewController.swift */; };
+		1D3D73791E2D0AC60086AA5B /* MPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73731E2D0AC60086AA5B /* MPUtils.swift */; };
+		1D3D737A1E2D0AC60086AA5B /* MPArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73751E2D0AC60086AA5B /* MPArticleTableViewCell.swift */; };
+		1D3D737B1E2D0AC60086AA5B /* MPBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73761E2D0AC60086AA5B /* MPBaseTableViewCell.swift */; };
 		1D3D737E1E2D0B0A0086AA5B /* UserDefaults+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D737D1E2D0B0A0086AA5B /* UserDefaults+Helpers.swift */; };
-		1D3D73811E2D0B420086AA5B /* ICCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73801E2D0B420086AA5B /* ICCard.swift */; };
-		1D3D73831E2D0C4C0086AA5B /* ICConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73821E2D0C4C0086AA5B /* ICConstants.swift */; };
-		1D3D73851E2D0D100086AA5B /* ICCardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73841E2D0D100086AA5B /* ICCardsTableViewController.swift */; };
-		1D3D73871E2D0E3F0086AA5B /* ICCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73861E2D0E3F0086AA5B /* ICCardTableViewCell.swift */; };
-		1D3D73891E2D128C0086AA5B /* ICTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73881E2D128C0086AA5B /* ICTransaction.swift */; };
-		1D3D738B1E2D12EA0086AA5B /* ICOrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D738A1E2D12EA0086AA5B /* ICOrdersTableViewController.swift */; };
-		1D3D738D1E2D133F0086AA5B /* ICOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D738C1E2D133F0086AA5B /* ICOrderTableViewCell.swift */; };
-		1D3D738F1E2D193F0086AA5B /* ICTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D738E1E2D193F0086AA5B /* ICTransactionTableViewCell.swift */; };
-		1D3D73911E2D199D0086AA5B /* ICTransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73901E2D199D0086AA5B /* ICTransactionsTableViewController.swift */; };
-		1D3D7FE41E7A909A0043BF9D /* MobilePaymentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */; };
+		1D3D73811E2D0B420086AA5B /* MPCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73801E2D0B420086AA5B /* MPCard.swift */; };
+		1D3D73831E2D0C4C0086AA5B /* MPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73821E2D0C4C0086AA5B /* MPConstants.swift */; };
+		1D3D73851E2D0D100086AA5B /* MPCardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73841E2D0D100086AA5B /* MPCardsTableViewController.swift */; };
+		1D3D73871E2D0E3F0086AA5B /* MPCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73861E2D0E3F0086AA5B /* MPCardTableViewCell.swift */; };
+		1D3D73891E2D128C0086AA5B /* MPTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73881E2D128C0086AA5B /* MPTransaction.swift */; };
+		1D3D738B1E2D12EA0086AA5B /* MPOrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D738A1E2D12EA0086AA5B /* MPOrdersTableViewController.swift */; };
+		1D3D738D1E2D133F0086AA5B /* MPOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D738C1E2D133F0086AA5B /* MPOrderTableViewCell.swift */; };
+		1D3D738F1E2D193F0086AA5B /* MPTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D738E1E2D193F0086AA5B /* MPTransactionTableViewCell.swift */; };
+		1D3D73911E2D199D0086AA5B /* MPTransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D73901E2D199D0086AA5B /* MPTransactionsTableViewController.swift */; };
 		1D66DA571E8D224400079DF0 /* JGProgressHUD Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1D66DA3F1E8D224400079DF0 /* JGProgressHUD Resources.bundle */; };
 		1D66DA581E8D224400079DF0 /* JGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA421E8D224400079DF0 /* JGProgressHUD.m */; };
 		1D66DA591E8D224400079DF0 /* JGProgressHUDAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA441E8D224400079DF0 /* JGProgressHUDAnimation.m */; };
@@ -36,6 +34,11 @@
 		1D66DA601E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA521E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m */; };
 		1D66DA611E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA541E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m */; };
 		1D66DA621E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66DA561E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m */; };
+		1D6735AA24B5B720004814C4 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6735A924B5B720004814C4 /* Test.m */; };
+		1D82070324BC3E2100CA3728 /* MPAuthorizationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82070224BC3E2100CA3728 /* MPAuthorizationsTableViewController.swift */; };
+		1D82070524BC4B5800CA3728 /* MPAuthorizationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82070424BC4B5800CA3728 /* MPAuthorizationTableViewCell.swift */; };
+		1D8B4A21231D011400F1A4E4 /* MPCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8B4A20231D011400F1A4E4 /* MPCheckout.framework */; };
+		1D8B4A23231D011800F1A4E4 /* MPCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8B4A20231D011400F1A4E4 /* MPCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1DA95B921E16584D005C3EB3 /* MobilePaymentSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DA95B901E16584D005C3EB3 /* MobilePaymentSDK.strings */; };
 		1DB58EEE1E029D2800875E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB58EED1E029D2800875E9F /* AppDelegate.swift */; };
 		1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF11E029D2800875E9F /* Main.storyboard */; };
@@ -50,7 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1D32E5A21E7AB11200B066A0 /* MobilePaymentSDK.framework in Embed Frameworks */,
+				1D8B4A23231D011800F1A4E4 /* MPCheckout.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,22 +63,21 @@
 /* Begin PBXFileReference section */
 		1D3C0D2A1E1650E700755FB4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		1D3C0D2B1E1650E700755FB4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		1D3D73701E2D0AC60086AA5B /* ICArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICArticlesTableViewController.swift; sourceTree = "<group>"; };
-		1D3D73711E2D0AC60086AA5B /* ICBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICBaseTableViewController.swift; sourceTree = "<group>"; };
-		1D3D73731E2D0AC60086AA5B /* ICUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICUtils.swift; sourceTree = "<group>"; };
-		1D3D73751E2D0AC60086AA5B /* ICArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICArticleTableViewCell.swift; sourceTree = "<group>"; };
-		1D3D73761E2D0AC60086AA5B /* ICBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICBaseTableViewCell.swift; sourceTree = "<group>"; };
+		1D3D73701E2D0AC60086AA5B /* MPArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPArticlesTableViewController.swift; sourceTree = "<group>"; };
+		1D3D73711E2D0AC60086AA5B /* MPBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPBaseTableViewController.swift; sourceTree = "<group>"; };
+		1D3D73731E2D0AC60086AA5B /* MPUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPUtils.swift; sourceTree = "<group>"; };
+		1D3D73751E2D0AC60086AA5B /* MPArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPArticleTableViewCell.swift; sourceTree = "<group>"; };
+		1D3D73761E2D0AC60086AA5B /* MPBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPBaseTableViewCell.swift; sourceTree = "<group>"; };
 		1D3D737D1E2D0B0A0086AA5B /* UserDefaults+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Helpers.swift"; sourceTree = "<group>"; };
-		1D3D73801E2D0B420086AA5B /* ICCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICCard.swift; sourceTree = "<group>"; };
-		1D3D73821E2D0C4C0086AA5B /* ICConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICConstants.swift; sourceTree = "<group>"; };
-		1D3D73841E2D0D100086AA5B /* ICCardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICCardsTableViewController.swift; sourceTree = "<group>"; };
-		1D3D73861E2D0E3F0086AA5B /* ICCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICCardTableViewCell.swift; sourceTree = "<group>"; };
-		1D3D73881E2D128C0086AA5B /* ICTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTransaction.swift; sourceTree = "<group>"; };
-		1D3D738A1E2D12EA0086AA5B /* ICOrdersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICOrdersTableViewController.swift; sourceTree = "<group>"; };
-		1D3D738C1E2D133F0086AA5B /* ICOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICOrderTableViewCell.swift; sourceTree = "<group>"; };
-		1D3D738E1E2D193F0086AA5B /* ICTransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTransactionTableViewCell.swift; sourceTree = "<group>"; };
-		1D3D73901E2D199D0086AA5B /* ICTransactionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTransactionsTableViewController.swift; sourceTree = "<group>"; };
-		1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobilePaymentSDK.framework; path = "Mobile Payment Test/MobilePaymentSDK.framework"; sourceTree = "<group>"; };
+		1D3D73801E2D0B420086AA5B /* MPCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCard.swift; sourceTree = "<group>"; };
+		1D3D73821E2D0C4C0086AA5B /* MPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPConstants.swift; sourceTree = "<group>"; };
+		1D3D73841E2D0D100086AA5B /* MPCardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCardsTableViewController.swift; sourceTree = "<group>"; };
+		1D3D73861E2D0E3F0086AA5B /* MPCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCardTableViewCell.swift; sourceTree = "<group>"; };
+		1D3D73881E2D128C0086AA5B /* MPTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPTransaction.swift; sourceTree = "<group>"; };
+		1D3D738A1E2D12EA0086AA5B /* MPOrdersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPOrdersTableViewController.swift; sourceTree = "<group>"; };
+		1D3D738C1E2D133F0086AA5B /* MPOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPOrderTableViewCell.swift; sourceTree = "<group>"; };
+		1D3D738E1E2D193F0086AA5B /* MPTransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPTransactionTableViewCell.swift; sourceTree = "<group>"; };
+		1D3D73901E2D199D0086AA5B /* MPTransactionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPTransactionsTableViewController.swift; sourceTree = "<group>"; };
 		1D3D7FE51E7A90B30043BF9D /* Mobile Payment Test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mobile Payment Test-Bridging-Header.h"; sourceTree = "<group>"; };
 		1D66DA3F1E8D224400079DF0 /* JGProgressHUD Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "JGProgressHUD Resources.bundle"; sourceTree = "<group>"; };
 		1D66DA401E8D224400079DF0 /* JGProgressHUD-Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JGProgressHUD-Defines.h"; sourceTree = "<group>"; };
@@ -101,6 +103,11 @@
 		1D66DA541E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDRingIndicatorView.m; sourceTree = "<group>"; };
 		1D66DA551E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGProgressHUDSuccessIndicatorView.h; sourceTree = "<group>"; };
 		1D66DA561E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGProgressHUDSuccessIndicatorView.m; sourceTree = "<group>"; };
+		1D6735A824B5B720004814C4 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		1D6735A924B5B720004814C4 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		1D82070224BC3E2100CA3728 /* MPAuthorizationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPAuthorizationsTableViewController.swift; sourceTree = "<group>"; };
+		1D82070424BC4B5800CA3728 /* MPAuthorizationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPAuthorizationTableViewCell.swift; sourceTree = "<group>"; };
+		1D8B4A20231D011400F1A4E4 /* MPCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MPCheckout.framework; path = "Mobile Payment Test/MPCheckout.framework"; sourceTree = "<group>"; };
 		1DA95B911E16584D005C3EB3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "Mobile Payment Test/de.lproj/MobilePaymentSDK.strings"; sourceTree = "<group>"; };
 		1DA95B931E16585A005C3EB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Mobile Payment Test/en.lproj/MobilePaymentSDK.strings"; sourceTree = "<group>"; };
 		1DB58EEA1E029D2800875E9F /* Mobile Payment Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Payment Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D3D7FE41E7A909A0043BF9D /* MobilePaymentSDK.framework in Frameworks */,
+				1D8B4A21231D011400F1A4E4 /* MPCheckout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,11 +133,12 @@
 		1D3D736F1E2D0AC60086AA5B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1D3D73711E2D0AC60086AA5B /* ICBaseTableViewController.swift */,
-				1D3D73701E2D0AC60086AA5B /* ICArticlesTableViewController.swift */,
-				1D3D73841E2D0D100086AA5B /* ICCardsTableViewController.swift */,
-				1D3D738A1E2D12EA0086AA5B /* ICOrdersTableViewController.swift */,
-				1D3D73901E2D199D0086AA5B /* ICTransactionsTableViewController.swift */,
+				1D3D73711E2D0AC60086AA5B /* MPBaseTableViewController.swift */,
+				1D3D73701E2D0AC60086AA5B /* MPArticlesTableViewController.swift */,
+				1D3D73841E2D0D100086AA5B /* MPCardsTableViewController.swift */,
+				1D3D738A1E2D12EA0086AA5B /* MPOrdersTableViewController.swift */,
+				1D3D73901E2D199D0086AA5B /* MPTransactionsTableViewController.swift */,
+				1D82070224BC3E2100CA3728 /* MPAuthorizationsTableViewController.swift */,
 			);
 			name = Controllers;
 			path = Classes/Controllers;
@@ -139,8 +147,8 @@
 		1D3D73721E2D0AC60086AA5B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				1D3D73731E2D0AC60086AA5B /* ICUtils.swift */,
-				1D3D73821E2D0C4C0086AA5B /* ICConstants.swift */,
+				1D3D73731E2D0AC60086AA5B /* MPUtils.swift */,
+				1D3D73821E2D0C4C0086AA5B /* MPConstants.swift */,
 			);
 			name = Helpers;
 			path = Classes/Helpers;
@@ -150,11 +158,12 @@
 			isa = PBXGroup;
 			children = (
 				1D66DA3E1E8D224400079DF0 /* JGProgressHUD */,
-				1D3D73761E2D0AC60086AA5B /* ICBaseTableViewCell.swift */,
-				1D3D73751E2D0AC60086AA5B /* ICArticleTableViewCell.swift */,
-				1D3D73861E2D0E3F0086AA5B /* ICCardTableViewCell.swift */,
-				1D3D738C1E2D133F0086AA5B /* ICOrderTableViewCell.swift */,
-				1D3D738E1E2D193F0086AA5B /* ICTransactionTableViewCell.swift */,
+				1D3D73761E2D0AC60086AA5B /* MPBaseTableViewCell.swift */,
+				1D3D73751E2D0AC60086AA5B /* MPArticleTableViewCell.swift */,
+				1D3D73861E2D0E3F0086AA5B /* MPCardTableViewCell.swift */,
+				1D3D738C1E2D133F0086AA5B /* MPOrderTableViewCell.swift */,
+				1D3D738E1E2D193F0086AA5B /* MPTransactionTableViewCell.swift */,
+				1D82070424BC4B5800CA3728 /* MPAuthorizationTableViewCell.swift */,
 			);
 			name = Views;
 			path = Classes/Views;
@@ -172,8 +181,8 @@
 		1D3D737F1E2D0B390086AA5B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1D3D73801E2D0B420086AA5B /* ICCard.swift */,
-				1D3D73881E2D128C0086AA5B /* ICTransaction.swift */,
+				1D3D73801E2D0B420086AA5B /* MPCard.swift */,
+				1D3D73881E2D128C0086AA5B /* MPTransaction.swift */,
 			);
 			name = Models;
 			path = Classes/Models;
@@ -213,7 +222,7 @@
 		1DA95B841E1655AF005C3EB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D3D7FE31E7A909A0043BF9D /* MobilePaymentSDK.framework */,
+				1D8B4A20231D011400F1A4E4 /* MPCheckout.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,6 +253,8 @@
 				1D3D737F1E2D0B390086AA5B /* Models */,
 				1D3D73741E2D0AC60086AA5B /* Views */,
 				1DB58EED1E029D2800875E9F /* AppDelegate.swift */,
+				1D6735A824B5B720004814C4 /* Test.h */,
+				1D6735A924B5B720004814C4 /* Test.m */,
 				1DB58EF11E029D2800875E9F /* Main.storyboard */,
 				1DB58EF61E029D2800875E9F /* LaunchScreen.storyboard */,
 				1DA95B901E16584D005C3EB3 /* MobilePaymentSDK.strings */,
@@ -283,7 +294,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "Intercard Finance AD";
+				ORGANIZATIONNAME = "myPOS AD";
 				TargetAttributes = {
 					1DB58EE91E029D2800875E9F = {
 						CreatedOnToolsVersion = 8.2;
@@ -298,6 +309,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				de,
@@ -332,31 +344,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D3D738F1E2D193F0086AA5B /* ICTransactionTableViewCell.swift in Sources */,
-				1D3D73811E2D0B420086AA5B /* ICCard.swift in Sources */,
-				1D3D737A1E2D0AC60086AA5B /* ICArticleTableViewCell.swift in Sources */,
-				1D3D73781E2D0AC60086AA5B /* ICBaseTableViewController.swift in Sources */,
+				1D82070524BC4B5800CA3728 /* MPAuthorizationTableViewCell.swift in Sources */,
+				1D3D738F1E2D193F0086AA5B /* MPTransactionTableViewCell.swift in Sources */,
+				1D3D73811E2D0B420086AA5B /* MPCard.swift in Sources */,
+				1D3D737A1E2D0AC60086AA5B /* MPArticleTableViewCell.swift in Sources */,
+				1D3D73781E2D0AC60086AA5B /* MPBaseTableViewController.swift in Sources */,
 				1D66DA5E1E8D224400079DF0 /* JGProgressHUDIndeterminateIndicatorView.m in Sources */,
 				1D66DA5C1E8D224400079DF0 /* JGProgressHUDFadeZoomAnimation.m in Sources */,
-				1D3D73791E2D0AC60086AA5B /* ICUtils.swift in Sources */,
-				1D3D738B1E2D12EA0086AA5B /* ICOrdersTableViewController.swift in Sources */,
+				1D3D73791E2D0AC60086AA5B /* MPUtils.swift in Sources */,
+				1D3D738B1E2D12EA0086AA5B /* MPOrdersTableViewController.swift in Sources */,
 				1D66DA5A1E8D224400079DF0 /* JGProgressHUDErrorIndicatorView.m in Sources */,
-				1D3D73911E2D199D0086AA5B /* ICTransactionsTableViewController.swift in Sources */,
-				1D3D73771E2D0AC60086AA5B /* ICArticlesTableViewController.swift in Sources */,
-				1D3D73891E2D128C0086AA5B /* ICTransaction.swift in Sources */,
+				1D3D73911E2D199D0086AA5B /* MPTransactionsTableViewController.swift in Sources */,
+				1D3D73771E2D0AC60086AA5B /* MPArticlesTableViewController.swift in Sources */,
+				1D3D73891E2D128C0086AA5B /* MPTransaction.swift in Sources */,
 				1D66DA611E8D224400079DF0 /* JGProgressHUDRingIndicatorView.m in Sources */,
-				1D3D73871E2D0E3F0086AA5B /* ICCardTableViewCell.swift in Sources */,
+				1D82070324BC3E2100CA3728 /* MPAuthorizationsTableViewController.swift in Sources */,
+				1D3D73871E2D0E3F0086AA5B /* MPCardTableViewCell.swift in Sources */,
 				1D66DA591E8D224400079DF0 /* JGProgressHUDAnimation.m in Sources */,
-				1D3D737B1E2D0AC60086AA5B /* ICBaseTableViewCell.swift in Sources */,
+				1D3D737B1E2D0AC60086AA5B /* MPBaseTableViewCell.swift in Sources */,
 				1D3D737E1E2D0B0A0086AA5B /* UserDefaults+Helpers.swift in Sources */,
 				1DB58EEE1E029D2800875E9F /* AppDelegate.swift in Sources */,
 				1D66DA5D1E8D224400079DF0 /* JGProgressHUDImageIndicatorView.m in Sources */,
-				1D3D73831E2D0C4C0086AA5B /* ICConstants.swift in Sources */,
-				1D3D73851E2D0D100086AA5B /* ICCardsTableViewController.swift in Sources */,
+				1D3D73831E2D0C4C0086AA5B /* MPConstants.swift in Sources */,
+				1D3D73851E2D0D100086AA5B /* MPCardsTableViewController.swift in Sources */,
 				1D66DA601E8D224400079DF0 /* JGProgressHUDPieIndicatorView.m in Sources */,
-				1D3D738D1E2D133F0086AA5B /* ICOrderTableViewCell.swift in Sources */,
+				1D3D738D1E2D133F0086AA5B /* MPOrderTableViewCell.swift in Sources */,
 				1D66DA5B1E8D224400079DF0 /* JGProgressHUDFadeAnimation.m in Sources */,
 				1D66DA5F1E8D224400079DF0 /* JGProgressHUDIndicatorView.m in Sources */,
+				1D6735AA24B5B720004814C4 /* Test.m in Sources */,
 				1D66DA621E8D224400079DF0 /* JGProgressHUDSuccessIndicatorView.m in Sources */,
 				1D66DA581E8D224400079DF0 /* JGProgressHUD.m in Sources */,
 			);
@@ -516,13 +531,16 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
 				);
 				INFOPLIST_FILE = "Mobile Payment Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mypos.Mobile-Payment-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mypos.checkout-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Mobile Payment Test/Mobile Payment Test-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -541,12 +559,15 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
 				);
 				INFOPLIST_FILE = "Mobile Payment Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mypos.Mobile-Payment-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mypos.checkout-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Mobile Payment Test/Mobile Payment Test-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;

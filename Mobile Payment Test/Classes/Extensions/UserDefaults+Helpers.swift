@@ -12,15 +12,15 @@ extension UserDefaults {
     
     // MARK: Cards
     
-    static func cards() -> [ICCard]? {
-        guard let cardsData = UserDefaults.standard.data(forKey: ICConstants.cards) else {
+    static func cards() -> [MPCard]? {
+        guard let cardsData = UserDefaults.standard.data(forKey: MPConstants.cards) else {
             return nil
         }
         
         return self.unarchivedCards(cardsData)
     }
     
-    static func addCard(_ card: ICCard) {
+    static func addCard(_ card: MPCard) {
         var cards = [card]
         
         if let oldCards = self.cards() {
@@ -30,7 +30,7 @@ extension UserDefaults {
         self.saveCards(cards)
     }
     
-    static func deleteCard(_ card: ICCard) {
+    static func deleteCard(_ card: MPCard) {
         var cards = self.cards() ?? []
         
         if let oldCardIndex = cards.index(of: card) {
@@ -40,23 +40,23 @@ extension UserDefaults {
         self.saveCards(cards)
     }
     
-    private static func saveCards(_ cards: [ICCard]) {
-        UserDefaults.standard.setValue(self.archivedCards(cards), forKey: ICConstants.cards)
+    private static func saveCards(_ cards: [MPCard]) {
+        UserDefaults.standard.setValue(self.archivedCards(cards), forKey: MPConstants.cards)
     }
     
-    private static func archivedCards(_ cards: [ICCard]) -> Data {
+    private static func archivedCards(_ cards: [MPCard]) -> Data {
         return NSKeyedArchiver.archivedData(withRootObject: cards)
     }
     
-    private static func unarchivedCards(_ cardsData: Data) -> [ICCard]? {
-        return NSKeyedUnarchiver.unarchiveObject(with: cardsData) as? [ICCard]
+    private static func unarchivedCards(_ cardsData: Data) -> [MPCard]? {
+        return NSKeyedUnarchiver.unarchiveObject(with: cardsData) as? [MPCard]
     }
     
     
     // MARK: Orders
     
     static func orders() -> [String]? {
-        return UserDefaults.standard.array(forKey: ICConstants.orders) as? [String]
+        return UserDefaults.standard.array(forKey: MPConstants.orders) as? [String]
     }
     
     static func addOrder(_ order: String) {
@@ -80,21 +80,21 @@ extension UserDefaults {
     }
     
     private static func saveOrders(_ orders: [String]) {
-        UserDefaults.standard.set(orders, forKey: ICConstants.orders)
+        UserDefaults.standard.set(orders, forKey: MPConstants.orders)
     }
     
     
     // MARK: Transactions
     
-    static func transactions() -> [ICTransaction]? {
-        guard let transactionsData = UserDefaults.standard.data(forKey: ICConstants.transactions) else {
+    static func transactions() -> [MPTransaction]? {
+        guard let transactionsData = UserDefaults.standard.data(forKey: MPConstants.transactions) else {
             return nil
         }
         
         return self.unarchivedTransactions(transactionsData)
     }
     
-    static func addTransaction(_ transaction: ICTransaction) {
+    static func addTransaction(_ transaction: MPTransaction) {
         var transactions = [transaction]
         
         if let oldTransactions = self.transactions() {
@@ -104,7 +104,7 @@ extension UserDefaults {
         self.saveTransactions(transactions)
     }
     
-    static func deleteTransaction(_ transaction: ICTransaction) {
+    static func deleteTransaction(_ transaction: MPTransaction) {
         var transactions = self.transactions() ?? []
         
         if let oldTransactionIndex = transactions.index(of: transaction) {
@@ -114,15 +114,15 @@ extension UserDefaults {
         self.saveTransactions(transactions)
     }
     
-    private static func saveTransactions(_ transactions: [ICTransaction]) {
-        UserDefaults.standard.setValue(self.archivedTransactions(transactions), forKey: ICConstants.transactions)
+    private static func saveTransactions(_ transactions: [MPTransaction]) {
+        UserDefaults.standard.setValue(self.archivedTransactions(transactions), forKey: MPConstants.transactions)
     }
     
-    private static func archivedTransactions(_ transactions: [ICTransaction]) -> Data {
+    private static func archivedTransactions(_ transactions: [MPTransaction]) -> Data {
         return NSKeyedArchiver.archivedData(withRootObject: transactions)
     }
     
-    private static func unarchivedTransactions(_ transactionsData: Data) -> [ICTransaction]? {
-        return NSKeyedUnarchiver.unarchiveObject(with: transactionsData) as? [ICTransaction]
+    private static func unarchivedTransactions(_ transactionsData: Data) -> [MPTransaction]? {
+        return NSKeyedUnarchiver.unarchiveObject(with: transactionsData) as? [MPTransaction]
     }
 }

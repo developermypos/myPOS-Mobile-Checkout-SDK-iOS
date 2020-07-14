@@ -1,0 +1,6 @@
+framework module MPCheckout {
+  umbrella header "MPCheckout.h"
+
+  export *
+  module * { export * }
+}
