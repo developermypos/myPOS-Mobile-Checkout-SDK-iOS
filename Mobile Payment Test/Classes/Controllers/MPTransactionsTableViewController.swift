@@ -133,6 +133,6 @@ class MPTransactionsTableViewController: MPBaseTableViewController {
         alertController.addAction(cancelAction)
         alertController.addAction(refundAction)
         
-        self.present(alertController, animated: true, completion: nil)
+        self.presenter.present(alertController, animated: true, completion: nil)
     }
 }

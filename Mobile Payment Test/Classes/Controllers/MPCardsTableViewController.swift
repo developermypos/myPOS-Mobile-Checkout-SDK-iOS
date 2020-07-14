@@ -130,7 +130,7 @@ class MPCardsTableViewController: MPBaseTableViewController {
                                                  cardToken: _selectedCardToken,
                                                  delegate: self)
         
-        present(controller, animated: true, completion: nil)
+        self.presenter.present(controller, animated: true, completion: nil)
     }
     
     func updateCard() {

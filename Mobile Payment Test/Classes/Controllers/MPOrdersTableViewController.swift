@@ -83,7 +83,7 @@ class MPOrdersTableViewController: MPBaseTableViewController {
         alertController.addAction(refundAction)
         alertController.addAction(purchaseAction)
         
-        self.present(alertController, animated: true, completion: nil)
+        self.presenter.present(alertController, animated: true, completion: nil)
     }
     
     private func getOrderStatus(_ orderId: String, type: MPTransactionType) {

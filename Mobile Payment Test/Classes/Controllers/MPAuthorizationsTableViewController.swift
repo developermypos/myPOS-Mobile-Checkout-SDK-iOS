@@ -63,7 +63,7 @@ class MPAuthorizationsTableViewController: MPBaseTableViewController {
         
         alertController.addAction(UIAlertAction(title: "Capture \(authorization.amount) \(authorization.currency)", style: .default, handler: { (_) in
             self.showLoadingHUD()
-            MPCheckout.captureAuthorization(authorization.orderId, forAmount: CGFloat(Float(authorization.amount) ?? 0.00), completion: { (_) in
+            MPCheckout.captureAuthorization(authorization.orderId, forAmount: authorization.amount, completion: { (_) in
                 self.showSuccessMessage()
             }) { (error) in
                 self.hideLoadingHUD()

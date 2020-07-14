@@ -33,7 +33,9 @@ extension UserDefaults {
     static func deleteCard(_ card: MPCard) {
         var cards = self.cards() ?? []
         
-        if let oldCardIndex = cards.index(of: card) {
+        if let oldCardIndex = cards.index(where: { (oldCard) -> Bool in
+            return oldCard.token == card.token
+        }) {
             cards.remove(at: oldCardIndex)
         }
         

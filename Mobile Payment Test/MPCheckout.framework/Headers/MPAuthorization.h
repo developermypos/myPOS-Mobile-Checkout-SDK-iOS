@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MPAuthorization : NSObject
 
+@property (nonatomic) CGFloat amount;
 @property (nonatomic, strong) NSString *date;
-@property (nonatomic, strong) NSString *amount;
 @property (nonatomic, strong) NSString *currency;
 @property (nonatomic, strong) NSString *orderId;
 @property (nonatomic, strong) NSString *trnReference;

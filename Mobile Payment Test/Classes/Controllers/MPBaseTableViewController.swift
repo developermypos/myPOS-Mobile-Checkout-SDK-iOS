@@ -32,7 +32,6 @@ class MPBaseTableViewController: UITableViewController, MPPaymentDelegate, MPSto
     
     func paymentDidFailWithError(_ error: MPCheckoutError) {
         self.showAlertWithText("Payment error: \(error.localizedDescription)")
-//        self.showAlertWithText("Payment error: \(error.message)")
     }
     
     
@@ -44,7 +43,6 @@ class MPBaseTableViewController: UITableViewController, MPPaymentDelegate, MPSto
     
     func storeCardDidFailWithError(_ error: MPCheckoutError) {
         self.showAlertWithText("Store card error: \(error.localizedDescription)")
-//        self.showAlertWithText("Store card error: \(error.message)")
     }
     
     func updateStoredCardDidComplete(withData storedCard: MPStoredCard, forCardWithToken cardToken: String) {
@@ -53,7 +51,6 @@ class MPBaseTableViewController: UITableViewController, MPPaymentDelegate, MPSto
     
     func updateStoredCardDidFailWithError(_ error: MPCheckoutError) {
         self.showAlertWithText("Update stored card error: \(error.localizedDescription)")
-//        self.showAlertWithText("Update stored card error: \(error.message)")
     }
     
     public func didMakePayment(transactionRef: String) {
@@ -102,7 +99,6 @@ class MPBaseTableViewController: UITableViewController, MPPaymentDelegate, MPSto
                 _ = self.navigationController?.popToRootViewController(animated: true)
             }
         }
-        
         
         alertController.addAction(okAction)
         

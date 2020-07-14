@@ -87,22 +87,22 @@ Accepting mobile payments for merchants
  
 Swift:
 ```Swift
-MobilePaymentSDK.initialize(accountNumber: "1234567890",
-                            storeId: "12345",
-                            currency: .eur,
-                            certificate: "public_cert",
-                            privateKey: "private_key")
+MPCheckout.initialize(accountNumber: "1234567890",
+                      storeId: "12345",
+                      currency: .eur,
+                      certificate: "public_cert",
+                      privateKey: "private_key")
 ```
   
 Objective-C:
 ```ObjectiveC
-[MobilePaymentSDK initializeWithAccountNumber:@"1234567890"
-                                      storeId:@"12345"
-                                     currency:CurrencyEUR
-                                  certificate:@"public_cert"
-                                   privateKey:@"private_key"
-                                       bundle:[NSBundle mainBundle]
-                                     keyIndex:1];
+[MPCheckout initializeWithAccountNumber:@"1234567890"
+                                storeId:@"12345"
+                               currency:MPCurrencyEUR
+                            certificate:@"public_cert"
+                             privateKey:@"private_key"
+                                 bundle:[NSBundle mainBundle]
+                               keyIndex:1];
 ```
   
   Note: “bundle” and “keyIndex” are optional in Swift and default to main bundle and first key index. The key index represents the sequence of the generated key. In Objective-C we need to provide those to the SDK. The bundle will be used to look for the certificate, private key and localization files.
@@ -117,18 +117,18 @@ The SDK allows further configuration by using the existing settings. These are t
   
 Swift:
 ```Swift
-let controller = PaymentViewController(cartItems: selectedCartItems, 
-                                       orderId: ICUtils.randomOrderId, 
-                                       delegate: self)
+let controller = MPPaymentViewController(cartItems: selectedCartItems, 
+                                         orderId: ICUtils.randomOrderId, 
+                                         delegate: self)
 
 self.present(controller, animated: true, completion: nil)
 ```
   
 Objective-C:
 ```ObjectiveC
-PaymentViewController *controller = [[PaymentViewController alloc] initWithCartItems:_selectedCartItems 
-                                                                             orderId:[ICUtils randomOrderId] 
-                                                                            delegate:self];
+MPPaymentViewController *controller = [[MPPaymentViewController alloc] initWithCartItems:_selectedCartItems 
+                                                                                 orderId:[ICUtils randomOrderId] 
+                                                                                delegate:self];
 
 [self presentViewController:controller animated:YES completion:nil];
 ```
@@ -138,13 +138,13 @@ The delegate must implement PaymentDelegate’s methods:
 Swift:
 ```Swift
 func didMakePayment(transactionRef: String)
-func paymentFailed(error: MobilePaymentSDKError)
+func paymentFailed(error: MPCheckoutError)
 ```
   
 Objective-C:
 ```ObjectiveC
 - (void)didMakePaymentWithTransactionRef:(NSString *)transactionRef;
-- (void)paymentFailedWithError:(MobilePaymentSDKError *)error;
+- (void)paymentFailedWithError:(MPCheckoutError *)error;
 ```
   
   ## Perform a Payment with a Stored Card
@@ -153,20 +153,20 @@ Objective-C:
  
 Swift:
 ```Swift
-let controller = PaymentViewController(cartItems: selectedCartItems, 
-                                       orderId: ICUtils.randomOrderId, 
-                                       cardToken: selectedCardToken,
-                                       delegate: self)
+let controller = MPPaymentViewController(cartItems: selectedCartItems, 
+                                         orderId: ICUtils.randomOrderId, 
+                                         cardToken: selectedCardToken,
+                                         delegate: self)
 
 self.present(controller, animated: true, completion: nil)
 ```
   
 Objective-C:
 ```ObjectiveC
-PaymentViewController *controller = [[PaymentViewController alloc] initWithCartItems:_selectedCartItems 
-                                                                             orderId:[ICUtils randomOrderId]
-                                                                           cardToken:_selectedCardToken
-                                                                            delegate:self];
+MPPaymentViewController *controller = [[MPPaymentViewController alloc] initWithCartItems:_selectedCartItems 
+                                                                                 orderId:[ICUtils randomOrderId]
+                                                                               cardToken:_selectedCardToken
+                                                                                delegate:self];
 
 [self presentViewController:controller animated:YES completion:nil];
 ```
@@ -176,13 +176,13 @@ The same delegate methods are called after completion:
 Swift:
 ```Swift
 func didMakePayment(transactionRef: String)
-func paymentFailed(error: MobilePaymentSDKError)
+func paymentFailed(error: MPCheckoutError)
 ```
   
 Objective-C:
 ```ObjectiveC
 - (void)didMakePaymentWithTransactionRef:(NSString *)transactionRef;
-- (void)paymentFailedWithError:(MobilePaymentSDKError *)error;
+- (void)paymentFailedWithError:(MPCheckoutError *)error;
 ```
 
   ## Add a Card
@@ -191,16 +191,16 @@ Create an instance of StoreCardViewController with a verification amount and a d
 
 Swift:
 ```Swift
-let controller = StoreCardViewController(verificationAmount: 1.00, 
-                                         delegate: self)
+let controller = MPStoreCardViewController(verificationAmount: 1.00, 
+                                           delegate: self)
 
 present(controller, animated: true, completion: nil)
 ```
   
 Objective-C:
 ```ObjectiveC
-StoreCardViewController *controller = [[StoreCardViewController alloc] initWithVerificationAmount:1.00
-                                                                                         delegate:self];
+MPStoreCardViewController *controller = [[MPStoreCardViewController alloc] initWithVerificationAmount:1.00
+                                                                                             delegate:self];
 
 [self presentViewController:controller animated:YES completion:nil];
 ```
@@ -209,14 +209,14 @@ The delegate must implement StoreCardDelegate’s methods.
 
 Swift:
 ```Swift
-func didStoreCard(cardToken: String, customName: String)
-func storeCardFailed(error: MobilePaymentSDKError)
+func storeCardDidComplete(withData storedCard: MPStoredCard)
+func storeCardDidFailWithError(_ error: MPCheckoutError)
 ```
   
 Objective-C:
 ```ObjectiveC
-- (void)didStoreCardWithCardToken:(NSString *)cardToken customName:(NSString *)customName;
-- (void)storeCardFailedWithError:(MobilePaymentSDKError *)error;
+- (void)storeCardDidCompleteWithData:(MPStoredCard *)storedCard
+- (void)storeCardDidFailWithError:(MPCheckoutError *)error;
 ```
 
   ## Update a Stored Card
@@ -226,18 +226,18 @@ Create an instance of UpdateStoredCardViewController with a verification amount 
 
 Swift:
 ```Swift
-let controller = UpdateStoredCardViewController(cardToken: selectedCard.token
-                                                verificationAmount: 1.00, 
-                                                delegate: self)
+let controller = MPUpdateStoredCardViewController(cardToken: selectedCard.token
+                                                  verificationAmount: 1.00, 
+                                                  delegate: self)
 
 present(controller, animated: true, completion: nil)
 ```
   
 Objective-C:
 ```ObjectiveC
-UpdateStoredCardViewController *controller = [[UpdateStoredCardViewController alloc] initWithCardToken:_card.token
-                                                                                    verificationAmount:1.00
-                                                                                              delegate:self];
+MPUpdateStoredCardViewController *controller = [[MPUpdateStoredCardViewController alloc] initWithCardToken:_card.token
+                                                                                        verificationAmount:1.00
+                                                                                                  delegate:self];
 [self presentViewController:controller animated:YES completion:nil];
 ```
 
@@ -245,44 +245,44 @@ The delegate must implement StoreCardDelegate’s methods.
 
 Swift:
 ```Swift
-func didUpdateStoredCard(cardToken: String, customName: String)
-func updateStoredCardFailed(error: MobilePaymentSDKError)
+func updateStoredCardDidComplete(withData storedCard: MPStoredCard, forCardWithToken cardToken: String)
+func updateStoredCardDidFailWithError(_ error: MPCheckoutError)
 ```
   
 Objective-C:
 ```ObjectiveC
-- (void)didUpdateStoredCardWithCardToken:(NSString *)cardToken customName:(NSString *)customName;
-- (void)updateStoredCardFailedWithError:(MobilePaymentSDKError *)error;
+- (void)updateStoredCardDidCompleteWithData:(MPStoredCard *)storedCard forCardWithToken:(NSString *)cardToken
+- (void)updateStoredCardDidFailWithError:(MPCheckoutError *)error
 ```
 
   ## Perform a Refund
   
-Refunding a payment requires that you have the transaction reference and order id of the payment. The amount should also be specified. A completion block with the transaction reference and a failed block with a MobilePaymentSDKError object should be provided.
+Refunding a payment requires that you have the transaction reference and order id of the payment. The amount should also be specified. A completion block with the transaction reference and a failed block with a MPCheckoutError object should be provided.
 
 Swift:
 ```Swift
-MobilePaymentSDK.refundTransaction(transaction.reference, 
-                                   orderId: transaction.orderId, 
-                                   amount: amount, 
-                                   completed: { (transactionRef) in
-                                    showAlertWithText("Refund completed successfully")
-}, 
-                                   failed: { (error) in 
-                             showAlertWithText("Refund failed. Error: \(error.message)")
+MPCheckout.refundTransaction(transaction.reference, 
+                             orderId: transaction.orderId, 
+                             amount: amount, 
+                             completed: { (transactionRef) in
+                              showAlertWithText("Refund completed successfully")
+},
+                             failed: { (error) in 
+                              showAlertWithText("Refund failed. Error: \(error.message)")
 })
 ```
   
 Objective-C:
 ```ObjectiveC
-[MobilePaymentSDK refundTransaction:_transaction.reference
-                            orderId:_transaction.orderId
-                             amount:_amount
-                          completed:^(NSString * _Nonnull transactionRef) {
-                              [self showAlertWithText:@"Refund completed successfully"];
-                          } failed:^(MobilePaymentSDKError * _Nonnull error) {
-                              [self showAlertWithText:[@"Refund failed. Error: "                                 
-                                                       stringByAppendingString:error.message]];
-                          }];
+[MPCheckout refundTransaction:_transaction.reference
+                      orderId:_transaction.orderId
+                       amount:_amount
+                    completed:^(NSString * _Nonnull transactionRef) {
+                        [self showAlertWithText:@"Refund completed successfully"];
+                    } failed:^(MPCheckoutError * _Nonnull error) {
+                        [self showAlertWithText:[@"Refund failed. Error: "                                 
+                                                 stringByAppendingString:error.message]];
+                    }];
 ```
 
 Note: Please make sure that you are using the correct Transaction Reference ID for the transaction that you want to be refunded.
@@ -293,32 +293,32 @@ To check the status of a transaction, you need its order id and type, whether it
 
 Swift:
 ```Swift
-MobilePaymentSDK.getOrderStatusFor(orderId,
-                                   transactionType: type,
-                                   completed: { (status, reference) in
-                                    self.showAlertWithText("Order \(orderId). " +
-                                                           "Status - \(status) | " + 
-                                                           "Reference - \(reference)")
+MPCheckout.getOrderStatusFor(orderId,
+                             transactionType: type,
+                             completed: { (status, reference) in
+                              self.showAlertWithText("Order \(orderId). " +
+                                                     "Status - \(status) | " + 
+                                                     "Reference - \(reference)")
 },
-                                   failed: { (error) in
-                                    self.showAlertWithText("Error while getting order status: " +
-                                                           "\(error.message)")
+                             failed: { (error) in
+                              self.showAlertWithText("Error while getting order status: " +
+                                                     "\(error.message)")
 })
 ```
   
 Objective-C:
 ```ObjectiveC
-[MobilePaymentSDK getOrderStatusFor:_orderId
-                    transactionType:_transactionType
-                          completed:^(NSInteger status, NSString * _Nonnull paymentRef) {
-                              [self showAlertWithText:[NSString stringWithFormat:
-                                                      @"Order %@. Status - %ld | Reference - %@",
-                                                      orderId, status, paymentRef]];
-                           } failed:^(MobilePaymentSDKError * _Nonnull error) {
-        			  [self showAlertWithText:[NSString stringWithFormat:
-                                                      @"Error while getting order status: %ld",
-                                                      status]];
-                           }];
+[MPCheckout getOrderStatusFor:_orderId
+              transactionType:_transactionType
+                    completed:^(NSInteger status, NSString * _Nonnull paymentRef) {
+                        [self showAlertWithText:[NSString stringWithFormat:
+                                                @"Order %@. Status - %ld | Reference - %@",
+                                                orderId, status, paymentRef]];
+                     } failed:^(MPCheckoutError * _Nonnull error) {
+                        [self showAlertWithText:[NSString stringWithFormat:
+                                                @"Error while getting order status: %ld",
+                                                status]];
+                    }];
 ```
 
 # UI customization
@@ -333,7 +333,8 @@ Create a new MobilePaymentTheme object and set its properties. Here is an exampl
 
 Swift:
 ```Swift
-var theme = MobilePaymentTheme()
+var theme                  = MPCheckoutTheme()
+theme.labelFontSize        = 13.0
 theme.textFieldFont        = UIFont.systemFont(ofSize: 14.0)
 theme.labelTextColor       = UIColor.defaultTextColor
 theme.placeholderColor     = UIColor.lightGray
@@ -347,13 +348,14 @@ theme.placeholderAlignment = .left
   
 Objective-C:
 ```ObjectiveC
-MobilePaymentTheme *theme  = [MobilePaymentTheme new];
-theme.textFieldFont        = [UIFont systemFontOfSize:14.0];
+MPCheckout *theme          = [MPCheckout new];
+theme.labelFontSize        = 13.0f;
+theme.textFieldFont        = [UIFont systemFontOfSize:14.0f];
 theme.labelTextColor       = [UIColor defaultTextColor];
 theme.placeholderColor     = [UIColor lightGrayColor];
 theme.barButtonItemColor   = [UIColor buttonEnabled];
 theme.textFieldTextColor   = [UIColor defaultTextColor];
-theme.placeholderFontSize  = 13.0;
+theme.placeholderFontSize  = 13.0f;
 theme.textFieldBorderColor = [[UIColor grayColor] colorWithAlphaComponent:.3];
 theme.navigationTitleColor = [UIColor defaultTextColor];
 theme.placeholderAlignment = NSTextAlignmentLeft;
@@ -363,12 +365,12 @@ After settings up the theme, tell the SDK to apply it:
 
 Swift:
 ```Swift
-MobilePaymentSDK.applyTheme(theme)
+MPCheckout.applyTheme(theme)
 ```
   
 Objective-C:
 ```ObjectiveC
-[MobilePaymentSDK applyTheme:theme];
+[MPCheckout applyTheme:theme];
 ```
 
 Note: Each method in the SDK has Xcode style documentation accessible in the Utilities Quick help section or by holding “alt” and mouse clicking on the method.
@@ -384,7 +386,7 @@ Swift:
 
 Objective C:
 ```ObjectiveC
-CurrencyHRK, CurrencyCZK, CurrencyDKK, CurrencyHUF, CurrencyISK, CurrencyNOK, CurrencySEK, CurrencyCHF, CurrencyGBP, CurrencyUSN, CurrencyRON, CurrencyBGN, CurrencyEUR, CurrencyPLN
+MPCurrencyHRK, MPCurrencyCZK, MPCurrencyDKK, MPCurrencyHUF, MPCurrencyISK, MPCurrencyNOK, MPCurrencySEK, MPCurrencyCHF, MPCurrencyGBP, MPCurrencyUSN, MPCurrencyRON, MPCurrencyBGN, MPCurrencyEUR, MPCurrencyPLN
 ```
 
 Transaction types:
@@ -396,7 +398,7 @@ Swift:
 
 Objective C:
 ```ObjectiveC
-TransactionTypePurchase, TransactionTypeRefund
+MPTransactionTypePurchase, MPTransactionTypeRefund
 ```
 
 
