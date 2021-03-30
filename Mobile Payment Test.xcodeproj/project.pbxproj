@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -44,11 +44,11 @@
 		1D82071A24BD8BC300CA3728 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D82071224BD8BC300CA3728 /* Main.strings */; };
 		1D82071B24BD8BC300CA3728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82071424BD8BC300CA3728 /* AppDelegate.swift */; };
 		1D82071C24BD8CE900CA3728 /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D53419220CFE21700087AD3 /* UIViewController+Helpers.swift */; };
-		1D8B4A21231D011400F1A4E4 /* MPCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8B4A20231D011400F1A4E4 /* MPCheckout.framework */; };
-		1D8B4A23231D011800F1A4E4 /* MPCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8B4A20231D011400F1A4E4 /* MPCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF11E029D2800875E9F /* Main.storyboard */; };
 		1DB58EF51E029D2800875E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF41E029D2800875E9F /* Assets.xcassets */; };
 		1DB58EF81E029D2800875E9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF61E029D2800875E9F /* LaunchScreen.storyboard */; };
+		8B63012626131D3E00A1A73C /* MPCheckout.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B63012426131D2B00A1A73C /* MPCheckout.xcframework */; };
+		8B63012726131D3E00A1A73C /* MPCheckout.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B63012426131D2B00A1A73C /* MPCheckout.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,7 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1D8B4A23231D011800F1A4E4 /* MPCheckout.framework in Embed Frameworks */,
+				8B63012726131D3E00A1A73C /* MPCheckout.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,12 +118,12 @@
 		1D82071124BD8BC300CA3728 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = MPCheckout.strings; sourceTree = "<group>"; };
 		1D82071324BD8BC300CA3728 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Main.strings; sourceTree = "<group>"; };
 		1D82071424BD8BC300CA3728 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D8B4A20231D011400F1A4E4 /* MPCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MPCheckout.framework; path = "Mobile Payment Test/MPCheckout.framework"; sourceTree = "<group>"; };
 		1DB58EEA1E029D2800875E9F /* Mobile Payment Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Payment Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB58EF21E029D2800875E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DB58EF41E029D2800875E9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DB58EF71E029D2800875E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DB58EF91E029D2800875E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B63012426131D2B00A1A73C /* MPCheckout.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MPCheckout.xcframework; sourceTree = "<group>"; };
 		8B714859260C77C3008038D8 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = ../hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8B71485A260C77C3008038D8 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = ../hu.lproj/MPCheckout.strings; sourceTree = "<group>"; };
 		8B71485B260C77C3008038D8 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = ../hu.lproj/Main.strings; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D8B4A21231D011400F1A4E4 /* MPCheckout.framework in Frameworks */,
+				8B63012626131D3E00A1A73C /* MPCheckout.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +254,7 @@
 		1DA95B841E1655AF005C3EB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D8B4A20231D011400F1A4E4 /* MPCheckout.framework */,
+				8B63012426131D2B00A1A73C /* MPCheckout.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -594,7 +594,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -616,7 +617,10 @@
 				);
 				INFOPLIST_FILE = "Mobile Payment Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mypos.checkout-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -644,7 +648,10 @@
 				);
 				INFOPLIST_FILE = "Mobile Payment Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mypos.checkout-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
