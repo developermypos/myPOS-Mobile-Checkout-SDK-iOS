@@ -87,30 +87,13 @@ static NSString * const ICCardTypeJCB          = @"6";
 }
 
 - (NSString *)urlEncoded {
-    NSMutableString *output = [NSMutableString string];
-    const unsigned char *source = (const unsigned char *)[self UTF8String];
-    unsigned long sourceLen = strlen((const char *)source);
-    
-    for (int i = 0; i < sourceLen; ++i) {
-        const unsigned char thisChar = source[i];
-        
-        if (thisChar == ' ') {
-            [output appendString:@"%20"];
-            continue;
-        }
-        
-        if ((thisChar >= 'a' && thisChar <= 'z') ||
-            (thisChar >= 'A' && thisChar <= 'Z') ||
-            (thisChar >= '0' && thisChar <= '9'))
-        {
-            [output appendFormat:@"%c", thisChar];
-            continue;
-        }
-        
-        [output appendFormat:@"%%%02X", thisChar];
-    }
-    
-    return output;
+    return CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes
+                             (kCFAllocatorDefault,
+                              (__bridge CFStringRef)self,
+                              NULL,
+                              CFSTR("!*'();:@&=+$,/?%#[]"),
+                              kCFStringEncodingUTF8)
+                             );
 }
 
 + (NSString *)uuid {

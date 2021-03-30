@@ -39,6 +39,9 @@
     
     [ICLogger log:[NSString stringWithFormat:@"Base64 data to sign: %@", string]];
     
+    string = [[string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@""];
+    [ICLogger log:[NSString stringWithFormat:@"Base64 data to sign FIXED: %@", string]];
+    
     SecKeyRef privateKey = [[ICMobilePaymentManager sharedManager] privateKey];
     
     if (!privateKey) {
@@ -97,7 +100,10 @@
         return nil;
     }
     
-    return [encryptedString base64EncodedString];
+    string = [encryptedString base64EncodedString];
+    string = [string stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    
+    return string;
 }
 
 - (NSString *)decryptedString:(NSString *)string {

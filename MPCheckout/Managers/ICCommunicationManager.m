@@ -390,6 +390,8 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
             return;
         }
         
+        signature = [[signature componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@""];
+        
         NSString *requestData = [NSString stringWithFormat:@"%@&%@=%@",
                                  [command.data formData], ICParameterSignature, [signature urlEncoded]];
         
