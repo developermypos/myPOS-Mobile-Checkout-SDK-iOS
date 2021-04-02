@@ -53,11 +53,11 @@
 
 #pragma mark - Helpers
 
-- (void (^)(NSString *))storeCardCompleted {
-    return ^(NSString *cardToken) {
+- (void (^)(NSString *cardToken, NSString *transactionRef))storeCardCompleted {
+    return ^(NSString *cardToken, NSString *transactionRef) {
         [self dismiss:^{
-            if ([self.storeCardDelegate respondsToSelector:@selector(storeCardDidCompleteWithData:)]) {
-                [self.storeCardDelegate storeCardDidCompleteWithData:[self storedCardWithToken:cardToken]];;
+            if ([self.storeCardDelegate respondsToSelector:@selector(storeCardDidCompleteWithData:transactionRef:)]) {
+                [self.storeCardDelegate storeCardDidCompleteWithData:[self storedCardWithToken:cardToken] transactionRef:transactionRef];
             }
         }];
     };

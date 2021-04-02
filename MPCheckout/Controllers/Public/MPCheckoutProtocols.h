@@ -34,8 +34,9 @@
  * @method storeCardDidCompleteWithData:
  *
  * @param storedCard The stored card with all it's data.
+ * @param transactionRef Transaction reference of the operation
  */
-- (void)storeCardDidCompleteWithData:(nonnull MPStoredCard *)storedCard;
+- (void)storeCardDidCompleteWithData:(nonnull MPStoredCard *)storedCard transactionRef:(nonnull NSString *)transactionRef;
 
 /*!
  * @method storeCardDidFailWithError:

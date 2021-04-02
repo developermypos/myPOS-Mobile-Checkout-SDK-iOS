@@ -162,7 +162,7 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
        customName:(NSString *)customName
            amount:(NSString *)amount
         extraData:(NSDictionary *)extraData
-       completion:(void (^)(NSString *cardToken))completionBlock
+       completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
           failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     ICStoreCardCommand *command = [[ICStoreCardCommand alloc] initWithPan:pan
@@ -173,7 +173,11 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
                                                                    amount:amount
                                                                 extraData:extraData];
     
-    [self sendCommand:command completion:[self cardOperationCompletion:completionBlock failure:errorBlock]];
+    [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterCardToken, ICParameterTransactionRef]
+                                                            completion:^(NSDictionary *data) {
+                                                                completionBlock([data objectForKey:ICParameterCardToken],
+                                                                                [[data objectForKey:ICParameterTransactionRef] stringValue]);
+                                                            } failed:errorBlock]];
 }
 
 - (void)updateStoredCard:(NSString *)token

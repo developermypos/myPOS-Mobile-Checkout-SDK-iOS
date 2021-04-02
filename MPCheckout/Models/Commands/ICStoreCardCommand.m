@@ -57,12 +57,13 @@
 
 - (NSString *)responseInfo {
     NSString *customName = [_data objectForKey:ICParameterCustomName];
+    NSString *transactionRef = [[_data objectForKey:ICParameterTransactionRef] stringValue];
     
-    if (!customName) {
+    if (!customName || !transactionRef) {
         return [super responseInfo];
     }
     
-    return [NSString stringWithFormat:@"Response for store card with custom name %@ has been received", customName];
+    return [NSString stringWithFormat:@"Response for store card with custom name %@ and transaction reference %@ has been received", customName, transactionRef];
 }
 
 @end

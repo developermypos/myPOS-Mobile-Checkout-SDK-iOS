@@ -152,7 +152,7 @@
 
 - (NSString *)base64EncodedString {
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
-    return [data base64EncodedString];
+    return [data base64EncodedStringWithOptions:0];
 }
 
 - (NSString *)base64DecodedString {

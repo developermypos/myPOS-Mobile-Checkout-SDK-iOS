@@ -46,7 +46,7 @@
        customName:(NSString *)customName
            amount:(NSString *)amount
         extraData:(NSDictionary *)extraData
-       completion:(void (^)(NSString *cardToken))completionBlock
+       completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
           failure:(void (^)(MPCheckoutError *error))errorBlock;
 
 - (void)updateStoredCard:(NSString *)token
