@@ -71,7 +71,9 @@ static NSString * const ICCardTypeJCB          = @"6";
 }
 
 - (NSString *)encrypted {
-    return [[ICRSAManager sharedManager] encryptedString:self];
+    NSString *requestData = [[ICRSAManager sharedManager] encryptedString:self];
+    requestData = [[requestData componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@""];
+    return requestData;
 }
 
 - (NSString *)decrypted {
