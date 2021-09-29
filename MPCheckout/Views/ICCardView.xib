@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -212,6 +213,12 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" returnKeyType="next"/>
                                 </textField>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QL-8q-EdV">
+                                    <rect key="frame" x="16" y="66" width="65.5" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" systemColor="systemRedColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="focus-emboss" translatesAutoresizingMaskIntoConstraints="NO" id="IDq-9G-qdr">
                                     <rect key="frame" x="309" y="24" width="50" height="32"/>
                                     <constraints>
@@ -229,7 +236,9 @@
                                 <constraint firstItem="IDq-9G-qdr" firstAttribute="top" secondItem="QxS-yI-WLu" secondAttribute="bottom" id="RDG-u8-vGv"/>
                                 <constraint firstItem="QxS-yI-WLu" firstAttribute="leading" secondItem="NUA-Pa-zGC" secondAttribute="leading" constant="16" id="RVT-Mn-gG8"/>
                                 <constraint firstAttribute="trailing" secondItem="9EB-SN-oFx" secondAttribute="trailing" constant="16" id="Ubu-35-mL4"/>
+                                <constraint firstItem="2QL-8q-EdV" firstAttribute="top" secondItem="9EB-SN-oFx" secondAttribute="bottom" constant="4" id="VK6-s7-8Dd"/>
                                 <constraint firstItem="9EB-SN-oFx" firstAttribute="top" secondItem="QxS-yI-WLu" secondAttribute="bottom" constant="8" id="WU9-9Z-yj5"/>
+                                <constraint firstItem="2QL-8q-EdV" firstAttribute="leading" secondItem="9EB-SN-oFx" secondAttribute="leading" id="bXo-bX-ZsZ"/>
                                 <constraint firstAttribute="bottom" secondItem="9EB-SN-oFx" secondAttribute="bottom" constant="8" id="dr2-sz-rXV"/>
                             </constraints>
                         </view>
@@ -315,6 +324,7 @@
                 <outlet property="noCustomNameConstraint" destination="iPP-0d-bdI" id="LFN-5e-xsY"/>
                 <outlet property="panLabel" destination="h5Y-cK-qzg" id="vSe-S9-dWT"/>
                 <outlet property="panTextField" destination="ECn-IY-c35" id="d36-rm-qSt"/>
+                <outlet property="useLatinLettersLabel" destination="2QL-8q-EdV" id="ijQ-3j-fw1"/>
             </connections>
             <point key="canvasLocation" x="-29.5" y="-112.5"/>
         </view>
@@ -325,5 +335,8 @@
         <image name="focus-expiry-date" width="54.5" height="35"/>
         <image name="focus-pan" width="54.5" height="35"/>
         <image name="mypos-logo" width="95.5" height="120"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

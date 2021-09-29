@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet ICThemedTextField *cvcTextField;
 @property (weak, nonatomic) IBOutlet UILabel *embossNameLabel;
 @property (weak, nonatomic) IBOutlet ICThemedTextField *embossNameTextField;
+@property (weak, nonatomic) IBOutlet UILabel *useLatinLettersLabel;
 @property (weak, nonatomic) IBOutlet UILabel *customNameLabel;
 @property (weak, nonatomic) IBOutlet ICThemedTextField *customNameTextField;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *noCustomNameConstraint;
@@ -41,7 +42,7 @@
 @implementation ICCardView
 
 static NSInteger const kMaxLength     = 30;
-static NSInteger const kExpDateLength = 4;
+static NSInteger const kExpDateLength = 5;
 static NSInteger const kCVCMaxLength  = 4;
 static NSInteger const kPanMaxLength  = 19;
 
@@ -81,7 +82,12 @@ static NSInteger const kPanMaxLength  = 19;
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     if (string.length == 0) {
+        [self.useLatinLettersLabel setHidden:YES];
         return YES;
+    }
+    
+    if ([textField isEqual:self.expiryDateTextField] && [textField.text length] == 2) {
+        textField.text = [textField.text stringByAppendingString:@"/"];
     }
     
     NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
@@ -107,7 +113,8 @@ static NSInteger const kPanMaxLength  = 19;
     }
     
     if ([textField isEqual:self.embossNameTextField]) {
-        return [string matchesRegEx:@"^[a-zA-Z' ]+$"];
+        [self.useLatinLettersLabel setHidden:[string matchesRegEx:@"^[a-zA-Z.' -]+$"]];
+        return [string matchesRegEx:@"^[a-zA-Z.' -]+$"];
     }
     
     if ([textField isEqual:self.customNameTextField]) {
@@ -158,7 +165,7 @@ static NSInteger const kPanMaxLength  = 19;
 }
 
 - (NSString *)expiryDate {
-    return self.expiryDateTextField.text;
+    return [self.expiryDateTextField.text stringByReplacingOccurrencesOfString:@"/" withString:@""];
 }
 
 - (NSString *)embossName {
@@ -188,6 +195,7 @@ static NSInteger const kPanMaxLength  = 19;
     self.cvcLabel.text        = ICLocalizedString(@"CVC");
     self.embossNameLabel.text = ICLocalizedString(@"Emboss name");
     self.customNameLabel.text = ICLocalizedString(@"Custom name");
+    self.useLatinLettersLabel.text = ICLocalizedString(@"Please use latin letters only");
     
     self.panTextField.placeholder        = ICLocalizedString(@"Enter card number");
     self.cvcTextField.placeholder        = ICLocalizedString(@"Enter CVC code");

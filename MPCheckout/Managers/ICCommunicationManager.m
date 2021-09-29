@@ -176,7 +176,7 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
     [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterCardToken, ICParameterTransactionRef]
                                                             completion:^(NSDictionary *data) {
                                                                 completionBlock([data objectForKey:ICParameterCardToken],
-                                                                                [[data objectForKey:ICParameterTransactionRef] stringValue]);
+                                                                                [[data objectForKey:ICParameterTransactionRef] isKindOfClass:[NSNumber class]] ? [[data objectForKey:ICParameterTransactionRef] stringValue] : [[data objectForKey:ICParameterTransactionRef] stringValue]);
                                                             } failed:errorBlock]];
 }
 
