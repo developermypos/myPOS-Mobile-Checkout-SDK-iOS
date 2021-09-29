@@ -47,18 +47,18 @@
 		1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF11E029D2800875E9F /* Main.storyboard */; };
 		1DB58EF51E029D2800875E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF41E029D2800875E9F /* Assets.xcassets */; };
 		1DB58EF81E029D2800875E9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF61E029D2800875E9F /* LaunchScreen.storyboard */; };
-		8B63012626131D3E00A1A73C /* MPCheckout.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B63012426131D2B00A1A73C /* MPCheckout.xcframework */; };
-		8B63012726131D3E00A1A73C /* MPCheckout.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B63012426131D2B00A1A73C /* MPCheckout.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8B2138D227043BDC005BC1B5 /* MPCheckout.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC5DD042616F1F900E98831 /* MPCheckout.xcframework */; };
+		8B2138D327043BDC005BC1B5 /* MPCheckout.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC5DD042616F1F900E98831 /* MPCheckout.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1DC267521E262F0C00278F60 /* Embed Frameworks */ = {
+		8B2138D427043BDC005BC1B5 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8B63012726131D3E00A1A73C /* MPCheckout.xcframework in Embed Frameworks */,
+				8B2138D327043BDC005BC1B5 /* MPCheckout.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,10 +123,11 @@
 		1DB58EF41E029D2800875E9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DB58EF71E029D2800875E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DB58EF91E029D2800875E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B63012426131D2B00A1A73C /* MPCheckout.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MPCheckout.xcframework; sourceTree = "<group>"; };
+		8B2138CE270362B1005BC1B5 /* MPCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MPCheckout.framework; sourceTree = "<group>"; };
 		8B714859260C77C3008038D8 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = ../hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8B71485A260C77C3008038D8 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = ../hu.lproj/MPCheckout.strings; sourceTree = "<group>"; };
 		8B71485B260C77C3008038D8 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = ../hu.lproj/Main.strings; sourceTree = "<group>"; };
+		8BC5DD042616F1F900E98831 /* MPCheckout.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MPCheckout.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B63012626131D3E00A1A73C /* MPCheckout.xcframework in Frameworks */,
+				8B2138D227043BDC005BC1B5 /* MPCheckout.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +255,8 @@
 		1DA95B841E1655AF005C3EB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8B63012426131D2B00A1A73C /* MPCheckout.xcframework */,
+				8B2138CE270362B1005BC1B5 /* MPCheckout.framework */,
+				8BC5DD042616F1F900E98831 /* MPCheckout.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -306,7 +308,7 @@
 				1DB58EE61E029D2800875E9F /* Sources */,
 				1DB58EE71E029D2800875E9F /* Frameworks */,
 				1DB58EE81E029D2800875E9F /* Resources */,
-				1DC267521E262F0C00278F60 /* Embed Frameworks */,
+				8B2138D427043BDC005BC1B5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -614,6 +616,10 @@
 					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
 					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
 					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
 				);
 				INFOPLIST_FILE = "Mobile Payment Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -642,6 +648,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
+					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
 					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
 					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",
 					"$(PROJECT_DIR)/Mobile\\ Payment\\ Test",

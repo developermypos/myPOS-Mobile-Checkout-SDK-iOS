@@ -90,8 +90,8 @@ class MPCardsTableViewController: MPBaseTableViewController {
     
     // MARK: Store Card Delegate
     
-    override func storeCardDidComplete(withData storedCard: MPStoredCard) {
-        super.storeCardDidComplete(withData: storedCard)
+    override func storeCardDidComplete(withData storedCard: MPStoredCard, transactionRef: String) {
+        super.storeCardDidComplete(withData: storedCard, transactionRef: transactionRef)
         
         let card = MPCard(name: storedCard.customName, token: storedCard.token)
         UserDefaults.addCard(card)

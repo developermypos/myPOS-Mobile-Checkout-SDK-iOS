@@ -37,8 +37,8 @@ class MPBaseTableViewController: UITableViewController, MPPaymentDelegate, MPSto
     
     // MARK: Store Card Delegate
     
-    func storeCardDidComplete(withData storedCard: MPStoredCard) {
-        self.showAlertWithText("Stored card \(storedCard.customName) with token \(storedCard.token)")
+    func storeCardDidComplete(withData storedCard: MPStoredCard, transactionRef: String) {
+        self.showAlertWithText("Stored card \(storedCard.customName) with token \(storedCard.token) with transaction reference \(transactionRef)")
     }
     
     func storeCardDidFailWithError(_ error: MPCheckoutError) {
