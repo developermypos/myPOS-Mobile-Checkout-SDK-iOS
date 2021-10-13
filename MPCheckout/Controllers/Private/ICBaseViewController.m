@@ -69,6 +69,14 @@
                                                       NSFontAttributeName            : [[ICThemeManager sharedTheme] mediumFontWithSize:16.0f],
                                                       NSForegroundColorAttributeName : [[ICThemeManager sharedTheme] navigationTitleColor]
                                                       }];
+    
+    if (@available(iOS 15.0, *)) {
+        UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc] init];
+        [appearance configureWithOpaqueBackground];
+        [appearance setBackgroundColor:navigationBarColor];
+        [self.navigationController.navigationBar setStandardAppearance:appearance];
+        [self.navigationController.navigationBar setScrollEdgeAppearance:self.navigationController.navigationBar.standardAppearance];
+    }
 }
 
 #pragma mark - Public Methods
