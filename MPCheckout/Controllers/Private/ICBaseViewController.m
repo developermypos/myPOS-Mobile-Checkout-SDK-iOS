@@ -74,6 +74,10 @@
         UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc] init];
         [appearance configureWithOpaqueBackground];
         [appearance setBackgroundColor:navigationBarColor];
+        [appearance setTitleTextAttributes:@{
+            NSFontAttributeName            : [[ICThemeManager sharedTheme] mediumFontWithSize:16.0f],
+            NSForegroundColorAttributeName : [[ICThemeManager sharedTheme] navigationTitleColor]
+            }];
         [self.navigationController.navigationBar setStandardAppearance:appearance];
         [self.navigationController.navigationBar setScrollEdgeAppearance:self.navigationController.navigationBar.standardAppearance];
     }
