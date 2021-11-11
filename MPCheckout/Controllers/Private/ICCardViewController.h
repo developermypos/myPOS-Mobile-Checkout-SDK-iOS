@@ -35,6 +35,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *cardViewHeight;
 
 @property (nonatomic) BOOL withoutCustomName;
+@property (nonatomic) BOOL autoReverse;
 @property (weak, nonatomic) id<MPPaymentDelegate> paymentDelegate;
 @property (weak, nonatomic) id<MPStoreCardDelegate> storeCardDelegate;
 

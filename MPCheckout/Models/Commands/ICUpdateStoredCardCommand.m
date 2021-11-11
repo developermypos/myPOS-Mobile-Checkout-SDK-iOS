@@ -20,7 +20,7 @@
                    customName:(NSString *)customName
                        amount:(NSString *)amount
                     extraData:(NSDictionary *)extraData {
-    if (self = [super initWithPan:pan cvc:cvc expiryDate:expiryDate embossName:embossName customName:customName amount:amount extraData:extraData]) {
+    if (self = [super initWithPan:pan cvc:cvc expiryDate:expiryDate embossName:embossName customName:customName amount:amount autoReverse:NO extraData:extraData]) {
         [_data setObject:token                    forKey:ICParameterCardToken];
         [_data setObject:ICMethodUpdateStoredCard forKey:ICParameterMethod];
     }

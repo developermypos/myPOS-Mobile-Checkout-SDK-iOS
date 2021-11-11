@@ -45,6 +45,7 @@
        embossName:(NSString *)embossName
        customName:(NSString *)customName
            amount:(NSString *)amount
+      autoReverse:(BOOL)autoReverse
         extraData:(NSDictionary *)extraData
        completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
           failure:(void (^)(MPCheckoutError *error))errorBlock;

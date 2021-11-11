@@ -46,6 +46,7 @@
                                            embossName:card.embossName
                                            customName:card.customName
                                                amount:ICFormatterAmount(self.cardVerificationAmount)
+                                          autoReverse:self.autoReverse
                                             extraData:_extraData
                                            completion:[self storeCardCompleted]
                                               failure:[self storeCardFailed]];

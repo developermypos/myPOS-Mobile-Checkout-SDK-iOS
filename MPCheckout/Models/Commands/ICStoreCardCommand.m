@@ -19,6 +19,7 @@
                  embossName:(NSString *)embossName
                  customName:(NSString *)customName
                      amount:(NSString *)amount
+                autoReverse:(BOOL)autoReverse
                   extraData:(NSDictionary *)extraData {
     if (self = [super init]) {
         [_data setObject:ICMethodStoreCard                                 forKey:ICParameterMethod];
@@ -36,6 +37,8 @@
             [_data setObject:@"2"   forKey:ICParameterCardVerification];
             [_data setObject:amount forKey:ICParameterAmount];
         }
+        
+        [_data setValue:[[NSNumber numberWithBool:autoReverse] stringValue]  forKey:ICParameterAutoReverse];
         
         [_data addEntriesFromDictionary:extraData];
     }

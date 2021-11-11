@@ -17,6 +17,7 @@
 
 @interface MPStoreCardViewController () {
     BOOL _withoutCustomName;
+    BOOL _autoReverse;
     CGFloat _verificationAmount;
 }
 
@@ -29,13 +30,18 @@
 #pragma mark - Initializers
 
 - (instancetype)initWithVerificationAmount:(CGFloat)verificationAmount delegate:(id<MPStoreCardDelegate>)delegate {
-    return [self initWithVerificationAmount:verificationAmount delegate:delegate withoutCustomName:NO];
+    return [self initWithVerificationAmount:verificationAmount autoReverse:NO delegate:delegate withoutCustomName:NO];
 }
 
-- (instancetype)initWithVerificationAmount:(CGFloat)verificationAmount delegate:(id<MPStoreCardDelegate>)delegate withoutCustomName:(BOOL)withoutCustomName {
+- (instancetype)initWithVerificationAmount:(CGFloat)verificationAmount autoReverse:(BOOL)autoReverse delegate:(id<MPStoreCardDelegate>)delegate {
+    return [self initWithVerificationAmount:verificationAmount autoReverse:autoReverse delegate:delegate withoutCustomName:NO];
+}
+
+- (instancetype)initWithVerificationAmount:(CGFloat)verificationAmount autoReverse:(BOOL)autoReverse delegate:(id<MPStoreCardDelegate>)delegate withoutCustomName:(BOOL)withoutCustomName {
     if (self = [super initWithNibName:nil bundle:nil]) {
         _storeCardDelegate  = delegate;
         _withoutCustomName  = withoutCustomName;
+        _autoReverse        = autoReverse;
         _verificationAmount = verificationAmount;
         
         [self customInit];
@@ -75,6 +81,7 @@
     
     storeCardController.storeCardDelegate      = self.storeCardDelegate;
     storeCardController.withoutCustomName      = _withoutCustomName;
+    storeCardController.autoReverse            = _autoReverse;
     storeCardController.cardVerificationAmount = _verificationAmount;
     
     [self setViewControllers:@[storeCardController]];
