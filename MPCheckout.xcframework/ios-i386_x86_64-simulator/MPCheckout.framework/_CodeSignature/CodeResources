@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		vmnLmDXglT4isE9mvzluca+8xZg=
+		2C5IJ/Qt3FlZLWjLfMls43BM4To=
 		</data>
 		<key>Headers/MPAuthorization.h</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/MPStoreCardViewController.h</key>
 		<data>
-		KUsIAlOIchK4Kp7vQ860LpTu/0k=
+		piCVdilPq0e2PGSX1fu70znWIw4=
 		</data>
 		<key>Headers/MPStoredCard.h</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Yq3BF6hzyaMKC/CKWP/glXLHBi4=
+		rxsb6e3epo3QSeWUBRO01zcou4g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -123,11 +123,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vmnLmDXglT4isE9mvzluca+8xZg=
+			2C5IJ/Qt3FlZLWjLfMls43BM4To=
 			</data>
 			<key>hash2</key>
 			<data>
-			UX7iYI1MtaSOcoBI+jaACbZc4Ol76fSBdNww78x0d+s=
+			4Ui0GKjRm61WofPSwpa2+C+0eX77Ji5/siBr2/aurjc=
 			</data>
 		</dict>
 		<key>Headers/MPAuthorization.h</key>
@@ -244,11 +244,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KUsIAlOIchK4Kp7vQ860LpTu/0k=
+			piCVdilPq0e2PGSX1fu70znWIw4=
 			</data>
 			<key>hash2</key>
 			<data>
-			tvQopRn/vOr/rPIlfNAR01p+we5moDA9wDpuIGlJ9PI=
+			W2ZM2tNmlEpq//eFSZLdVMF2qZY+Quh6aJwCK/jeri8=
 			</data>
 		</dict>
 		<key>Headers/MPStoredCard.h</key>

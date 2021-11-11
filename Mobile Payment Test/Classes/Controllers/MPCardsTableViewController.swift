@@ -73,7 +73,7 @@ class MPCardsTableViewController: MPBaseTableViewController {
     // MARK: Actions
     
     @IBAction func storeCard(_ sender: Any) {
-        let controller = MPStoreCardViewController(verificationAmount: 0.00, delegate: self)
+        let controller = MPStoreCardViewController(verificationAmount: 0.00, autoReverse: true, delegate: self)
         present(controller, animated: true, completion: nil)
     }
     
