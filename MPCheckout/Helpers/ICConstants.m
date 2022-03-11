@@ -157,8 +157,8 @@ NSString * const ICSandboxApiUrl      = @"https://www.mypos.eu/vmp/checkout-test
 //NSString * const ICSandboxApiUrl      = @"https://devs.mypos.com/mypos.eu/trunk/public/vmp/checkout";
 NSString * const ICSandbox3DSecureUrl = @"https://devs.mypos.com/mypos_tdsgateway/";
 
-NSString * const ICProductionApiUrl      = @"https://www.mypos.eu/vmp/checkout";
-NSString * const ICProduction3DSecureUrl = @"https://www.mypos.eu/tds/";
+NSString * const ICProductionApiUrl      = @"https://www.mypos.com/vmp/checkout";
+NSString * const ICProduction3DSecureUrl = @"https://www.mypos.com/tds/";
 
 #pragma mark - Card Types
 
