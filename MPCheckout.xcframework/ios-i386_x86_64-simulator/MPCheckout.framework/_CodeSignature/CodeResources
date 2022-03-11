@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		2C5IJ/Qt3FlZLWjLfMls43BM4To=
+		z628b93Y5tuooQTt7f9I4C80TOA=
 		</data>
 		<key>Headers/MPAuthorization.h</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>ICCardView.nib</key>
 		<data>
-		UmHq06FAvxIB3Zpy95WTYyToidQ=
+		ya6cw1KZDUhckIsbo2jvcB6Xo3Y=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rxsb6e3epo3QSeWUBRO01zcou4g=
+		Cow4oCgu87m1xNk0vUtdc2zMeE8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -123,11 +123,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2C5IJ/Qt3FlZLWjLfMls43BM4To=
+			z628b93Y5tuooQTt7f9I4C80TOA=
 			</data>
 			<key>hash2</key>
 			<data>
-			4Ui0GKjRm61WofPSwpa2+C+0eX77Ji5/siBr2/aurjc=
+			M2tdj/hDZUsGY8M0691tZ6jTHfOL4UwNnX2fWYNAiYc=
 			</data>
 		</dict>
 		<key>Headers/MPAuthorization.h</key>
@@ -277,11 +277,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UmHq06FAvxIB3Zpy95WTYyToidQ=
+			ya6cw1KZDUhckIsbo2jvcB6Xo3Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			3pRqdIBDgDs+1tAPZII589qVAtqNOLRBO0TtLfeOmV4=
+			CeHxy10P8njRCJNh2SWRAhopn5HsWXHl+6CQpbIUn2c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
