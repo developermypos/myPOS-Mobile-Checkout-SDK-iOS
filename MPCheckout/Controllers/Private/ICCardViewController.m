@@ -55,6 +55,11 @@ static NSString * const kSecureSegue = @"3DSecure";
         return;
     }
     
+    if (![_cardView isValidEmail]) {
+        [UIAlertController showAlert:ICLocalizedString(@"Please enter a valid e-mail address") withTitle:ICLocalizedString(@"Incorrect fields") inController:self];
+        return;
+    }
+    
     [self showLoadingHUD];
     [[ICCommunicationManager sharedManager] getCardData:_cardView.pan completion:[self getCardDataCompleted] failure:[self getCardDataFailed]];
 }
@@ -72,7 +77,8 @@ static NSString * const kSecureSegue = @"3DSecure";
     secureController.delegate   = self;
     secureController.urlRequest = [ICUtil cardValidationURLRequest:[self card]
                                                           cardData:_cardData
-                                                            amount:ICFormatterAmount(self.cardVerificationAmount)];
+                                                            amount:ICFormatterAmount(self.cardVerificationAmount)
+                                                             email:_cardView.email];
 }
 
 #pragma mark - 3DSecure Delegate

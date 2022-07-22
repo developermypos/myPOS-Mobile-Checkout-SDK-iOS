@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -89,16 +89,14 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbC-q5-oZC">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="523" id="vTH-D7-fAJ"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="SbC-q5-oZC" secondAttribute="bottom" id="HXm-2t-HyC"/>
                                     <constraint firstItem="SbC-q5-oZC" firstAttribute="centerX" secondItem="q1b-d5-jgV" secondAttribute="centerX" id="PmV-Ug-rEe"/>
+                                    <constraint firstItem="SbC-q5-oZC" firstAttribute="height" secondItem="q1b-d5-jgV" secondAttribute="height" priority="750" id="d0b-cv-yIj"/>
                                     <constraint firstItem="SbC-q5-oZC" firstAttribute="leading" secondItem="q1b-d5-jgV" secondAttribute="leading" id="fXc-Fu-dUS"/>
                                     <constraint firstAttribute="trailing" secondItem="SbC-q5-oZC" secondAttribute="trailing" id="hbn-mH-Sg4"/>
                                     <constraint firstItem="SbC-q5-oZC" firstAttribute="top" secondItem="q1b-d5-jgV" secondAttribute="top" id="oPF-rk-t8D"/>
@@ -128,7 +126,6 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="cancelButton" destination="rru-Q5-XJB" id="SCs-Q7-PWT"/>
-                        <outlet property="cardViewHeight" destination="vTH-D7-fAJ" id="zVh-ru-AZc"/>
                         <outlet property="confirmButton" destination="Tn3-J6-Vl8" id="QbA-0K-naJ"/>
                         <outlet property="contentView" destination="SbC-q5-oZC" id="IBf-KF-OKG"/>
                         <outlet property="mainView" destination="q1b-d5-jgV" id="KdK-S0-6p9"/>
@@ -408,7 +405,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FZY-A8-CyP"/>
+        <segue reference="zro-db-Uyv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="card-types" width="250" height="34.5"/>

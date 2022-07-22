@@ -25,6 +25,9 @@
 
 + (NSString *)signedData:(NSDictionary<NSString *, NSString *> *)data;
 + (NSString *)itemsTotalAmount:(NSArray<MPCartItem *> *)cartItems;
-+ (NSURLRequest *)cardValidationURLRequest:(MPCard *)card cardData:(NSDictionary *)cardData amount:(NSString *)amount;
++ (NSURLRequest *)cardValidationURLRequest:(MPCard *)card
+                                  cardData:(NSDictionary *)cardData
+                                    amount:(NSString *)amount
+                                     email:(NSString *)email;
 
 @end

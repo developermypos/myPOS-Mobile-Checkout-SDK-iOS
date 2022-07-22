@@ -122,6 +122,15 @@ extern NSString * const IC3DSParameterCurrency;
 extern NSString * const IC3DSParameterExpiryYear;
 extern NSString * const IC3DSParameterExpiryMonth;
 extern NSString * const IC3DSParameterBillingDesc;
+extern NSString * const IC3DSParameterVersions;
+extern NSString * const IC3DSParameterEmail;
+extern NSString * const IC3DSParameterLanguage;
+extern NSString * const IC3DSParameterResolution;
+extern NSString * const IC3DSParameterTimezone;
+extern NSString * const IC3DSParameterBrLanguage;
+extern NSString * const IC3DSParameterLibVersion;
+extern NSString * const IC3DSParameterProgramProtocol;
+extern NSString * const IC3DSParameterDsTransactionId;
 
 extern NSString * const ICNotificationThemeChanged;
 

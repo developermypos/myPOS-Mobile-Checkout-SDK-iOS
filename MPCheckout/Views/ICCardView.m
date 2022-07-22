@@ -36,6 +36,8 @@
 @property (weak, nonatomic) IBOutlet ICThemedTextField *customNameTextField;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *noCustomNameConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *hasCustomNameConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet ICThemedTextField *emailTextField;
 
 @end
 
@@ -74,6 +76,9 @@ static NSInteger const kPanMaxLength  = 19;
         [self.customNameTextField becomeFirstResponder];
     }
     else if ([textField isEqual:self.customNameTextField]) {
+        [self.emailTextField becomeFirstResponder];
+    }
+    else if ([textField isEqual:self.emailTextField]) {
         [textField resignFirstResponder];
     }
     
@@ -153,7 +158,12 @@ static NSInteger const kPanMaxLength  = 19;
            self.cvc.trimmed.length        > 0 &&
            self.expiryDate.trimmed.length > 0 &&
            self.embossName.trimmed.length > 0 &&
+           self.email.trimmed.length      > 0 &&
            (_withoutCustomName || self.customName.trimmed.length > 0);
+}
+
+- (BOOL)isValidEmail {
+    return [self.email.trimmed matchesRegEx:@"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}$"];
 }
 
 - (NSString *)pan {
@@ -176,10 +186,14 @@ static NSInteger const kPanMaxLength  = 19;
     return self.customNameTextField.text;
 }
 
+- (NSString *)email {
+    return self.emailTextField.text;
+}
+
 #pragma mark - Private Methods
 
 - (void)customInit {
-    NSArray<UITextField *> *fields = @[self.panTextField, self.expiryDateTextField, self.cvcTextField, self.embossNameTextField, self.customNameTextField];
+    NSArray<UITextField *> *fields = @[self.panTextField, self.expiryDateTextField, self.cvcTextField, self.embossNameTextField, self.customNameTextField, self.emailTextField];
     
     for (UITextField *field in fields) {
         field.delegate = self;
@@ -196,11 +210,13 @@ static NSInteger const kPanMaxLength  = 19;
     self.embossNameLabel.text = ICLocalizedString(@"Emboss name");
     self.customNameLabel.text = ICLocalizedString(@"Custom name");
     self.useLatinLettersLabel.text = ICLocalizedString(@"Please use latin letters only");
+    self.emailLabel.text = ICLocalizedString(@"E-mail address");
     
     self.panTextField.placeholder        = ICLocalizedString(@"Enter card number");
     self.cvcTextField.placeholder        = ICLocalizedString(@"Enter CVC code");
     self.embossNameTextField.placeholder = ICLocalizedString(@"Enter name on card");
     self.customNameTextField.placeholder = ICLocalizedString(@"Enter custom name");
+    self.emailTextField.placeholder = ICLocalizedString(@"Enter e-mail address");
 }
 
 - (void)applyTheme {
@@ -208,7 +224,8 @@ static NSInteger const kPanMaxLength  = 19;
                             self.expiryDateLabel,
                             self.cvcLabel,
                             self.embossNameLabel,
-                            self.customNameLabel]
+                            self.customNameLabel,
+                            self.emailLabel]
                  fontSize:[[ICThemeManager sharedTheme] labelFontSize]
                 textColor:[[ICThemeManager sharedTheme] labelTextColor]];
 }

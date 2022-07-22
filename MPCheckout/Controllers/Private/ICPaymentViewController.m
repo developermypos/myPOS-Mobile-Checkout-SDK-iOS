@@ -63,6 +63,9 @@
         return;
     }
     
+    NSString *dsTransactionId  = [response objectForKey:IC3DSParameterDsTransactionId];
+    NSInteger programProtocol  = [[response objectForKey:IC3DSParameterProgramProtocol] integerValue];
+    
     [self showLoadingHUD];
     [[ICCommunicationManager sharedManager] makePurchaseForItems:self.cartItems
                                                          orderId:self.orderId

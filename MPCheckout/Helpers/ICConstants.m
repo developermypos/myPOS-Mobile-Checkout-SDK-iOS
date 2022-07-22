@@ -120,20 +120,29 @@ NSString * const ICParameterAutoReverse            = @"auto_reverse";
 
 #pragma mark - 3DS Parameters
 
-NSString * const IC3DSParameterPAN         = @"pan";
-NSString * const IC3DSParameterMID         = @"mid";
-NSString * const IC3DSParameterBIN         = @"bin";
-NSString * const IC3DSParameterAVV         = @"avv";
-NSString * const IC3DSParameterECI         = @"eci";
-NSString * const IC3DSParameterXID         = @"xid";
-NSString * const IC3DSParameterCAVV        = @"cavv";
-NSString * const IC3DSParameterAmount      = @"amount";
-NSString * const IC3DSParameterStatus      = @"status";
-NSString * const IC3DSParameterWalletId    = @"wallet_id";
-NSString * const IC3DSParameterCurrency    = @"currency";
-NSString * const IC3DSParameterExpiryYear  = @"exp_y";
-NSString * const IC3DSParameterExpiryMonth = @"exp_m";
-NSString * const IC3DSParameterBillingDesc = @"billing_descriptor";
+NSString * const IC3DSParameterPAN              = @"pan";
+NSString * const IC3DSParameterMID              = @"mid";
+NSString * const IC3DSParameterBIN              = @"bin";
+NSString * const IC3DSParameterAVV              = @"avv";
+NSString * const IC3DSParameterECI              = @"eci";
+NSString * const IC3DSParameterXID              = @"xid";
+NSString * const IC3DSParameterCAVV             = @"cavv";
+NSString * const IC3DSParameterAmount           = @"amount";
+NSString * const IC3DSParameterStatus           = @"status";
+NSString * const IC3DSParameterWalletId         = @"wallet_id";
+NSString * const IC3DSParameterCurrency         = @"currency";
+NSString * const IC3DSParameterExpiryYear       = @"exp_y";
+NSString * const IC3DSParameterExpiryMonth      = @"exp_m";
+NSString * const IC3DSParameterBillingDesc      = @"billing_descriptor";
+NSString * const IC3DSParameterVersions         = @"versions";
+NSString * const IC3DSParameterEmail            = @"email";
+NSString * const IC3DSParameterLanguage         = @"language";
+NSString * const IC3DSParameterResolution       = @"browser_screen_resolution";
+NSString * const IC3DSParameterTimezone         = @"browser_timezone";
+NSString * const IC3DSParameterBrLanguage       = @"browser_language";
+NSString * const IC3DSParameterLibVersion       = @"lib_version";
+NSString * const IC3DSParameterProgramProtocol  = @"program_protocol";
+NSString * const IC3DSParameterDsTransactionId  = @"ds_transaction_id";
 
 #pragma mark - Notifications
 
@@ -153,8 +162,8 @@ NSString * const ICHTTPMethodPOST = @"POST";
 
 #pragma mark - URLs
 
-NSString * const ICSandboxApiUrl      = @"https://www.mypos.eu/vmp/checkout-test";
-//NSString * const ICSandboxApiUrl      = @"https://devs.mypos.com/mypos.eu/trunk/public/vmp/checkout";
+//NSString * const ICSandboxApiUrl      = @"https://www.mypos.eu/vmp/checkout-test";
+NSString * const ICSandboxApiUrl      = @"https://devs.mypos.com/mypos.eu/trunk/public/vmp/checkout";
 NSString * const ICSandbox3DSecureUrl = @"https://devs.mypos.com/mypos_tdsgateway/";
 
 NSString * const ICProductionApiUrl      = @"https://www.mypos.com/vmp/checkout";

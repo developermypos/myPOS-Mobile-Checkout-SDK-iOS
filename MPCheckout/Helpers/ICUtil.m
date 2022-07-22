@@ -56,7 +56,10 @@
     return [[ICRSAManager sharedManager] signString:[dataToSign base64EncodedString]];
 }
 
-+ (NSURLRequest *)cardValidationURLRequest:(MPCard *)card cardData:(NSDictionary *)cardData amount:(NSString *)amount {
++ (NSURLRequest *)cardValidationURLRequest:(MPCard *)card
+                                  cardData:(NSDictionary *)cardData
+                                    amount:(NSString *)amount
+                                     email:(NSString *)email {
     NSString *mid         = [cardData objectForKey:ICParameterMID];
     NSString *bin         = [cardData objectForKey:ICParameterBIN];
     NSString *billingDesc = [cardData objectForKey:ICParameterBillingDescriptor];
@@ -103,7 +106,13 @@
         return nil;
     }
     
-    NSString *body = [NSString stringWithFormat:@"%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@",
+    NSTimeZone *timeZone = [NSTimeZone localTimeZone];
+    NSString *tzName = [timeZone name];
+    NSString *height = [[NSNumber numberWithFloat:[[UIScreen mainScreen] bounds].size.height] stringValue];
+    NSString *width = [[NSNumber numberWithFloat:[[UIScreen mainScreen] bounds].size.width] stringValue];
+    NSString *resolution =[NSString stringWithFormat:@"%@x%@", height, width];
+    
+    NSString *body = [NSString stringWithFormat:@"%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@",
                       ICParameterData, [encryptedData urlEncoded],
                       IC3DSParameterWalletId, [walletId urlEncoded],
                       ICParameterSource, [kSource urlEncoded],
@@ -113,7 +122,14 @@
                       IC3DSParameterAmount, [amount urlEncoded],
                       ICParameterVersion, [kIPCVersion urlEncoded],
                       ICParameterSID.lowercaseString, [[[ICMobilePaymentManager sharedManager] storeId] urlEncoded],
-                      IC3DSParameterCurrency, [[[ICMobilePaymentManager sharedManager] currency] urlEncoded]];
+                      IC3DSParameterCurrency, [[[ICMobilePaymentManager sharedManager] currency] urlEncoded],
+                      IC3DSParameterVersions, [@"1" urlEncoded],
+                      IC3DSParameterEmail, [email urlEncoded],
+                      IC3DSParameterLanguage, [[[ICMobilePaymentManager sharedManager] language] urlEncoded],
+                      IC3DSParameterResolution, [resolution urlEncoded],
+                      IC3DSParameterTimezone, [tzName urlEncoded],
+                      IC3DSParameterBrLanguage, [[[ICMobilePaymentManager sharedManager] language] urlEncoded],
+                      IC3DSParameterLibVersion, [kSDKVersion urlEncoded]];
     
 //    [ICLogger logDebug:[NSString stringWithFormat:@"3DS - body: %@", body]];
     

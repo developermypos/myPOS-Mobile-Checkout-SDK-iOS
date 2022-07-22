@@ -14,10 +14,12 @@
 
 - (BOOL)withoutCustomName;
 - (BOOL)isFilled;
+- (BOOL)isValidEmail;
 - (NSString *)pan;
 - (NSString *)cvc;
 - (NSString *)expiryDate;
 - (NSString *)embossName;
 - (NSString *)customName;
+- (NSString *)email;
 
 @end
