@@ -108,6 +108,8 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
                      orderId:(NSString *)orderId
                         card:(MPCard *)card
                     cardData:(NSDictionary *)cardData
+             dsTransactionId:(NSString *)dsTransactionId
+             programProtocol:(NSInteger)programProtocol
                   completion:(void (^)(NSString *transactionRef))completionBlock
                      failure:(void (^)(MPCheckoutError *error))errorBlock {
     
@@ -134,7 +136,7 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
                                          mutableCopy];
     
     [fullCardData addEntriesFromDictionary:cardData];
-    [self makePurchaseForItems:cartItems orderId:orderId cardData:fullCardData completion:completionBlock failure:errorBlock];
+    [self makePurchaseForItems:cartItems orderId:orderId cardData:fullCardData dsTransactionId:dsTransactionId programProtocol:programProtocol completion:completionBlock failure:errorBlock];
 }
 
 - (void)makeReversalForTransaction:(NSString *)transactionRef
@@ -163,6 +165,8 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
            amount:(NSString *)amount
       autoReverse:(BOOL)autoReverse
         extraData:(NSDictionary *)extraData
+  dsTransactionId:(NSString *)dsTransactionId
+  programProtocol:(NSInteger)programProtocol
        completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
           failure:(void (^)(MPCheckoutError *error))errorBlock {
     
@@ -173,7 +177,9 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
                                                                customName:customName
                                                                    amount:amount
                                                               autoReverse:autoReverse
-                                                                extraData:extraData];
+                                                                extraData:extraData
+                                                          dsTransactionId:dsTransactionId
+                                                          programProtocol:ICIntegerToString(programProtocol)];
     
     [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterCardToken, ICParameterTransactionRef]
                                                             completion:^(NSDictionary *data) {
@@ -190,6 +196,8 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
               customName:(NSString *)customName
                   amount:(NSString *)amount
                extraData:(NSDictionary *)extraData
+         dsTransactionId:(NSString *)dsTransactionId
+         programProtocol:(NSInteger)programProtocol
               completion:(void (^)(NSString *cardToken))completionBlock
                  failure:(void (^)(MPCheckoutError *error))errorBlock {
     
@@ -200,7 +208,9 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
                                                                                embossName:embossName
                                                                                customName:customName
                                                                                    amount:amount
-                                                                                extraData:extraData];
+                                                                                extraData:extraData
+                                                                          dsTransactionId:dsTransactionId
+                                                                          programProtocol:ICIntegerToString(programProtocol)];
     
     [self sendCommand:command completion:[self cardOperationCompletion:completionBlock failure:errorBlock]];
 }
@@ -242,6 +252,8 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
                         orderId:(NSString *)orderId
                            card:(MPCard *)card
                        cardData:(NSDictionary *)cardData
+                dsTransactionId:(NSString *)dsTransactionId
+                programProtocol:(NSInteger)programProtocol
                      completion:(void (^)(NSString *))completion
                         failure:(void (^)(MPCheckoutError *))errorBlock {
     
@@ -277,7 +289,7 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
     
     [extraData addEntriesFromDictionary:cardData];
     
-    ICPreAuthorizationCommand *command = [[ICPreAuthorizationCommand alloc] initWithAmount:ICFormatterAmount(amount) extraData:extraData];
+    ICPreAuthorizationCommand *command = [[ICPreAuthorizationCommand alloc] initWithAmount:ICFormatterAmount(amount) extraData:extraData dsTransactionId:dsTransactionId programProtocol:ICIntegerToString(programProtocol)];
     [self sendCommand:command completion:[self financeOperationCompletion:completion failure:errorBlock]];
 }
 
@@ -421,6 +433,33 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
 }
 
 #pragma mark - Helpers
+
+- (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
+                     orderId:(NSString *)orderId
+                    cardData:(NSDictionary<NSString *, NSString *> *)cardData
+             dsTransactionId:(NSString *)dsTransactionId
+             programProtocol:(NSInteger)programProtocol
+                  completion:(void (^)(NSString *transactionRef))completionBlock
+                     failure:(void (^)(MPCheckoutError *error))errorBlock {
+    
+    __block CGFloat amount = 0.0f;
+    NSMutableDictionary<NSString *, NSString *> *extraData = [@{
+                                                                ICParameterOrderId   : orderId,
+                                                                ICParameterCartItems : ICIntegerToString(cartItems.count)
+                                                                }
+                                                              mutableCopy];
+    
+    [cartItems enumerateObjectsUsingBlock:^(MPCartItem * _Nonnull cartItem, NSUInteger idx, BOOL * _Nonnull stop) {
+        amount += (cartItem.price * cartItem.quantity);
+        
+        [extraData addEntriesFromDictionary:[cartItem formattedData:idx + 1]];
+    }];
+    
+    [extraData addEntriesFromDictionary:cardData];
+    
+    ICPurchaseCommand *command = [[ICPurchaseCommand alloc] initWithAmount:ICFormatterAmount(amount) dsTransactionId:dsTransactionId programProtocol:ICIntegerToString(programProtocol) extraData:extraData];
+    [self sendCommand:command completion:[self financeOperationCompletion:completionBlock failure:errorBlock]];
+}
 
 - (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
                      orderId:(NSString *)orderId

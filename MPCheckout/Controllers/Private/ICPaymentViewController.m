@@ -71,6 +71,8 @@
                                                          orderId:self.orderId
                                                             card:card
                                                         cardData:_extraData
+                                                 dsTransactionId:dsTransactionId
+                                                 programProtocol:programProtocol
                                                       completion:[self paymentCompleted]
                                                          failure:[self paymentFailed]];
 }

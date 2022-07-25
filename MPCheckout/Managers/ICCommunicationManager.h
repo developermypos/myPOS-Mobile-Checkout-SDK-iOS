@@ -26,6 +26,8 @@
                      orderId:(NSString *)orderId
                         card:(MPCard *)card
                     cardData:(NSDictionary *)cardData
+             dsTransactionId:(NSString *)dsTransactionId
+             programProtocol:(NSInteger)programProtocol
                   completion:(void (^)(NSString *transactionRef))completionBlock
                      failure:(void (^)(MPCheckoutError *error))errorBlock;
 
@@ -47,6 +49,8 @@
            amount:(NSString *)amount
       autoReverse:(BOOL)autoReverse
         extraData:(NSDictionary *)extraData
+  dsTransactionId:(NSString *)dsTransactionId
+  programProtocol:(NSInteger)programProtocol
        completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
           failure:(void (^)(MPCheckoutError *error))errorBlock;
 
@@ -58,6 +62,8 @@
               customName:(NSString *)customName
                   amount:(NSString *)amount
                extraData:(NSDictionary *)extraData
+         dsTransactionId:(NSString *)dsTransactionId
+         programProtocol:(NSInteger)programProtocol
               completion:(void (^)(NSString *cardToken))completionBlock
                  failure:(void (^)(MPCheckoutError *error))errorBlock;
 
@@ -75,6 +81,8 @@
                         orderId:(NSString *)orderId
                            card:(MPCard *)card
                        cardData:(NSDictionary *)cardData
+                dsTransactionId:(NSString *)dsTransactionId
+                programProtocol:(NSInteger)programProtocol
                      completion:(void (^)(NSString *transactionRef))completion
                         failure:(void (^)(MPCheckoutError *error))errorBlock;
 

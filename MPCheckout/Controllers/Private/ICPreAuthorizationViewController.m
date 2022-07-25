@@ -44,12 +44,17 @@
         return;
     }
     
+    NSString *dsTransactionId  = [response objectForKey:IC3DSParameterDsTransactionId];
+    NSInteger programProtocol  = [[response objectForKey:IC3DSParameterProgramProtocol] integerValue];
+    
     [self showLoadingHUD];
     [[ICCommunicationManager sharedManager] makePreAuthorizationFor:self.amount
                                                            itemName:self.itemName
                                                             orderId:self.orderId
                                                                card:self.card
                                                            cardData:_extraData
+                                                    dsTransactionId:dsTransactionId
+                                                    programProtocol:programProtocol
                                                          completion:[self preAuthorizationCompleted]
                                                             failure:[self preAuthorizationFailed]];
 }

@@ -43,6 +43,9 @@
         return;
     }
     
+    NSString *dsTransactionId  = [response objectForKey:IC3DSParameterDsTransactionId];
+    NSInteger programProtocol  = [[response objectForKey:IC3DSParameterProgramProtocol] integerValue];
+    
     [self showLoadingHUD];
     [[ICCommunicationManager sharedManager] updateStoredCard:self.cardToken
                                                          pan:card.pan
@@ -52,6 +55,8 @@
                                                   customName:card.customName
                                                       amount:ICFormatterAmount(self.cardVerificationAmount)
                                                    extraData:_extraData
+                                             dsTransactionId:(NSString *)dsTransactionId
+                                             programProtocol:(NSInteger)programProtocol
                                                   completion:[self storeCardCompleted]
                                                      failure:[self storeCardFailed]];
 }

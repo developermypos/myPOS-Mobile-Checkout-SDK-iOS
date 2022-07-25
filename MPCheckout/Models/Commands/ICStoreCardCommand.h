@@ -17,6 +17,8 @@
                  customName:(NSString *)customName
                      amount:(NSString *)amount
                 autoReverse:(BOOL)autoReverse
-                  extraData:(NSDictionary *)extraData;
+                  extraData:(NSDictionary *)extraData
+            dsTransactionId:(NSString *)dsTransactionId
+            programProtocol:(NSString *)programProtocol;
 
 @end

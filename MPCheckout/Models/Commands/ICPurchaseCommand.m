@@ -12,7 +12,32 @@
 
 #pragma mark - Initialziers
 
-- (instancetype)initWithAmount:(NSString *)amount extraData:(NSDictionary *)extraData {
+- (instancetype)initWithAmount:(NSString *)amount
+               dsTransactionId:(NSString *)dsTransactionId
+               programProtocol:(NSString *)programProtocol
+                     extraData:(NSDictionary *)extraData {
+    
+    if (self = [super init]) {
+        [_data setObject:ICMethodPurchase                                  forKey:ICParameterMethod];
+        [_data setObject:amount                                            forKey:ICParameterAmount];
+        [_data setObject:[[ICMobilePaymentManager sharedManager] currency] forKey:ICParameterCurrency];
+        
+        if (dsTransactionId) {
+            [_data setObject:dsTransactionId                                  forKey:IC3DSParameterDsTransactionId];
+        }
+        
+        if (programProtocol) {
+            [_data setObject:programProtocol                                  forKey:IC3DSParameterProgramProtocol];
+        }
+        
+        [_data addEntriesFromDictionary:extraData];
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithAmount:(NSString *)amount
+                     extraData:(NSDictionary *)extraData {
     if (self = [super init]) {
         [_data setObject:ICMethodPurchase                                  forKey:ICParameterMethod];
         [_data setObject:amount                                            forKey:ICParameterAmount];

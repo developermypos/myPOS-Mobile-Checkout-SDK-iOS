@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ICPreAuthorizationCommand : ICBaseCommand
 
-- (instancetype)initWithAmount:(NSString *)amount extraData:(NSDictionary *)extraData;
+- (instancetype)initWithAmount:(NSString *)amount extraData:(NSDictionary *)extraData dsTransactionId:(NSString *)dsTransactionId programProtocol:(NSString *)programProtocol;
 
 @end
 

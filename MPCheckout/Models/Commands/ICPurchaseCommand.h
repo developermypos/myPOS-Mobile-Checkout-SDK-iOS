@@ -10,6 +10,12 @@
 
 @interface ICPurchaseCommand : ICBaseCommand
 
-- (instancetype)initWithAmount:(NSString *)amount extraData:(NSDictionary *)extraData;
+- (instancetype)initWithAmount:(NSString *)amount
+               dsTransactionId:(NSString *)dsTransactionId
+               programProtocol:(NSString *)programProtocol
+                     extraData:(NSDictionary *)extraData;
+
+- (instancetype)initWithAmount:(NSString *)amount
+                     extraData:(NSDictionary *)extraData;
 
 @end

@@ -75,10 +75,10 @@ static NSInteger const kPanMaxLength  = 19;
     if ([textField isEqual:self.embossNameTextField]) {
         [self.customNameTextField becomeFirstResponder];
     }
-    else if ([textField isEqual:self.customNameTextField]) {
-        [self.emailTextField becomeFirstResponder];
-    }
     else if ([textField isEqual:self.emailTextField]) {
+        [self.customNameTextField becomeFirstResponder];
+    }
+    else if ([textField isEqual:self.customNameTextField]) {
         [textField resignFirstResponder];
     }
     
@@ -193,7 +193,7 @@ static NSInteger const kPanMaxLength  = 19;
 #pragma mark - Private Methods
 
 - (void)customInit {
-    NSArray<UITextField *> *fields = @[self.panTextField, self.expiryDateTextField, self.cvcTextField, self.embossNameTextField, self.customNameTextField, self.emailTextField];
+    NSArray<UITextField *> *fields = @[self.panTextField, self.expiryDateTextField, self.cvcTextField, self.embossNameTextField, self.emailTextField, self.customNameTextField];
     
     for (UITextField *field in fields) {
         field.delegate = self;

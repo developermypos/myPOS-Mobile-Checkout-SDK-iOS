@@ -20,7 +20,9 @@
                  customName:(NSString *)customName
                      amount:(NSString *)amount
                 autoReverse:(BOOL)autoReverse
-                  extraData:(NSDictionary *)extraData {
+                  extraData:(NSDictionary *)extraData
+            dsTransactionId:(NSString *)dsTransactionId
+            programProtocol:(NSString *)programProtocol {
     if (self = [super init]) {
         [_data setObject:ICMethodStoreCard                                 forKey:ICParameterMethod];
         [_data setObject:embossName                                        forKey:ICParameterEmbossName];
@@ -41,6 +43,14 @@
         [_data setValue:[[NSNumber numberWithBool:autoReverse] stringValue]  forKey:ICParameterAutoReverse];
         
         [_data addEntriesFromDictionary:extraData];
+        
+        if (dsTransactionId) {
+            [_data setObject:dsTransactionId                                  forKey:IC3DSParameterDsTransactionId];
+        }
+        
+        if (programProtocol) {
+            [_data setObject:programProtocol                                  forKey:IC3DSParameterProgramProtocol];
+        }
     }
     
     return self;

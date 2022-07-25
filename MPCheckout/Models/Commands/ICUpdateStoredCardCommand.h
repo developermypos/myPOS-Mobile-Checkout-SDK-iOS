@@ -17,6 +17,8 @@
                    embossName:(NSString *)embossName
                    customName:(NSString *)customName
                        amount:(NSString *)amount
-                    extraData:(NSDictionary *)extraData;
+                    extraData:(NSDictionary *)extraData
+              dsTransactionId:(NSString *)dsTransactionId
+              programProtocol:(NSString *)programProtocol;
 
 @end

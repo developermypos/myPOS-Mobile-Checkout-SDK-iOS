@@ -23,10 +23,10 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzr-CD-CvY">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="593"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="523" id="rQR-VU-m9E"/>
+                                            <constraint firstAttribute="height" constant="593" id="rQR-VU-m9E"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -89,14 +89,16 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbC-q5-oZC">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="593"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="593" id="POr-8t-sNk"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="SbC-q5-oZC" secondAttribute="bottom" id="HXm-2t-HyC"/>
                                     <constraint firstItem="SbC-q5-oZC" firstAttribute="centerX" secondItem="q1b-d5-jgV" secondAttribute="centerX" id="PmV-Ug-rEe"/>
-                                    <constraint firstItem="SbC-q5-oZC" firstAttribute="height" secondItem="q1b-d5-jgV" secondAttribute="height" priority="750" id="d0b-cv-yIj"/>
                                     <constraint firstItem="SbC-q5-oZC" firstAttribute="leading" secondItem="q1b-d5-jgV" secondAttribute="leading" id="fXc-Fu-dUS"/>
                                     <constraint firstAttribute="trailing" secondItem="SbC-q5-oZC" secondAttribute="trailing" id="hbn-mH-Sg4"/>
                                     <constraint firstItem="SbC-q5-oZC" firstAttribute="top" secondItem="q1b-d5-jgV" secondAttribute="top" id="oPF-rk-t8D"/>
@@ -287,10 +289,10 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGr-qW-bXe">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="593"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="523" id="MUV-gI-BUI"/>
+                                            <constraint firstAttribute="height" constant="593" id="MUV-gI-BUI"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -353,10 +355,10 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dr3-ud-j7d">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="593"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="523" id="KV5-QG-7U6"/>
+                                            <constraint firstAttribute="height" constant="593" id="KV5-QG-7U6"/>
                                         </constraints>
                                     </view>
                                 </subviews>

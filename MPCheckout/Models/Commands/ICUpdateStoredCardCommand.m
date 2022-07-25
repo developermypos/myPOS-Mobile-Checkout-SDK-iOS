@@ -19,8 +19,10 @@
                    embossName:(NSString *)embossName
                    customName:(NSString *)customName
                        amount:(NSString *)amount
-                    extraData:(NSDictionary *)extraData {
-    if (self = [super initWithPan:pan cvc:cvc expiryDate:expiryDate embossName:embossName customName:customName amount:amount autoReverse:NO extraData:extraData]) {
+                    extraData:(NSDictionary *)extraData
+              dsTransactionId:(NSString *)dsTransactionId
+              programProtocol:(NSString *)programProtocol {
+    if (self = [super initWithPan:pan cvc:cvc expiryDate:expiryDate embossName:embossName customName:customName amount:amount autoReverse:NO extraData:extraData dsTransactionId:dsTransactionId programProtocol:programProtocol]) {
         [_data setObject:token                    forKey:ICParameterCardToken];
         [_data setObject:ICMethodUpdateStoredCard forKey:ICParameterMethod];
     }

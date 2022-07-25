@@ -39,6 +39,9 @@
         return;
     }
     
+    NSString *dsTransactionId  = [response objectForKey:IC3DSParameterDsTransactionId];
+    NSInteger programProtocol  = [[response objectForKey:IC3DSParameterProgramProtocol] integerValue];
+    
     [self showLoadingHUD];
     [[ICCommunicationManager sharedManager] storeCard:card.pan
                                            expiryDate:card.expiryDate
@@ -48,6 +51,8 @@
                                                amount:ICFormatterAmount(self.cardVerificationAmount)
                                           autoReverse:self.autoReverse
                                             extraData:_extraData
+                                      dsTransactionId:dsTransactionId
+                                      programProtocol:programProtocol
                                            completion:[self storeCardCompleted]
                                               failure:[self storeCardFailed]];
 }

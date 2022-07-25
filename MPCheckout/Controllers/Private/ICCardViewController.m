@@ -24,7 +24,7 @@ static NSString * const kSecureSegue = @"3DSecure";
     _cardView = [ICCardView cardViewWithFrame:self.contentView.bounds withoutCustomName:self.withoutCustomName];
     [self.contentView addSubview:_cardView];
     
-    [self.cardViewHeight setConstant:self.withoutCustomName ? 433.0f : 523.0f];
+    [self.cardViewHeight setConstant:self.withoutCustomName ? 511.0f : 593.0f];
     [self.view layoutIfNeeded];
 }
 
