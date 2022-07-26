@@ -47,8 +47,8 @@
 		1DB58EF31E029D2800875E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF11E029D2800875E9F /* Main.storyboard */; };
 		1DB58EF51E029D2800875E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF41E029D2800875E9F /* Assets.xcassets */; };
 		1DB58EF81E029D2800875E9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB58EF61E029D2800875E9F /* LaunchScreen.storyboard */; };
-		8B86097F27DB8A960074F990 /* MPCheckout.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B86097D27DB8A910074F990 /* MPCheckout.xcframework */; };
-		8B86098027DB8A960074F990 /* MPCheckout.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B86097D27DB8A910074F990 /* MPCheckout.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8BB44A682890343700E0E8B2 /* MPCheckout.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB44A662890343500E0E8B2 /* MPCheckout.xcframework */; };
+		8BB44A692890343700E0E8B2 /* MPCheckout.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB44A662890343500E0E8B2 /* MPCheckout.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,7 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8B86098027DB8A960074F990 /* MPCheckout.xcframework in Embed Frameworks */,
+				8BB44A692890343700E0E8B2 /* MPCheckout.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,7 +126,7 @@
 		8B714859260C77C3008038D8 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = ../hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8B71485A260C77C3008038D8 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = ../hu.lproj/MPCheckout.strings; sourceTree = "<group>"; };
 		8B71485B260C77C3008038D8 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = ../hu.lproj/Main.strings; sourceTree = "<group>"; };
-		8B86097D27DB8A910074F990 /* MPCheckout.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MPCheckout.xcframework; sourceTree = "<group>"; };
+		8BB44A662890343500E0E8B2 /* MPCheckout.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MPCheckout.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B86097F27DB8A960074F990 /* MPCheckout.xcframework in Frameworks */,
+				8BB44A682890343700E0E8B2 /* MPCheckout.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +254,7 @@
 		1DA95B841E1655AF005C3EB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8B86097D27DB8A910074F990 /* MPCheckout.xcframework */,
+				8BB44A662890343500E0E8B2 /* MPCheckout.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
