@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWi-mE-l6O">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="507"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="593"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDp-SV-kzY">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
@@ -329,7 +329,7 @@
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="2Pg-hf-lhf"/>
+                            <exclude reference="asu-3S-ED7"/>
                         </mask>
                     </variation>
                 </view>
