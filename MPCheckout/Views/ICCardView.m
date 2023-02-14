@@ -86,27 +86,85 @@ static NSInteger const kPanMaxLength  = 19;
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    if (string.length == 0) {
-        [self.useLatinLettersLabel setHidden:YES];
-        return YES;
-    }
-    
-    if ([textField isEqual:self.expiryDateTextField] && [textField.text length] == 2) {
-        textField.text = [textField.text stringByAppendingString:@"/"];
-    }
-    
     NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
     if ([textField isEqual:self.panTextField] && newString.length > kPanMaxLength) {
         return NO;
     }
     
-    if (([textField isEqual:self.expiryDateTextField] && newString.length > kExpDateLength)) {
-        return NO;
+    if ([textField isEqual:self.expiryDateTextField]) {
+        if (string.length == 0 && range.length + range.location < [textField.text length] - 1) {
+            textField.text = @"";
+            return NO;
+        }
+        
+        if ([newString length] < [textField.text length] &&
+            ![newString containsString:@"/"] &&
+            [textField.text containsString:@"/"]) {
+            textField.text = @"";
+            return NO;
+        }
+        
+        if ([newString length] > kExpDateLength) {
+            return NO;
+        }
+          
+        NSArray *components = [newString componentsSeparatedByString:@"/"];
+          
+        if ([components count] > 2) {
+            return NO;
+        }
+          
+        NSString *monthString = [components objectAtIndex:0];
+        NSString *yearString = [components count] == 2 ? [components objectAtIndex:1] : nil;
+          
+        if ([monthString length] > 2) {
+            return NO;
+        }
+          
+        if ([yearString length] > 2) {
+            return NO;
+        }
+        
+        if ([monthString length] == 1 && [monthString integerValue] > 1) {
+            return NO;
+        }
+        
+        if ([monthString length] == 2) {
+            NSInteger month = [monthString integerValue];
+            if (month < 1 || month > 12) {
+                return NO;
+            }
+            
+            if ([yearString length] == 2) {
+                NSCalendar *calendar = [NSCalendar currentCalendar];
+                NSDateComponents *dateComponents = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth fromDate:[NSDate date]];
+              
+                NSInteger currentYear = [dateComponents year] % 1000;
+                NSInteger currentMonth = [dateComponents month];
+              
+                NSInteger year = [yearString integerValue];
+                if (year < currentYear || (year == currentYear && month < currentMonth)) {
+                    return NO;
+                }
+            }
+        }
+        
+        if ([textField.text length] == 1) {
+            textField.text = [newString stringByAppendingString:@"/"];
+            return NO;
+        }
+          
+        return YES;
     }
     
     if (([textField isEqual:self.cvcTextField] && newString.length > kCVCMaxLength)) {
         return NO;
+    }
+    
+    if (string.length == 0) {
+        [self.useLatinLettersLabel setHidden:YES];
+        return YES;
     }
     
     if (([textField isEqual:self.embossNameTextField] || [textField isEqual:self.customNameTextField]) && newString.length > kMaxLength) {
@@ -118,8 +176,8 @@ static NSInteger const kPanMaxLength  = 19;
     }
     
     if ([textField isEqual:self.embossNameTextField]) {
-        [self.useLatinLettersLabel setHidden:[string matchesRegEx:@"^[a-zA-Z.' -]+$"]];
-        return [string matchesRegEx:@"^[a-zA-Z.' -]+$"];
+        [self.useLatinLettersLabel setHidden:[string matchesRegEx:@"^[a-zA-Zа-яА-ЯÀ-ÏÐ-ßà-ïð-ÿα-ωΑ-Ω0-9 \\_.-]+$"]];
+        return [string matchesRegEx:@"^[a-zA-Zа-яА-ЯÀ-ÏÐ-ßà-ïð-ÿα-ωΑ-Ω0-9 \\_.-]+$"];
     }
     
     if ([textField isEqual:self.customNameTextField]) {
@@ -209,7 +267,7 @@ static NSInteger const kPanMaxLength  = 19;
     self.cvcLabel.text        = ICLocalizedString(@"CVC");
     self.embossNameLabel.text = ICLocalizedString(@"Emboss name");
     self.customNameLabel.text = ICLocalizedString(@"Custom name");
-    self.useLatinLettersLabel.text = ICLocalizedString(@"Please use latin letters only");
+    self.useLatinLettersLabel.text = ICLocalizedString(@"Invalid symbol");
     self.emailLabel.text = ICLocalizedString(@"E-mail address");
     
     self.panTextField.placeholder        = ICLocalizedString(@"Enter card number");
