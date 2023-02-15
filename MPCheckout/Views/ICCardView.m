@@ -136,6 +136,19 @@ static NSInteger const kPanMaxLength  = 19;
                 return NO;
             }
             
+            if ([yearString length] == 1) {
+                NSCalendar *calendar = [NSCalendar currentCalendar];
+                NSDateComponents *dateComponents = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth fromDate:[NSDate date]];
+              
+                NSInteger currentYear = [dateComponents year] % 1000;
+                NSInteger currentMonth = [dateComponents month];
+              
+                NSInteger year = [yearString integerValue];
+                if (year < (currentYear / 10)) {
+                    return NO;
+                }
+            }
+            
             if ([yearString length] == 2) {
                 NSCalendar *calendar = [NSCalendar currentCalendar];
                 NSDateComponents *dateComponents = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth fromDate:[NSDate date]];
@@ -150,7 +163,7 @@ static NSInteger const kPanMaxLength  = 19;
             }
         }
         
-        if ([textField.text length] == 1) {
+        if ([textField.text length] == 1 && string.length != 0) {
             textField.text = [newString stringByAppendingString:@"/"];
             return NO;
         }
