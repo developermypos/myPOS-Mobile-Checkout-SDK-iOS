@@ -13,9 +13,11 @@
 - (instancetype)initWithAmount:(NSString *)amount
                dsTransactionId:(NSString *)dsTransactionId
                programProtocol:(NSString *)programProtocol
+                  requestToken:(BOOL)requestToken
                      extraData:(NSDictionary *)extraData;
 
 - (instancetype)initWithAmount:(NSString *)amount
+                  requestToken:(BOOL)requestToken
                      extraData:(NSDictionary *)extraData;
 
 @end

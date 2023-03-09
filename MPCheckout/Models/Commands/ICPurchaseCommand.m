@@ -15,12 +15,14 @@
 - (instancetype)initWithAmount:(NSString *)amount
                dsTransactionId:(NSString *)dsTransactionId
                programProtocol:(NSString *)programProtocol
+                  requestToken:(BOOL)requestToken
                      extraData:(NSDictionary *)extraData {
     
     if (self = [super init]) {
         [_data setObject:ICMethodPurchase                                  forKey:ICParameterMethod];
         [_data setObject:amount                                            forKey:ICParameterAmount];
         [_data setObject:[[ICMobilePaymentManager sharedManager] currency] forKey:ICParameterCurrency];
+        [_data setObject:[NSNumber numberWithBool:requestToken]            forKey:ICParameterRequestToken];
         
         if (dsTransactionId) {
             [_data setObject:dsTransactionId                                  forKey:IC3DSParameterDsTransactionId];
@@ -37,11 +39,13 @@
 }
 
 - (instancetype)initWithAmount:(NSString *)amount
+                  requestToken:(BOOL)requestToken
                      extraData:(NSDictionary *)extraData {
     if (self = [super init]) {
         [_data setObject:ICMethodPurchase                                  forKey:ICParameterMethod];
         [_data setObject:amount                                            forKey:ICParameterAmount];
         [_data setObject:[[ICMobilePaymentManager sharedManager] currency] forKey:ICParameterCurrency];
+        [_data setObject:[NSNumber numberWithBool:requestToken]            forKey:ICParameterRequestToken];
         
         [_data addEntriesFromDictionary:extraData];
     }

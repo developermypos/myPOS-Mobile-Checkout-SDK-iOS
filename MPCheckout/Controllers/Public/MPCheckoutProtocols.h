@@ -20,6 +20,13 @@
 - (void)paymentDidCompleteWithReference:(nonnull NSString *)transactionReference;
 
 /*!
+ * @method paymentDidCompleteWithReference:cardToken:
+ *
+ * @param transactionReference  The reference of the successfull transaction.
+ */
+- (void)paymentDidCompleteWithReference:(nonnull NSString *)transactionReference cardToken:(nonnull NSString *)cardToken;
+
+/*!
  * @method paymentDidFailWithError:
  *
  * @param error Information about an error that occured during a payment.

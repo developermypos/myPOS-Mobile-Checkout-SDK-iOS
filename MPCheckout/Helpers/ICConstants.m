@@ -117,6 +117,7 @@ NSString * const ICParameterAuthorizationTrnRef    = @"IPCTrnref";
 NSString * const ICParameterTransactionReference   = @"TrnRef";
 NSString * const ICParameterPreAuthorizationStatus = @"IPCPreAuthStatus";
 NSString * const ICParameterAutoReverse            = @"auto_reverse";
+NSString * const ICParameterRequestToken           = @"RequestToken";
 
 #pragma mark - 3DS Parameters
 

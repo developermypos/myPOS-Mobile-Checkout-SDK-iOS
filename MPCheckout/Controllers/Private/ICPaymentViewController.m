@@ -30,6 +30,7 @@
     [[ICCommunicationManager sharedManager] makePurchaseForItems:self.cartItems
                                                          orderId:self.orderId
                                                        cardToken:self.cardToken
+                                                    requestToken:self.requestToken
                                                       completion:[self paymentCompleted]
                                                          failure:[self paymentFailed]];
 }
@@ -73,18 +74,19 @@
                                                         cardData:_extraData
                                                  dsTransactionId:dsTransactionId
                                                  programProtocol:programProtocol
+                                                    requestToken:self.requestToken
                                                       completion:[self paymentCompleted]
                                                          failure:[self paymentFailed]];
 }
 
 #pragma mark - Helpers
 
-- (void (^)(NSString *))paymentCompleted {
-    return ^(NSString *transactionRef) {
+- (void (^)(NSString *, NSString *))paymentCompleted {
+    return ^(NSString *transactionRef, NSString *cardToken) {
         NSString *trnReference = [transactionRef isKindOfClass:[NSNumber class]] ? [(id)transactionRef stringValue] : transactionRef;
         [self dismiss:^{
-            if ([self.paymentDelegate respondsToSelector:@selector(paymentDidCompleteWithReference:)]) {
-                [self.paymentDelegate paymentDidCompleteWithReference:trnReference];
+            if ([self.paymentDelegate respondsToSelector:@selector(paymentDidCompleteWithReference:cardToken:)]) {
+                [self.paymentDelegate paymentDidCompleteWithReference:trnReference cardToken:cardToken];
             }
         }];
     };
