@@ -142,6 +142,7 @@
 		1DACE84C1E2E1E7A00F5E38E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DACE84B1E2E1E7A00F5E38E /* Storyboard.storyboard */; };
 		1DD42BFF1EB8794400F83DA9 /* UIAlertController+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DD42BFD1EB8794400F83DA9 /* UIAlertController+Helpers.h */; };
 		1DD42C001EB8794400F83DA9 /* UIAlertController+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD42BFE1EB8794400F83DA9 /* UIAlertController+Helpers.m */; };
+		8BE6B48129BF46FE009757C0 /* ICPurchaseWithTokenCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE6B48029BF46FE009757C0 /* ICPurchaseWithTokenCommand.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -282,6 +283,8 @@
 		1DACE84B1E2E1E7A00F5E38E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = MPCheckout/Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
 		1DD42BFD1EB8794400F83DA9 /* UIAlertController+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Helpers.h"; sourceTree = "<group>"; };
 		1DD42BFE1EB8794400F83DA9 /* UIAlertController+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Helpers.m"; sourceTree = "<group>"; };
+		8BE6B47F29BF469B009757C0 /* ICPurchaseWithTokenCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICPurchaseWithTokenCommand.h; sourceTree = "<group>"; };
+		8BE6B48029BF46FE009757C0 /* ICPurchaseWithTokenCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICPurchaseWithTokenCommand.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -507,6 +510,8 @@
 				1D8206F724B891E800CA3728 /* ICAuthorizationReverseCommand.m */,
 				1D8206FE24B893C300CA3728 /* ICAuthorizationListCommand.h */,
 				1D8206FF24B893C300CA3728 /* ICAuthorizationListCommand.m */,
+				8BE6B47F29BF469B009757C0 /* ICPurchaseWithTokenCommand.h */,
+				8BE6B48029BF46FE009757C0 /* ICPurchaseWithTokenCommand.m */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -687,6 +692,7 @@
 				1D7A785C1E4090A500DA6196 /* ICRefundCommand.m in Sources */,
 				1D7A789C1E40E2DA00DA6196 /* ICUpdateStoredCardViewController.m in Sources */,
 				1D6AE8B71F738FCD00124B54 /* ICASN.m in Sources */,
+				8BE6B48129BF46FE009757C0 /* ICPurchaseWithTokenCommand.m in Sources */,
 				1D7A783C1E407DD000DA6196 /* ICHTTPOperation.m in Sources */,
 				1D9D806D20A2C4320054D7BB /* UIViewController+Helperes.m in Sources */,
 				1DD42C001EB8794400F83DA9 /* UIAlertController+Helpers.m in Sources */,

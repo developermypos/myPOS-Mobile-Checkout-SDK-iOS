@@ -159,6 +159,102 @@
     return (NSURLRequest *)request;
 }
 
++ (NSURLRequest *)tdsProcessURLRequest:(NSDictionary *)cardData
+                                amount:(NSString *)amount
+                                 email:(NSString *)email {
+    
+    NSString *cardToken = [cardData objectForKey:ICParameterCardToken];
+    
+    if (!cardToken) {
+        [ICLogger logDebug:@"3DS - Card token not found"];
+        return nil;
+    }
+    
+    NSString *tz = [NSString stringWithFormat: @"%@", [[NSNumber numberWithFloat: [[NSTimeZone localTimeZone] secondsFromGMT] / 60] stringValue]];
+    NSString *height = [[NSNumber numberWithFloat:[[UIScreen mainScreen] bounds].size.height] stringValue];
+    NSString *width = [[NSNumber numberWithFloat:[[UIScreen mainScreen] bounds].size.width] stringValue];
+    NSString *resolution =[NSString stringWithFormat:@"%@x%@", height, width];
+    
+    NSDictionary *data = [@{
+        ICParameterMethod: [ICMethodTDSProcess urlEncoded],
+        ICParameterIPCVersion: [kIPCVersion urlEncoded],
+        ICParameterLanguage: [[[ICMobilePaymentManager sharedManager] language] urlEncoded],
+        ICParameterSID: [[[ICMobilePaymentManager sharedManager] storeId] urlEncoded],
+        @"WalletNumber": [[[ICMobilePaymentManager sharedManager] walletNumber] urlEncoded],
+        ICParameterKeyIndex: [ICIntegerToString([[ICMobilePaymentManager sharedManager] keyIndex]) urlEncoded],
+        ICParameterOutputFormat: [kOutputFormat urlEncoded],
+        ICParameterAmount: [amount urlEncoded],
+        ICParameterCurrency: [[[ICMobilePaymentManager sharedManager] currency] urlEncoded],
+        @"UseRedirect": [@"1" urlEncoded],
+        ICParameterCardToken: [cardToken urlEncoded],
+        ICParameterEmail: [email urlEncoded],
+        @"BrowserTimezone": [tz urlEncoded],
+        @"BrowserLanguage": [[[ICMobilePaymentManager sharedManager] language] urlEncoded],
+        ICParameterBaseSource: @"iOS SDK",
+        @"BrowserScreenResolution": [resolution urlEncoded],
+        @"LibVersion": [kSDKVersion urlEncoded]
+        }
+      mutableCopy];
+    
+    NSString *signature = [ICUtil signedData:data];
+    
+    
+    if (!signature) {
+        [ICLogger logDebug:@"Could not sign data"];
+        return nil;
+    }
+    
+    signature = [[signature componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@""];
+    
+    NSString *body = [NSString stringWithFormat:@"%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@",
+                      ICParameterMethod, [ICMethodTDSProcess urlEncoded],
+                      ICParameterIPCVersion, [kIPCVersion urlEncoded],
+                      ICParameterLanguage, [[[ICMobilePaymentManager sharedManager] language] urlEncoded],
+                      ICParameterSID, [[[ICMobilePaymentManager sharedManager] storeId] urlEncoded],
+                      @"WalletNumber", [[[ICMobilePaymentManager sharedManager] walletNumber] urlEncoded],
+                      ICParameterKeyIndex, [ICIntegerToString([[ICMobilePaymentManager sharedManager] keyIndex]) urlEncoded],
+                      ICParameterOutputFormat, [kOutputFormat urlEncoded],
+                      ICParameterAmount, [amount urlEncoded],
+                      ICParameterCurrency, [[[ICMobilePaymentManager sharedManager] currency] urlEncoded],
+                      @"UseRedirect", [@"1" urlEncoded],
+                      ICParameterCardToken, [cardToken urlEncoded],
+                      ICParameterEmail, [email urlEncoded],
+                      @"BrowserTimezone", [tz urlEncoded],
+                      @"BrowserLanguage", [[[ICMobilePaymentManager sharedManager] language] urlEncoded],
+                      ICParameterBaseSource, @"iOS SDK",
+                      @"BrowserScreenResolution", [resolution urlEncoded],
+                      @"LibVersion", [kSDKVersion urlEncoded],
+                      ICParameterSignature, [signature urlEncoded]];
+    
+    [ICLogger logDebug:[NSString stringWithFormat:@"3DS - body: %@", body]];
+    
+    NSURL *url = [NSURL URLWithString:[ICMobilePaymentManager secureUrl]];
+    
+    if (!url) {
+        [ICLogger logDebug:@"Invalid communication URL"];
+        return nil;
+    }
+    
+    NSData *httpBody = [body dataUsingEncoding:NSUTF8StringEncoding];
+    
+    if (!httpBody) {
+        [ICLogger logDebug:@"Could not get bytes of body"];
+        return nil;
+    }
+    
+//    [ICLogger logDebug:[NSString stringWithFormat:@"Starting 3DSecure request to URL '%@' with body '%@", url, body]];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPBody:httpBody];
+    [request setHTTPMethod:ICHTTPMethodPOST];
+    
+    [request setValue:kURLEncoded                        forHTTPHeaderField:kContentType];
+    [request setValue:ICIntegerToString(httpBody.length) forHTTPHeaderField:kContentLength];
+    
+    return (NSURLRequest *)request;
+}
+
 + (NSString *)itemsTotalAmount:(NSArray<MPCartItem *> *)cartItems {
     CGFloat amount = 0.0f;
     

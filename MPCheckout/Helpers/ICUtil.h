@@ -29,5 +29,8 @@
                                   cardData:(NSDictionary *)cardData
                                     amount:(NSString *)amount
                                      email:(NSString *)email;
++ (NSURLRequest *)tdsProcessURLRequest:(NSDictionary *)cardData
+                                amount:(NSString *)amount
+                                 email:(NSString *)email;
 
 @end

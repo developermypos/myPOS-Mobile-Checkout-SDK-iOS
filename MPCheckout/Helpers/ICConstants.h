@@ -57,6 +57,7 @@ extern NSString * const ICMethodAuthorization;
 extern NSString * const ICMethodCaptureAuthorization;
 extern NSString * const ICMethodReverseAuthorization;
 extern NSString * const ICMethodListAuthorizations;
+extern NSString * const ICMethodTDSProcess;
 
 extern NSString * const ICParameterMID;
 extern NSString * const ICParameterBIN;
@@ -109,6 +110,7 @@ extern NSString * const ICParameterPreAuthorizationStatus;
 extern NSString * const ICParameterAutoReverse;
 extern NSString * const ICParameterRequestToken;
 extern NSString * const ICParameterBaseSource;
+extern NSString * const ICParameterEmail;
 
 extern NSString * const IC3DSParameterPAN;
 extern NSString * const IC3DSParameterMID;

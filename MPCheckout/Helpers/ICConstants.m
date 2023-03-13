@@ -65,6 +65,7 @@ NSString * const ICMethodAuthorization                = @"IPCAuthorization";
 NSString * const ICMethodCaptureAuthorization         = @"IPCAuthorizationCapture";
 NSString * const ICMethodReverseAuthorization         = @"IPCAuthorizationReverse";
 NSString * const ICMethodListAuthorizations           = @"IPCAuthorizationList";
+NSString * const ICMethodTDSProcess                   = @"IPCTDSProcess";
 
 #pragma mark - Parameters
 
@@ -119,6 +120,7 @@ NSString * const ICParameterPreAuthorizationStatus = @"IPCPreAuthStatus";
 NSString * const ICParameterAutoReverse            = @"auto_reverse";
 NSString * const ICParameterRequestToken           = @"RequestToken";
 NSString * const ICParameterBaseSource             = @"Source";
+NSString * const ICParameterEmail                  = @"Email";
 
 #pragma mark - 3DS Parameters
 
