@@ -14,6 +14,7 @@
 @property (nonatomic, strong, readonly) NSString *cvc;
 @property (nonatomic, strong, readonly) NSString *embossName;
 @property (nonatomic, strong, readonly) NSString *customName;
+@property (nonatomic, strong, readonly) NSString *email;
 
 /*!
  * @method initWithPan:expiryDate:cvc:embossName:customName:
@@ -30,7 +31,8 @@
                  expiryDate:(NSString *)expiryDate
                         cvc:(NSString *)cvc
                  embossName:(NSString *)embossName
-                 customName:(NSString *)customName;
+                 customName:(NSString *)customName
+                      email:(NSString *)email;
 
 /*!
  * @method expiryMonth

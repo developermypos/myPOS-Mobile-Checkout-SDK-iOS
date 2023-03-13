@@ -147,7 +147,8 @@ static NSString * const kSecureSegue = @"3DSecure";
                           expiryDate:_cardView.expiryDate
                                  cvc:_cardView.cvc
                           embossName:_cardView.embossName
-                          customName:_cardView.withoutCustomName ? [NSString stringWithFormat:@"%@ %@", [cardType plainCardType], [_cardView.pan shortPan]] : _cardView.customName];
+                          customName:_cardView.withoutCustomName ? [NSString stringWithFormat:@"%@ %@", [cardType plainCardType], [_cardView.pan shortPan]] : _cardView.customName
+                               email:_cardView.email];
 }
 
 - (void (^)(NSDictionary *data))getCardDataCompleted {

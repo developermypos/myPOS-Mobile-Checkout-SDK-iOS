@@ -96,13 +96,12 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
 - (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
                      orderId:(NSString *)orderId
                    cardToken:(NSString *)cardToken
-                requestToken:(BOOL)requestToken
                   completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
                      failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     NSDictionary *cardData = @{ ICParameterCardToken : cardToken };
     
-    [self makePurchaseForItems:cartItems orderId:orderId cardData:cardData requestToken:requestToken completion:completionBlock failure:errorBlock];
+    [self makePurchaseForItems:cartItems orderId:orderId cardData:cardData completion:completionBlock failure:errorBlock];
 }
 
 - (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
@@ -471,7 +470,6 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
 - (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
                      orderId:(NSString *)orderId
                     cardData:(NSDictionary<NSString *, NSString *> *)cardData
-                requestToken:(BOOL)requestToken
                   completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
                      failure:(void (^)(MPCheckoutError *error))errorBlock {
     
@@ -490,7 +488,7 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
     
     [extraData addEntriesFromDictionary:cardData];
     
-    ICPurchaseCommand *command = [[ICPurchaseCommand alloc] initWithAmount:ICFormatterAmount(amount) requestToken:requestToken extraData:extraData];
+    ICPurchaseCommand *command = [[ICPurchaseCommand alloc] initWithAmount:ICFormatterAmount(amount) extraData:extraData];
     [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterCardToken, ICParameterTransactionRef]
                                                             completion:^(NSDictionary *data) {
                                                                 completionBlock([data objectForKey:ICParameterCardToken],

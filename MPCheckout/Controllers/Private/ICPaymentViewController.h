@@ -13,5 +13,6 @@
 @property (nonatomic, strong) NSArray<MPCartItem *> *cartItems;
 @property (nonatomic, strong) NSString *orderId;
 @property (nonatomic, strong) NSString *cardToken;
+@property (nonatomic) BOOL requestToken;
 
 @end

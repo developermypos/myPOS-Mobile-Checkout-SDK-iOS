@@ -108,6 +108,7 @@ extern NSString * const ICParameterTransactionReference;
 extern NSString * const ICParameterPreAuthorizationStatus;
 extern NSString * const ICParameterAutoReverse;
 extern NSString * const ICParameterRequestToken;
+extern NSString * const ICParameterBaseSource;
 
 extern NSString * const IC3DSParameterPAN;
 extern NSString * const IC3DSParameterMID;

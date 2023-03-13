@@ -29,11 +29,12 @@
 
 #pragma mark - Initializers/Deinitializer
 
-- (instancetype)initWithCartItems:(NSArray *)cartItems orderId:(NSString *)orderId delegate:(id<MPPaymentDelegate>)delegate {
+- (instancetype)initWithCartItems:(NSArray *)cartItems orderId:(NSString *)orderId requestToken:(BOOL)requestToken delegate:(id<MPPaymentDelegate>)delegate {
     if (self = [super initWithNibName:nil bundle:nil]) {
         _orderId         = orderId;
         _cartItems       = cartItems;
         _paymentDelegate = delegate;
+        requestToken     = requestToken;
         
         [self customInit];
     }

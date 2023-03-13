@@ -20,6 +20,7 @@
         _expiryDate = card.expiryDate;
         _embossName = card.embossName;
         _customName = card.customName;
+        _email      = card.email;
     }
     
     return self;
@@ -33,13 +34,15 @@
             "   expiry date = %@\r"
             "   emboss name = %@\r"
             "   custom name = %@\r"
+            "   email = %@\r"
             "}",
             self.pan,
             self.type,
             self.token,
             self.expiryDate,
             self.embossName,
-            self.customName];
+            self.customName,
+            self.email];
 }
 
 @end

@@ -21,7 +21,8 @@
                    ICParameterKeyIndex     : ICIntegerToString([[ICMobilePaymentManager sharedManager] keyIndex]),
                    ICParameterIPCVersion   : kIPCVersion,
                    ICParameterOutputFormat : kOutputFormat,
-                   ICParameterWalletNumber : [[ICMobilePaymentManager sharedManager] walletNumber]
+                   ICParameterWalletNumber : [[ICMobilePaymentManager sharedManager] walletNumber],
+                   ICParameterBaseSource   : @"iOS SDK"
                    }
                  mutableCopy];
     }

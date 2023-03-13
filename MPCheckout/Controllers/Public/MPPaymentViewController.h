@@ -26,6 +26,7 @@
  */
 - (nonnull instancetype)initWithCartItems:(nonnull NSArray<MPCartItem *> *)cartItems
                                   orderId:(nonnull NSString *)orderId
+                             requestToken:(BOOL)requestToken
                                  delegate:(nullable id<MPPaymentDelegate>)delegate;
 
 /*!

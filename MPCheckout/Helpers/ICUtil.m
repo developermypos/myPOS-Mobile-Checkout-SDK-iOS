@@ -106,8 +106,7 @@
         return nil;
     }
     
-    NSTimeZone *timeZone = [NSTimeZone localTimeZone];
-    NSString *tzName = [timeZone name];
+    NSString *tz = [NSString stringWithFormat: @"%@", [[NSNumber numberWithFloat: [[NSTimeZone localTimeZone] secondsFromGMT] / 60] stringValue]];
     NSString *height = [[NSNumber numberWithFloat:[[UIScreen mainScreen] bounds].size.height] stringValue];
     NSString *width = [[NSNumber numberWithFloat:[[UIScreen mainScreen] bounds].size.width] stringValue];
     NSString *resolution =[NSString stringWithFormat:@"%@x%@", height, width];
@@ -127,11 +126,11 @@
                       IC3DSParameterEmail, [email urlEncoded],
                       IC3DSParameterLanguage, [[[ICMobilePaymentManager sharedManager] language] urlEncoded],
                       IC3DSParameterResolution, [resolution urlEncoded],
-                      IC3DSParameterTimezone, [tzName urlEncoded],
+                      IC3DSParameterTimezone, [tz urlEncoded],
                       IC3DSParameterBrLanguage, [[[ICMobilePaymentManager sharedManager] language] urlEncoded],
                       IC3DSParameterLibVersion, [kSDKVersion urlEncoded]];
     
-//    [ICLogger logDebug:[NSString stringWithFormat:@"3DS - body: %@", body]];
+    [ICLogger logDebug:[NSString stringWithFormat:@"3DS - body: %@", body]];
     
     NSURL *url = [NSURL URLWithString:[ICMobilePaymentManager secureUrl]];
     

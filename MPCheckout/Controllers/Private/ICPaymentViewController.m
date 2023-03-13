@@ -8,6 +8,8 @@
 
 #import "ICPaymentViewController.h"
 
+#import "NSString+Helpers.h"
+
 @interface ICPaymentViewController ()
 
 @end
@@ -30,7 +32,6 @@
     [[ICCommunicationManager sharedManager] makePurchaseForItems:self.cartItems
                                                          orderId:self.orderId
                                                        cardToken:self.cardToken
-                                                    requestToken:self.requestToken
                                                       completion:[self paymentCompleted]
                                                          failure:[self paymentFailed]];
 }
@@ -85,8 +86,8 @@
     return ^(NSString *transactionRef, NSString *cardToken) {
         NSString *trnReference = [transactionRef isKindOfClass:[NSNumber class]] ? [(id)transactionRef stringValue] : transactionRef;
         [self dismiss:^{
-            if ([self.paymentDelegate respondsToSelector:@selector(paymentDidCompleteWithReference:cardToken:)]) {
-                [self.paymentDelegate paymentDidCompleteWithReference:trnReference cardToken:cardToken];
+            if ([self.paymentDelegate respondsToSelector:@selector(paymentDidCompleteWithReference:card:)]) {
+                [self.paymentDelegate paymentDidCompleteWithReference:trnReference card:[self storedCardWithToken:cardToken]];
             }
         }];
     };
@@ -100,6 +101,11 @@
             }
         }];
     };
+}
+
+- (MPStoredCard *)storedCardWithToken:(NSString *)token {
+    NSString *cardType = [_extraData objectForKey:ICParameterCardType] ? : @"";
+    return [[MPStoredCard alloc] initWithCard:[self card] type:[cardType plainCardType] token:token];
 }
 
 @end

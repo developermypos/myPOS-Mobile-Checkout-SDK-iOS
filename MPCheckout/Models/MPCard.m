@@ -22,13 +22,15 @@
                  expiryDate:(NSString *)expiryDate
                         cvc:(NSString *)cvc
                  embossName:(NSString *)embossName
-                 customName:(NSString *)customName {
+                 customName:(NSString *)customName
+                      email:(NSString *)email{
     if (self = [super init]) {
         _pan        = pan;
         _cvc        = cvc;
         _embossName = embossName;
         _customName = customName;
         _expiryDate = expiryDate;
+        _email      = email;
     }
     
     return self;
@@ -39,7 +41,8 @@
                           expiryDate:card.expiryDate
                                  cvc:card.cvc
                           embossName:card.embossName
-                          customName:card.customName];
+                          customName:card.customName
+                               email:card.email];
 }
 
 - (instancetype)copy {

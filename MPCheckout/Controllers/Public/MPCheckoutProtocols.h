@@ -23,8 +23,9 @@
  * @method paymentDidCompleteWithReference:cardToken:
  *
  * @param transactionReference  The reference of the successfull transaction.
+ * @param card  The card used for the transaction.
  */
-- (void)paymentDidCompleteWithReference:(nonnull NSString *)transactionReference cardToken:(nonnull NSString *)cardToken;
+- (void)paymentDidCompleteWithReference:(nonnull NSString *)transactionReference card:(nonnull MPStoredCard *)card;
 
 /*!
  * @method paymentDidFailWithError:

@@ -19,7 +19,6 @@
 - (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
                      orderId:(NSString *)orderId
                    cardToken:(NSString *)cardToken
-                requestToken:(BOOL)requestToken
                   completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
                      failure:(void (^)(MPCheckoutError *error))errorBlock;
 
