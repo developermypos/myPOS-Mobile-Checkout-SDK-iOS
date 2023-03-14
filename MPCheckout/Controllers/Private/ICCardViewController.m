@@ -41,6 +41,7 @@ static NSString * const kSecureSegue = @"3DSecure";
     _extraData         = nil;
     _paymentDelegate   = nil;
     _storeCardDelegate = nil;
+    _forceTDS          = nil;
 }
 
 #pragma mark - Actions
@@ -75,6 +76,13 @@ static NSString * const kSecureSegue = @"3DSecure";
     IC3DSecureWebViewController *secureController     = navigationController.viewControllers.firstObject;
     
     secureController.delegate   = self;
+    if (_forceTDS && [_cardData objectForKey:ICParameterCardToken]) {
+        secureController.urlRequest = [ICUtil tdsProcessURLRequest:_cardData
+                                                            amount:ICFormatterAmount(self.cardVerificationAmount)
+                                                             email:_cardView.email];
+        return;
+    }
+    
     secureController.urlRequest = [ICUtil cardValidationURLRequest:[self card]
                                                           cardData:_cardData
                                                             amount:ICFormatterAmount(self.cardVerificationAmount)
@@ -132,6 +140,33 @@ static NSString * const kSecureSegue = @"3DSecure";
     [ICLogger log:@"Card verified"];
 }
 
+- (void)didReceiveForce3DSecureResponse:(NSDictionary *)response {
+    _extraData = nil;
+    
+    [ICLogger logDebug:[NSString stringWithFormat:@"3DS response: %@", response]];
+    
+    NSString *_status = [response objectForKey:ICParameterStatus];
+    
+    if (!_status) {
+        [ICLogger logDebug:@"3DS response did not return status"];
+        return;
+    }
+    
+    NSInteger status = [_status integerValue];
+    
+    if (status == ICSecureResponseStatusParamError || status == ICSecureResponseStatusOtherParamError) {
+        [ICLogger log:@"Invalid card data"];
+        return;
+    }
+    
+    if (status != ICResponseStatusOK) {
+        [ICLogger logDebug:@"3DS error"];
+        return;
+    }
+    
+    [ICLogger log:@"Card verified"];
+}
+
 #pragma mark - Public Methods
 
 - (void)dismiss:(void (^)(void))completion {
@@ -154,7 +189,6 @@ static NSString * const kSecureSegue = @"3DSecure";
 - (void (^)(NSDictionary *data))getCardDataCompleted {
     return ^(NSDictionary *cardData) {
         [self hideLoadingHUD];
-        
         if (![cardData objectForKey:ICParameterIs3DEnabled] || ![cardData objectForKey:ICParameterIs3DEnabled]) {
             [self.presenter dismissViewControllerAnimated:YES completion:^{
                 if ([self.storeCardDelegate respondsToSelector:@selector(storeCardDidFailWithError:)]) {
@@ -163,7 +197,6 @@ static NSString * const kSecureSegue = @"3DSecure";
             }];
             return;
         }
-        
         NSInteger is3DSecured = [[cardData objectForKey:ICParameterIs3DEnabled] integerValue];
         NSString  *cardType   = [cardData objectForKey:ICParameterCardType];
     

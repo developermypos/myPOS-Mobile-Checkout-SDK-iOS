@@ -52,6 +52,7 @@ NSString * const ICColorBackgroundGray = @"F9F9F9";
 
 NSString * const ICMethodRefund                       = @"IPCRefund";
 NSString * const ICMethodPurchase                     = @"IPCIAPurchase";
+NSString * const ICMethodPurchaseWithToken            = @"IPCIAPurchaseWithToken";
 NSString * const ICMethodReversal                     = @"IPCReversal";
 NSString * const ICMethodStoreCard                    = @"IPCIAStoreCard";
 NSString * const ICMethodGetCardData                  = @"IPCIATdsBin";
@@ -147,6 +148,7 @@ NSString * const IC3DSParameterBrLanguage       = @"browser_language";
 NSString * const IC3DSParameterLibVersion       = @"lib_version";
 NSString * const IC3DSParameterProgramProtocol  = @"program_protocol";
 NSString * const IC3DSParameterDsTransactionId  = @"ds_transaction_id";
+NSString * const IC3DSParameterTDSReferenceId   = @"TDSReferenceID";
 
 #pragma mark - Notifications
 

@@ -16,6 +16,8 @@
 
 @implementation ICPaymentViewController
 
+static NSString * const kSecureSegue = @"3DSecure";
+
 #pragma mark - Controller Methods
 
 - (void)viewDidLoad {
@@ -27,6 +29,12 @@
     
     self.contentView.hidden                = YES;
     self.navigationItem.rightBarButtonItem = nil;
+    
+    if (self.forceTDS && _cardToken) {
+        _cardData = @{ ICParameterCardToken : _cardToken };
+        [self performSegueWithIdentifier:kSecureSegue sender:self];
+        return;
+    }
     
     [self showLoadingHUD];
     [[ICCommunicationManager sharedManager] makePurchaseForItems:self.cartItems
@@ -76,18 +84,47 @@
                                                  dsTransactionId:dsTransactionId
                                                  programProtocol:programProtocol
                                                     requestToken:self.requestToken
+                                                      completion:[self paymentCompletedWithToken]
+                                                         failure:[self paymentFailed]];
+}
+
+- (void)didReceiveForce3DSecureResponse:(NSDictionary *)response {
+    [super didReceiveForce3DSecureResponse:response];
+    
+    NSString *dsTransactionId  = [response objectForKey:IC3DSParameterDsTransactionId];
+    NSString *tdsReferenceId   = [response objectForKey:IC3DSParameterTDSReferenceId];
+    NSInteger programProtocol  = [[response objectForKey:IC3DSParameterProgramProtocol] integerValue];
+    
+    [self showLoadingHUD];
+    [[ICCommunicationManager sharedManager] makePurchaseForItems:self.cartItems
+                                                         orderId:self.orderId
+                                                       cardToken:self.cardToken
+                                                 dsTransactionId:dsTransactionId
+                                                  tdsReferenceId:tdsReferenceId
+                                                 programProtocol:programProtocol
                                                       completion:[self paymentCompleted]
                                                          failure:[self paymentFailed]];
 }
 
 #pragma mark - Helpers
 
-- (void (^)(NSString *, NSString *))paymentCompleted {
+- (void (^)(NSString *, NSString *))paymentCompletedWithToken {
     return ^(NSString *transactionRef, NSString *cardToken) {
         NSString *trnReference = [transactionRef isKindOfClass:[NSNumber class]] ? [(id)transactionRef stringValue] : transactionRef;
         [self dismiss:^{
             if ([self.paymentDelegate respondsToSelector:@selector(paymentDidCompleteWithReference:card:)]) {
                 [self.paymentDelegate paymentDidCompleteWithReference:trnReference card:[self storedCardWithToken:cardToken]];
+            }
+        }];
+    };
+}
+
+- (void (^)(NSString *))paymentCompleted {
+    return ^(NSString *transactionRef) {
+        NSString *trnReference = [transactionRef isKindOfClass:[NSNumber class]] ? [(id)transactionRef stringValue] : transactionRef;
+        [self dismiss:^{
+            if ([self.paymentDelegate respondsToSelector:@selector(paymentDidCompleteWithReference:)]) {
+                [self.paymentDelegate paymentDidCompleteWithReference:trnReference];
             }
         }];
     };

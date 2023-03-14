@@ -11,6 +11,7 @@
 @protocol IC3DSecureDelegate <NSObject>
 
 - (void)didReceive3DSecureResponse:(NSDictionary *)response;
+- (void)didReceiveForce3DSecureResponse:(NSDictionary *)response;
 - (void)didCancel3DS;
 
 @end

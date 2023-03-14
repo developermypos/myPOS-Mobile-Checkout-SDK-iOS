@@ -22,6 +22,7 @@
 
 #import "Base64.h"
 #import "NSString+Helpers.h"
+#import "NSDictionary+Helpers.h"
 
 @implementation ICUtil
 
@@ -190,7 +191,7 @@
         ICParameterEmail: [email urlEncoded],
         @"BrowserTimezone": [tz urlEncoded],
         @"BrowserLanguage": [[[ICMobilePaymentManager sharedManager] language] urlEncoded],
-        ICParameterBaseSource: @"iOS SDK",
+        ICParameterBaseSource: [@"iOS SDK" urlEncoded],
         @"BrowserScreenResolution": [resolution urlEncoded],
         @"LibVersion": [kSDKVersion urlEncoded]
         }
@@ -206,29 +207,12 @@
     
     signature = [[signature componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@""];
     
-    NSString *body = [NSString stringWithFormat:@"%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@&%@=%@",
-                      ICParameterMethod, [ICMethodTDSProcess urlEncoded],
-                      ICParameterIPCVersion, [kIPCVersion urlEncoded],
-                      ICParameterLanguage, [[[ICMobilePaymentManager sharedManager] language] urlEncoded],
-                      ICParameterSID, [[[ICMobilePaymentManager sharedManager] storeId] urlEncoded],
-                      @"WalletNumber", [[[ICMobilePaymentManager sharedManager] walletNumber] urlEncoded],
-                      ICParameterKeyIndex, [ICIntegerToString([[ICMobilePaymentManager sharedManager] keyIndex]) urlEncoded],
-                      ICParameterOutputFormat, [kOutputFormat urlEncoded],
-                      ICParameterAmount, [amount urlEncoded],
-                      ICParameterCurrency, [[[ICMobilePaymentManager sharedManager] currency] urlEncoded],
-                      @"UseRedirect", [@"1" urlEncoded],
-                      ICParameterCardToken, [cardToken urlEncoded],
-                      ICParameterEmail, [email urlEncoded],
-                      @"BrowserTimezone", [tz urlEncoded],
-                      @"BrowserLanguage", [[[ICMobilePaymentManager sharedManager] language] urlEncoded],
-                      ICParameterBaseSource, @"iOS SDK",
-                      @"BrowserScreenResolution", [resolution urlEncoded],
-                      @"LibVersion", [kSDKVersion urlEncoded],
-                      ICParameterSignature, [signature urlEncoded]];
+    NSString *body = [NSString stringWithFormat:@"%@&%@=%@",
+                             [data formData], ICParameterSignature, [signature urlEncoded]];
     
     [ICLogger logDebug:[NSString stringWithFormat:@"3DS - body: %@", body]];
     
-    NSURL *url = [NSURL URLWithString:[ICMobilePaymentManager secureUrl]];
+    NSURL *url = [NSURL URLWithString:[ICMobilePaymentManager apiUrl]];
     
     if (!url) {
         [ICLogger logDebug:@"Invalid communication URL"];

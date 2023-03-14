@@ -68,14 +68,8 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     NSString *url = webView.request.URL.absoluteString;
-    
-    if (url &&
-        ![url containsString:@"icard"]   &&
-        ![url containsString:@"leupay"]  &&
-        ![url containsString:@"leupost"] &&
-        ![url containsString:@"gateway"]) {
-        [self hideLoadingHUD];
-    }
+
+    [self hideLoadingHUD];
     
     [ICLogger logDebug:url];
     [self readResponse];
@@ -86,7 +80,6 @@
         [self.webView loadRequest:_urlRequest];
         return;
     }
-    
     [ICLogger log:[NSString stringWithFormat:@"Web view error: %@", error]];
     [self hideLoadingHUD];
 }
@@ -123,8 +116,12 @@
         return;
     }
     
-    if ([self.delegate respondsToSelector:@selector(didReceive3DSecureResponse:)]) {
+    NSString *url = self.webView.request.URL.absoluteString;
+    if ([url containsString:@"result"] && [self.delegate respondsToSelector:@selector(didReceive3DSecureResponse:)]) {
         [self.delegate didReceive3DSecureResponse:json];
+    }
+    else if ([url containsString:@"returnFrom3DSIA"] && [self.delegate respondsToSelector:@selector(didReceiveForce3DSecureResponse:)]) {
+        [self.delegate didReceiveForce3DSecureResponse:json];
     }
     
     [self.presenter dismissViewControllerAnimated:YES completion:nil];

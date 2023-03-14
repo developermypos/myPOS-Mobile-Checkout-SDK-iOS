@@ -19,7 +19,16 @@
 - (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
                      orderId:(NSString *)orderId
                    cardToken:(NSString *)cardToken
-                  completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
+                  completion:(void (^)(NSString *transactionRef))completionBlock
+                     failure:(void (^)(MPCheckoutError *error))errorBlock;
+
+- (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
+                     orderId:(NSString *)orderId
+                   cardToken:(NSString *)cardToken
+             dsTransactionId:(NSString *)dsTransactionId
+              tdsReferenceId:(NSString *)tdsReferenceId
+             programProtocol:(NSInteger)programProtocol
+                  completion:(void (^)(NSString *transactionRef))completionBlock
                      failure:(void (^)(MPCheckoutError *error))errorBlock;
 
 - (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
@@ -29,7 +38,7 @@
              dsTransactionId:(NSString *)dsTransactionId
              programProtocol:(NSInteger)programProtocol
                 requestToken:(BOOL)requestToken
-                  completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
+                  completion:(void (^)(NSString *transactionRef, NSString *cardToken))completionBlock
                      failure:(void (^)(MPCheckoutError *error))errorBlock;
 
 - (void)makeReversalForTransaction:(NSString *)transactionRef

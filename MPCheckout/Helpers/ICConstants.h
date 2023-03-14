@@ -44,6 +44,7 @@ extern NSString * const ICColorBackgroundGray;
 
 extern NSString * const ICMethodRefund;
 extern NSString * const ICMethodPurchase;
+extern NSString * const ICMethodPurchaseWithToken;
 extern NSString * const ICMethodReversal;
 extern NSString * const ICMethodStoreCard;
 extern NSString * const ICMethodGetCardData;
@@ -135,6 +136,7 @@ extern NSString * const IC3DSParameterBrLanguage;
 extern NSString * const IC3DSParameterLibVersion;
 extern NSString * const IC3DSParameterProgramProtocol;
 extern NSString * const IC3DSParameterDsTransactionId;
+extern NSString * const IC3DSParameterTDSReferenceId;
 
 extern NSString * const ICNotificationThemeChanged;
 

@@ -19,6 +19,8 @@
     NSString *_orderId;
     NSString *_cardToken;
     NSArray<MPCartItem *> *_cartItems;
+    BOOL _forceTDS;
+    BOOL _requestToken;
 }
 
 @property (weak, nonatomic) id<MPPaymentDelegate> paymentDelegate;
@@ -34,7 +36,7 @@
         _orderId         = orderId;
         _cartItems       = cartItems;
         _paymentDelegate = delegate;
-        requestToken     = requestToken;
+        _requestToken     = requestToken;
         
         [self customInit];
     }
@@ -42,12 +44,13 @@
     return self;
 }
 
-- (instancetype)initWithCartItems:(NSArray<MPCartItem *> *)cartItems orderId:(NSString *)orderId cardToken:(NSString *)cardToken delegate:(id<MPPaymentDelegate>)delegate {
+- (instancetype)initWithCartItems:(NSArray<MPCartItem *> *)cartItems orderId:(NSString *)orderId cardToken:(NSString *)cardToken forceTDS:(BOOL)forceTDS delegate:(id<MPPaymentDelegate>)delegate {
     if (self = [super initWithNibName:nil bundle:nil]) {
         _orderId         = orderId;
         _cartItems       = cartItems;
         _paymentDelegate = delegate;
         _cardToken       = cardToken;
+        _forceTDS        = forceTDS;
         
         [self customInit];
     }
@@ -90,6 +93,8 @@
     paymentController.cardToken              = _cardToken;
     paymentController.paymentDelegate        = self.paymentDelegate;
     paymentController.withoutCustomName      = YES;
+    paymentController.forceTDS               = _forceTDS;
+    paymentController.requestToken           = _requestToken;
     paymentController.cardVerificationAmount = [[ICUtil itemsTotalAmount:_cartItems] floatValue];
     paymentController.backgroundColor        = self.backgroundColor;
     

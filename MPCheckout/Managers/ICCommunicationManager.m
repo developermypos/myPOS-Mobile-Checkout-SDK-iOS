@@ -21,6 +21,7 @@
 #import "MPAuthorization.h"
 
 #import "ICPurchaseCommand.h"
+#import "ICPurchaseWithTokenCommand.h"
 #import "ICReversalCommand.h"
 #import "ICRefundCommand.h"
 #import "ICStoreCardCommand.h"
@@ -96,7 +97,7 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
 - (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
                      orderId:(NSString *)orderId
                    cardToken:(NSString *)cardToken
-                  completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
+                  completion:(void (^)(NSString *transactionRef))completionBlock
                      failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     NSDictionary *cardData = @{ ICParameterCardToken : cardToken };
@@ -106,12 +107,40 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
 
 - (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
                      orderId:(NSString *)orderId
+                   cardToken:(NSString *)cardToken
+             dsTransactionId:(NSString *)dsTransactionId
+              tdsReferenceId:(NSString *)tdsReferenceId
+             programProtocol:(NSInteger)programProtocol
+                  completion:(void (^)(NSString *transactionRef))completionBlock
+                     failure:(void (^)(MPCheckoutError *error))errorBlock {
+    
+    __block CGFloat amount = 0.0f;
+    NSMutableDictionary<NSString *, NSString *> *extraData = [@{
+        ICParameterOrderId   : orderId,
+        ICParameterCartItems : ICIntegerToString(cartItems.count)
+    }
+                                                              mutableCopy];
+    
+    [cartItems enumerateObjectsUsingBlock:^(MPCartItem * _Nonnull cartItem, NSUInteger idx, BOOL * _Nonnull stop) {
+        amount += (cartItem.price * cartItem.quantity);
+        
+        [extraData addEntriesFromDictionary:[cartItem formattedData:idx + 1]];
+    }];
+    
+    [extraData addEntriesFromDictionary:@{ ICParameterCardToken : cardToken }];
+    
+    ICPurchaseWithTokenCommand *command = [[ICPurchaseWithTokenCommand alloc] initWithAmount:ICFormatterAmount(amount) dsTransactionId:dsTransactionId tdsReferenceId:tdsReferenceId programProtocol:ICIntegerToString(programProtocol) extraData:extraData];
+    [self sendCommand:command completion:[self financeOperationCompletion:completionBlock failure:errorBlock]];
+}
+
+- (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
+                     orderId:(NSString *)orderId
                         card:(MPCard *)card
                     cardData:(NSDictionary *)cardData
              dsTransactionId:(NSString *)dsTransactionId
              programProtocol:(NSInteger)programProtocol
                 requestToken:(BOOL)requestToken
-                  completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
+                  completion:(void (^)(NSString *transactionRef, NSString *cardToken))completionBlock
                      failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     NSString *pan        = [card.pan        encrypted];
@@ -441,7 +470,7 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
              dsTransactionId:(NSString *)dsTransactionId
              programProtocol:(NSInteger)programProtocol
                 requestToken:(BOOL)requestToken
-                  completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
+                  completion:(void (^)(NSString *transactionRef, NSString *cardToken))completionBlock
                      failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     __block CGFloat amount = 0.0f;
@@ -460,17 +489,17 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
     [extraData addEntriesFromDictionary:cardData];
     
     ICPurchaseCommand *command = [[ICPurchaseCommand alloc] initWithAmount:ICFormatterAmount(amount) dsTransactionId:dsTransactionId programProtocol:ICIntegerToString(programProtocol) requestToken:requestToken extraData:extraData];
-    [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterCardToken, ICParameterTransactionRef]
+    [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterTransactionRef, ICParameterCardToken]
                                                             completion:^(NSDictionary *data) {
-                                                                completionBlock([data objectForKey:ICParameterCardToken],
-                                                                                [[data objectForKey:ICParameterTransactionRef] stringValue]);
+                                                                completionBlock([[data objectForKey:ICParameterTransactionRef] stringValue],
+                                                                                [data objectForKey:ICParameterCardToken]);
                                                             } failed:errorBlock]];
 }
 
 - (void)makePurchaseForItems:(NSArray<MPCartItem *> *)cartItems
                      orderId:(NSString *)orderId
                     cardData:(NSDictionary<NSString *, NSString *> *)cardData
-                  completion:(void (^)(NSString *cardToken, NSString *transactionRef))completionBlock
+                  completion:(void (^)(NSString *transactionRef))completionBlock
                      failure:(void (^)(MPCheckoutError *error))errorBlock {
     
     __block CGFloat amount = 0.0f;
@@ -489,11 +518,7 @@ static char * const kCommunicationQueue = "com.mypos.MPCheckout-communication";
     [extraData addEntriesFromDictionary:cardData];
     
     ICPurchaseCommand *command = [[ICPurchaseCommand alloc] initWithAmount:ICFormatterAmount(amount) extraData:extraData];
-    [self sendCommand:command completion:[self fullOperationCompletion:@[ICParameterCardToken, ICParameterTransactionRef]
-                                                            completion:^(NSDictionary *data) {
-                                                                completionBlock([data objectForKey:ICParameterCardToken],
-                                                                                [[data objectForKey:ICParameterTransactionRef] stringValue]);
-                                                            } failed:errorBlock]];
+    [self sendCommand:command completion:[self financeOperationCompletion:completionBlock failure:errorBlock]];
 }
 
 - (void (^)(id response))financeOperationCompletion:(void (^)(NSString *transactionRef))completionBlock failure:(void (^)(MPCheckoutError *error))errorBlock {

@@ -43,6 +43,7 @@
 - (nonnull instancetype)initWithCartItems:(nonnull NSArray<MPCartItem *> *)cartItems
                                   orderId:(nonnull NSString *)orderId
                                 cardToken:(nonnull NSString *)cardToken
+                                 forceTDS:(BOOL)forceTDS
                                  delegate:(nullable id<MPPaymentDelegate>)delegate;
 
 @end

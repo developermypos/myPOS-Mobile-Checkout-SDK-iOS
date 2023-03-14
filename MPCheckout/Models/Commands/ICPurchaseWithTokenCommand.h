@@ -12,11 +12,8 @@
 
 - (instancetype)initWithAmount:(NSString *)amount
                dsTransactionId:(NSString *)dsTransactionId
+                tdsReferenceId:(NSString *)tdsReferenceId
                programProtocol:(NSString *)programProtocol
-                  requestToken:(BOOL)requestToken
-                     extraData:(NSDictionary *)extraData;
-
-- (instancetype)initWithAmount:(NSString *)amount
                      extraData:(NSDictionary *)extraData;
 
 @end
