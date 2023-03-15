@@ -22,9 +22,9 @@
 }
 
 + (void)logDebug:(NSString *)message {
-//#if !DEBUG
+#if !DEBUG
     [self log:message];
-//#endif
+#endif
     
 }
 

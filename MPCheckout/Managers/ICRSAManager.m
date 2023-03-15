@@ -37,10 +37,10 @@
         return nil;
     }
     
-    [ICLogger log:[NSString stringWithFormat:@"Base64 data to sign: %@", string]];
+    [ICLogger logDebug:[NSString stringWithFormat:@"Base64 data to sign: %@", string]];
     
     string = [[string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@""];
-    [ICLogger log:[NSString stringWithFormat:@"Base64 data to sign FIXED: %@", string]];
+    [ICLogger logDebug:[NSString stringWithFormat:@"Base64 data to sign FIXED: %@", string]];
     
     SecKeyRef privateKey = [[ICMobilePaymentManager sharedManager] privateKey];
     
