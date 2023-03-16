@@ -168,8 +168,8 @@ NSString * const ICHTTPMethodPOST = @"POST";
 
 #pragma mark - URLs
 
-//NSString * const ICSandboxApiUrl      = @"https://www.mypos.eu/vmp/checkout-test";
-NSString * const ICSandboxApiUrl      = @"https://devs.mypos.com/mypos.eu/branches/token_tds_authentication_ACQ-121/public/vmp/checkout/";
+NSString * const ICSandboxApiUrl      = @"https://www.mypos.com/vmp/checkout-test";
+//NSString * const ICSandboxApiUrl      = @"https://devs.mypos.com/mypos.eu/branches/token_tds_authentication_ACQ-121/public/vmp/checkout/";
 NSString * const ICSandbox3DSecureUrl = @"https://devs.mypos.com/mypos_tdsgateway/";
 
 NSString * const ICProductionApiUrl      = @"https://www.mypos.com/vmp/checkout";
