@@ -42,6 +42,7 @@ static NSString * const kSecureSegue = @"3DSecure";
     _paymentDelegate   = nil;
     _storeCardDelegate = nil;
     _forceTDS          = nil;
+    _email             = nil;
 }
 
 #pragma mark - Actions
@@ -79,7 +80,7 @@ static NSString * const kSecureSegue = @"3DSecure";
     if (_forceTDS && [_cardData objectForKey:ICParameterCardToken]) {
         secureController.urlRequest = [ICUtil tdsProcessURLRequest:_cardData
                                                             amount:ICFormatterAmount(self.cardVerificationAmount)
-                                                             email:_cardView.email];
+                                                             email:_email];
         return;
     }
     

@@ -37,6 +37,7 @@
 @property (nonatomic) BOOL withoutCustomName;
 @property (nonatomic) BOOL autoReverse;
 @property (nonatomic) BOOL forceTDS;
+@property (nonatomic, strong) NSString *email;
 @property (weak, nonatomic) id<MPPaymentDelegate> paymentDelegate;
 @property (weak, nonatomic) id<MPStoreCardDelegate> storeCardDelegate;
 

@@ -18,6 +18,7 @@
 @interface MPPaymentViewController () {
     NSString *_orderId;
     NSString *_cardToken;
+    NSString *_email;
     NSArray<MPCartItem *> *_cartItems;
     BOOL _forceTDS;
     BOOL _requestToken;
@@ -44,13 +45,14 @@
     return self;
 }
 
-- (instancetype)initWithCartItems:(NSArray<MPCartItem *> *)cartItems orderId:(NSString *)orderId cardToken:(NSString *)cardToken forceTDS:(BOOL)forceTDS delegate:(id<MPPaymentDelegate>)delegate {
+- (instancetype)initWithCartItems:(NSArray<MPCartItem *> *)cartItems orderId:(NSString *)orderId cardToken:(NSString *)cardToken forceTDS:(BOOL)forceTDS email:(NSString *)email delegate:(id<MPPaymentDelegate>)delegate {
     if (self = [super initWithNibName:nil bundle:nil]) {
         _orderId         = orderId;
         _cartItems       = cartItems;
         _paymentDelegate = delegate;
         _cardToken       = cardToken;
         _forceTDS        = forceTDS;
+        _email           = email;
         
         [self customInit];
     }
@@ -91,6 +93,7 @@
     paymentController.orderId                = _orderId;
     paymentController.cartItems              = _cartItems;
     paymentController.cardToken              = _cardToken;
+    paymentController.email                  = _email;
     paymentController.paymentDelegate        = self.paymentDelegate;
     paymentController.withoutCustomName      = YES;
     paymentController.forceTDS               = _forceTDS;

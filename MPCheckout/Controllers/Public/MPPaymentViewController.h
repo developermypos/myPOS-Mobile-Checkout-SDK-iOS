@@ -44,6 +44,7 @@
                                   orderId:(nonnull NSString *)orderId
                                 cardToken:(nonnull NSString *)cardToken
                                  forceTDS:(BOOL)forceTDS
+                                    email:(nullable NSString *)email
                                  delegate:(nullable id<MPPaymentDelegate>)delegate;
 
 @end
