@@ -111,9 +111,9 @@
 }
 
 - (SecKeyRef)privateKey {
-    if (_privateKey) {
-        return _privateKey;
-    }
+//    if (_privateKey) {
+//        return _privateKey;
+//    }
     
     NSData *keyData = [self pemToDer:_privateKeyName];
     
@@ -127,9 +127,9 @@
 }
 
 - (SecKeyRef)publicKey {
-    if (_publicKey) {
-        return _publicKey;
-    }
+//    if (_publicKey) {
+//        return _publicKey;
+//    }
 
     NSData *certData = [self pemToDer:_publicKeyName];
 
