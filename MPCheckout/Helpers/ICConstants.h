@@ -137,6 +137,8 @@ extern NSString * const IC3DSParameterLibVersion;
 extern NSString * const IC3DSParameterProgramProtocol;
 extern NSString * const IC3DSParameterDsTransactionId;
 extern NSString * const IC3DSParameterTDSReferenceId;
+extern NSString * const ICParameterProgramProtocol;
+extern NSString * const ICParameterDsTransactionId;
 
 extern NSString * const ICNotificationThemeChanged;
 

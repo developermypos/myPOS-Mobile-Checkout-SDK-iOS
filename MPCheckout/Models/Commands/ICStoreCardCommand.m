@@ -45,11 +45,11 @@
         [_data addEntriesFromDictionary:extraData];
         
         if (dsTransactionId) {
-            [_data setObject:dsTransactionId                                  forKey:IC3DSParameterDsTransactionId];
+            [_data setObject:dsTransactionId                                  forKey:ICParameterDsTransactionId];
         }
         
         if (programProtocol) {
-            [_data setObject:programProtocol                                  forKey:IC3DSParameterProgramProtocol];
+            [_data setObject:programProtocol                                  forKey:ICParameterProgramProtocol];
         }
     }
     

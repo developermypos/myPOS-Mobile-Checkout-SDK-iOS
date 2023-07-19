@@ -149,6 +149,8 @@ NSString * const IC3DSParameterLibVersion       = @"lib_version";
 NSString * const IC3DSParameterProgramProtocol  = @"program_protocol";
 NSString * const IC3DSParameterDsTransactionId  = @"ds_transaction_id";
 NSString * const IC3DSParameterTDSReferenceId   = @"TDSReferenceID";
+NSString * const ICParameterProgramProtocol     = @"ProgramProtocol";
+NSString * const ICParameterDsTransactionId     = @"DSTransactionID";
 
 #pragma mark - Notifications
 
