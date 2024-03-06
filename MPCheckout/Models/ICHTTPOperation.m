@@ -242,6 +242,13 @@ static const char *kOperationQueue = "com.mypos.MPCheckout-operation";
     }
     
     if (status != ICResponseStatusOK) {
+        NSString * subStatus = [response objectForKey:ICParameterSubStatus];
+        if (subStatus) {
+            [self completeWithStatus:status
+                           subStatus:subStatus];
+            return;
+        }
+        
         [self completeWithStatus:status];
         return;
     }
@@ -268,6 +275,16 @@ static const char *kOperationQueue = "com.mypos.MPCheckout-operation";
 - (void)completeWithStatus:(NSInteger)status {
     if (_errorBlock) {
         _errorBlock([MPCheckoutError errorWithStatus:status]);
+    }
+    
+    [self completeOperation];
+}
+
+- (void)completeWithStatus:(NSInteger)status
+                 subStatus:(NSString *)subStatus {
+    if (_errorBlock) {
+        _errorBlock([MPCheckoutError errorWithSubStatus:subStatus
+                                                 status:status]);
     }
     
     [self completeOperation];

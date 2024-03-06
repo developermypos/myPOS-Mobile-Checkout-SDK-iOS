@@ -112,6 +112,7 @@ extern NSString * const ICParameterAutoReverse;
 extern NSString * const ICParameterRequestToken;
 extern NSString * const ICParameterBaseSource;
 extern NSString * const ICParameterEmail;
+extern NSString * const ICParameterSubStatus;
 
 extern NSString * const IC3DSParameterPAN;
 extern NSString * const IC3DSParameterMID;

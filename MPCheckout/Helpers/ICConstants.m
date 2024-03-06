@@ -122,6 +122,7 @@ NSString * const ICParameterAutoReverse            = @"auto_reverse";
 NSString * const ICParameterRequestToken           = @"RequestToken";
 NSString * const ICParameterBaseSource             = @"Source";
 NSString * const ICParameterEmail                  = @"Email";
+NSString * const ICParameterSubStatus              = @"SubStatus";
 
 #pragma mark - 3DS Parameters
 
@@ -169,8 +170,8 @@ NSString * const ICHTTPMethodGET  = @"GET";
 NSString * const ICHTTPMethodPOST = @"POST";
 
 #pragma mark - URLs
-
-NSString * const ICSandboxApiUrl      = @"https://www.mypos.com/vmp/checkout-test";
+//NSString * const ICSandboxApiUrl      = @"https://www.mypos.com/vmp/checkout-test";
+NSString * const ICSandboxApiUrl      = @"https://devs-us.mypos.com/mypos_old_checkout/branches/substatus_errors_266/public/vmp/checkout";
 //NSString * const ICSandboxApiUrl      = @"https://devs.mypos.com/mypos.eu/branches/token_tds_authentication_ACQ-121/public/vmp/checkout/";
 NSString * const ICSandbox3DSecureUrl = @"https://devs.mypos.com/mypos_tdsgateway/";
 
