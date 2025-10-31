@@ -56,10 +56,14 @@ typedef NS_ENUM (NSUInteger, MPPreAuthorizationStatus) {
 @interface MPCheckout : NSObject
 
 + (void)initializeInCurrency:(MPCurrency)currency
-        withConfigurationKey:(NSString * _Nonnull)configurationKey;
+        withConfigurationKey:(NSString * _Nonnull)configurationKey
+               applicationId:(NSString * _Nonnull)applicationId
+                   partnerId:(NSString * _Nonnull)partnerId;
 
 + (void)initializeInCurrency:(MPCurrency)currency
         withConfigurationKey:(NSString * _Nonnull)configurationKey
+               applicationId:(NSString * _Nonnull)applicationId
+                   partnerId:(NSString * _Nonnull)partnerId
                    isSandbox:(BOOL)isSandbox;
 
 + (void)initializeWithAccountNumber:(NSString * _Nonnull)accountNumber
@@ -67,6 +71,8 @@ typedef NS_ENUM (NSUInteger, MPPreAuthorizationStatus) {
                            currency:(MPCurrency)currency
                         certificate:(NSString * _Nonnull)certificate
                          privateKey:(NSString * _Nonnull)privateKey
+                      applicationId:(NSString * _Nonnull)applicationId
+                          partnerId:(NSString * _Nonnull)partnerId
                              bundle:(NSBundle * _Nullable)bundle
                            keyIndex:(NSInteger)keyIndex;
 
@@ -75,6 +81,8 @@ typedef NS_ENUM (NSUInteger, MPPreAuthorizationStatus) {
                            currency:(MPCurrency)currency
                         certificate:(NSString * _Nonnull)certificate
                          privateKey:(NSString * _Nonnull)privateKey
+                      applicationId:(NSString * _Nonnull)applicationId
+                          partnerId:(NSString * _Nonnull)partnerId
                              bundle:(NSBundle * _Nullable)bundle
                            keyIndex:(NSInteger)keyIndex
                           isSandbox:(BOOL)isSandbox;

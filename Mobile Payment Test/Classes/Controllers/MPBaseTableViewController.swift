@@ -26,6 +26,10 @@ class MPBaseTableViewController: UITableViewController, MPPaymentDelegate, MPSto
     
     // MARK: Payment Delegate
     
+    func paymentDidComplete(withReference transactionReference: String, card: MPStoredCard) {
+        self.showAlertWithText("Payment completed with reference: \(transactionReference)", popToRoot: true)
+    }
+    
     func paymentDidComplete(withReference transactionReference: String) {
         self.showAlertWithText("Payment completed with reference: \(transactionReference)", popToRoot: true)
     }

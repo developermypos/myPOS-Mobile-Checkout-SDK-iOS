@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
+
 @interface MPCheckoutError : NSError
 
 + (instancetype)errorWithStatus:(NSInteger)status;
++ (instancetype)errorWithSubStatus:(NSString *)subStatus
+                            status:(NSInteger)status;
 + (instancetype)notInitializedError;
 + (instancetype)communicationError;
 + (instancetype)undefinedError;

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		CF+fo5ZWMuFRmdnBfk/50PCbXuk=
+		esdkOm4WVCqWL6er8EKY0iWkj74=
 		</data>
 		<key>Headers/MPAuthorization.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/MPCard.h</key>
 		<data>
-		FdCikUJee3xl5iLzNSUXP0/p1mg=
+		K9qHTz4SjKTVYqP2hh49/QV38iI=
 		</data>
 		<key>Headers/MPCartItem.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/MPCheckout.h</key>
 		<data>
-		hfa7IEr5svAeKLk7mkwsOa+d0PQ=
+		pW0ikP6hTwHl2DRogX3HWrXhCBc=
 		</data>
 		<key>Headers/MPCheckoutController.h</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Headers/MPCheckoutError.h</key>
 		<data>
-		QTxZ0y8gpEdnXCYsh1hVfwsL6Aw=
+		gFxWb3oiWJTElsKQX0gcHXdsddc=
 		</data>
 		<key>Headers/MPCheckoutProtocols.h</key>
 		<data>
-		E8SRXz051HDmpYNZ0Qbs/TFcvM4=
+		Umvb6N1W7gmPayZwk4mYBWZpYRo=
 		</data>
 		<key>Headers/MPCheckoutTheme.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/MPPaymentViewController.h</key>
 		<data>
-		d0MjOSw+Zw8wJqZYxVsZEQHUJB8=
+		u50S86gWKVQaPfEpDZTmK7Tg8n4=
 		</data>
 		<key>Headers/MPPreAuthorizationViewController.h</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Headers/MPStoredCard.h</key>
 		<data>
-		9opwpFxdAA/BtEvsPr7ui8YmrpA=
+		l/VjfqkAcqayxdGdTbO0+I9sjZM=
 		</data>
 		<key>Headers/MPUpdateStoredCardViewController.h</key>
 		<data>
@@ -62,23 +62,23 @@
 		</data>
 		<key>ICCardView.nib</key>
 		<data>
-		OVkvWDEJiwTMhkkcJclY0rSKARE=
+		Xi2A9GXTMtRoX9EbQBiZfrBGWLU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		T71uJwlPOYBGWfkGiZarQozT6y0=
+		hdAX8uSWpKMuOOjO4tW/VW/5OLs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		+Y/0cwX+OOJiGXdqMQq+ofYdSd4=
+		+5e+qkt6OprU1n7jk438XZYbGO0=
 		</data>
 		<key>Storyboard.storyboardc/3DSecureController.nib</key>
 		<data>
-		r0DBDmmiKNi4hSqEubQsOLY5SdQ=
+		jKPZOxaGk3wzNqavSnV1FB92tQQ=
 		</data>
 		<key>Storyboard.storyboardc/5AT-MM-unF-view-pRj-hr-mvn.nib</key>
 		<data>
-		ne+l7w52iWnSPnTf1031EGduU9k=
+		9zqadXvr2rj7/UkieE7x52e6hY0=
 		</data>
 		<key>Storyboard.storyboardc/Info.plist</key>
 		<data>
@@ -102,40 +102,32 @@
 		</data>
 		<key>Storyboard.storyboardc/VTf-Ro-Cln-view-Gez-CR-0WR.nib</key>
 		<data>
-		eZGIBBw+30DgsMMzo5EDrM98PuA=
+		9zqadXvr2rj7/UkieE7x52e6hY0=
 		</data>
 		<key>Storyboard.storyboardc/ZEi-yh-dld-view-GK7-5z-zBQ.nib</key>
 		<data>
-		6b+ErT7aRicUdGtr78MIJ5TWM/g=
+		9zqadXvr2rj7/UkieE7x52e6hY0=
 		</data>
 		<key>Storyboard.storyboardc/gFg-FE-Xmk-view-JSG-Lm-Xva.nib</key>
 		<data>
-		Rm47Zz2aunoV/8leX9XD+JgvHrc=
+		9zqadXvr2rj7/UkieE7x52e6hY0=
 		</data>
 		<key>Storyboard.storyboardc/w5J-C1-eVA-view-wiU-l4-xq3.nib</key>
 		<data>
-		xmedP1KN7LbKD9shCSAW4vdbG4o=
+		25SsiFPBLKOsaOtj25bylr6Cy80=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Assets.car</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			CF+fo5ZWMuFRmdnBfk/50PCbXuk=
-			</data>
 			<key>hash2</key>
 			<data>
-			DPE8GWF/X3vyTSqK+NMwasHNv2TGqrQn2AneaAL5WCY=
+			ToWTqmrsUjrNRt6KCXbop2QV3vF06n3eokfkdGFu/W8=
 			</data>
 		</dict>
 		<key>Headers/MPAuthorization.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			bjBp6rCubNCa/4AvuHVF1G2gNd0=
-			</data>
 			<key>hash2</key>
 			<data>
 			iV5GQqvegqZH3wwiT2ElXK1149smyD00t4THqXtoGbI=
@@ -143,21 +135,13 @@
 		</dict>
 		<key>Headers/MPCard.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			FdCikUJee3xl5iLzNSUXP0/p1mg=
-			</data>
 			<key>hash2</key>
 			<data>
-			PykwwMuOWam5yrl8znV+IxY8NZGXA0VcFXySVNsGcoQ=
+			KlEIUMlLUIlZLRwBmjcet6NE4F9Q2padAUZnQiYWZcg=
 			</data>
 		</dict>
 		<key>Headers/MPCartItem.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			nJP7XGeg5f3hcmwRW8XDsYAALoE=
-			</data>
 			<key>hash2</key>
 			<data>
 			RZResx4ip8XH19ZYNZQn1U8+1esYNr4SNHH25nKQozo=
@@ -165,21 +149,13 @@
 		</dict>
 		<key>Headers/MPCheckout.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			hfa7IEr5svAeKLk7mkwsOa+d0PQ=
-			</data>
 			<key>hash2</key>
 			<data>
-			EaJxKphXcCD8BNL4uQ6GOybxoJwncig1kTv8Ubh9Fv0=
+			Uv0GT4i+ThIyoydCpozPl4M3tz/sowZal8mizDVlI1M=
 			</data>
 		</dict>
 		<key>Headers/MPCheckoutController.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			mI2rJc7FnTtRKcWMFYDjn48jUfc=
-			</data>
 			<key>hash2</key>
 			<data>
 			bAbtAGbOIGRkV3oO4uBQEWcj0PNOmy3E07VGtSAyD6o=
@@ -187,32 +163,20 @@
 		</dict>
 		<key>Headers/MPCheckoutError.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			QTxZ0y8gpEdnXCYsh1hVfwsL6Aw=
-			</data>
 			<key>hash2</key>
 			<data>
-			Ekt8ILdQtHLggUahgSP+0xKwFGRj/BPIriXZ4+k8OiU=
+			dZtMwjZfYyA4eLj/ARFB3dv5P7u+LkGvgOB7lRXBQEA=
 			</data>
 		</dict>
 		<key>Headers/MPCheckoutProtocols.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			E8SRXz051HDmpYNZ0Qbs/TFcvM4=
-			</data>
 			<key>hash2</key>
 			<data>
-			t4A81LiPo5CPxx+p7S8TfONi+/v/hdyhgPTNuhcSTvQ=
+			BI2O5VE4+/icxhRHux/S0q1zQpn/aKd1zaG6x6hC7A8=
 			</data>
 		</dict>
 		<key>Headers/MPCheckoutTheme.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			n3JSiI/66/9i0js3x8DLkmmN7QU=
-			</data>
 			<key>hash2</key>
 			<data>
 			oC9YuleEpHDepS4Ct8cZmAlTtMefJEdz+2xofk6H8wU=
@@ -220,21 +184,13 @@
 		</dict>
 		<key>Headers/MPPaymentViewController.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			d0MjOSw+Zw8wJqZYxVsZEQHUJB8=
-			</data>
 			<key>hash2</key>
 			<data>
-			8vZKij/NNZLPIfRNTwmfxW2C37v0EmBzJ/W7Yt9FM4I=
+			B3KNrC0vwUhaYfmKAjBFx82YNyRg8RY1NKAcKCzjXMA=
 			</data>
 		</dict>
 		<key>Headers/MPPreAuthorizationViewController.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			1j2mhdg1IM8FbFj59UjU0LPhbB0=
-			</data>
 			<key>hash2</key>
 			<data>
 			qEAYlmssXFTPUApesxsRHPNvx7PPXNiLMX21qUxoPk0=
@@ -242,10 +198,6 @@
 		</dict>
 		<key>Headers/MPStoreCardViewController.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			piCVdilPq0e2PGSX1fu70znWIw4=
-			</data>
 			<key>hash2</key>
 			<data>
 			W2ZM2tNmlEpq//eFSZLdVMF2qZY+Quh6aJwCK/jeri8=
@@ -253,21 +205,13 @@
 		</dict>
 		<key>Headers/MPStoredCard.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			9opwpFxdAA/BtEvsPr7ui8YmrpA=
-			</data>
 			<key>hash2</key>
 			<data>
-			kfP1/rOtK/i3yiPaTGFwvWmje87NUVeIa4uevtW7fQ0=
+			CWdlBVu7iGsWy9W7L6V+1w+izM2J3nN58e8HTk827WA=
 			</data>
 		</dict>
 		<key>Headers/MPUpdateStoredCardViewController.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			RM6YCSuMeqnJdNwIlGMhQnH867Q=
-			</data>
 			<key>hash2</key>
 			<data>
 			RVJKTpMFpt4FSlkFRVGv+LblsiAJP3MJvzAF0F/d55U=
@@ -275,54 +219,34 @@
 		</dict>
 		<key>ICCardView.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			OVkvWDEJiwTMhkkcJclY0rSKARE=
-			</data>
 			<key>hash2</key>
 			<data>
-			xqez9u9UNClSUG4mMTRACwAUOj+OZZ23nlMUZ4c6Wxk=
+			PT5lKCl0zHPxoUfme5f4ISpEXkpQZaMByVxPA/Mo6Ss=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			+Y/0cwX+OOJiGXdqMQq+ofYdSd4=
-			</data>
 			<key>hash2</key>
 			<data>
-			MjbgC11UDySyI7aLC/amWniIAn2+JOswO90YB2sa82c=
+			2SrTrjxbrf9uXQtJU7h5XD+U7YD75o52Zq4XJHpePp8=
 			</data>
 		</dict>
 		<key>Storyboard.storyboardc/3DSecureController.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			r0DBDmmiKNi4hSqEubQsOLY5SdQ=
-			</data>
 			<key>hash2</key>
 			<data>
-			jXb9IDuycAFDm7HTIDHJ5VvEoau61g3wSY0Zthrzf9g=
+			4POM0L804NHRIrfdcyImO40L2jOW4nNzT6eYjHIn5Bk=
 			</data>
 		</dict>
 		<key>Storyboard.storyboardc/5AT-MM-unF-view-pRj-hr-mvn.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ne+l7w52iWnSPnTf1031EGduU9k=
-			</data>
 			<key>hash2</key>
 			<data>
-			Jnnsp3u3BhNByiB16AL9ujqrUeXppRcT5zK7ZCo1dC8=
+			+NPjiVoGPF0FaNgEcENK+GF/SSG6z460bAL0YbH06V0=
 			</data>
 		</dict>
 		<key>Storyboard.storyboardc/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			9MngjcGMIB5rR7siPeX6CbwrshQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			VQ1HyH2tD7bJz0viAOu8u6FT0iJBpNoxWrXluZGq3Ek=
@@ -330,10 +254,6 @@
 		</dict>
 		<key>Storyboard.storyboardc/Payment.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			v6PeLl8ljkzuYaa0EQ4Veh1KvD0=
-			</data>
 			<key>hash2</key>
 			<data>
 			dV2ot+sIU05Nd6k0V2HTGq9hYTnP3mRgEXeGT7kCWHg=
@@ -341,10 +261,6 @@
 		</dict>
 		<key>Storyboard.storyboardc/PreAuthorization.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			uLCCm09lFLjTHkS1N7fWW/GIOwQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			Be7xUFKZPUEWIc4derf6JH/FQCdzvQJk9VFuShNBn1c=
@@ -352,10 +268,6 @@
 		</dict>
 		<key>Storyboard.storyboardc/StoreCard.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			bc203TA/+bH6ZggACaSvdtEwPmE=
-			</data>
 			<key>hash2</key>
 			<data>
 			9qgSdTdHRkyN7U787gDlD//4ruLx1RIt7IfVf5fTC6I=
@@ -363,10 +275,6 @@
 		</dict>
 		<key>Storyboard.storyboardc/UpdateStoredCard.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ojc3F+tBEf+hv6oNF5r4APA2MaA=
-			</data>
 			<key>hash2</key>
 			<data>
 			KdosMj2zQRZC5tRF721u7bDzmoHPrfb/OT2PIx8x1fA=
@@ -374,46 +282,30 @@
 		</dict>
 		<key>Storyboard.storyboardc/VTf-Ro-Cln-view-Gez-CR-0WR.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			eZGIBBw+30DgsMMzo5EDrM98PuA=
-			</data>
 			<key>hash2</key>
 			<data>
-			tpIy5ymVPH01J4vOtfn93E/LFMEiyVhhYtjRQJyoaSQ=
+			+NPjiVoGPF0FaNgEcENK+GF/SSG6z460bAL0YbH06V0=
 			</data>
 		</dict>
 		<key>Storyboard.storyboardc/ZEi-yh-dld-view-GK7-5z-zBQ.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			6b+ErT7aRicUdGtr78MIJ5TWM/g=
-			</data>
 			<key>hash2</key>
 			<data>
-			Y2A29LhBQ4TiO9Uiu51lUoOh7nTlfIWidzgrczxcjoo=
+			+NPjiVoGPF0FaNgEcENK+GF/SSG6z460bAL0YbH06V0=
 			</data>
 		</dict>
 		<key>Storyboard.storyboardc/gFg-FE-Xmk-view-JSG-Lm-Xva.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Rm47Zz2aunoV/8leX9XD+JgvHrc=
-			</data>
 			<key>hash2</key>
 			<data>
-			Qoyv8pxxVOjSpFyLykdHqaZg77Vep1lYsoQijjo8zo0=
+			+NPjiVoGPF0FaNgEcENK+GF/SSG6z460bAL0YbH06V0=
 			</data>
 		</dict>
 		<key>Storyboard.storyboardc/w5J-C1-eVA-view-wiU-l4-xq3.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			xmedP1KN7LbKD9shCSAW4vdbG4o=
-			</data>
 			<key>hash2</key>
 			<data>
-			5yY3XDcm3OkxkAzfD42D537XS568KGeV4tNMSvj2Mpg=
+			7FJ++ZXW6OOZG2EikkHW09+BDFVMWWsINH/ZxZBoXsg=
 			</data>
 		</dict>
 	</dict>

@@ -16,6 +16,7 @@
 @property (nonatomic, strong, readonly, nonnull) NSString *expiryDate;
 @property (nonatomic, strong, readonly, nonnull) NSString *embossName;
 @property (nonatomic, strong, readonly, nonnull) NSString *customName;
+@property (nonatomic, strong, readonly, nonnull) NSString *email;
 
 /*!
  * @method initWithCard:type:token:
